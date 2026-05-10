@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Nomad Tours | Contact Us – Plan Your Kenya Adventure</title>
+    <meta name="description"
+        content="Get in touch with Nomad Tours. Reach us for custom safari planning, bookings, or any questions. We're here to craft your perfect Kenya experience.">
+    <meta name="keywords"
+        content="contact Nomad Tours, Kenya safari booking, travel inquiries, Diani tours, Masai Mara reservations">
+    <link rel="icon" href="assets/image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header class="contact-header">
+        <div class="container">
+            <div class="navbar-wrapper" id="navbarWrapper">
+                <div class="custom-navbar">
+                    <nav class="navbar navbar-expand-lg navbar-light p-0">
+                        <div class="container-fluid px-0 navbar-content">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/image/nomad_tours_logo.webp" alt="Nomad Tours Logo"
+                                    class="travel-logo">
+                            </a>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="tours.html">Safari Tours</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="event.html">Events</a></li>
+                                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav-right">
+                                <a href="#" class="btn-primary-travel">Book an Experience</a>
+                            </div>
+                            <button class="mobile-menu-toggle" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#mobileOffcanvas">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-3">
+            <h1 class="hero-title" style="font-size: 2.8rem;">Let's Plan Your Safari</h1>
+            <p class="hero-subtitle" style="font-size: 1.2rem;">Reach out – we're here to answer your questions and
+                craft unforgettable journeys.</p>
+        </div>
+    </header>
+
+    <div class="container contact-section py-4">
+        <!-- Contact Info Cards -->
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="contact-info-card">
+                    <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                    <h4>Phone / WhatsApp</h4>
+                    <p>+254 102 593 346</p>
+                    <p>+254 102 593 346</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="contact-info-card">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <h4>Email Us</h4>
+                    <p>info@wildnomads.co.ke</p>
+                    <p>booking@wildnomads.co.ke</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="contact-info-card">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h4>Visit Our Office</h4>
+                    <p>Bofa Road, Kilifi Town</p>
+                    <p>Kilifi County, Kenya</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-5">
+            <!-- Contact Form -->
+            <div class="col-lg-7">
+                <div class="contact-form-wrapper">
+                    <h3 class="mb-4" style="color: var(--primary-blue);">Send Us a Message</h3>
+                    <form id="contactForm" action="#" method="POST">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" name="name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" name="email" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" name="phone">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Preferred Package</label>
+                                <select class="form-select" name="destination">
+                                    <option>Summer Rest</option>
+                                    <option>Safari Tour</option>
+                                    <option>Cultural Tour</option>
+                                    <option>Corporate Tour</option>
+                                    <option>Honeymoon</option>
+                                    <option>Adventure</option>
+                                    <option>Custom Itinerary</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Message / Travel Plans *</label>
+                                <textarea class="form-control" rows="5" name="message"
+                                    placeholder="Tell us about your dream safari, group size, travel dates, and any special requests..."
+                                    required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn-submit"><i class="fas fa-paper-plane me-2"></i>Send
+                                    Inquiry</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="formSuccessMessage" class="alert alert-success mt-3 d-none">Thank you! We'll get back to
+                        you within 24 hours.</div>
+                </div>
+            </div>
+
+            <!-- Map & Social -->
+            <div class="col-lg-5">
+                <div class="map-container mb-4">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127705.30259030889!2d39.81255063811543!3d-3.630696958990079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1840a1a9d2e5f4b7%3A0x7e9f3c2a5d1e8f4c!2sKilifi%2C%20Kenya!5e0!3m2!1sen!2ske!4v1647000000000!5m2!1sen!2ske"
+                        allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col contact-info-card-footer">
+                    <img src="assets/image/nomad_tours_logo.webp" alt="Nomad Tours"
+                        style="border-radius:12px; padding:6px 12px; max-height:100px; margin-bottom:16px; filter: brightness(0) invert(1);">
+                    <h5>Nomad Tours & Experiences</h5>
+                    <p>Your trusted partner for authentic African adventures and unforgettable safari experiences.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/254712345678"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Experiences</h5>
+                    <a href="#">Wildlife Safaris</a>
+                    <a href="#">Cultural Tours</a>
+                    <a href="#">Beach Excursions</a>
+                    <a href="#">Custom Itineraries</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Policies</h5>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Booking Terms</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#cancellationModal">Cancellation Policy</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <p><i class="fas fa-phone-alt me-2" style="color:var(--secondary-orange);"></i> +254 102 593 346</p>
+                    <p><i class="fas fa-map-marker-alt me-2" style="color:var(--secondary-orange);"></i> Bofa Road,
+                        Kilifi Kenya</p>
+                    <p><i class="far fa-envelope me-2" style="color:var(--secondary-orange);"></i>
+                        info@wildnomads.co.ke</p>
+                        <p><i class="far fa-envelope me-2" style="color:var(--secondary-orange);"></i>
+                        booking@wildnomads.co.ke</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Nomad Tours & Experiences — Authentic Kenya Adventures.</p>
+                <p>🌍 Kilifi, Kenya | Design: <a href="" class="footer-link">LacomasTech</a> | Admin: <a href="" class="footer-link">LogIn</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/254712345678" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- Offcanvas Mobile Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileOffcanvas">
+        <div class="offcanvas-header">
+            <img src="assets/image/nomad_tours_logo.webp" alt="logo" style="height: 45px;">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="tours.html"><i class="fas fa-binoculars"></i> Safari Tours</a></li>
+                <li><a href="service.html"><i class="fas fa-concierge-bell"></i> Services</a></li>
+                <li><a href="blogs.html"><i class="fas fa-blog"></i> Blogs</a></li>
+                <li><a href="event.html"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            <div class="mobile-action-buttons mt-4">
+                <a href="#" class="btn-mobile-book"><i class="fas fa-ticket-alt"></i> Book Now</a>
+                <a href="https://wa.me/254712345678" class="btn-mobile-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+            <div class="mobile-contact-info">
+                <p><i class="fas fa-phone-alt"></i> +254 102 593 346</p>
+                <p><i class="fas fa-map-marker-alt"></i> Bofa Road, Kilifi, Kenya</p>
+                <p><i class="far fa-envelope"></i> info@wildnomads.co.ke</p>
+                <p><i class="far fa-envelope"></i> booking@wildnomads.co.ke</p>
+                <div class="mobile-social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/254712345678" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal fade" id="privacyModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Privacy Policy</h5><button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Nomad Tours collects booking information only for service delivery. Your data is never shared.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="termsModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Booking Terms</h5><button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>30% deposit confirms. Cancellation 30+ days: full refund less 10% admin.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cancellationModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cancellation</h5><button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Free up to 30 days before departure. 50% refund 15-29 days.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Sticky navbar
+        const navbarWrapper = document.getElementById('navbarWrapper');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 20) {
+                if (!navbarWrapper.classList.contains('sticky-nav')) {
+                    navbarWrapper.classList.add('sticky-nav');
+                    document.body.classList.add('nav-fixed-padding');
+                }
+            } else {
+                if (navbarWrapper.classList.contains('sticky-nav')) {
+                    navbarWrapper.classList.remove('sticky-nav');
+                    document.body.classList.remove('nav-fixed-padding');
+                }
+            }
+        });
+
+        // Offcanvas hide navbar
+        const offcanvasEl = document.getElementById('mobileOffcanvas');
+        if (offcanvasEl) {
+            offcanvasEl.addEventListener('show.bs.offcanvas', () => { navbarWrapper.style.display = 'none'; });
+            offcanvasEl.addEventListener('hidden.bs.offcanvas', () => { navbarWrapper.style.display = ''; });
+        }
+
+        // Simple form submission handler (demo)
+        const contactForm = document.getElementById('contactForm');
+        const successMsg = document.getElementById('formSuccessMessage');
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            // In a real scenario, you'd send data via fetch/AJAX
+            successMsg.classList.remove('d-none');
+            contactForm.reset();
+            setTimeout(() => {
+                successMsg.classList.add('d-none');
+            }, 5000);
+        });
+    </script>
+</body>
+
+</html>

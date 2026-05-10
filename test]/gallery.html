@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Nomad Events | Wildlife Category Carousel</title>
+    <!-- Bootstrap 5 CSS + Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Plus Jakartas Sans', 'Aptos', sans-serif;
+            background: #F8F9FA;
+            color: #1C2D49;
+            padding: 2rem 0 3rem;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 3px;
+            background: #F28518;
+            margin-top: 8px;
+            border-radius: 4px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* Category Carousel Styling */
+        .category-carousel {
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2);
+        }
+        .carousel-item {
+            position: relative;
+            height: 500px;
+            background: #0a1a2f;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+            transition: transform 0.5s ease;
+        }
+        .carousel-item.active img {
+            transform: scale(1.02);
+        }
+        .carousel-caption {
+            background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.4) 70%, transparent 100%);
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem 1rem 1.8rem;
+            text-align: center;
+            border-radius: 0;
+        }
+        .carousel-caption h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            margin-bottom: 0.5rem;
+        }
+        .carousel-caption p {
+            font-size: 1rem;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 500;
+            background: rgba(242, 133, 24, 0.85);
+            display: inline-block;
+            padding: 0.25rem 1rem;
+            border-radius: 40px;
+            backdrop-filter: blur(4px);
+        }
+        .carousel-indicators button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #fff;
+            margin: 0 6px;
+            opacity: 0.6;
+        }
+        .carousel-indicators button.active {
+            background-color: #F28518;
+            opacity: 1;
+            transform: scale(1.2);
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0,0,0,0.5);
+            border-radius: 50%;
+            padding: 20px;
+            background-size: 50%;
+        }
+        @media (max-width: 768px) {
+            .carousel-item {
+                height: 420px;
+            }
+            .carousel-caption h3 {
+                font-size: 1.4rem;
+            }
+            .carousel-caption p {
+                font-size: 0.8rem;
+                padding: 0.2rem 0.8rem;
+            }
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                padding: 12px;
+            }
+        }
+        /* category badge container (optional) */
+        .category-tag {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+            padding: 6px 18px;
+            border-radius: 40px;
+            color: white;
+            font-weight: 600;
+            font-size: 0.85rem;
+            z-index: 5;
+            border-left: 4px solid #F28518;
+            pointer-events: none;
+        }
+        .carousel-item .category-tag i {
+            margin-right: 6px;
+            color: #F28518;
+        }
+        /* subtle animation */
+        .carousel-fade .carousel-item {
+            transition: opacity 0.6s ease-in-out;
+        }
+        .text-muted-custom {
+            color: #5a6e7c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-3">
+        <!-- Header same as original vibe -->
+        <div class="text-center mb-5">
+            <h2 class="section-title">Wildlife & Landscape Gallery</h2>
+            <p class="text-muted mx-auto" style="max-width: 700px;">Explore authentic moments captured by our guides
+                and travelers — each category reveals a unique face of Kenya’s wilderness.</p>
+        </div>
+
+        <!-- CAROUSEL: 6 CATEGORIES (exactly 6 slides) -->
+        <div id="categoryCarousel" class="carousel slide category-carousel" data-bs-ride="carousel" data-bs-interval="5000">
+            <!-- Indicators / 6 dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#categoryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#categoryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#categoryCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#categoryCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#categoryCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#categoryCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <!-- Category 1: Great Migration / Wildebeest Crossing -->
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1600&h=900&fit=crop" alt="Wildebeest crossing Mara River" loading="lazy">
+                    <div class="category-tag"><i class="fas fa-paw"></i> Category: The Great Migration</div>
+                    <div class="carousel-caption">
+                        <h3>River Crossing Drama</h3>
+                        <p>Over 1.5 million wildebeest & zebra braving crocodile-infested waters</p>
+                    </div>
+                </div>
+                <!-- Category 2: Hot Air Balloon Safari -->
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1600&h=900&fit=crop" alt="Hot air balloon over Masai Mara" loading="lazy">
+                    <div class="category-tag"><i class="fas fa-fan"></i> Category: Balloon Safaris</div>
+                    <div class="carousel-caption">
+                        <h3>Above the Savannah</h3>
+                        <p>Sunrise flights with champagne breakfast & endless horizons</p>
+                    </div>
+                </div>
+                <!-- Category 3: Elephant Herds & Amboseli Giants -->
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?w=1600&h=900&fit=crop" alt="Elephant family with Kilimanjaro" loading="lazy">
+                    <div class="category-tag"><i class="fas fa-tree"></i> Category: Gentle Giants</div>
+                    <div class="carousel-caption">
+                        <h3>Majestic Elephant Herds</h3>
+                        <p>Iconic encounters with Africa's largest land mammals</p>
+                    </div>
+                </div>
+                <!-- Category 4: Coastal Paradise – Diani Beach -->
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1600&h=900&fit=crop" alt="Diani Beach turquoise water" loading="lazy">
+                    <div class="category-tag"><i class="fas fa-umbrella-beach"></i> Category: Coastal Escape</div>
+                    <div class="carousel-caption">
+                        <h3>Indian Ocean Serenity</h3>
+                        <p>Powder-white sands, palm trees & marine turtle conservation</p>
+                    </div>
+                </div>
+                <!-- Category 5: Big Cats – Lion & Leopard Kingdom -->
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=1600&h=900&fit=crop" alt="Lion pride in Masai Mara" loading="lazy">
+                    <div class="category-tag"><i class="fas fa-crown"></i> Category: Predator Plains</div>
+                    <div class="carousel-caption">
+                        <h3>Lions, Leopards & Cheetahs</h3>
+                        <p>Witness the apex predators in their natural realm</p>
+                    </div>
+                </div>
+                <!-- Category 6: Maasai Culture & Traditions -->
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=1600&h=900&fit=crop" alt="Maasai warriors jumping dance" loading="lazy">
+                    <div class="category-tag"><i class="fas fa-hands-helping"></i> Category: Cultural Heritage</div>
+                    <div class="carousel-caption">
+                        <h3>Maasai Spirit</h3>
+                        <p>Ancient traditions, vibrant beadwork & authentic village visits</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Navigation Arrows -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#categoryCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#categoryCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Optional: category description / context row -->
+        <div class="row mt-5 text-center">
+            <div class="col-12">
+                <div class="d-flex flex-wrap justify-content-center gap-3 mt-2">
+                    <span class="badge bg-light text-dark p-2 px-3 rounded-pill shadow-sm"><i class="fas fa-water text-info me-1"></i> Migration Spectacle</span>
+                    <span class="badge bg-light text-dark p-2 px-3 rounded-pill shadow-sm"><i class="fas fa-hot-air-balloon text-warning me-1"></i> Balloon Flights</span>
+                    <span class="badge bg-light text-dark p-2 px-3 rounded-pill shadow-sm"><i class="fas fa-paw text-success me-1"></i> Elephant Encounters</span>
+                    <span class="badge bg-light text-dark p-2 px-3 rounded-pill shadow-sm"><i class="fas fa-water text-primary me-1"></i> Coastal Retreat</span>
+                    <span class="badge bg-light text-dark p-2 px-3 rounded-pill shadow-sm"><i class="fas fa-fang text-danger me-1"></i> Big Cats Safari</span>
+                    <span class="badge bg-light text-dark p-2 px-3 rounded-pill shadow-sm"><i class="fas fa-drumstick-bite text-secondary me-1"></i> Maasai Culture</span>
+                </div>
+                <p class="text-muted-custom small mt-4"><i class="fas fa-camera-retro me-1"></i> 6 categories – 6 windows into Kenya’s soul. Swipe or use arrows to explore.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle (for carousel functionality) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- optional: add auto-cycle and smooth hover pause -->
+    <script>
+        (function() {
+            // ensure carousel initializes & allows smooth interaction
+            const carouselElement = document.querySelector('#categoryCarousel');
+            if (carouselElement) {
+                // optional: pause on hover for better UX
+                const carousel = new bootstrap.Carousel(carouselElement, {
+                    interval: 5000,
+                    ride: 'carousel',
+                    pause: 'hover',
+                    wrap: true
+                });
+                // small fix for touch devices
+                carouselElement.addEventListener('touchstart', () => {
+                    // just user-friendly: nothing extra needed
+                });
+            }
+        })();
+    </script>
+    <!-- additional style for badge:hover & fallback -->
+    <style>
+        .badge.bg-light {
+            background: #ffffffd9 !important;
+            backdrop-filter: blur(2px);
+            border: 1px solid #dee2e6;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        .badge.bg-light:hover {
+            background: #F28518 !important;
+            color: white !important;
+            border-color: #F28518;
+            transform: translateY(-2px);
+        }
+        .carousel-caption p {
+            font-size: 0.95rem;
+            background: rgba(0,0,0,0.55);
+            backdrop-filter: blur(4px);
+        }
+        .category-tag {
+            font-size: 0.85rem;
+            background: rgba(28,45,73,0.85);
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        @media (max-width: 576px) {
+            .carousel-caption h3 {
+                font-size: 1.1rem;
+            }
+            .carousel-caption p {
+                font-size: 0.7rem;
+                padding: 0.15rem 0.6rem;
+            }
+            .category-tag {
+                font-size: 0.7rem;
+                top: 12px;
+                left: 12px;
+                padding: 3px 12px;
+            }
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Nomad Tours | Safari Photo Gallery – Kenya Wildlife & Landscapes</title>
+    <meta name="description"
+        content="Explore the beauty of Kenya through our safari gallery: wildlife encounters, Maasai Mara sunsets, cultural moments, and breathtaking landscapes.">
+    <meta name="keywords" content="Kenya safari photos, Maasai Mara gallery, wildlife photography, Nomad Tours gallery">
+    <link rel="icon" href="assets/logo/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        /* BASE STYLES (consistent with brand) */
+        @font-face {
+            font-family: 'Aptos';
+            src: url('/Aptos/Aptos.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        :root {
+            --primary-blue: #1C2D49;
+            --secondary-orange: #F28518;
+            --support-green: #059669;
+            --white: #FFFFFF;
+            --light: #F8F9FA;
+            --soft-gray: #F1F5F9;
+            --ocean-blue: #1C2D49;
+            --sunrise-gold: #F28518;
+            --deep-navy: #1C2D49;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Aptos', sans-serif;
+            color: var(--deep-navy);
+            background-color: var(--light);
+            line-height: 1.5;
+            font-size: 0.9rem;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Aptos', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Header Hero */
+        .page-header {
+            background: linear-gradient(rgba(28, 45, 73, 0.85), rgba(28, 45, 73, 0.85)),
+                url('https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+            background-size: cover;
+            min-height: 32vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px 0 50px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Navbar */
+        .navbar-wrapper {
+            position: relative;
+            z-index: 1100;
+            transition: all 0.3s ease;
+            margin-top: 0;
+            border-radius: 60px;
+            background: transparent;
+            width: 100%;
+        }
+
+        .custom-navbar {
+            background: var(--white);
+            border-radius: 60px;
+            padding: 0.5rem 5rem;
+            box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-wrapper.sticky-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            margin: 0;
+            border-radius: 0;
+            z-index: 1100;
+            background: var(--white);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-wrapper.sticky-nav .custom-navbar {
+            border-radius: 0;
+            box-shadow: none;
+            padding: 0.3rem 8rem;
+        }
+
+        body.nav-fixed-padding {
+            padding-top: 85px;
+        }
+
+        .travel-logo {
+            height: 70px;
+            transition: transform 0.2s;
+            max-width: 100%;
+        }
+
+        .custom-navbar .navbar-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .navbar-brand {
+            margin-right: 0;
+            padding: 0;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-text {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .brand-text span {
+            color: var(--secondary-orange);
+        }
+
+        .navbar-collapse {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            gap: 0.25rem;
+            margin: 0;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--ocean-blue);
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            transition: 0.2s;
+            white-space: nowrap;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--support-green);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-primary-travel {
+            background-color: var(--sunrise-gold);
+            text-decoration: none;
+            color: var(--white);
+            border: 2px solid var(--sunrise-gold);
+            padding: 0.4rem 1.25rem;
+            border-radius: 40px;
+            font-weight: 600;
+            transition: all 0.25s;
+        }
+
+        .btn-primary-travel:hover {
+            background-color: transparent;
+            color: var(--sunrise-gold);
+            border-color: var(--sunrise-gold);
+        }
+
+        /* Gallery Section */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--sunrise-gold);
+            margin-top: 8px;
+            border-radius: 4px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            height: 260px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+            color: white;
+            padding: 20px 15px 10px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            text-align: left;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay span {
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Lightbox Modal */
+        .modal-image {
+            max-width: 90%;
+            max-height: 80vh;
+            margin: auto;
+            display: block;
+            border-radius: 16px;
+        }
+
+        .modal-body {
+            text-align: center;
+            background: #1e1e2f;
+        }
+
+        .custom-modal .modal-content {
+            background: transparent;
+            border: none;
+        }
+
+        .close-lightbox {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+            z-index: 1060;
+        }
+
+        /* Footer & Mobile */
+        footer {
+            background: var(--deep-navy);
+            color: var(--white);
+            padding: 56px 0 28px;
+            margin-top: 3rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h5 {
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+        }
+
+        .footer-col p,
+        .footer-col a {
+            font-size: 13px;
+            color: var(--light);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .footer-col a:hover {
+            color: var(--secondary-orange);
+        }
+
+        .footer-social a {
+            width: 34px;
+            height: 34px;
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 8px;
+            color: #CFDCD8;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--secondary-orange);
+            padding-top: 22px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #25D366;
+            color: white;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            font-size: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: 0.2s;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--ocean-blue);
+        }
+
+        .offcanvas {
+            background: var(--white);
+            width: 85% !important;
+            max-width: 350px;
+        }
+
+        @media (max-width: 991px) {
+
+            .navbar-collapse,
+            .nav-right {
+                display: none !important;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .custom-navbar {
+                padding: 0.5rem 1rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 1.9rem;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .gallery-item {
+                height: 200px;
+            }
+        }
+
+        .mobile-nav-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .mobile-nav-list a {
+            text-decoration: none;
+            color: var(--deep-navy);
+            font-weight: 600;
+            display: block;
+            padding: 8px 12px;
+        }
+
+        .btn-mobile-book,
+        .btn-mobile-wa {
+            text-decoration: none;
+            font-weight: 600;
+            display: block;
+            text-align: center;
+            border-radius: 40px;
+            padding: 12px;
+        }
+
+        .btn-mobile-book {
+            background: var(--sunrise-gold);
+            color: white;
+        }
+
+        .btn-mobile-wa {
+            background: #25D366;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .modal-content {
+            border-radius: 24px;
+        }
+
+        .modal-header {
+            background: var(--deep-navy);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="container">
+            <div class="navbar-wrapper" id="navbarWrapper">
+                <div class="custom-navbar">
+                    <nav class="navbar navbar-expand-lg navbar-light p-0">
+                        <div class="container-fluid px-0 navbar-content">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/image/nomad_tours_logo.webp" alt="Nomad Tours Logo"
+                                    class="travel-logo">
+                            </a>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="tours.html">Safari Tours</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+                                    <li class="nav-item"><a class="nav-link active" href="event.html">Events</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav-right">
+                                <a href="#" class="btn-primary-travel">Book an Experience</a>
+                            </div>
+                            <button class="mobile-menu-toggle" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#mobileOffcanvas">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-3">
+            <h1 class="hero-title" style="font-size: 2.8rem;">Our Visual Safari Diary</h1>
+            <p class="hero-subtitle" style="font-size: 1.2rem;">Moments that capture the spirit of Kenya – from the
+                savannah to the coast.</p>
+        </div>
+    </header>
+
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Wildlife & Landscape Gallery</h2>
+            <p class="text-muted mx-auto" style="max-width: 720px;">Explore authentic moments captured by our guides and
+                travelers. Every image tells a story of adventure, conservation, and beauty.</p>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="row g-4">
+            <!-- Image 1 -->
+            <div class="col-md-6 col-sm-6">
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal"
+                    data-img="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1200&h=800&fit=crop"
+                    data-title="Wildebeest Crossing Mara River">
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&h=400&fit=crop"
+                        alt="Great Migration" loading="lazy">
+                    <div class="gallery-overlay"><span><i class="fas fa-expand-alt me-1"></i> Wildebeest Crossing</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Image 2 -->
+            <div class="col-md-6 col-sm-6">
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal"
+                    data-img="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1200&h=800&fit=crop"
+                    data-title="Hot Air Balloon over Masai Mara">
+                    <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=600&h=400&fit=crop"
+                        alt="Balloon Safari" loading="lazy">
+                    <div class="gallery-overlay"><span><i class="fas fa-expand-alt me-1"></i> Balloon Safari</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Image 3 -->
+            <div class="col-md-6 col-sm-6">
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal"
+                    data-img="https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?w=1200&h=800&fit=crop"
+                    data-title="Elephant Family at Amboseli">
+                    <img src="https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?w=600&h=400&fit=crop"
+                        alt="Elephants Amboseli" loading="lazy">
+                    <div class="gallery-overlay"><span><i class="fas fa-expand-alt me-1"></i> Elephant Herd</span></div>
+                </div>
+            </div>
+            <!-- Image 4 -->
+            <div class="col-md-6 col-sm-6">
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#lightboxModal"
+                    data-img="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&h=800&fit=crop"
+                    data-title="Diani Beach Sunset">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop"
+                        alt="Kenya Coast" loading="lazy">
+                    <div class="gallery-overlay"><span><i class="fas fa-expand-alt me-1"></i> Coastal Paradise</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <p class="text-muted">Experience these sights in person. <a href="tours.html" class="text-decoration-none"
+                    style="color: var(--sunrise-gold);">Book your safari →</a></p>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="modal fade custom-modal" id="lightboxModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-body p-0">
+                    <button type="button" class="btn-close btn-close-white close-lightbox" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    <img src="" alt="Gallery Image" class="modal-image" id="lightboxImg">
+                    <h4 class="text-white mt-3" id="lightboxCaption" style="font-size: 1.2rem;"></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="assets/image/nomad_tours_logo.webp" alt="Nomad Tours"
+                        style="background:#f0f2f5; border-radius:12px; padding:6px 12px; max-height:70px; margin-bottom:16px;">
+                    <h5>Nomad Tours & Experiences</h5>
+                    <p>Authentic journeys crafted by locals, with heart and expertise.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/254712345678"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <p><i class="fas fa-phone-alt me-2" style="color:var(--secondary-orange);"></i> +254 712 345 678</p>
+                    <p><i class="fas fa-map-marker-alt me-2" style="color:var(--secondary-orange);"></i> Bofa Road,
+                        Kilifi Kenya</p>
+                    <p><i class="far fa-envelope me-2" style="color:var(--secondary-orange);"></i>
+                        hello@nomadtours.co.ke</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Policies</h5>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Booking Terms</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#cancellationModal">Cancellation Policy</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Experiences</h5>
+                    <a href="#">Wildlife Safaris</a>
+                    <a href="#">Cultural Tours</a>
+                    <a href="#">Beach Excursions</a>
+                    <a href="#">Custom Itineraries</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Nomad Tours & Experiences — Authentic Kenya Adventures.</p>
+                <p>🌍 Kilifi, Kenya | Design: LacomasTech</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/254712345678" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- Offcanvas Mobile Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileOffcanvas">
+        <div class="offcanvas-header">
+            <img src="assets/image/nomad_tours_logo.webp" alt="logo" style="height: 45px;">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="tours.html"><i class="fas fa-binoculars"></i> Safari Tours</a></li>
+                <li><a href="service.html"><i class="fas fa-concierge-bell"></i> Services</a></li>
+                <li><a href="blogs.html"><i class="fas fa-blog"></i> Blogs</a></li>
+                <li><a href="event.html"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                <li><a href="gallery.html"><i class="fas fa-image"></i> Gallery</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            <div class="mobile-action-buttons mt-4">
+                <a href="#" class="btn-mobile-book"><i class="fas fa-calendar-check"></i> Book Now</a>
+                <a href="https://wa.me/254712345678" class="btn-mobile-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Policy Modals -->
+    <div class="modal fade" id="privacyModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Privacy Policy</h5><button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Nomad Tours collects booking information only for service delivery. Your data is never shared.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="termsModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Booking Terms</h5><button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>30% deposit confirms. Cancellation 30+ days: full refund less 10% admin.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cancellationModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cancellation</h5><button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Free up to 30 days before departure. 50% refund 15-29 days.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Sticky navbar
+        const navbarWrapper = document.getElementById('navbarWrapper');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 20) {
+                if (!navbarWrapper.classList.contains('sticky-nav')) {
+                    navbarWrapper.classList.add('sticky-nav');
+                    document.body.classList.add('nav-fixed-padding');
+                }
+            } else {
+                if (navbarWrapper.classList.contains('sticky-nav')) {
+                    navbarWrapper.classList.remove('sticky-nav');
+                    document.body.classList.remove('nav-fixed-padding');
+                }
+            }
+        });
+
+        // Lightbox dynamic content
+        const lightboxModal = document.getElementById('lightboxModal');
+        if (lightboxModal) {
+            lightboxModal.addEventListener('show.bs.modal', function (event) {
+                const trigger = event.relatedTarget;
+                const imgSrc = trigger.getAttribute('data-img');
+                const imgTitle = trigger.getAttribute('data-title');
+                const modalImg = document.getElementById('lightboxImg');
+                const caption = document.getElementById('lightboxCaption');
+                modalImg.src = imgSrc;
+                caption.textContent = imgTitle || "Kenwa Safari Moment";
+            });
+        }
+
+        const offcanvasEl = document.getElementById('mobileOffcanvas');
+        if (offcanvasEl) {
+            offcanvasEl.addEventListener('show.bs.offcanvas', () => { navbarWrapper.style.display = 'none'; });
+            offcanvasEl.addEventListener('hidden.bs.offcanvas', () => { navbarWrapper.style.display = ''; });
+        }
+    </script>
+</body>
+
+</html>

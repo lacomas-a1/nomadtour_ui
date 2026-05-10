@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>SaviraNest | Book an Experience – Reserve Your Kenyan Adventure</title>
+
+    <meta name="description"
+        content="Book unforgettable experiences in Kenya: safaris, snorkeling, cultural tours, and more. Instant confirmation.">
+    <meta name="keywords"
+        content="booking experience Kenya, Masai Mara safari, Diani snorkeling, Watamu marine, Lamu dhow">
+
+    <link rel="icon" href="assets/image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link href="assets/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Flatpickr CSS (optional, kept for date picker consistency) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/airbnb.css">
+    <style>
+        /* Header Hero */
+        .booking-header {
+            background: linear-gradient(rgba(11, 31, 58, 0.85), rgba(11, 31, 58, 0.85)),
+                url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+            background-size: cover;
+            min-height: 38vh;
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 50px;
+            padding-bottom: 40px;
+            text-align: center;
+        }
+
+        /* Booking Card */
+        .booking-card {
+            background: var(--white);
+            border-radius: 32px;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.2);
+            padding: 2rem 2rem;
+            margin-top: -3rem;
+            margin-bottom: 5rem;
+            position: relative;
+            z-index: 20;
+        }
+
+        .toggle-booking-type {
+            display: flex;
+            gap: 1rem;
+            background: #F1F5F9;
+            border-radius: 60px;
+            padding: 0.4rem;
+            margin-bottom: 2rem;
+        }
+
+        .booking-type-btn {
+            flex: 1;
+            text-align: center;
+            padding: 0.75rem;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s;
+            background: transparent;
+            border: none;
+            color: var(--deep-navy);
+        }
+
+        .booking-type-btn.active {
+            background: var(--sunrise-gold);
+            color: white;
+            box-shadow: 0 4px 12px rgba(249, 168, 38, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-label-custom {
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            color: var(--deep-navy);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .form-control-booking,
+        .form-select-booking {
+            background: #F9FAFB;
+            border: 1px solid #E2E8F0;
+            border-radius: 20px;
+            padding: 0.7rem 1rem;
+            font-size: 0.9rem;
+            width: 100%;
+            transition: 0.2s;
+        }
+
+        .form-control-booking:focus,
+        .form-select-booking:focus {
+            border-color: var(--sunrise-gold);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(249, 168, 38, 0.2);
+        }
+
+        .price-summary {
+            background: #FEF9F0;
+            border-radius: 24px;
+            padding: 1.2rem;
+            margin-top: 1.5rem;
+        }
+
+        .btn-book-now {
+            background: linear-gradient(95deg, var(--support-green), #047857);
+            border: none;
+            padding: 14px;
+            width: 100%;
+            font-weight: 800;
+            border-radius: 50px;
+            color: white;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+
+        .btn-book-now:hover {
+            transform: scale(1.01);
+            box-shadow: 0 10px 20px rgba(5, 150, 105, 0.3);
+        }
+
+        .desc {
+            font-size: 16px;
+        }
+
+        .search-experience {
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        .search-experience i {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #adb5bd;
+            z-index: 2;
+        }
+
+        .search-experience input {
+            padding-left: 35px;
+            border-radius: 30px;
+            border: 1px solid #e2e8f0;
+            background: white;
+        }
+
+        .no-results-msg {
+            font-size: 0.85rem;
+            color: #dc3545;
+            margin-top: 0.3rem;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="booking-header">
+        <div class="container">
+            <div class="navbar-wrapper" id="navbarWrapper">
+                <div class="custom-navbar">
+                    <nav class="navbar navbar-expand-lg navbar-light p-0">
+                        <div class="container-fluid px-0 navbar-content">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/image/nomad_tours_logo.webp" alt="Nomad Tours Logo"
+                                    class="travel-logo">
+                            </a>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="tours.html">Safari Tours</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="event.html">Events</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav-right">
+                                <a href="#" class="btn-primary-travel">Book an Experience</a>
+                            </div>
+                            <button class="mobile-menu-toggle" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#mobileOffcanvas">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="hero-content container">
+            <h1 class="hero-title">Book Your Kenyan Experience</h1>
+            <p class="hero-subtitle">Secure your adventure — from wildlife safaris to cultural tours — instant
+                confirmation</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="booking-card">
+            <form id="bookingForm">
+                <!-- EXPERIENCE FIELDS with search -->
+                <div id="experienceFields">
+                    <div class="row g-3">
+                        <div class="col-md-12 form-group">
+                            <label class="form-label-custom"><i class="fas fa-search"></i> Search Experiences</label>
+                            <div class="search-experience">
+                                <i class="fas fa-search"></i>
+                                <input type="text" id="searchExperience" class="form-control"
+                                    placeholder="Type to filter experiences...">
+                            </div>
+                            <div id="noResultsMsg" class="no-results-msg">No matching experiences found. Try a different
+                                keyword.</div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="form-label-custom"><i class="fas fa-tree"></i> Select Experience *</label>
+                            <select id="experienceItem" class="form-select-booking" required>
+                                <option value="">-- Choose an adventure --</option>
+                                <option value="Masai Mara Full Day Safari" data-price="12500">Masai Mara Full Day Safari
+                                    (incl. lunch) – KES 12,500 p.p</option>
+                                <option value="Diani Snorkeling & Wasini Island" data-price="5500">Diani Snorkeling &
+                                    Wasini Island – KES 5,500 p.p</option>
+                                <option value="Watamu Marine Park & Mida Creek" data-price="4800">Watamu Marine Park &
+                                    Mida Creek – KES 4,800 p.p</option>
+                                <option value="Lamu Dhow Sunset Cruise" data-price="3200">Lamu Dhow Sunset Cruise – KES
+                                    3,200 p.p</option>
+                                <option value="Hell's Gate Cycling & Hiking" data-price="3900">Hell's Gate Cycling &
+                                    Hiking – KES 3,900 p.p</option>
+                                <option value="Coffee Farm & Kiambethu Tea Tour" data-price="4500">Farm-to-Table Coffee
+                                    Tour – KES 4,500 p.p</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="form-label-custom"><i class="fas fa-calendar-alt"></i> Preferred Date
+                                *</label>
+                            <input type="date" id="experienceDate" class="form-control-booking" required>
+                        </div>
+                    </div>
+                    <div class="row g-3 mt-2">
+                        <div class="col-md-4 form-group">
+                            <label class="form-label-custom"><i class="fas fa-user-friends"></i> Adults (12+
+                                years)</label>
+                            <input type="number" id="adults" class="form-control-booking" value="2" min="1" max="10">
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <label class="form-label-custom"><i class="fas fa-child"></i> Children (under 12)</label>
+                            <input type="number" id="children" class="form-control-booking" value="0" min="0" max="6">
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <label class="form-label-custom"><i class="fas fa-users"></i> Total Participants
+                                (auto-calculated) *</label>
+                            <input type="number" id="participants" class="form-control-booking" value="2" readonly
+                                style="background:#eef2ff;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guest Information -->
+                <div class="row g-3 mt-3">
+                    <div class="col-md-4 form-group">
+                        <label class="form-label-custom"><i class="fas fa-user"></i> Full Name *</label>
+                        <input type="text" id="guestName" class="form-control-booking" placeholder="John Mwangi"
+                            required>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label class="form-label-custom"><i class="fas fa-envelope"></i> Email *</label>
+                        <input type="email" id="guestEmail" class="form-control-booking" placeholder="hello@example.com"
+                            required>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label class="form-label-custom"><i class="fas fa-phone-alt"></i> Phone (WhatsApp) *</label>
+                        <input type="tel" id="guestPhone" class="form-control-booking" placeholder="+2547XXXXXXXX"
+                            required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <label class="form-label-custom"><i class="fas fa-comment"></i> Special Requests</label>
+                        <textarea rows="3" id="specialRequests" placeholder="Dietary, accessibility, equipment needs..."
+                            class="form-control-booking"></textarea>
+                    </div>
+                </div>
+
+                <!-- Price Summary -->
+                <div class="price-summary" id="priceSummary">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span><strong>Total estimated price:</strong></span>
+                        <span id="totalAmountDisplay" class="fw-bold fs-5" style="color: var(--support-green);">KES
+                            0</span>
+                    </div>
+                    <div class="small text-muted mt-1" id="breakdownText">Select an experience above to see total</div>
+                </div>
+
+                <button type="submit" class="btn-book-now mt-3"><i class="fas fa-lock me-2"></i> Confirm & Proceed to
+                    Payment</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col contact-info-card-footer">
+                    <img src="assets/image/nomad_tours_logo.webp" alt="Nomad Tours"
+                        style="border-radius:12px; padding:6px 12px; max-height:100px; margin-bottom:16px; filter: brightness(0) invert(1);">
+                    <h5>Nomad Tours & Experiences</h5>
+                    <p>Your trusted partner for authentic African adventures and unforgettable safari experiences.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/254712345678"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Experiences</h5>
+                    <a href="#">Wildlife Safaris</a>
+                    <a href="#">Cultural Tours</a>
+                    <a href="#">Beach Excursions</a>
+                    <a href="#">Custom Itineraries</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Policies</h5>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Booking Terms</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#cancellationModal">Cancellation Policy</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <p><i class="fas fa-phone-alt me-2" style="color:var(--secondary-orange);"></i> +254 102 593 346</p>
+                    <p><i class="fas fa-map-marker-alt me-2" style="color:var(--secondary-orange);"></i> Bofa Road,
+                        Kilifi Kenya</p>
+                    <p><i class="far fa-envelope me-2" style="color:var(--secondary-orange);"></i>
+                        info@wildnomads.co.ke</p>
+                    <p><i class="far fa-envelope me-2" style="color:var(--secondary-orange);"></i>
+                        booking@wildnomads.co.ke</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Nomad Tours & Experiences — Authentic Kenya Adventures.</p>
+                <p>🌍 Kilifi, Kenya | Design: <a href="" class="footer-link">LacomasTech</a> | Admin: <a href=""
+                        class="footer-link">LogIn</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/254712345678" class="whatsapp-float" target="_blank" rel="noopener noreferrer"><i
+            class="fab fa-whatsapp"></i></a>
+
+    <!-- Offcanvas Mobile Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileOffcanvas">
+        <div class="offcanvas-header">
+            <img src="assets/image/savira_nest_logo.webp" alt="Savira Nest Logo" style="height: 55px;">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="acc.html"><i class="fas fa-hotel"></i> Stays</a></li>
+                <li><a href="experiences.html"><i class="fas fa-water"></i> Experiences</a></li>
+                <li><a href="rentals.html"><i class="fas fa-hiking"></i> Outdoor Rentals</a></li>
+                <li><a href="pricing.html"><i class="fas fa-tag"></i> Pricing</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            <div class="mobile-action-buttons">
+                <a href="login.html" class="btn-mobile-book"><i class="fas fa-user"></i> Login / Sign Up</a>
+            </div>
+            <div class="mobile-contact-info">
+                <p><i class="fas fa-phone-alt"></i> +254 712 345 678</p>
+                <p><i class="fas fa-map-marker-alt"></i> Bofa Road, Kilifi, Kenya</p>
+                <p><i class="far fa-envelope"></i> info@saviranest.co.ke</p>
+                <div class="mobile-social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/254712345678" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals (shortened for brevity) -->
+    <div class="modal fade" id="privacyModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Privacy Policy</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>SaviraNest is committed to protecting your privacy. We collect personal information only to
+                        process bookings and improve your experience. Your data is never shared without consent.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="termsModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Terms & Conditions</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>30% deposit confirms booking. Full payment due 14 days before activity. Cancellation free up to 7
+                        days prior, 50% refund 3-7 days, no refund within 48 hours.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cancellationModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Cancellation Policy</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>You may cancel your experience booking up to 7 days before the scheduled date for a full refund
+                        (minus 10% admin fee). Cancellations within 48 hours are non-refundable.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // DOM elements
+        const experienceSelect = document.getElementById('experienceItem');
+        const searchInput = document.getElementById('searchExperience');
+        const noResultsMsg = document.getElementById('noResultsMsg');
+        const adultsInput = document.getElementById('adults');
+        const childrenInput = document.getElementById('children');
+        const participantsInput = document.getElementById('participants');
+        const totalDisplay = document.getElementById('totalAmountDisplay');
+        const breakdownSpan = document.getElementById('breakdownText');
+        const bookingForm = document.getElementById('bookingForm');
+
+        // Store original options (excluding the first placeholder)
+        let originalOptions = [];
+        for (let i = 1; i < experienceSelect.options.length; i++) {
+            originalOptions.push({
+                value: experienceSelect.options[i].value,
+                text: experienceSelect.options[i].text,
+                price: experienceSelect.options[i].getAttribute('data-price')
+            });
+        }
+
+        // Function to filter select options
+        function filterExperiences() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            let hasVisible = false;
+
+            // Clear current options (keep only placeholder)
+            while (experienceSelect.options.length > 1) {
+                experienceSelect.remove(1);
+            }
+
+            if (searchTerm === '') {
+                // Show all original options
+                originalOptions.forEach(opt => {
+                    const option = new Option(opt.text, opt.value);
+                    option.setAttribute('data-price', opt.price);
+                    experienceSelect.add(option);
+                });
+                hasVisible = originalOptions.length > 0;
+                noResultsMsg.style.display = 'none';
+            } else {
+                // Filter options
+                const filtered = originalOptions.filter(opt => opt.text.toLowerCase().includes(searchTerm));
+                filtered.forEach(opt => {
+                    const option = new Option(opt.text, opt.value);
+                    option.setAttribute('data-price', opt.price);
+                    experienceSelect.add(option);
+                });
+                hasVisible = filtered.length > 0;
+                noResultsMsg.style.display = hasVisible ? 'none' : 'block';
+            }
+
+            // Reset selection to placeholder
+            experienceSelect.value = '';
+            // Re-trigger price calculation
+            updateParticipantsAndPrice();
+        }
+
+        // Update participants = adults + children, then price
+        function updateParticipantsAndPrice() {
+            let adults = parseInt(adultsInput.value) || 0;
+            let children = parseInt(childrenInput.value) || 0;
+            const totalParticipants = adults + children;
+            participantsInput.value = totalParticipants;
+
+            const selectedOption = experienceSelect.options[experienceSelect.selectedIndex];
+            if (!selectedOption || !selectedOption.value || totalParticipants === 0) {
+                totalDisplay.innerText = 'KES 0';
+                breakdownSpan.innerText = 'Select an experience and ensure at least 1 participant.';
+                return;
+            }
+
+            const pricePerPerson = parseInt(selectedOption.getAttribute('data-price')) || 0;
+            const total = pricePerPerson * totalParticipants;
+            totalDisplay.innerText = `KES ${total.toLocaleString()}`;
+            breakdownSpan.innerText = `${selectedOption.text.split('–')[0].trim()} × ${totalParticipants} person(s) = KES ${total.toLocaleString()}`;
+        }
+
+        // Event listeners
+        searchInput.addEventListener('input', filterExperiences);
+        experienceSelect.addEventListener('change', updateParticipantsAndPrice);
+        adultsInput.addEventListener('input', updateParticipantsAndPrice);
+        childrenInput.addEventListener('input', updateParticipantsAndPrice);
+
+        // Initial load - show all options
+        filterExperiences();
+
+        // Form submission handler
+        bookingForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const experience = experienceSelect.value;
+            const expDate = document.getElementById('experienceDate').value;
+            const participants = participantsInput.value;
+            const name = document.getElementById('guestName').value.trim();
+            const email = document.getElementById('guestEmail').value.trim();
+            const phone = document.getElementById('guestPhone').value.trim();
+
+            if (!experience || !expDate || participants == 0 || !name || !email || !phone) {
+                alert('Please fill in all required fields (*). Ensure at least one adult or child.');
+                return;
+            }
+
+            alert(`✨ Thank you, ${name}! Your booking for "${experience}" on ${expDate} has been received. We'll send a confirmation email to ${email} within 24 hours.\nTotal: ${totalDisplay.innerText}`);
+        });
+    </script>
+</body>
+
+</html>

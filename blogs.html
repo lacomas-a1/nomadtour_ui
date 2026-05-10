@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Nomad Tours | Travel Blog – Kenya Safari Stories & Tips</title>
+    <meta name="description"
+        content="Explore the Nomad Tours blog: insider guides to Masai Mara, cultural insights, beach getaways, and sustainable travel in Kenya.">
+    <meta name="keywords"
+        content="Kenya travel blog, safari tips, Masai Mara guide, Diani beach, Kenyan culture, Nomad Tours blog">
+    <link rel="icon" href="assets/image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header class="blog-header">
+        <div class="container">
+            <div class="navbar-wrapper" id="navbarWrapper">
+                <div class="custom-navbar">
+                    <nav class="navbar navbar-expand-lg navbar-light p-0">
+                        <div class="container-fluid px-0 navbar-content">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/image/nomad_tours_logo.webp" alt="Nomad Tours Logo"
+                                    class="travel-logo">
+                            </a>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="tours.html">Safari Tours</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                                    <li class="nav-item"><a class="nav-link active" href="blogs.html">Blogs</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="event.html">Events</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav-right">
+                                <a href="#" class="btn-primary-travel">Book an Experience</a>
+                            </div>
+                            <button class="mobile-menu-toggle" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#mobileOffcanvas">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="hero-content container">
+            <h1 class="hero-title">Nomad Stories & Travel Tales</h1>
+            <p class="hero-subtitle">Insider guides, safari tips, and cultural deep dives
+                from Kenya</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Category Filter Bar (matches tours page design) -->
+        <div class="category-bar">
+            <button class="filter-btn active" data-filter="all">All Stories</button>
+            <button class="filter-btn" data-filter="safari">Safari & Wildlife</button>
+            <button class="filter-btn" data-filter="culture">Culture & Heritage</button>
+            <button class="filter-btn" data-filter="beach">Beach & Coastal</button>
+            <button class="filter-btn" data-filter="tips">Travel Tips</button>
+        </div>
+
+        <!-- Blog Grid -->
+        <div class="row g-4" id="blogGrid">
+            <!-- Post 1 - Safari -->
+            <div class="col-lg-4 col-md-6 blog-post" data-category="safari">
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&w=600&h=400&fit=crop"
+                        class="blog-img" alt="Masai Mara jeep safari">
+                    <div class="blog-content">
+                        <div class="blog-meta"><span><i class="far fa-calendar-alt"></i> March 12, 2026</span><span><i
+                                    class="fas fa-tag"></i> Safari</span></div>
+                        <h3 class="blog-title">Ultimate Masai Mara Safari Guide: Best Time & Hidden Spots</h3>
+                        <p class="blog-excerpt">Discover the lesser-known river crossings, mobile camping tips, and how
+                            to witness the Great Migration without crowds...</p>
+                        <a href="blog-details.html" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Post 2 - Culture -->
+            <div class="col-lg-4 col-md-6 blog-post" data-category="culture">
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?ixlib=rb-4.0.3&w=600&h=400&fit=crop"
+                        class="blog-img" alt="Maasai village">
+                    <div class="blog-content">
+                        <div class="blog-meta"><span><i class="far fa-calendar-alt"></i> February 28,
+                                2026</span><span><i class="fas fa-tag"></i> Culture</span></div>
+                        <h3 class="blog-title">Meeting the Maasai: Respectful Cultural Encounters</h3>
+                        <p class="blog-excerpt">Learn the etiquette, photography tips, and authentic experiences that
+                            support local communities beyond the tourist trail...</p>
+                        <a href="blog-details.html" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Post 3 - Beach -->
+            <div class="col-lg-4 col-md-6 blog-post" data-category="beach">
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&w=600&h=400&fit=crop"
+                        class="blog-img" alt="Diani beach">
+                    <div class="blog-content">
+                        <div class="blog-meta"><span><i class="far fa-calendar-alt"></i> January 20, 2026</span><span><i
+                                    class="fas fa-tag"></i> Beach</span></div>
+                        <h3 class="blog-title">Diani Beyond the Beach: Marine Reserves & Local Eats</h3>
+                        <p class="blog-excerpt">From snorkeling with whale sharks to Swahili seafood feasts, here's how
+                            to experience Kenya's south coast like a local...</p>
+                        <a href="blog-details.html" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Post 4 - Tips -->
+            <div class="col-lg-4 col-md-6 blog-post" data-category="tips">
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?ixlib=rb-4.0.3&w=600&h=400&fit=crop"
+                        class="blog-img" alt="Packing for safari">
+                    <div class="blog-content">
+                        <div class="blog-meta"><span><i class="far fa-calendar-alt"></i> December 5, 2025</span><span><i
+                                    class="fas fa-tag"></i> Travel Tips</span></div>
+                        <h3 class="blog-title">What to Pack for a Kenya Safari: Expert Checklist</h3>
+                        <p class="blog-excerpt">Avoid overpacking: neutral colors, layers, camera gear, and essential
+                            gadgets for a seamless bush adventure...</p>
+                        <a href="blog-details.html" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Post 5 - Safari -->
+            <div class="col-lg-4 col-md-6 blog-post" data-category="safari">
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&w=600&h=400&fit=crop"
+                        class="blog-img" alt="Amboseli elephants">
+                    <div class="blog-content">
+                        <div class="blog-meta"><span><i class="far fa-calendar-alt"></i> November 18,
+                                2025</span><span><i class="fas fa-tag"></i> Safari</span></div>
+                        <h3 class="blog-title">Amboseli's Giants: Photographing Elephants with Kilimanjaro</h3>
+                        <p class="blog-excerpt">Tips for capturing that postcard shot, best lodges with mountain views,
+                            and elephant behavior insights...</p>
+                        <a href="blog-details.html" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Post 6 - Culture -->
+            <div class="col-lg-4 col-md-6 blog-post" data-category="culture">
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?ixlib=rb-4.0.3&w=600&h=400&fit=crop"
+                        class="blog-img" alt="Lamu old town">
+                    <div class="blog-content">
+                        <div class="blog-meta"><span><i class="far fa-calendar-alt"></i> October 10, 2025</span><span><i
+                                    class="fas fa-tag"></i> Culture</span></div>
+                        <h3 class="blog-title">Lamu Archipelago: Where Swahili History Comes Alive</h3>
+                        <p class="blog-excerpt">A journey through donkeys, dhows, and centuries-old stone towns — plus
+                            the best local festivals...</p>
+                        <a href="blog-details.html" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Post 7 - Beach -->
+            <div class="col-lg-4 col-md-6 blog-post" data-category="beach">
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1582651300295-6c1a1bdee1b6?ixlib=rb-4.0.3&w=600&h=400&fit=crop"
+                        class="blog-img" alt="Watamu marine">
+                    <div class="blog-content">
+                        <div class="blog-meta"><span><i class="far fa-calendar-alt"></i> September 2,
+                                2025</span><span><i class="fas fa-tag"></i> Beach</span></div>
+                        <h3 class="blog-title">Watamu Marine Park: Snorkeling with Sea Turtles</h3>
+                        <p class="blog-excerpt">A complete guide to coral gardens, turtle conservation, and the best
+                            tide times for crystal-clear snorkeling...</p>
+                        <a href="blog-details.html" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Post 8 - Tips -->
+            <div class="col-lg-4 col-md-6 blog-post" data-category="tips">
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1483450388369-9ed95738483c?ixlib=rb-4.0.3&w=600&h=400&fit=crop"
+                        class="blog-img" alt="Kenya road trip">
+                    <div class="blog-content">
+                        <div class="blog-meta"><span><i class="far fa-calendar-alt"></i> August 14, 2025</span><span><i
+                                    class="fas fa-tag"></i> Travel Tips</span></div>
+                        <h3 class="blog-title">Self-Drive vs Guided Safari: Pros, Cons & Costs</h3>
+                        <p class="blog-excerpt">Is it better to rent a 4x4 or book a driver? We break down flexibility,
+                            budget, and safety considerations...</p>
+                        <a href="blog-details.html" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Post 9 - Safari -->
+            <div class="col-lg-4 col-md-6 blog-post" data-category="safari">
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1499363536502-87642509e31b?ixlib=rb-4.0.3&w=600&h=400&fit=crop"
+                        class="blog-img" alt="Leopard in tree">
+                    <div class="blog-content">
+                        <div class="blog-meta"><span><i class="far fa-calendar-alt"></i> July 22, 2025</span><span><i
+                                    class="fas fa-tag"></i> Safari</span></div>
+                        <h3 class="blog-title">The Big Five: Where to Spot Each in Kenya’s Parks</h3>
+                        <p class="blog-excerpt">Leopard in Samburu, rhino in Lake Nakuru – our expert guide to
+                            maximizing wildlife sightings...</p>
+                        <a href="blog-details.html" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More -->
+        <div class="load-more">
+            <button class="btn-outline" id="loadMoreBtn" style="cursor: pointer;"><i
+                    class="fas fa-sync-alt me-2"></i>Load More Articles</button>
+        </div>
+        <p class="text-muted text-center mt-4 small">* Click on category filters to explore stories by theme.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col contact-info-card-footer">
+                    <img src="assets/image/nomad_tours_logo.webp" alt="Nomad Tours" style="border-radius:12px; padding:6px 12px; max-height:100px; margin-bottom:16px; filter: brightness(0) invert(1);">
+                    <h5>Nomad Tours & Experiences</h5>
+                    <p>Your trusted partner for authentic African adventures and unforgettable safari experiences.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/254712345678"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Experiences</h5>
+                    <a href="#">Wildlife Safaris</a>
+                    <a href="#">Cultural Tours</a>
+                    <a href="#">Beach Excursions</a>
+                    <a href="#">Custom Itineraries</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Policies</h5>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Booking Terms</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#cancellationModal">Cancellation Policy</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <p><i class="fas fa-phone-alt me-2" style="color:var(--secondary-orange);"></i> +254 102 593 346</p>
+                    <p><i class="fas fa-map-marker-alt me-2" style="color:var(--secondary-orange);"></i> Bofa Road,
+                        Kilifi Kenya</p>
+                    <p><i class="far fa-envelope me-2" style="color:var(--secondary-orange);"></i>
+                        info@wildnomads.co.ke</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Nomad Tours & Experiences — Authentic Kenya Adventures.</p>
+                <p>🌍 Kilifi, Kenya | Design: LacomasTech</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/254712345678" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- Offcanvas Mobile Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileOffcanvas">
+        <div class="offcanvas-header">
+            <img src="assets/image/nomad_tours_logo.webp" alt="logo" style="height: 45px;">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="tours.html"><i class="fas fa-binoculars"></i> Safari Tours</a></li>
+                <li><a href="service.html"><i class="fas fa-concierge-bell"></i> Services</a></li>
+                <li><a href="blogs.html"><i class="fas fa-blog"></i> Blogs</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            <div class="mobile-action-buttons mt-4">
+                <a href="#" class="btn-mobile-book"><i class="fas fa-calendar-check"></i> Book Now</a>
+                <a href="https://wa.me/254712345678" class="btn-mobile-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal fade" id="privacyModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Privacy Policy</h5><button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Nomad Tours collects booking information only for service delivery. Your data is never shared.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="termsModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Booking Terms</h5><button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>30% deposit confirms. Cancellation 30+ days: full refund less 10% admin.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cancellationModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cancellation</h5><button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Free up to 30 days before departure. 50% refund 15-29 days.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Sticky navbar
+        const navbarWrapper = document.getElementById('navbarWrapper');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 20) {
+                if (!navbarWrapper.classList.contains('sticky-nav')) {
+                    navbarWrapper.classList.add('sticky-nav');
+                    document.body.classList.add('nav-fixed-padding');
+                }
+            } else {
+                if (navbarWrapper.classList.contains('sticky-nav')) {
+                    navbarWrapper.classList.remove('sticky-nav');
+                    document.body.classList.remove('nav-fixed-padding');
+                }
+            }
+        });
+
+        // Offcanvas hide navbar
+        const offcanvasEl = document.getElementById('mobileOffcanvas');
+        if (offcanvasEl) {
+            offcanvasEl.addEventListener('show.bs.offcanvas', () => { navbarWrapper.style.display = 'none'; });
+            offcanvasEl.addEventListener('hidden.bs.offcanvas', () => { navbarWrapper.style.display = ''; });
+        }
+
+        // Blog filtering (using .filter-btn)
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const blogPosts = document.querySelectorAll('.blog-post');
+
+        function filterBlogPosts(category) {
+            blogPosts.forEach(post => {
+                if (category === 'all' || post.getAttribute('data-category') === category) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const category = btn.getAttribute('data-filter');
+                filterBlogPosts(category);
+            });
+        });
+
+        // Load More functionality (shows all 9 initially, then 'Load More' does nothing extra because all are visible)
+        // But we keep the button for UX – it could be used to load additional posts via AJAX in future.
+        const loadBtn = document.getElementById('loadMoreBtn');
+        loadBtn.addEventListener('click', () => {
+            alert('All articles are already displayed. Stay tuned for more stories!');
+        });
+    </script>
+</body>
+
+</html>

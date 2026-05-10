@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Nomad Tours & Experiences | Unforgettable Kenya Adventures</title>
+
+    <meta name="description"
+        content="Discover authentic Kenya tours and experiences: wildlife safaris, cultural journeys, beach adventures & more. Handcrafted nomadic expeditions with local experts.">
+    <meta name="keywords"
+        content="Kenya tours, safari experiences, cultural tours Kenya, Diani excursions, Masai Mara tours, Nomad experiences Kenya">
+
+    <link rel="icon" href="assets/image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header class="safari-header">
+        <div class="container">
+            <div class="navbar-wrapper" id="navbarWrapper">
+                <div class="custom-navbar">
+                    <nav class="navbar navbar-expand-lg navbar-light p-0">
+                        <div class="container-fluid px-0 navbar-content">
+                            <!-- Logo + Brand Text -->
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/image/nomad_tours_logo.webp" alt="Nomad Tours Logo"
+                                    class="travel-logo">
+                            </a>
+
+                            <!-- Desktop navigation -->
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                                    <li class="nav-item"><a class="nav-link active" href="tours.html">Safari Tours</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="event.html">Events</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Desktop right buttons -->
+                            <div class="nav-right">
+                                <!-- <a href="https://wa.me/254712345678" class="btn-outline" target="_blank"><i
+                                        class="fab fa-whatsapp"></i> WhatsApp</a> -->
+                                <a href="#" class="btn-primary-travel">Book an Experience</a>
+                            </div>
+
+                            <!-- Mobile Hamburger -->
+                            <button class="mobile-menu-toggle" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#mobileOffcanvas" aria-controls="mobileOffcanvas">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-content container">
+            <h1 class="hero-title">Authentic Nomad Tours & Experiences</h1>
+            <p class="hero-subtitle">Wildlife Safaris · Cultural Journeys · Ocean Adventures · Hidden Gems</p>
+        </div>
+    </header>
+
+    <!-- Category Filter Bar (updated for tours) -->
+    <div class="container">
+        <div class="category-bar">
+            <button class="filter-btn active" data-filter="all">All Experiences</button>
+            <button class="filter-btn" data-filter="wildlife">Wildlife Safaris</button>
+            <button class="filter-btn" data-filter="culture">Cultural & Heritage</button>
+            <button class="filter-btn" data-filter="beach">Beach & Water</button>
+        </div>
+    </div>
+
+    <section class="safari-grid-section">
+        <div class="container">
+            <div class="row g-4" id="safariGrid">
+                <!-- Tour 1 - Masai Mara Safari (wildlife) -->
+                <div class="col-lg-4 col-md-6 safari-item" data-category="wildlife">
+                    <div class="safari-card">
+                        <div class="img-holder">
+                            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&w=600&h=400&fit=crop"
+                                class="card-img-top" alt="Masai Mara Safari Jeep">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">3-Day Masai Mara Safari Express</h5>
+                            <div class="location-text"><i class="fas fa-map-marker-alt"
+                                    style="color: var(--sunrise-gold);"></i> Masai Mara, Kenya</div>
+                            <div class="rating-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star-half-alt"></i> <span class="ms-1 small text-muted">(4.9)</span>
+                            </div>
+                            <p class="desc-text">Game drives in search of Big Five, picnic by the Mara River, and
+                                authentic bush dinner under the stars.</p>
+                            <div class="price-block">From KES 24,500 / person</div>
+                            <div class="card-buttons">
+                                <a href="tour-details.html?id=1" class="btn btn-outline-accent"><i
+                                        class="fas fa-info-circle"></i> Details</a>
+                                <a href="https://wa.me/254700123456?text=I'm%20interested%20in%20Masai%20Mara%203-Day%20Safari"
+                                    target="_blank" class="btn btn-inquire"><i class="fab fa-whatsapp"></i> Inquire</a>
+                            </div>
+                            <div class="mt-2">
+                                <a href="#" class="btn-exp-book"><i class="fas fa-ticket-alt"></i> Book Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tour 2 - Diani Snorkeling & Marine (beach) -->
+                <div class="col-lg-4 col-md-6 safari-item" data-category="beach">
+                    <div class="safari-card">
+                        <div class="img-holder">
+                            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&w=600&h=400&fit=crop"
+                                class="card-img-top" alt="Diani snorkeling tour">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Diani Marine Safari: Dolphins & Coral Gardens</h5>
+                            <div class="location-text"><i class="fas fa-map-marker-alt"
+                                    style="color: var(--sunrise-gold);"></i> Diani Beach, South Coast</div>
+                            <div class="rating-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span
+                                    class="ms-1 small text-muted">(4.8)</span></div>
+                            <p class="desc-text">Snorkel in Kisite Marine Park, spot dolphins, and enjoy a Swahili
+                                seafood lunch on Wasini Island.</p>
+                            <div class="price-block">KES 9,200 / person</div>
+                            <div class="card-buttons">
+                                <a href="tour-details.html?id=2" class="btn btn-outline-accent"><i
+                                        class="fas fa-info-circle"></i> Details</a>
+                                <a href="https://wa.me/254700123456?text=I'm%20interested%20in%20Diani%20Marine%20Safari"
+                                    target="_blank" class="btn btn-inquire"><i class="fab fa-whatsapp"></i> Inquire</a>
+                            </div>
+                            <div class="mt-2">
+                                <a href="#" class="btn-exp-book"><i class="fas fa-ticket-alt"></i> Book Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tour 3 - Lamu Cultural Heritage (culture) -->
+                <div class="col-lg-4 col-md-6 safari-item" data-category="culture">
+                    <div class="safari-card">
+                        <div class="img-holder">
+                            <img src="https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?ixlib=rb-4.0.3&w=600&h=400&fit=crop"
+                                class="card-img-top" alt="Lamu Old Town">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Lamu Archipelago Dhow & Culture Tour</h5>
+                            <div class="location-text"><i class="fas fa-map-marker-alt"
+                                    style="color: var(--sunrise-gold);"></i> Lamu Island, Kenya</div>
+                            <div class="rating-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span
+                                    class="ms-1 small text-muted">(4.7)</span></div>
+                            <p class="desc-text">Explore Lamu's UNESCO heritage, sail on a traditional dhow, visit
+                                Swahili ruins and enjoy local cuisine.</p>
+                            <div class="price-block">KES 12,800 / person</div>
+                            <div class="card-buttons">
+                                <a href="tour-details.html?id=6" class="btn btn-outline-accent"><i
+                                        class="fas fa-info-circle"></i> Details</a>
+                                <a href="https://wa.me/254700123456?text=I'm%20interested%20in%20Lamu%20Cultural%20Tour"
+                                    target="_blank" class="btn btn-inquire"><i class="fab fa-whatsapp"></i> Inquire</a>
+                            </div>
+                            <div class="mt-2">
+                                <a href="#" class="btn-exp-book"><i class="fas fa-ticket-alt"></i> Book Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tour 4 - Amboseli & Elephants (wildlife) -->
+                <div class="col-lg-4 col-md-6 safari-item" data-category="wildlife">
+                    <div class="safari-card">
+                        <div class="img-holder">
+                            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&w=600&h=400&fit=crop"
+                                class="card-img-top" alt="Elephants Amboseli">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Amboseli: Elephants & Kilimanjaro View</h5>
+                            <div class="location-text"><i class="fas fa-map-marker-alt"
+                                    style="color: var(--sunrise-gold);"></i> Amboseli National Park</div>
+                            <div class="rating-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star-half-alt"></i> <span class="ms-1 small text-muted">(4.7)</span>
+                            </div>
+                            <p class="desc-text">Photograph elephants with Mount Kilimanjaro backdrop, cultural visit to
+                                Maasai village & full-day game drive.</p>
+                            <div class="price-block">KES 18,900 / person</div>
+                            <div class="card-buttons">
+                                <a href="tour-details.html?id=4" class="btn btn-outline-accent"><i
+                                        class="fas fa-info-circle"></i> Details</a>
+                                <a href="https://wa.me/254700123456?text=I'm%20interested%20in%20Amboseli%20Safari"
+                                    target="_blank" class="btn btn-inquire"><i class="fab fa-whatsapp"></i> Inquire</a>
+                            </div>
+                            <div class="mt-2">
+                                <a href="#" class="btn-exp-book"><i class="fas fa-ticket-alt"></i> Book Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tour 5 - Hell's Gate Cycling & Geothermal (adventure/culture) -->
+                <div class="col-lg-4 col-md-6 safari-item" data-category="culture">
+                    <div class="safari-card">
+                        <div class="img-holder">
+                            <img src="https://images.unsplash.com/photo-1591115765373-5207764f72e4?ixlib=rb-4.0.3&w=600&h=400&fit=crop"
+                                class="card-img-top" alt="Hell's Gate cycling">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Hell’s Gate Hike & Bike Adventure</h5>
+                            <div class="location-text"><i class="fas fa-map-marker-alt"
+                                    style="color: var(--sunrise-gold);"></i> Naivasha, Rift Valley</div>
+                            <div class="rating-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> <span
+                                    class="ms-1 small text-muted">(4.5)</span></div>
+                            <p class="desc-text">Cycle among zebras, hike the gorges, and soak in geothermal steam. Boat
+                                ride optional at Lake Naivasha.</p>
+                            <div class="price-block">KES 6,500 / person</div>
+                            <div class="card-buttons">
+                                <a href="tour-details.html?id=5" class="btn btn-outline-accent"><i
+                                        class="fas fa-info-circle"></i> Details</a>
+                                <a href="https://wa.me/254700123456?text=I'm%20interested%20in%20Hell's%20Gate%20Tour"
+                                    target="_blank" class="btn btn-inquire"><i class="fab fa-whatsapp"></i> Inquire</a>
+                            </div>
+                            <div class="mt-2">
+                                <a href="#" class="btn-exp-book"><i class="fas fa-ticket-alt"></i> Book Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tour 6 - Watamu Ocean Safari (beach) -->
+                <div class="col-lg-4 col-md-6 safari-item" data-category="beach">
+                    <div class="safari-card">
+                        <div class="img-holder">
+                            <img src="https://images.unsplash.com/photo-1582651300295-6c1a1bdee1b6?ixlib=rb-4.0.3&w=600&h=400&fit=crop"
+                                class="card-img-top" alt="Watamu marine park">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Watamu Ocean Safari: Turtle & Snorkel Quest</h5>
+                            <div class="location-text"><i class="fas fa-map-marker-alt"
+                                    style="color: var(--sunrise-gold);"></i> Watamu Marine Reserve</div>
+                            <div class="rating-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span
+                                    class="ms-1 small text-muted">(4.9)</span></div>
+                            <p class="desc-text">Snorkel vibrant coral reefs, see sea turtles, and visit the famous
+                                Watamu Blue Lagoon.</p>
+                            <div class="price-block">KES 8,200 / person</div>
+                            <div class="card-buttons">
+                                <a href="tour-details.html?id=7" class="btn btn-outline-accent"><i
+                                        class="fas fa-info-circle"></i> Details</a>
+                                <a href="https://wa.me/254700123456?text=I'm%20interested%20in%20Watamu%20Ocean%20Safari"
+                                    target="_blank" class="btn btn-inquire"><i class="fab fa-whatsapp"></i> Inquire</a>
+                            </div>
+                            <div class="mt-2">
+                                <a href="#" class="btn-exp-book"><i class="fas fa-ticket-alt"></i> Book Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER updated brand name -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col contact-info-card-footer">
+                    <img src="assets/image/nomad_tours_logo.webp" alt="Nomad Tours"
+                        style="border-radius:12px; padding:6px 12px; max-height:100px; margin-bottom:16px; filter: brightness(0) invert(1);">
+                    <h5>Nomad Tours & Experiences</h5>
+                    <p>Your trusted partner for authentic African adventures and unforgettable safari experiences.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/254712345678"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Experiences</h5>
+                    <a href="#">Wildlife Safaris</a>
+                    <a href="#">Cultural Tours</a>
+                    <a href="#">Beach Excursions</a>
+                    <a href="#">Custom Itineraries</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Policies</h5>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Booking Terms</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#cancellationModal">Cancellation Policy</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <p><i class="fas fa-phone-alt me-2" style="color:var(--secondary-orange);"></i> +254 102 593 346</p>
+                    <p><i class="fas fa-map-marker-alt me-2" style="color:var(--secondary-orange);"></i> Bofa Road,
+                        Kilifi Kenya</p>
+                    <p><i class="far fa-envelope me-2" style="color:var(--secondary-orange);"></i>
+                        info@wildnomads.co.ke</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Nomad Tours & Experiences — Authentic Kenya Adventures.</p>
+                <p>🌍 Kilifi, Kenya | Design: LacomasTech</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/254712345678" class="whatsapp-float" target="_blank" rel="noopener noreferrer"><i
+            class="fab fa-whatsapp"></i></a>
+
+    <!-- OFF-CANVAS MOBILE MENU -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileOffcanvas" aria-labelledby="mobileOffcanvasLabel">
+        <div class="offcanvas-header">
+            <img src="assets/image/savira_nest_logo.png" alt="Nomad Tours Logo" class="offcanvas-logo"
+                style="height: 55px;">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="tours.html"><i class="fas fa-binoculars"></i> Safari Tours</a></li>
+                <li><a href="acc.html"><i class="fas fa-compass"></i> Experiences</a></li>
+                <li><a href="pricing.html"><i class="fas fa-tag"></i> Pricing</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            <div class="mobile-action-buttons">
+                <a href="#" class="btn-mobile-book"><i class="fas fa-calendar-check"></i> Book an Experience</a>
+                <a href="https://wa.me/254712345678" target="_blank" class="btn-mobile-wa"><i
+                        class="fab fa-whatsapp"></i> WhatsApp Inquiry</a>
+            </div>
+            <div class="mobile-contact-info">
+                <p><i class="fas fa-phone-alt"></i> +254 712 345 678</p>
+                <p><i class="fas fa-map-marker-alt"></i> Bofa Road, Kilifi, Kenya</p>
+                <p><i class="far fa-envelope"></i> hello@nomadtours.co.ke</p>
+                <div class="mobile-social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/254712345678" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals unchanged content but adapted slightly -->
+    <div class="modal fade" id="privacyModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Privacy Policy</h5><button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Nomad Tours Privacy Commitment</strong></p>
+                    <p>We collect personal information to process bookings, customize experiences, and improve tours.
+                        Data is never shared. Secure transactions.</p>
+                    <p>For inquiries: hello@nomadtours.co.ke</p>
+                </div>
+                <div class="modal-footer"><button type="button" class="btn btn-secondary"
+                        data-bs-dismiss="modal">Close</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Booking Terms</h5><button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>30% deposit confirms tour. Balance due 14 days before departure. Cancellation 30+ days: full
+                        refund minus 10% admin fee. Within 14 days: non-refundable.</p>
+                </div>
+                <div class="modal-footer"><button type="button" class="btn btn-secondary"
+                        data-bs-dismiss="modal">Close</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cancellationModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cancellation Policy</h5><button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Free cancellation up to 30 days. 50% refund 15-29 days. No refund within 14 days. Force majeure:
+                        travel credit offered.</p>
+                </div>
+                <div class="modal-footer"><button type="button" class="btn btn-secondary"
+                        data-bs-dismiss="modal">Close</button></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Category filtering for tours
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const safariItems = document.querySelectorAll('.safari-item');
+        function filterItems(category) {
+            safariItems.forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                filterItems(btn.getAttribute('data-filter'));
+            });
+        });
+
+        // Sticky navbar
+        const navbarWrapper = document.getElementById('navbarWrapper');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 20) {
+                if (!navbarWrapper.classList.contains('sticky-nav')) {
+                    navbarWrapper.classList.add('sticky-nav');
+                    document.body.classList.add('nav-fixed-padding');
+                }
+            } else {
+                if (navbarWrapper.classList.contains('sticky-nav')) {
+                    navbarWrapper.classList.remove('sticky-nav');
+                    document.body.classList.remove('nav-fixed-padding');
+                }
+            }
+        });
+
+        // Hide navbar when offcanvas opens
+        const offcanvasElement = document.getElementById('mobileOffcanvas');
+        if (offcanvasElement) {
+            offcanvasElement.addEventListener('show.bs.offcanvas', function () {
+                if (navbarWrapper) navbarWrapper.style.display = 'none';
+            });
+            offcanvasElement.addEventListener('hidden.bs.offcanvas', function () {
+                if (navbarWrapper) navbarWrapper.style.display = '';
+            });
+        }
+    </script>
+</body>
+
+</html>
