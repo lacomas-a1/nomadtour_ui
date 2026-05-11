@@ -517,18 +517,15 @@
                     <!-- dynamic testimonial content area -->
                     <div class="testimonial-content-area" id="testimonialDynamic">
                         <div class="testimonial-text" id="quoteText">
-                            "Great customer service, Social Media Marketing Company is professional and extremely
-                            serious
-                            about
-                            business. I have increased my revenue of my business."
+                            "Excellent travel experience with outstanding service. The team is professional, reliable, and truly dedicated to making every trip memorable. I highly recommend them and will definitely travel with them again."
                         </div>
                         <div class="author-block" id="authorBlock">
                             <div class="author-avatar" id="authorAvatar">
                             </div>
                             <div class="author-info">
                                 <div class="author-name-line">
-                                    <span class="author-name" id="authorName">Sarah Lee</span>
-                                    <span class="author-location-date" id="authorLocationDate">Teacher</span>
+                                    <span class="author-name" id="authorName">Nomad Tours</span>
+                                    <span class="author-location-date" id="authorLocationDate">Tour Guide</span>
                                 </div>
                                 <div class="author-title" id="authorTitle"></div>
                             </div>
@@ -542,19 +539,14 @@
         </div>
 
         <!-- Call to Action -->
-        <div class="container">
-            <div class="cta-banner fade-up">
-                <i class="fas fa-compass"
-                    style="font-size: 2.5rem; color: var(--sunrise-gold); margin-bottom: 12px; display: inline-block;"></i>
-                <h3 style="font-size: 1.8rem; margin-bottom: 12px;">
-                    Ready to Begin Your Nomad Story?
-                </h3>
-                <p style="max-width: 500px; margin: 0 auto 20px;">
-                    Let us craft an unforgettable safari tailored just for you.
-                </p>
+        <div class="container py-5">
+            <div class="cta-section">
+                <h3>Ready to Begin Your Nomad Story?</h3>
+                <p class="mt-2 mb-3">Let us craft an unforgettable safari tailored just for you.</p>
                 <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-                    <a href="contact.html" class="btn-hero-outline">Contact Us</a>
-                    <a href="tours.html" class="btn-hero-primary">Explore Tours</a>
+                    <a href="{{ route('contact') }}" class="btn-hero-outline">Contact Us</a>
+                    <a href="{{ route('plan') }}" class="btn-hero-primary">Plan Your Adventure <i
+                        class="fas fa-arrow-right ms-2"></i></a>
                 </div>
             </div>
         </div>
@@ -812,7 +804,7 @@
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
+    <!-- <script>
         // Sticky navbar (same as original)
         const navbarWrapper = document.getElementById('navbarWrapper');
         window.addEventListener('scroll', function () {
@@ -828,7 +820,7 @@
                 }
             }
         });
-    </script>
+    </script> -->
     <script>
         // ----- TESTIMONIAL DATA with image, location, and date -----
         const testimonials = [

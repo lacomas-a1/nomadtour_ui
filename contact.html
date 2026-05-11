@@ -50,9 +50,9 @@
                 </div>
             </div>
         </div>
-        <div class="container mt-3">
-            <h1 class="hero-title" style="font-size: 2.8rem;">Let's Plan Your Safari</h1>
-            <p class="hero-subtitle" style="font-size: 1.2rem;">Reach out – we're here to answer your questions and
+        <div class="hero-content container">
+            <h1 class="hero-title">Let's Plan Your Safari</h1>
+            <p class="hero-subtitle">Reach out – we're here to answer your questions and
                 craft unforgettable journeys.</p>
         </div>
     </header>
@@ -115,6 +115,19 @@
                                     <option>Honeymoon</option>
                                     <option>Adventure</option>
                                     <option>Custom Itinerary</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Preferred Date</label>
+                                <input type="date" class="form-control" name="preferred_date">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Travelers</label>
+                                <select class="form-select" name="adults">
+                                    <option value="1">1 Traveler</option>
+                                    <option value="2">2 Travelers</option>
+                                    <option value="3">3-4 Travelers</option>
+                                    <option value="5">5+ Group</option>
                                 </select>
                             </div>
                             <div class="col-12">
@@ -182,13 +195,14 @@
                         Kilifi Kenya</p>
                     <p><i class="far fa-envelope me-2" style="color:var(--secondary-orange);"></i>
                         info@wildnomads.co.ke</p>
-                        <p><i class="far fa-envelope me-2" style="color:var(--secondary-orange);"></i>
+                    <p><i class="far fa-envelope me-2" style="color:var(--secondary-orange);"></i>
                         booking@wildnomads.co.ke</p>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>© 2026 Nomad Tours & Experiences — Authentic Kenya Adventures.</p>
-                <p>🌍 Kilifi, Kenya | Design: <a href="" class="footer-link">LacomasTech</a> | Admin: <a href="" class="footer-link">LogIn</a></p>
+                <p>🌍 Kilifi, Kenya | Design: <a href="" class="footer-link">LacomasTech</a> | Admin: <a href=""
+                        class="footer-link">LogIn</a></p>
             </div>
         </div>
     </footer>
@@ -272,44 +286,8 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Sticky navbar
-        const navbarWrapper = document.getElementById('navbarWrapper');
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 20) {
-                if (!navbarWrapper.classList.contains('sticky-nav')) {
-                    navbarWrapper.classList.add('sticky-nav');
-                    document.body.classList.add('nav-fixed-padding');
-                }
-            } else {
-                if (navbarWrapper.classList.contains('sticky-nav')) {
-                    navbarWrapper.classList.remove('sticky-nav');
-                    document.body.classList.remove('nav-fixed-padding');
-                }
-            }
-        });
-
-        // Offcanvas hide navbar
-        const offcanvasEl = document.getElementById('mobileOffcanvas');
-        if (offcanvasEl) {
-            offcanvasEl.addEventListener('show.bs.offcanvas', () => { navbarWrapper.style.display = 'none'; });
-            offcanvasEl.addEventListener('hidden.bs.offcanvas', () => { navbarWrapper.style.display = ''; });
-        }
-
-        // Simple form submission handler (demo)
-        const contactForm = document.getElementById('contactForm');
-        const successMsg = document.getElementById('formSuccessMessage');
-        contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            // In a real scenario, you'd send data via fetch/AJAX
-            successMsg.classList.remove('d-none');
-            contactForm.reset();
-            setTimeout(() => {
-                successMsg.classList.add('d-none');
-            }, 5000);
-        });
-    </script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

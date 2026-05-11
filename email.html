@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>New Booking Notification | Nomad Tours & Experiences Admin</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #eef2f7; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+
+    <!-- MAIN WRAPPER TABLE (centered) -->
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" bgcolor="#eef2f7" style="background-color: #eef2f7; width: 100%;">
+        <tr>
+            <td align="center" style="padding: 30px 15px;">
+                <!-- MAIN CARD CONTAINER (max-width 600px, border-left accent: #ba3d4f) -->
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center" style="max-width: 750px; width: 100%; background-color: #ffffff; border-radius: 24px; box-shadow: 0 12px 28px rgba(0,0,0,0.08); overflow: hidden; border-left: 5px solid #ba3d4f; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                    
+                    <!-- HEADER WITH LOGO -->
+                    <tr>
+                        <td style="padding: 28px 28px 12px 28px; text-align: center; background-color: #ffffff; border-bottom: 1px solid #f0eef0;">
+                            <img src="https://wildnomads.co.ke/assets/logo/logo.png" 
+                                 alt="Nomad Tours & Experiences Logo" 
+                                 style="max-width: 170px; width: 100%; height: auto; display: inline-block; vertical-align: middle; border: 0; line-height: 100%; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic;">
+                        </td>
+                    </tr>
+                    
+                    <!-- MAIN CONTENT -->
+                    <tr>
+                        <td style="padding: 24px 28px 20px 28px; background-color: #ffffff;">
+                            
+                            <!-- TITLE / HEADER -->
+                            <h2 style="color: #ba3d4f; font-size: 24px; font-weight: 700; margin: 0 0 12px 0; letter-spacing: -0.2px; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                                📋 New Tour Booking Received
+                            </h2>
+                            
+                            <!-- ADMIN NOTE / ALERT BOX -->
+                            <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #fff5f5; border-radius: 14px; margin: 8px 0 24px 0; border: 1px solid #ffe0e0;">
+                                <tr>
+                                    <td style="padding: 14px 18px;">
+                                        <p style="margin: 0; font-size: 14px; color: #a1303e; line-height: 1.4; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                                            ⚡ Action required: A new customer has submitted a tour booking. Please review and confirm availability.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <!-- CUSTOMER & BOOKING DETAILS HEADER -->
+                            <h3 style="color: #2d3748; font-size: 18px; font-weight: 600; margin: 12px 0 14px 0; border-bottom: 2px solid #f0eef0; padding-bottom: 8px; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                                🧑‍🤝‍🧑 Customer Information
+                            </h3>
+                            
+                            <!-- TWO-COLUMN DETAILS TABLE -->
+                            <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 20px; width: 100%;">
+                                <tr>
+                                    <td style="padding: 7px 0 6px 0; width: 35%; vertical-align: top; border-bottom: 1px solid #f3f3f3;">
+                                        <span style="font-size: 14px; color: #4a5568; font-weight: 600; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">Full Name</span>
+                                    </td>
+                                    <td style="padding: 7px 0 6px 0; width: 65%; vertical-align: top; border-bottom: 1px solid #f3f3f3;">
+                                        <span style="font-size: 14px; color: #1a202c; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">{{ $full_name }}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 7px 0 6px 0; vertical-align: top; border-bottom: 1px solid #f3f3f3;">
+                                        <span style="font-size: 14px; color: #4a5568; font-weight: 600; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">Email</span>
+                                    </td>
+                                    <td style="padding: 7px 0 6px 0; vertical-align: top; border-bottom: 1px solid #f3f3f3;">
+                                        <span style="font-size: 14px; color: #1a202c; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                                            <a href="mailto:{{ $email }}" style="color: #ba3d4f; text-decoration: none;">{{ $email }}</a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 7px 0 6px 0; vertical-align: top; border-bottom: 1px solid #f3f3f3;">
+                                        <span style="font-size: 14px; color: #4a5568; font-weight: 600; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">Phone</span>
+                                    </td>
+                                    <td style="padding: 7px 0 6px 0; vertical-align: top; border-bottom: 1px solid #f3f3f3;">
+                                        <span style="font-size: 14px; color: #1a202c; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">{{ $phone }}</span>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <h3 style="color: #2d3748; font-size: 18px; font-weight: 600; margin: 20px 0 14px 0; border-bottom: 2px solid #f0eef0; padding-bottom: 8px; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                                🗺️ Tour Booking Details
+                            </h3>
+                            
+                            <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 24px; width: 100%;">
+                                <tr>
+                                    <td style="padding: 7px 0 6px 0; width: 35%; vertical-align: top; border-bottom: 1px solid #f3f3f3;">
+                                        <span style="font-size: 14px; color: #4a5568; font-weight: 600; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">Booking ID</span>
+                                    </td>
+                                    <td style="padding: 7px 0 6px 0; width: 65%; vertical-align: top; border-bottom: 1px solid #f3f3f3;">
+                                        <span style="font-size: 14px; color: #1a202c; font-weight: 500; font-family: monospace; background-color: #f9f9f9; padding: 2px 6px; border-radius: 6px;">{{ $transaction_code }}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 7px 0 6px 0; vertical-align: top; border-bottom: 1px solid #f3f3f3;">
+                                        <span style="font-size: 14px; color: #4a5568; font-weight: 600; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">Tour Name</span>
+                                    </td>
+                                    <td style="padding: 7px 0 6px 0; vertical-align: top; border-bottom: 1px solid #f3f3f3;">
+                                        <span style="font-size: 14px; color: #1a202c; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">{{ $tour_name }}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 7px 0 6px 0; vertical-align: top; border-bottom: 1px solid #f3f3f3;">
+                                        <span style="font-size: 14px; color: #4a5568; font-weight: 600; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">Location</span>
+                                    </td>
+                                    <td style="padding: 7px 0 6px 0; vertical-align: top; border-bottom: 1px solid #f3f3f3;">
+                                        <span style="font-size: 14px; color: #1a202c; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">{{ $tour_location }}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 7px 0 6px 0; vertical-align: top; border-bottom: 1px solid #f3f3f3;">
+                                        <span style="font-size: 14px; color: #4a5568; font-weight: 600; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">Tour Duration</span>
+                                    </td>
+                                    <td style="padding: 7px 0 6px 0; vertical-align: top; border-bottom: 1px solid #f3f3f3;">
+                                        <span style="font-size: 14px; color: #1a202c; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">{{ $tour_date }}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 7px 0 6px 0; vertical-align: top; border-bottom: 1px solid #f3f3f3;">
+                                        <span style="font-size: 14px; color: #4a5568; font-weight: 600; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">Preferred Travel Date</span>
+                                    </td>
+                                    <td style="padding: 7px 0 6px 0; vertical-align: top; border-bottom: 1px solid #f3f3f3;">
+                                        <span style="font-size: 14px; color: #1a202c; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">{{ $prefered_date_of_travel }}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 7px 0 6px 0; vertical-align: top; border-bottom: 1px solid #f3f3f3;">
+                                        <span style="font-size: 14px; color: #4a5568; font-weight: 600; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">Travelers</span>
+                                    </td>
+                                    <td style="padding: 7px 0 6px 0; vertical-align: top; border-bottom: 1px solid #f3f3f3;">
+                                        <span style="font-size: 14px; color: #1a202c; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">Adults: {{ $adults }} &nbsp;|&nbsp; Children: {{ $children }}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 7px 0 6px 0; vertical-align: top; border-bottom: 1px solid #f3f3f3;">
+                                        <span style="font-size: 14px; color: #4a5568; font-weight: 600; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">Special Requests</span>
+                                    </td>
+                                    <td style="padding: 7px 0 6px 0; vertical-align: top; border-bottom: 1px solid #f3f3f3;">
+                                        <span style="font-size: 14px; color: #1a202c; font-style: {{ empty($special_requests) ? 'italic' : 'normal' }}; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                                            {{ $special_requests ?? 'None' }}
+                                        </span>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <!-- STAFF ACTION BUTTON (simple link, email-safe) -->
+                            <table width="100%" cellpadding="0" cellspacing="0" style="margin: 10px 0 20px 0;">
+                                <tr>
+                                    <td align="center">
+                                        <table cellpadding="0" cellspacing="0" style="background-color: #ba3d4f; border-radius: 40px;">
+                                            <tr>
+                                                <td style="padding: 12px 28px;">
+                                                    <a href="https://wildnomads.co.ke/admin/bookings/{{ $transaction_code }}" 
+                                                       style="color: #ffffff; text-decoration: none; font-weight: 600; font-size: 15px; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; display: inline-block;">
+                                                        📌 View & Process Booking
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <!-- NOTE FOR ADMIN -->
+                            <p style="font-size: 13px; color: #718096; margin-top: 16px; border-top: 1px solid #edf2f7; padding-top: 18px; text-align: center; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                                This is an automated notification sent to the admin team. Please confirm the booking and send confirmation to the customer within 24 hours.
+                            </p>
+                        </td>
+                    </tr>
+                    
+                    <!-- FOOTER SECTION (copyright) -->
+                    <tr>
+                        <td style="background-color: #fafafc; padding: 18px 28px 22px 28px; border-top: 1px solid #ececf0; text-align: center;">
+                            <p style="margin: 0 0 6px 0; font-size: 12px; color: #a0aec0; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                                &copy; {{ date('Y') }}
+                                <a href="https://wildnomads.co.ke" style="color: #a0aec0; text-decoration: none;">Nomad Tours and Experiences</a>
+                                . All rights reserved.
+                            </p>
+                            <p style="margin: 8px 0 0; font-size: 11px; color: #cbd5e0; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                                This email is for internal staff use only — do not forward to customers.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                <!-- END MAIN CARD -->
+                
+                <!-- tiny spacer -->
+                <table width="100%" cellpadding="0" cellspacing="0" align="center" style="max-width: 600px; width: 100%; margin-top: 16px;">
+                    <tr>
+                        <td style="text-align: center; padding: 8px 20px;">
+                            <p style="font-size: 10px; color: #94a3b8; margin: 0; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                                Nomad Tours & Experiences — Authentic Kenya Safaris
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
