@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Safari Packages & Rates | Nomad Tours</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- html2pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        @font-face {
+            font-family: 'Aptos';
+            src: url('/Aptos/Aptos.ttf') format('truetype');
+        }
+
+        body {
+            font-family: 'Aptos', sans-serif;
+            background: #fff;
+            color: #1f2937;
+        }
+
+        .rate-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .rate-table th,
+        .rate-table td {
+            padding: 10px;
+            text-align: center;
+            font-size: 0.85rem;
+            border: 1px solid rgba(17, 24, 39, 0.08);
+            /* 👈 THIS adds the lines */
+        }
+
+        .rate-table th {
+            background: #F4E7D3;
+            font-weight: 600;
+            border: 1px solid rgba(17, 24, 39, 0.10);
+        }
+
+        /* .rate-table th,
+        .rate-table td {
+            padding: 8px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        .rate-table th {
+            background: #F4E7D3;
+        } */
+
+        /* PAGE BREAK */
+        .html2pdf__page-break {
+            page-break-after: always;
+        }
+
+        /* COVER PAGE CENTER */
+        .cover-page {
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- DOWNLOAD BUTTON -->
+    <div class="text-center my-6">
+        <button onclick="downloadPDF()" class="bg-blue-600 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700">
+            <i class="fas fa-download mr-2"></i> Download PDF
+        </button>
+    </div>
+
+    <!-- PDF CONTENT -->
+    <div id="invoice" class="max-w-7xl mx-auto px-6 py-10">
+
+        <!-- ===================== COVER PAGE ===================== -->
+        <div class="cover-page flex flex-col justify-center items-center text-center">
+
+            <img src="../assets/image/nomad_tours_logo.webp" class="mx-auto w-56 mb-6" alt="Logo">
+
+            <h1 class="text-3xl md:text-4xl font-bold">
+                Safari Tour Packages – Official Rate Card (2026)
+            </h1>
+
+            <p class="mt-4 text-gray-600 text-lg">
+                Experience Safari · Coastal Escapes · Cultural Journeys
+            </p>
+
+            <p class="text-sm text-gray-500 mt-2">
+                All prices are in USD, per person sharing basis.
+            </p>
+
+        </div>
+
+        <!-- PAGE BREAK -->
+        <div class="html2pdf__page-break"></div>
+
+        <!-- ===================== CONTENT PAGE ===================== -->
+        <div class="bg-white border rounded-xl overflow-hidden py-7">
+
+            <!-- PACKAGE -->
+            <div class="package-card rounded-2xl overflow-hidden">
+
+                <!-- HEADER -->
+                <div class="bg-gradient-to-r from-[#0B1F3A] to-[#1E88E5] text-white p-6">
+                    <h2 class="text-2xl font-bold">
+                        Kenya All-in-One Signature Safari & Beach
+                    </h2>
+                    <p class="text-sm opacity-80">6 Days 5 Nights</p>
+                    <p class="text-sm mt-1">
+                        Nairobi · Maasai Mara · Mombasa/Diani
+                    </p>
+
+                    <div class="mt-4 text-sm space-y-1">
+                        <p><strong>Budget:</strong> Enchoro Wildlife Camp & Diani Sea Resort</p>
+                        <p><strong>Mid Range:</strong> Mara Serena Lodge & Leopard Beach Resort</p>
+                        <p><strong>Luxury:</strong> Angama Mara & Almanara Villas</p>
+                    </div>
+                </div>
+
+                <!-- LOW SEASON -->
+                <div class="p-6 overflow-x-auto">
+                    <h3 class="text-xl font-bold mb-1">Low Season Rates</h3>
+                    <p class="text-sm text-gray-500 mb-3">
+                        Season: April – June & November (Green / Low Season)
+                    </p>
+
+                    <table class="rate-table w-full border-collapse">
+                        <thead>
+                            <tr>
+                                <th>Option</th>
+                                <th>Vehicle</th>
+                                <th>2 Pax</th>
+                                <th>4 Pax</th>
+                                <th>6 Pax</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="2" class="font-semibold bg-[#F4E7D3]">Budget</td>
+                                <td>Land Cruiser</td>
+                                <td>$995</td>
+                                <td>$775</td>
+                                <td>$715</td>
+                            </tr>
+                            <tr>
+                                <td>Van</td>
+                                <td>$725</td>
+                                <td>$710</td>
+                                <td>$675</td>
+                            </tr>
+
+                            <tr>
+                                <td rowspan="2" class="font-semibold bg-[#F4E7D3]">Mid Range</td>
+                                <td>Land Cruiser</td>
+                                <td>$1015</td>
+                                <td>$790</td>
+                                <td>$735</td>
+                            </tr>
+                            <tr>
+                                <td>Van</td>
+                                <td>$885</td>
+                                <td>$725</td>
+                                <td>$690</td>
+                            </tr>
+
+                            <tr>
+                                <td rowspan="2" class="font-semibold bg-[#F4E7D3]">Luxury</td>
+                                <td>Land Cruiser</td>
+                                <td>$1685</td>
+                                <td>$1465</td>
+                                <td>$1405</td>
+                            </tr>
+                            <tr>
+                                <td>Van</td>
+                                <td>$1560</td>
+                                <td>$1400</td>
+                                <td>$1365</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- PEAK SEASON -->
+                <div class="p-6 overflow-x-auto border-t">
+                    <h3 class="text-xl font-bold mb-1">Peak Season Rates</h3>
+                    <p class="text-sm text-gray-500 mb-3">
+                        Season: July – October & December – March (High / Peak Season)
+                    </p>
+
+                    <table class="rate-table w-full border-collapse">
+                        <thead>
+                            <tr>
+                                <th>Option</th>
+                                <th>Vehicle</th>
+                                <th>2 Pax</th>
+                                <th>4 Pax</th>
+                                <th>6 Pax</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="2" class="font-semibold bg-[#F4E7D3]">Budget</td>
+                                <td>Land Cruiser</td>
+                                <td>$995</td>
+                                <td>$775</td>
+                                <td>$715</td>
+                            </tr>
+                            <tr>
+                                <td>Van</td>
+                                <td>$725</td>
+                                <td>$710</td>
+                                <td>$675</td>
+                            </tr>
+
+                            <tr>
+                                <td rowspan="2" class="font-semibold bg-[#F4E7D3]">Mid Range</td>
+                                <td>Land Cruiser</td>
+                                <td>$1015</td>
+                                <td>$790</td>
+                                <td>$735</td>
+                            </tr>
+                            <tr>
+                                <td>Van</td>
+                                <td>$885</td>
+                                <td>$725</td>
+                                <td>$690</td>
+                            </tr>
+
+                            <tr>
+                                <td rowspan="2" class="font-semibold bg-[#F4E7D3]">Luxury</td>
+                                <td>Land Cruiser</td>
+                                <td>$1685</td>
+                                <td>$1465</td>
+                                <td>$1405</td>
+                            </tr>
+                            <tr>
+                                <td>Van</td>
+                                <td>$1560</td>
+                                <td>$1400</td>
+                                <td>$1365</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PDF SCRIPT -->
+    <script>
+        function downloadPDF() {
+            const element = document.getElementById("invoice");
+
+            const opt = {
+                margin: 0,
+                filename: 'Safari_Tour_Packages_2026.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { scale: 3, useCORS: true },
+                jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+            };
+
+            html2pdf().set(opt).from(element).save();
+        }
+    </script>
+
+</body>
+
+</html>

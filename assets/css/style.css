@@ -957,16 +957,21 @@ body.nav-fixed-padding {
 }
 
 .logo-img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
     margin-bottom: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #fff;
-    border-radius: 60px;
+    /* background: #fff; */
+    border-radius: 12px;
     padding: 8px;
+}
+
+.logo-img img{
+    width: 150px;
+    height: 100px;
 }
 
 /* Fallback: using font awesome as emblem but actual logo images can replace src */
@@ -2923,6 +2928,11 @@ footer {
         font-size: 0.75rem;
     }
 
+    .filter-btns {
+        padding: 0.4rem 1rem;
+        font-size: 0.75rem;
+    }
+
     .category-bar {
         gap: 0.4rem;
         padding: 0.5rem 0.8rem;
@@ -3146,6 +3156,31 @@ footer {
 }
 
 .filter-btn:hover:not(.active) {
+    background: #eef2ff;
+    color: var(--ocean-blue);
+}
+
+
+.filter-btns {
+    background: transparent;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    color: var(--deep-navy);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.filter-btns.active {
+    background: var(--sunrise-gold);
+    color: white;
+    box-shadow: 0 2px 8px rgba(242, 133, 24, 0.3);
+}
+
+.filter-btns:hover:not(.active) {
     background: #eef2ff;
     color: var(--ocean-blue);
 }

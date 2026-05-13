@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Safari Packages & Rates | Nomad Tours - Official Rate Card 2026</title>
+
+    <!-- Tailwind + Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        @font-face {
+            font-family: 'Aptos';
+            src: url('/Aptos/Aptos.ttf') format('truetype');
+        }
+        body {
+            font-family: 'Aptos', sans-serif;
+            background: #fff;
+            color: #1f2937;
+        }
+        .rate-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .rate-table th,
+        .rate-table td {
+            padding: 10px 8px;
+            text-align: center;
+            font-size: 0.85rem;
+            border: 1px solid rgba(17, 24, 39, 0.08);
+        }
+        .rate-table th {
+            background: #F4E7D3;
+            font-weight: 600;
+            border: 1px solid rgba(17, 24, 39, 0.1);
+        }
+        .rate-table td:first-child {
+            text-align: left;
+            font-weight: 500;
+        }
+        .rate-table td[rowspan] {
+            background: #F4E7D3;
+            font-weight: 600;
+            vertical-align: middle;
+        }
+        .package-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 1rem;
+            overflow: hidden;
+            background: white;
+            margin-bottom: 1.5rem;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+        .package-header {
+            background: linear-gradient(to right, #0B1F3A, #1E88E5);
+            color: white;
+            padding: 1.5rem;
+        }
+        .package-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 0 0 0.25rem 0;
+        }
+        .package-duration {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            margin: 0 0 0.125rem 0;
+        }
+        .package-location {
+            font-size: 0.85rem;
+            margin: 0 0 0.75rem 0;
+        }
+        .accommodation-list {
+            font-size: 0.82rem;
+            line-height: 1.7;
+        }
+        .accommodation-list p {
+            margin: 0;
+        }
+        .season-block {
+            padding: 1.25rem 1.5rem;
+        }
+        .season-block.border-top {
+            border-top: 1px solid #e5e7eb;
+        }
+        .season-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin: 0 0 0.25rem 0;
+        }
+        .season-sub {
+            font-size: 0.78rem;
+            color: #6b7280;
+            margin: 0 0 0.75rem 0;
+        }
+        .package-footnote {
+            text-align: center;
+            font-size: 0.72rem;
+            color: #9ca3af;
+            padding-bottom: 0.75rem;
+            margin: 0;
+        }
+        .html2pdf__page-break {
+            page-break-after: always;
+        }
+        .cover-page {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .package-item {
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+        /* custom footer page styling */
+        .footer-page {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+        }
+        .footer-card {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
+        .contact-icon {
+            background: #0B1F3A;
+            width: 48px;
+            height: 48px;
+            border-radius: 60px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .contact-icon i {
+            font-size: 1.5rem;
+            color: white;
+        }
+        .contact-row {
+            background: #F9F7F4;
+            border-radius: 1.5rem;
+            padding: 0.9rem 1rem;
+            margin-bottom: 1rem;
+            transition: all 0.1s;
+        }
+    </style>
+</head>
+<body>
+
+<div class="text-center my-6">
+    <button onclick="downloadPDF()" class="bg-blue-600 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700">
+        <i class="fas fa-download mr-2"></i> Download Complete Rate Card (PDF)
+    </button>
+</div>
+
+<div id="invoice" class="max-w-7xl mx-auto px-6 py-10">
+
+    <!-- COVER PAGE -->
+    <div class="cover-page">
+        <img src="../assets/image/nomad_tours_logo.webp" class="mx-auto w-56 mb-6" alt="Nomad Tours Logo" onerror="this.style.display='none'">
+        <h1 class="text-3xl md:text-4xl font-bold">Safari Tour Packages – Official Rate Card (2026)</h1>
+        <p class="mt-4 text-gray-600 text-lg">Nomad Tours & Experiences · Kenya Safari & Beach Experiences</p>
+        <p class="text-sm text-gray-500 mt-2">All rates are in USD, per person sharing basis. Indicative – subject to availability.</p>
+    </div>
+    <div class="html2pdf__page-break"></div>
+
+    <!-- ==================== PACKAGE 10 : KENYA IN CONTRAST ==================== -->
+    <div class="package-item">
+        <div class="package-card">
+            <div class="package-header">
+                <h2 class="package-title">KENYA IN CONTRAST – Safari & Heritage Coast</h2>
+                <p class="package-duration">10 Days 9 Nights</p>
+                <p class="package-location">Nairobi, Masai Mara, Lake Naivasha & Lamu Island</p>
+                <div class="accommodation-list">
+                    <p><strong>Budget:</strong> Enchoro Wildlife Camp & JamboHouse Lamu</p>
+                    <p><strong>Mid Range:</strong> Mara Serena Safari Lodge & The Majlis Resort</p>
+                    <p><strong>Luxury:</strong> Angama Mara & Peponi Hotel</p>
+                </div>
+            </div>
+            <div class="season-block">
+                <h3 class="season-title">Low Season Rates</h3>
+                <p class="season-sub">April – June & November (Green / Low Season)</p>
+                <table class="rate-table">
+                    <thead><tr><th>Option</th><th>Vehicle</th><th>2 Pax</th><th>4 Pax</th><th>6 Pax</th></tr></thead>
+                    <tbody>
+                        <tr><td rowspan="2">Budget</td><td>Land Cruiser</td><td>$1380 p.p</td><td>$1290 p.p</td><td>$1240 p.p</td></tr>
+                        <tr><td>Van</td><td>$1290 p.p</td><td>$1200 p.p</td><td>$1150 p.p</td></tr>
+                        <tr><td rowspan="2">Mid Range</td><td>Land Cruiser</td><td>$1460 p.p</td><td>$1350 p.p</td><td>$1295 p.p</td></tr>
+                        <tr><td>Van</td><td>$1370 p.p</td><td>$1260 p.p</td><td>$1205 p.p</td></tr>
+                        <tr><td rowspan="2">Luxury</td><td>Land Cruiser</td><td>$1820 p.p</td><td>$1710 p.p</td><td>$1650 p.p</td></tr>
+                        <tr><td>Van</td><td>$1730 p.p</td><td>$1620 p.p</td><td>$1560 p.p</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="season-block border-top">
+                <h3 class="season-title">Peak Season Rates</h3>
+                <p class="season-sub">July – October & December – March (High / Peak Season)</p>
+                <table class="rate-table">
+                    <thead><tr><th>Option</th><th>Vehicle</th><th>2 Pax</th><th>4 Pax</th><th>6 Pax</th></tr></thead>
+                    <tbody>
+                        <tr><td rowspan="2">Budget</td><td>Land Cruiser</td><td>$1480 p.p</td><td>$1360 p.p</td><td>$1290 p.p</td></tr>
+                        <tr><td>Van</td><td>$1390 p.p</td><td>$1270 p.p</td><td>$1200 p.p</td></tr>
+                        <tr><td rowspan="2">Mid Range</td><td>Land Cruiser</td><td>$1580 p.p</td><td>$1440 p.p</td><td>$1370 p.p</td></tr>
+                        <tr><td>Van</td><td>$1490 p.p</td><td>$1350 p.p</td><td>$1280 p.p</td></tr>
+                        <tr><td rowspan="2">Luxury</td><td>Land Cruiser</td><td>$2020 p.p</td><td>$1900 p.p</td><td>$1840 p.p</td></tr>
+                        <tr><td>Van</td><td>$1930 p.p</td><td>$1810 p.p</td><td>$1750 p.p</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="package-footnote">* Rates include accommodation, park fees, game drives & selected meals.</p>
+        </div>
+    </div>
+    <div class="html2pdf__page-break"></div>
+
+    <!-- ==================== PACKAGE 11 : THE GREAT PLAINS & CREEK ESCAPE ==================== -->
+    <div class="package-item">
+        <div class="package-card">
+            <div class="package-header">
+                <h2 class="package-title">THE GREAT PLAINS & CREEK ESCAPE</h2>
+                <p class="package-duration">9 Days 8 Nights</p>
+                <p class="package-location">Nairobi, Masai Mara, Lake Nakuru & Kilifi</p>
+                <div class="accommodation-list">
+                    <p><strong>Budget:</strong> Rhino Tourist Camp & Kilifi Bay Resort</p>
+                    <p><strong>Mid Range:</strong> Mara Serena & Silver Palm Spa Resort</p>
+                    <p><strong>Luxury:</strong> Sand River Camp & Kilifi Bay Villas</p>
+                </div>
+            </div>
+            <div class="season-block">
+                <h3 class="season-title">Low Season Rates</h3>
+                <p class="season-sub">April – June & November (Green / Low Season)</p>
+                <table class="rate-table">
+                    <thead><tr><th>Option</th><th>Vehicle</th><th>2 Pax</th><th>4 Pax</th><th>6 Pax</th></tr></thead>
+                    <tbody>
+                        <tr><td rowspan="2">Budget</td><td>Land Cruiser</td><td>$1260 p.p</td><td>$1170 p.p</td><td>$1120 p.p</td></tr>
+                        <tr><td>Van</td><td>$1170 p.p</td><td>$1080 p.p</td><td>$1030 p.p</td></tr>
+                        <tr><td rowspan="2">Mid Range</td><td>Land Cruiser</td><td>$1340 p.p</td><td>$1230 p.p</td><td>$1175 p.p</td></tr>
+                        <tr><td>Van</td><td>$1250 p.p</td><td>$1140 p.p</td><td>$1085 p.p</td></tr>
+                        <tr><td rowspan="2">Luxury</td><td>Land Cruiser</td><td>$1700 p.p</td><td>$1590 p.p</td><td>$1530 p.p</td></tr>
+                        <tr><td>Van</td><td>$1610 p.p</td><td>$1500 p.p</td><td>$1440 p.p</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="season-block border-top">
+                <h3 class="season-title">Peak Season Rates</h3>
+                <p class="season-sub">July – October & December – March (High / Peak Season)</p>
+                <table class="rate-table">
+                    <thead><tr><th>Option</th><th>Vehicle</th><th>2 Pax</th><th>4 Pax</th><th>6 Pax</th></td></thead>
+                    <tbody>
+                        <tr><td rowspan="2">Budget</td><td>Land Cruiser</td><td>$1360 p.p</td><td>$1240 p.p</td><td>$1170 p.p</td></tr>
+                        <tr><td>Van</td><td>$1270 p.p</td><td>$1150 p.p</td><td>$1080 p.p</td></tr>
+                        <tr><td rowspan="2">Mid Range</td><td>Land Cruiser</td><td>$1460 p.p</td><td>$1320 p.p</td><td>$1250 p.p</td></tr>
+                        <tr><td>Van</td><td>$1370 p.p</td><td>$1230 p.p</td><td>$1160 p.p</td></tr>
+                        <tr><td rowspan="2">Luxury</td><td>Land Cruiser</td><td>$1900 p.p</td><td>$1780 p.p</td><td>$1720 p.p</td></tr>
+                        <tr><td>Van</td><td>$1810 p.p</td><td>$1690 p.p</td><td>$1630 p.p</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="package-footnote">* Rates include accommodation, park fees, game drives & selected meals.</p>
+        </div>
+    </div>
+    
+    <!-- FORCED PAGE BREAK BEFORE FOOTER - ensures footer lives on its own separate page -->
+    <div class="html2pdf__page-break"></div>
+
+    <!-- ==================== CUSTOM FOOTER PAGE: LET'S PLAN YOUR SAFARI ==================== -->
+    <div class="footer-page">
+        <div class="footer-card">
+            <!-- decorative line -->
+            <div class="w-20 h-1 bg-amber-500 mx-auto mb-4 rounded-full"></div>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">Let's Plan Your Safari</h2>
+            <p class="text-amber-700 font-medium text-md mb-4">✨ We also design <strong>custom itineraries</strong> — tailor-made for your dreams, group, or special occasion ✨</p>
+            <p class="text-gray-600 leading-relaxed max-w-md mx-auto mb-8">
+                Reach out – we're here to answer your questions and craft unforgettable journeys.
+                From romantic honeymoons to family wildlife adventures, every detail is yours to imagine.
+            </p>
+
+            <!-- contact grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-left">
+                <!-- phone/whatsapp block -->
+                <div class="contact-row flex items-start gap-4">
+                    <div class="contact-icon bg-blue-900 flex-shrink-0">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-wider text-gray-500">Phone / WhatsApp</p>
+                        <p class="font-semibold text-gray-800">+254 102 593 346</p>
+                        <p class="text-gray-600 text-sm">+254 102 593 346 (24/7 support)</p>
+                    </div>
+                </div>
+
+                <!-- email block -->
+                <div class="contact-row flex items-start gap-4">
+                    <div class="contact-icon bg-blue-900 flex-shrink-0">
+                        <i class="far fa-envelope"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-wider text-gray-500">Email Us</p>
+                        <p class="font-medium text-gray-800">info@wildnomads.co.ke</p>
+                        <p class="text-gray-600 text-sm">booking@wildnomads.co.ke</p>
+                    </div>
+                </div>
+
+                <!-- office location -->
+                <div class="contact-row flex items-start gap-4">
+                    <div class="contact-icon bg-blue-900 flex-shrink-0">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-wider text-gray-500">Visit Our Office</p>
+                        <p class="font-medium text-gray-800">Bofa Road, Kilifi Town</p>
+                        <p class="text-gray-600">Kilifi County, Kenya</p>
+                    </div>
+                </div>
+
+                <!-- WEBSITE LINK - new addition -->
+                <div class="contact-row flex items-start gap-4">
+                    <div class="contact-icon bg-blue-900 flex-shrink-0">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-wider text-gray-500">Explore Our Website</p>
+                        <p class="font-medium text-gray-800 break-all">
+                            <a href="https://wildnomads.co.ke/" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:underline">https://wildnomads.co.ke/</a>
+                        </p>
+                        <p class="text-gray-500 text-sm">Discover more safari inspirations, galleries & travel guides</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- extra custom itinerary highlight + social inspiration -->
+            <div class="mt-8 pt-5 border-t border-gray-200 text-center">
+                <span class="inline-block bg-amber-50 text-amber-800 text-xs font-semibold px-3 py-1 rounded-full mb-3"><i class="fas fa-compass mr-1"></i> BESPOKE SAFARIS & COASTAL ESCAPES</span>
+                <p class="text-gray-500 text-sm">No two journeys are the same — tell us your interests, and we’ll build the perfect route.  
+                <br>Family, photography, bush & beach, cultural deep dives — everything is possible.</p>
+                <div class="flex justify-center gap-3 mt-4">
+                    <i class="fab fa-instagram text-gray-400 hover:text-gray-700 cursor-default"></i>
+                    <i class="fab fa-facebook text-gray-400 hover:text-gray-700 cursor-default"></i>
+                    <i class="fab fa-twitter text-gray-400 hover:text-gray-700 cursor-default"></i>
+                </div>
+                <p class="text-[11px] text-gray-400 mt-5">Nomad Tours & Experiences – Let your wild story begin.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function downloadPDF() {
+        const element = document.getElementById("invoice");
+        const opt = {
+            margin: 0,
+            filename: 'Nomad_Tours_Official_Ratecard_2026.pdf',
+            image: { type: 'jpeg', quality: 1 },
+            html2canvas: { scale: 3, useCORS: true }, 
+            jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+        };
+        html2pdf().set(opt).from(element).save();
+    }
+</script>
+</body>
+</html>

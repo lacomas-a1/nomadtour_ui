@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Madaraka Day Luxury Escape | Kilifi, Malindi & Watamu | Nomad Tours</title>
+    <title>Magical Coastal Escape | Madaraka Day Luxury | Nomad Tours</title>
     <meta name="description"
-        content="Celebrate Madaraka Day 2026 with an exclusive 4-day coastal luxury experience: dhow cruises, private sand dunes sundowners, Arabuko Sokoke forest, Marafa Hell's Kitchen, and gourmet dining.">
+        content="Experience the ultimate Madaraka Day weekend on Kenya's coast: choose from ELITE, VOYAGER or NOMAD packages. Private dhow, sand dunes, Marafa canyon & gourmet dining.">
     <meta name="keywords"
-        content="Madaraka Day safari, Kilifi luxury travel, Malindi events, Watamu beach resort, Kenya coastal holiday, Nomad Tours">
+        content="Madaraka Day safari, Kilifi luxury travel, Malindi events, Watamu beach resort, Kenya coastal holiday, Nomad Tours, Magical Coastal Escape">
     <link rel="icon" href="assets/logo/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -53,15 +53,18 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4 {
+        h1,
+        h2,
+        h3,
+        h4 {
             font-family: 'Aptos', sans-serif;
             font-weight: 700;
         }
 
-        /* Header Hero - Coastal Luxury */
+        /* Header Hero - Coastal Sunset */
         .event-detail-header {
             background: linear-gradient(rgba(28, 45, 73, 0.7), rgba(28, 45, 73, 0.8)),
-                url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+                url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center;
             background-size: cover;
             min-height: 38vh;
             display: flex;
@@ -252,8 +255,53 @@
             background: var(--primary-blue);
             color: white;
             border-radius: 24px;
-            padding: 1.8rem;
+            padding: 1.5rem;
             text-align: center;
+        }
+
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+
+        .pricing-table th,
+        .pricing-table td {
+            padding: 12px 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            text-align: center;
+        }
+
+        .pricing-table th {
+            background: rgba(242, 133, 24, 0.2);
+            font-weight: 700;
+        }
+
+        .pricing-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tier-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 40px;
+            font-weight: bold;
+            font-size: 0.7rem;
+        }
+
+        .tier-elite {
+            background: #D4AF37;
+            color: #1C2D49;
+        }
+
+        .tier-voyager {
+            background: #2C7DA0;
+            color: white;
+        }
+
+        .tier-nomad {
+            background: #E6B91E;
+            color: #1C2D49;
         }
 
         .btn-book-now {
@@ -370,15 +418,20 @@
         }
 
         @media (max-width: 991px) {
-            .navbar-collapse, .nav-right {
+
+            .navbar-collapse,
+            .nav-right {
                 display: none !important;
             }
+
             .mobile-menu-toggle {
                 display: block;
             }
+
             .custom-navbar {
                 padding: 0.5rem 1rem;
             }
+
             .footer-grid {
                 grid-template-columns: 1fr;
                 gap: 30px;
@@ -389,16 +442,25 @@
             .hero-title {
                 font-size: 1.9rem;
             }
+
             .section-title {
                 font-size: 1.5rem;
             }
+
             .itinerary-day .row {
                 flex-direction: column;
             }
+
             .itinerary-day .col-4,
             .itinerary-day .col-md-3 {
                 width: 100%;
                 margin-bottom: 12px;
+            }
+
+            .pricing-table th,
+            .pricing-table td {
+                font-size: 0.7rem;
+                padding: 8px 4px;
             }
         }
 
@@ -406,6 +468,7 @@
             list-style: none;
             padding-left: 0;
         }
+
         .mobile-nav-list a {
             text-decoration: none;
             color: var(--deep-navy);
@@ -413,7 +476,9 @@
             display: block;
             padding: 8px 12px;
         }
-        .btn-mobile-book, .btn-mobile-wa {
+
+        .btn-mobile-book,
+        .btn-mobile-wa {
             text-decoration: none;
             font-weight: 600;
             display: block;
@@ -421,22 +486,27 @@
             border-radius: 40px;
             padding: 12px;
         }
+
         .btn-mobile-book {
             background: var(--sunrise-gold);
             color: white;
         }
+
         .btn-mobile-wa {
             background: #25D366;
             color: white;
             margin-top: 10px;
         }
+
         .modal-content {
             border-radius: 24px;
         }
+
         .modal-header {
             background: var(--deep-navy);
             color: white;
         }
+
         .overview-img {
             border-radius: 24px;
             width: 100%;
@@ -444,6 +514,7 @@
             max-height: 220px;
             margin-top: 18px;
         }
+
         .transport-badge {
             background: #FEF3E2;
             border-left: 4px solid var(--sunrise-gold);
@@ -460,7 +531,8 @@
                     <nav class="navbar navbar-expand-lg navbar-light p-0">
                         <div class="container-fluid px-0 navbar-content">
                             <a class="navbar-brand" href="index.html">
-                                <img src="assets/image/nomad_tours_logo.webp" alt="Nomad Tours Logo" class="travel-logo">
+                                <img src="assets/image/nomad_tours_logo.webp" alt="Nomad Tours Logo"
+                                    class="travel-logo">
                             </a>
                             <div class="collapse navbar-collapse" id="navbarNav">
                                 <ul class="navbar-nav">
@@ -476,7 +548,8 @@
                             <div class="nav-right">
                                 <a href="#" class="btn-primary-travel">Book an Experience</a>
                             </div>
-                            <button class="mobile-menu-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvas">
+                            <button class="mobile-menu-toggle" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#mobileOffcanvas">
                                 <i class="fas fa-bars"></i>
                             </button>
                         </div>
@@ -485,8 +558,10 @@
             </div>
         </div>
         <div class="container mt-3">
-            <h1 class="hero-title" style="font-size: 2.8rem;">Madaraka Day Luxury Escape</h1>
-            <p class="hero-subtitle" style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">Kilifi · Malindi · Watamu: 4 days of coastal splendour, private dhow cruises, golden dunes & crimson canyons.</p>
+            <h1 class="hero-title" style="font-size: 2.8rem;">Magical Coastal Escape</h1>
+            <p class="hero-subtitle" style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">Madaraka Day Weekend •
+                May 29 – June 1, 2026<br>Three tiers of coastal luxury: ELITE, VOYAGER, NOMAD – curated experiences for
+                every traveller.</p>
         </div>
     </header>
 
@@ -498,34 +573,42 @@
                 <div class="info-card">
                     <h2 class="section-title">Event Overview</h2>
                     <p><strong>Dates:</strong> Friday, May 29 – Monday, June 1, 2026 (4 days / 3 nights)</p>
-                    <p><strong>Accommodation:</strong> Kilifi Bay Beach Resort — Premium Ocean View Suites</p>
-                    <p><strong>Celebrate Madaraka Day</strong> with an immersive coastal journey: from enchanting creeks and historic Malindi to the surreal Mambrui sand dunes and fiery Marafa canyon. Every moment is crafted for exclusivity: private dhow at sunset, floating restaurant dinner, farm-to-table feasts, and a grand Madaraka Day brunch.</p>
-                    
+                    <p><strong>Celebrate Madaraka Day</strong> with an immersive coastal journey: from enchanting creeks
+                        and historic Malindi to the surreal Mambrui sand dunes and fiery Marafa canyon. Every moment is
+                        crafted for exclusivity: private dhow at sunset, floating restaurant dinner, farm-to-table
+                        feasts, and a grand Madaraka Day brunch.</p>
+
                     <!-- Executive Transport Options highlights -->
                     <div class="row mt-3 g-3">
                         <div class="col-md-6">
                             <div class="transport-badge p-3 h-100">
                                 <i class="fas fa-plane fa-2x text-primary mb-2"></i>
                                 <h5 class="fw-bold">✈️ Flight Premier Option</h5>
-                                <p class="small mb-0">Morning flight Nairobi → Malindi Airport, private executive SUV transfer to Kilifi. Return flight with VIP lounge access.</p>
+                                <p class="small mb-0">Morning flight Nairobi → Malindi Airport, private executive SUV
+                                    transfer to Kilifi. Return flight with VIP lounge access. (supplement applies)</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="transport-badge p-3 h-100">
                                 <i class="fas fa-train fa-2x text-success mb-2"></i>
-                                <h5 class="fw-bold">🚆 SGR First Class (Included)</h5>
-                                <p class="small mb-0">Madaraka Express First Class to Miritini Station + chauffeured luxury transfer to Kilifi (≈90 min). Return same exclusive service.</p>
+                                <h5 class="fw-bold">🚆 SGR First Class (included)</h5>
+                                <p class="small mb-0">Madaraka Express First Class to Miritini Station + chauffeured
+                                    luxury transfer to Kilifi (≈90 min). Return same exclusive service.</p>
                             </div>
                         </div>
                     </div>
                     <div class="mt-3">
-                        <span class="badge bg-warning text-dark me-2"><i class="fas fa-champagne-glasses"></i> All-inclusive luxury</span>
-                        <span class="badge bg-success"><i class="fas fa-umbrella-beach"></i> Private tours & guides</span>
-                        <span class="badge bg-info text-dark"><i class="fas fa-dharmachakra"></i> Cultural & heritage immersion</span>
+                        <span class="badge bg-warning text-dark me-2"><i class="fas fa-champagne-glasses"></i>
+                            All-inclusive luxury</span>
+                        <span class="badge bg-success"><i class="fas fa-umbrella-beach"></i> Private tours &
+                            guides</span>
+                        <span class="badge bg-info text-dark"><i class="fas fa-dharmachakra"></i> Cultural & heritage
+                            immersion</span>
                     </div>
                     <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                         alt="Luxury dhow on Kilifi Creek at sunset" class="overview-img mt-3 shadow-sm">
-                    <p class="text-muted small mt-2"><i class="fas fa-camera-retro"></i> Sunset dhow cruise on Kilifi Creek – pure magic</p>
+                    <p class="text-muted small mt-2"><i class="fas fa-camera-retro"></i> Sunset dhow cruise on Kilifi
+                        Creek – pure magic</p>
                 </div>
 
                 <!-- Detailed Itinerary (Day by day with images) -->
@@ -540,8 +623,14 @@
                                     alt="Private dhow on Kilifi Creek" class="img-fluid rounded-3 shadow-sm w-100">
                             </div>
                             <div class="col-8 col-md-9">
-                                <h4><i class="fas fa-ship text-primary me-2"></i> Day 1: Arrival & The Enchanted Creek</h4>
-                                <p>VIP check‑in at Kilifi Bay Beach Resort, private lunch overlooking the bay. Sunset: <strong>private dhow cruise</strong> on Kilifi Creek with curated cocktails & appetizers. Dinner at a <strong>floating restaurant</strong> on the creek – grilled lobster & coastal delicacies.</p>
+                                <h4><i class="fas fa-ship text-primary me-2"></i> Day 1: Arrival & The Enchanted Creek
+                                </h4>
+                                <p>VIP check‑in at your chosen accommodation (Elite Waterfront Villa / Kilifi Bay
+                                    Standard / Boutique Glamping). Private lunch overlooking the bay. Sunset:
+                                    <strong>private dhow cruise</strong> on Kilifi Creek with curated cocktails &
+                                    appetizers. Dinner at a <strong>floating restaurant</strong> on the creek – grilled
+                                    lobster & coastal delicacies.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -551,11 +640,16 @@
                         <div class="row align-items-center g-3">
                             <div class="col-4 col-md-3">
                                 <img src="https://images.unsplash.com/photo-1566288623394-377af472d81b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80"
-                                    alt="Malindi Museum Vasco da Gama Pillar" class="img-fluid rounded-3 shadow-sm w-100">
+                                    alt="Malindi Museum Vasco da Gama Pillar"
+                                    class="img-fluid rounded-3 shadow-sm w-100">
                             </div>
                             <div class="col-8 col-md-9">
-                                <h4><i class="fas fa-landmark text-primary me-2"></i> Day 2: Heritage, History & The Golden Dunes</h4>
-                                <p>Guided tour of <strong>Malindi Museum</strong>, Vasco da Gama Pillar, and Old Town. Gourmet Italian‑Swahili fusion lunch at a boutique beachfront club. Afternoon expedition to <strong>Mambrui Sand Dunes</strong> – private butler‑serviced sundowner atop the dunes where desert meets the sea.</p>
+                                <h4><i class="fas fa-landmark text-primary me-2"></i> Day 2: Heritage, History & The
+                                    Golden Dunes</h4>
+                                <p>Guided tour of <strong>Malindi Museum</strong>, Vasco da Gama Pillar, and Old Town.
+                                    Gourmet Italian‑Swahili fusion lunch at a boutique beachfront club. Afternoon
+                                    expedition to <strong>Mambrui Sand Dunes</strong> – private butler‑serviced
+                                    sundowner atop the dunes where desert meets the sea.</p>
                             </div>
                         </div>
                     </div>
@@ -568,8 +662,12 @@
                                     alt="Arabuko Sokoke Forest trail" class="img-fluid rounded-3 shadow-sm w-100">
                             </div>
                             <div class="col-8 col-md-9">
-                                <h4><i class="fas fa-tree text-primary me-2"></i> Day 3: Nature’s Majesty & The Crimson Canyon</h4>
-                                <p>Private safari in <strong>Arabuko Sokoke Forest</strong> (expert naturalist, endemic birds/ wildlife). Farm‑to‑table lunch near Watamu. Late afternoon: <strong>Marafa Hell’s Kitchen</strong> – witness “Golden Hour” as canyon walls glow deep red. Candlelit “Farewell Feast” on a private beach at the resort.</p>
+                                <h4><i class="fas fa-tree text-primary me-2"></i> Day 3: Nature’s Majesty & The Crimson
+                                    Canyon</h4>
+                                <p>Private safari in <strong>Arabuko Sokoke Forest</strong> (expert naturalist, endemic
+                                    birds/ wildlife). Farm‑to‑table lunch near Watamu. Late afternoon: <strong>Marafa
+                                        Hell’s Kitchen</strong> – witness “Golden Hour” as canyon walls glow deep red.
+                                    Candlelit “Farewell Feast” on a private beach at the resort.</p>
                             </div>
                         </div>
                     </div>
@@ -582,26 +680,39 @@
                                     alt="Luxury beachfront brunch" class="img-fluid rounded-3 shadow-sm w-100">
                             </div>
                             <div class="col-8 col-md-9">
-                                <h4><i class="fas fa-flag-checkered text-primary me-2"></i> Day 4: Madaraka Day Celebration & Departure</h4>
-                                <p>Leisurely breakfast, spa treatment or paddleboarding in the bay. Midday: <strong>Grand Madaraka Day Brunch</strong> – coastal‑fusion fine dining. Afternoon private executive transfer to Malindi Airport or Mombasa SGR station.</p>
+                                <h4><i class="fas fa-flag-checkered text-primary me-2"></i> Day 4: Madaraka Day
+                                    Celebration & Departure</h4>
+                                <p>Leisurely breakfast, spa treatment or paddleboarding in the bay. Midday:
+                                    <strong>Grand Madaraka Day Brunch</strong> – coastal‑fusion fine dining. Afternoon
+                                    private executive transfer to Malindi Airport or Mombasa SGR station.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Inclusions / Exclusions -->
+                <!-- Inclusions / Exclusions (updated to match all tiers) -->
                 <div class="row g-4">
                     <div class="col-md-6">
                         <div class="info-card h-100">
-                            <h3><i class="fas fa-check-circle text-success"></i> Inclusions</h3>
+                            <h3><i class="fas fa-check-circle text-success"></i> All Packages Include</h3>
                             <ul class="list-unstyled mt-3">
-                                <li><i class="fas fa-check text-success me-2"></i> Round‑trip First Class SGR tickets (Nairobi ↔ Mombasa) & luxury transfers</li>
-                                <li><i class="fas fa-check text-success me-2"></i> 3 nights Ocean View Suite at Kilifi Bay Beach Resort (full board)</li>
-                                <li><i class="fas fa-check text-success me-2"></i> Private dhow cruise + floating restaurant dinner</li>
-                                <li><i class="fas fa-check text-success me-2"></i> Malindi heritage tour + Mambrui Dunes exclusive sundowner</li>
-                                <li><i class="fas fa-check text-success me-2"></i> Arabuko Sokoke private safari & Marafa Hell’s Kitchen golden hour</li>
-                                <li><i class="fas fa-check text-success me-2"></i> All park fees, professional certified guide, luxury Land Cruiser</li>
-                                <li><i class="fas fa-check text-success me-2"></i> Madaraka Day brunch & signature experiences (spa/paddleboard)</li>
+                                <li><i class="fas fa-check text-success me-2"></i> 3 nights accommodation (per tier)
+                                </li>
+                                <li><i class="fas fa-check text-success me-2"></i> Round‑trip First Class SGR tickets
+                                    (Nairobi ↔ Mombasa) & luxury transfers</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Private dhow cruise + floating
+                                    restaurant dinner</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Malindi heritage tour + Mambrui Dunes
+                                    exclusive sundowner</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Arabuko Sokoke private safari &
+                                    Marafa Hell’s Kitchen golden hour</li>
+                                <li><i class="fas fa-check text-success me-2"></i> All park fees, professional certified
+                                    guide, luxury Land Cruiser</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Madaraka Day brunch & signature
+                                    experiences (spa/paddleboard for Elite/Voyager)</li>
+                                <li><i class="fas fa-check text-success me-2"></i> Full-board gourmet meals (breakfast,
+                                    lunch, dinner daily)</li>
                             </ul>
                         </div>
                     </div>
@@ -611,9 +722,10 @@
                             <ul class="list-unstyled mt-3">
                                 <li><i class="fas fa-times text-danger me-2"></i> International flights & visa fees</li>
                                 <li><i class="fas fa-times text-danger me-2"></i> Travel insurance (mandatory)</li>
-                                <li><i class="fas fa-times text-danger me-2"></i> Premium alcoholic beverages & personal souvenirs</li>
-                                <li><i class="fas fa-times text-danger me-2"></i> Flight upgrade surcharge (+$290 per person)</li>
-                                <li><i class="fas fa-times text-danger me-2"></i> Spa treatments beyond complimentary session</li>
+                                <li><i class="fas fa-times text-danger me-2"></i> Premium alcoholic beverages & personal
+                                    souvenirs</li>
+                                <li><i class="fas fa-times text-danger me-2"></i> Flight upgrade surcharge ( +$290 / KES
+                                    37,000 approx )</li>
                                 <li><i class="fas fa-times text-danger me-2"></i> Tips & gratuities</li>
                             </ul>
                         </div>
@@ -625,80 +737,151 @@
                     <h3 class="section-title">Glimpses of the Coast</h3>
                     <div id="coastalCarousel" class="carousel slide migration-carousel" data-bs-ride="carousel">
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#coastalCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                            <button type="button" data-bs-target="#coastalCarousel" data-bs-slide-to="0" class="active"
+                                aria-current="true"></button>
                             <button type="button" data-bs-target="#coastalCarousel" data-bs-slide-to="1"></button>
                             <button type="button" data-bs-target="#coastalCarousel" data-bs-slide-to="2"></button>
                             <button type="button" data-bs-target="#coastalCarousel" data-bs-slide-to="3"></button>
                         </div>
                         <div class="carousel-inner rounded-4">
                             <div class="carousel-item active">
-                                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Dhow at sunset Kilifi">
-                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-2"><p class="mb-0">Sunset dhow on Kilifi Creek</p></div>
+                                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                    class="d-block w-100" alt="Dhow at sunset Kilifi">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-2">
+                                    <p class="mb-0">Sunset dhow on Kilifi Creek</p>
+                                </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="https://images.unsplash.com/photo-1509316785289-025a5b846eb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Mambrui Sand Dunes">
-                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-2"><p class="mb-0">Mambrui Dunes – desert meets ocean</p></div>
+                                <img src="https://images.unsplash.com/photo-1509316785289-025a5b846eb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                    class="d-block w-100" alt="Mambrui Sand Dunes">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-2">
+                                    <p class="mb-0">Mambrui Dunes – desert meets ocean</p>
+                                </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Marafa Hells Kitchen">
-                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-2"><p class="mb-0">Marafa ‘Hell’s Kitchen’ canyon glow</p></div>
+                                <img src="https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                    class="d-block w-100" alt="Marafa Hells Kitchen">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-2">
+                                    <p class="mb-0">Marafa ‘Hell’s Kitchen’ canyon glow</p>
+                                </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Kilifi Bay Beach Resort">
-                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-2"><p class="mb-0">Ocean View Suite luxury</p></div>
+                                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                    class="d-block w-100" alt="Kilifi Bay Beach Resort">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-2">
+                                    <p class="mb-0">Oceanfront luxury at Elite Villa</p>
+                                </div>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#coastalCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#coastalCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#coastalCarousel"
+                            data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#coastalCarousel"
+                            data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
                     </div>
-                    <p class="text-center mt-3 text-muted small"><i class="fas fa-camera"></i> Unforgettable moments – from creek to crimson canyon</p>
+                    <p class="text-center mt-3 text-muted small"><i class="fas fa-camera"></i> Unforgettable moments –
+                        from creek to crimson canyon</p>
                 </div>
             </div>
 
-            <!-- Sidebar: Price & Booking -->
+            <!-- Sidebar: PRICING TABLE (NEW TIERS) -->
             <div class="col-lg-4">
                 <div class="price-box sticky-top" style="top: 100px;">
-                    <h3 class="text-white">Package price</h3>
-                    <div class="display-4 fw-bold text-white">$1,995</div>
-                    <p class="text-white-50">per person sharing (Ocean View Suite)</p>
+                    <h3 class="text-white">Magical Coastal Escape</h3>
+                    <p class="text-white-50 mb-3">May 29 – June 1, 2026 (3 nights)</p>
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th>Package</th>
+                                <th>Solo Traveler</th>
+                                <th>Couple (p.p)</th>
+                                <th>Group 4+ (p.p)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="tier-badge tier-elite">ELITE</span><br>
+                                    <!-- <small>WaterfrontVilla/Suite</small> -->
+                                </td>
+                                <td><strong>KES 222,000</strong></td>
+                                <td><strong>KES 187,000</strong></td>
+                                <td><strong>KES 167,000</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span class="tier-badge tier-voyager">VOYAGER</span><br>
+                                    <!-- <small>Kilifi Bay Standard
+                                        Luxury</small> -->
+                                </td>
+                                <td><strong>KES 117,000</strong></td>
+                                <td><strong>KES 97,000</strong></td>
+                                <td><strong>KES 87,000</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span class="tier-badge tier-nomad">NOMAD</span><br>
+                                    <!-- <small>Premium Glamping /
+                                        Boutique Airbnb</small> -->
+                                </td>
+                                <td><strong>KES 67,000</strong></td>
+                                <td><strong>KES 57,000</strong></td>
+                                <td><strong>KES 49,000</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <hr class="bg-white-50">
-                    <p><i class="fas fa-calendar-alt"></i> May 29 – June 1, 2026</p>
-                    <p><i class="fas fa-train"></i> SGR First Class (Nairobi–Mombasa) included</p>
-                    <p><i class="fas fa-users"></i> Intimate group – max 12 guests</p>
-                    <p><i class="fas fa-gem"></i> Flight upgrade +$290</p>
-                    <a href="#" class="btn-book-now mt-3 w-100" data-bs-toggle="modal" data-bs-target="#bookingModal">Secure Your Spot →</a>
+                    <p class="small text-white-50 mb-2"><i class="fas fa-check-circle"></i> All rates are
+                        <strong>all-inclusive</strong> of:
+                    </p>
+                    <ul class="text-start text-white-50 small" style="list-style: none; padding-left: 0;">
+                        <li><i class="fas fa-check text-white me-1"></i> 3‑Nights accommodation (per tier)</li>
+                        <li><i class="fas fa-check text-white me-1"></i> Executive 4x4 transport + SGR First Class</li>
+                        <li><i class="fas fa-check text-white me-1"></i> Full itinerary excursions (Malindi Museum,
+                            Marafa, Arabuko Sokoke)</li>
+                        <li><i class="fas fa-check text-white me-1"></i> All park & heritage entry fees, private guiding
+                        </li>
+                        <li><i class="fas fa-check text-white me-1"></i> Madaraka Day Grand Brunch</li>
+                    </ul>
+                    <hr class="bg-white-50">
+                    <p><i class="fas fa-calendar-alt"></i> Limited spots – only 12 guests total</p>
+                    <a href="#" class="btn-book-now mt-2 w-100" data-bs-toggle="modal"
+                        data-bs-target="#bookingModal">Select Your Tier →</a>
                     <p class="mt-3 small text-white-50">30% deposit | Balance due 45 days before</p>
                     <hr>
-                    <a href="https://wa.me/254712345678" class="btn-outline-event border border-orange rounded-pill py-2 px-4 text-decoration-none text-white"><i class="fab fa-whatsapp"></i> Speak to Safari Expert</a>
+                    <a href="https://wa.me/254712345678"
+                        class="btn-outline-event border border-orange rounded-pill py-2 px-4 text-decoration-none text-white d-block text-center"><i
+                            class="fab fa-whatsapp"></i> Chat with Safari Expert</a>
                     <div class="info-card-quote mt-4 text-center">
                         <h4>Private group?</h4>
                         <p>Want this itinerary exclusively? Contact us for special rates (min 6 pax).</p>
-                        <a href="contact.html" class="btn-outline-event border border-orange text-orange rounded-pill py-2 px-4 text-decoration-none" style="color: var(--sunrise-gold);">Request Quote →</a>
+                        <a href="contact.html"
+                            class="btn-outline-event border border-orange text-orange rounded-pill py-2 px-4 text-decoration-none"
+                            style="color: var(--sunrise-gold);">Request Quote →</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Why This Luxury Experience -->
+        <!-- Why This Experience -->
         <div class="row mt-5">
             <div class="col-12">
                 <div class="info-card">
-                    <h3 class="section-title">Why This Madaraka Day Escape is Iconic</h3>
+                    <h3 class="section-title">Why the Magical Coastal Escape is Unforgettable</h3>
                     <div class="row">
                         <div class="col-md-4 mb-3">
                             <i class="fas fa-champagne-glasses fa-2x text-warning mb-2"></i>
                             <h5>Exclusive Coastal Access</h5>
-                            <p>Private dhow, secluded dune sundowner, and a floating restaurant – rare moments curated for pure luxury.</p>
+                            <p>Private dhow, secluded dune sundowner, and a floating restaurant – rare moments curated
+                                for pure luxury.</p>
                         </div>
                         <div class="col-md-4 mb-3">
                             <i class="fas fa-hiking fa-2x text-warning mb-2"></i>
                             <h5>Heritage & Wild Nature</h5>
-                            <p>From Arabuko Sokoke’s endemic species to the surreal Marafa canyon, discover Kenya’s hidden treasures.</p>
+                            <p>From Arabuko Sokoke’s endemic species to the surreal Marafa canyon, discover Kenya’s
+                                hidden treasures.</p>
                         </div>
                         <div class="col-md-4 mb-3">
                             <i class="fas fa-utensils fa-2x text-warning mb-2"></i>
                             <h5>Gastronomic Journey</h5>
-                            <p>Italian-Swahili fusion, fresh lobster, farm-to-table & Madaraka Day brunch – a feast of coastal flavors.</p>
+                            <p>Italian-Swahili fusion, fresh lobster, farm-to-table & Madaraka Day brunch – a feast of
+                                coastal flavors.</p>
                         </div>
                     </div>
                 </div>
@@ -706,7 +889,8 @@
         </div>
 
         <div class="mt-2 mb-4 text-center">
-            <a href="event.html" class="btn-back-tours text-decoration-none fw-bold" style="color: var(--deep-navy);"><i class="fas fa-arrow-left me-2"></i>Back to Events</a>
+            <a href="event.html" class="btn-back-tours text-decoration-none fw-bold" style="color: var(--deep-navy);"><i
+                    class="fas fa-arrow-left me-2"></i>Back to Events</a>
         </div>
     </div>
 
@@ -715,7 +899,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <img src="assets/image/nomad_tours_logo.webp" alt="Nomad Tours" style="background:#f0f2f5; border-radius:12px; padding:6px 12px; max-height:70px; margin-bottom:16px;">
+                    <img src="assets/image/nomad_tours_logo.webp" alt="Nomad Tours"
+                        style="background:#f0f2f5; border-radius:12px; padding:6px 12px; max-height:70px; margin-bottom:16px;">
                     <h5>Nomad Tours & Experiences</h5>
                     <p>Authentic journeys crafted by locals, with heart and expertise.</p>
                     <div class="footer-social">
@@ -728,8 +913,10 @@
                 <div class="footer-col">
                     <h5>Contact</h5>
                     <p><i class="fas fa-phone-alt me-2" style="color:var(--secondary-orange);"></i> +254 712 345 678</p>
-                    <p><i class="fas fa-map-marker-alt me-2" style="color:var(--secondary-orange);"></i> Bofa Road, Kilifi Kenya</p>
-                    <p><i class="far fa-envelope me-2" style="color:var(--secondary-orange);"></i> hello@nomadtours.co.ke</p>
+                    <p><i class="fas fa-map-marker-alt me-2" style="color:var(--secondary-orange);"></i> Bofa Road,
+                        Kilifi Kenya</p>
+                    <p><i class="far fa-envelope me-2" style="color:var(--secondary-orange);"></i>
+                        hello@nomadtours.co.ke</p>
                 </div>
                 <div class="footer-col">
                     <h5>Policies</h5>
@@ -772,40 +959,101 @@
                 <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
             <div class="mobile-action-buttons mt-4">
-                <a href="#" class="btn-mobile-book" data-bs-toggle="modal" data-bs-target="#bookingModal"><i class="fas fa-calendar-check"></i> Book Now</a>
+                <a href="#" class="btn-mobile-book" data-bs-toggle="modal" data-bs-target="#bookingModal"><i
+                        class="fas fa-calendar-check"></i> Book Now</a>
                 <a href="https://wa.me/254712345678" class="btn-mobile-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
             </div>
         </div>
     </div>
 
-    <!-- Booking Modal -->
+    <!-- Booking Modal with tier selection -->
     <div class="modal fade" id="bookingModal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Book Madaraka Day Luxury Escape</h5>
+                    <h5 class="modal-title">Book Magical Coastal Escape</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Secure your spot: May 29 – June 1, 2026. Price $1,995 per person sharing (SGR First Class included). 30% deposit confirms.</p>
+                    <p>Secure your spot for May 29 – June 1, 2026. Choose your package below. 30% deposit confirms.</p>
                     <form>
-                        <div class="mb-3"><label class="form-label">Full Name</label><input type="text" class="form-control" required></div>
-                        <div class="mb-3"><label class="form-label">Email</label><input type="email" class="form-control" required></div>
-                        <div class="mb-3"><label class="form-label">WhatsApp / Phone</label><input type="text" class="form-control"></div>
-                        <div class="mb-3"><label class="form-label">Number of participants</label><select class="form-select"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></div>
-                        <div class="mb-3"><label class="form-label">Preferred transport</label><select class="form-select"><option>SGR First Class (included)</option><option>Flight upgrade (+$290)</option></select></div>
+                        <div class="mb-3"><label class="form-label">Full Name</label><input type="text"
+                                class="form-control" required></div>
+                        <div class="mb-3"><label class="form-label">Email</label><input type="email"
+                                class="form-control" required></div>
+                        <div class="mb-3"><label class="form-label">WhatsApp / Phone</label><input type="text"
+                                class="form-control"></div>
+                        <div class="mb-3"><label class="form-label">Select Package Tier</label>
+                            <select class="form-select" required>
+                                <option value="">-- Select --</option>
+                                <option>ELITE (Waterfront Villa) – from KES 167,000 p.p (group)</option>
+                                <option>VOYAGER (Kilifi Bay Standard) – from KES 87,000 p.p (group)</option>
+                                <option>NOMAD (Premium Glamping) – from KES 49,000 p.p (group)</option>
+                            </select>
+                        </div>
+                        <div class="mb-3"><label class="form-label">Number of participants</label><select
+                                class="form-select">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5+</option>
+                            </select></div>
+                        <div class="mb-3"><label class="form-label">Preferred transport</label><select
+                                class="form-select">
+                                <option>SGR First Class (included)</option>
+                                <option>Flight upgrade (+$290 / KES 37,000 approx)</option>
+                            </select></div>
                         <button type="submit" class="btn-primary-travel w-100 border-0">Request Booking →</button>
                     </form>
-                    <p class="mt-3 small text-muted">We'll reply within 12 hours. Limited to 12 guests – only 4 spots left!</p>
+                    <p class="mt-3 small text-muted">We'll reply within 12 hours. Limited to 12 guests – only 4 spots
+                        left!</p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Policy Modals -->
-    <div class="modal fade" id="privacyModal" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Privacy Policy</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Nomad Tours collects booking information only for service delivery. Your data is never shared.</p></div></div></div></div>
-    <div class="modal fade" id="termsModal" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Booking Terms</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>30% deposit confirms. Cancellation 30+ days: full refund less 10% admin.</p></div></div></div></div>
-    <div class="modal fade" id="cancellationModal" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Cancellation</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><p>Free cancellation up to 30 days before departure. 50% refund 15-29 days.</p></div></div></div></div>
+    <div class="modal fade" id="privacyModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Privacy Policy</h5><button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Nomad Tours collects booking information only for service delivery. Your data is never shared.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="termsModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Booking Terms</h5><button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>30% deposit confirms. Cancellation 30+ days: full refund less 10% admin.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cancellationModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cancellation</h5><button type="button" class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Free cancellation up to 30 days before departure. 50% refund 15-29 days.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
