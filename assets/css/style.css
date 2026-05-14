@@ -314,6 +314,28 @@ body.nav-fixed-padding {
     color: white;
 }
 
+/* #google_translate_element {
+    border-radius: 4px;
+    background-color: var(--white);
+    color: var(--secondary-orange);
+    padding: 8px;
+    font-weight: 800;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.goog-te-gadget {
+    font-family: Arial, sans-serif !important;
+}
+
+.goog-te-combo {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+} */
+
 /* Contact Page Styles */
 .contact-section {
     margin-top: -30px;
