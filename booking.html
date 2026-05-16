@@ -7,9 +7,9 @@
     <title>SaviraNest | Book an Experience – Reserve Your Kenyan Adventure</title>
 
     <meta name="description"
-        content="Book unforgettable experiences in Kenya: safaris, snorkeling, cultural tours, and more. Instant confirmation.">
+        content="Book unforgettable experiences in Kenya: safaris, snorkeling, cultural tours, and more. Instant confirmation with child discount (half price for under 12).">
     <meta name="keywords"
-        content="booking experience Kenya, Masai Mara safari, Diani snorkeling, Watamu marine, Lamu dhow">
+        content="booking experience Kenya, Masai Mara safari, Diani snorkeling, Watamu marine, Lamu dhow, child discount">
 
     <link rel="icon" href="assets/image/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -19,7 +19,7 @@
     <!-- Flatpickr CSS (optional, kept for date picker consistency) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/airbnb.css">
-   
+
 </head>
 
 <body>
@@ -59,7 +59,7 @@
         <div class="hero-content container">
             <h1 class="hero-title">Book Your Kenyan Experience</h1>
             <p class="hero-subtitle">Secure your adventure — from wildlife safaris to cultural tours — instant
-                confirmation</p>
+                confirmation, child discount applies (half price for under 12)</p>
         </div>
     </header>
 
@@ -79,25 +79,34 @@
                             <div id="noResultsMsg" class="no-results-msg">No matching experiences found. Try a different
                                 keyword.</div>
                         </div>
-                        <div class="col-md-6 form-group">
+                        <div class="col-md-4 form-group">
                             <label class="form-label-custom"><i class="fas fa-tree"></i> Select Experience *</label>
                             <select id="experienceItem" class="form-select-booking" required>
                                 <option value="">-- Choose an adventure --</option>
                                 <option value="Masai Mara Full Day Safari" data-price="12500">Masai Mara Full Day Safari
-                                    (incl. lunch) – KES 12,500 p.p</option>
+                                    (incl. lunch) – KES 12,500 p.p (adult)</option>
                                 <option value="Diani Snorkeling & Wasini Island" data-price="5500">Diani Snorkeling &
-                                    Wasini Island – KES 5,500 p.p</option>
+                                    Wasini Island – KES 5,500 p.p (adult)</option>
                                 <option value="Watamu Marine Park & Mida Creek" data-price="4800">Watamu Marine Park &
-                                    Mida Creek – KES 4,800 p.p</option>
+                                    Mida Creek – KES 4,800 p.p (adult)</option>
                                 <option value="Lamu Dhow Sunset Cruise" data-price="3200">Lamu Dhow Sunset Cruise – KES
-                                    3,200 p.p</option>
+                                    3,200 p.p (adult)</option>
                                 <option value="Hell's Gate Cycling & Hiking" data-price="3900">Hell's Gate Cycling &
-                                    Hiking – KES 3,900 p.p</option>
+                                    Hiking – KES 3,900 p.p (adult)</option>
                                 <option value="Coffee Farm & Kiambethu Tea Tour" data-price="4500">Farm-to-Table Coffee
-                                    Tour – KES 4,500 p.p</option>
+                                    Tour – KES 4,500 p.p (adult)</option>
                             </select>
                         </div>
-                        <div class="col-md-6 form-group">
+                        <div class="col-md-4 form-group">
+                            <label class="form-label-custom"><i class="fas fa-hiking"></i> Select Safari Style *</label>
+                            <select name="budget_type" id="budgetType" class="form-select-booking" required>
+                                <option value="">-- Choose Your Safari Style --</option>
+                                <option value="low_budget">Budget Safari (Affordable & Group Tours)</option>
+                                <option value="mid_range">Mid-Range Safari (Comfort & Value)</option>
+                                <option value="luxury">Luxury Safari (Premium Lodges & Private Tours)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 form-group">
                             <label class="form-label-custom"><i class="fas fa-calendar-alt"></i> Preferred Date
                                 *</label>
                             <input type="date" id="experienceDate" class="form-control-booking" required>
@@ -110,7 +119,8 @@
                             <input type="number" id="adults" class="form-control-booking" value="2" min="1" max="10">
                         </div>
                         <div class="col-md-4 form-group">
-                            <label class="form-label-custom"><i class="fas fa-child"></i> Children (under 12)</label>
+                            <label class="form-label-custom"><i class="fas fa-child"></i> Children (under 12) – half
+                                price</label>
                             <input type="number" id="children" class="form-control-booking" value="0" min="0" max="6">
                         </div>
                         <div class="col-md-4 form-group">
@@ -148,14 +158,15 @@
                     </div>
                 </div>
 
-                <!-- Price Summary -->
+                <!-- Price Summary (Child half price logic) -->
                 <div class="price-summary" id="priceSummary">
                     <div class="d-flex justify-content-between align-items-center">
                         <span><strong>Total estimated price:</strong></span>
                         <span id="totalAmountDisplay" class="fw-bold fs-5" style="color: var(--support-green);">KES
                             0</span>
                     </div>
-                    <div class="small text-muted mt-1" id="breakdownText">Select an experience above to see total</div>
+                    <div class="small text-muted mt-1" id="breakdownText">Select an experience and adjust guests to see
+                        child discount (50% off per child)</div>
                 </div>
 
                 <button type="submit" class="btn-book-now mt-3"><i class="fas fa-lock me-2"></i> Confirm & Proceed to
@@ -353,25 +364,63 @@
             updateParticipantsAndPrice();
         }
 
-        // Update participants = adults + children, then price
+        // NEW: Calculate total with child discount: child price = half of adult price (rounded to nearest KES)
+        function calculateTotalWithChildDiscount(adultCount, childCount, adultPricePerPerson) {
+            if (isNaN(adultPricePerPerson) || adultPricePerPerson <= 0) return 0;
+            const childPrice = Math.round(adultPricePerPerson / 2);
+            const totalAdultCost = adultCount * adultPricePerPerson;
+            const totalChildCost = childCount * childPrice;
+            return totalAdultCost + totalChildCost;
+        }
+
+        // Update participants count and price (child = half adult price)
         function updateParticipantsAndPrice() {
             let adults = parseInt(adultsInput.value) || 0;
             let children = parseInt(childrenInput.value) || 0;
+            // Ensure non-negative
+            if (adults < 0) adults = 0;
+            if (children < 0) children = 0;
+            // Minimum one adult? We'll allow zero adults but then children only? For UX, but keep as is. If no participants show 0
             const totalParticipants = adults + children;
             participantsInput.value = totalParticipants;
 
             const selectedOption = experienceSelect.options[experienceSelect.selectedIndex];
             if (!selectedOption || !selectedOption.value || totalParticipants === 0) {
                 totalDisplay.innerText = 'KES 0';
-                breakdownSpan.innerText = 'Select an experience and ensure at least 1 participant.';
+                breakdownSpan.innerText = 'Select an experience and ensure at least 1 participant (adult or child).';
                 return;
             }
 
-            const pricePerPerson = parseInt(selectedOption.getAttribute('data-price')) || 0;
-            const total = pricePerPerson * totalParticipants;
-            totalDisplay.innerText = `KES ${total.toLocaleString()}`;
-            breakdownSpan.innerText = `${selectedOption.text.split('–')[0].trim()} × ${totalParticipants} person(s) = KES ${total.toLocaleString()}`;
+            const adultPrice = parseInt(selectedOption.getAttribute('data-price')) || 0;
+            if (adultPrice === 0) {
+                totalDisplay.innerText = 'KES 0';
+                breakdownSpan.innerText = 'Price information unavailable.';
+                return;
+            }
+
+            const childPrice = Math.round(adultPrice / 2);
+            const totalCost = calculateTotalWithChildDiscount(adults, children, adultPrice);
+
+            // Format display
+            totalDisplay.innerText = `KES ${totalCost.toLocaleString()}`;
+
+            // Build descriptive breakdown
+            const experienceNameRaw = selectedOption.text.split('–')[0].trim();
+            let breakdownHtml = `${experienceNameRaw}: `;
+            if (adults > 0 && children > 0) {
+                breakdownHtml = `${experienceNameRaw}: ${adults} adult(s) × KES ${adultPrice.toLocaleString()} + ${children} child(ren) × KES ${childPrice.toLocaleString()} = KES ${totalCost.toLocaleString()}`;
+            } else if (adults > 0) {
+                breakdownHtml = `${experienceNameRaw}: ${adults} adult(s) × KES ${adultPrice.toLocaleString()} = KES ${totalCost.toLocaleString()}`;
+            } else if (children > 0) {
+                breakdownHtml = `${experienceNameRaw}: ${children} child(ren) × KES ${childPrice.toLocaleString()} = KES ${totalCost.toLocaleString()} (child half-price)`;
+            } else {
+                breakdownHtml = `${experienceNameRaw}: No participants selected.`;
+            }
+            breakdownSpan.innerHTML = breakdownHtml;
         }
+
+        // Extra validation: Ensure adults at least 1 if totalParticipants > 0 and children only? Not necessary but optional.
+        // But we respect if user sets 0 adults and only children, it's allowed (child price only)
 
         // Event listeners
         searchInput.addEventListener('input', filterExperiences);
@@ -379,8 +428,89 @@
         adultsInput.addEventListener('input', updateParticipantsAndPrice);
         childrenInput.addEventListener('input', updateParticipantsAndPrice);
 
-        // Initial load - show all options
+        // Initial load - show all options and set default price with 2 adults
         filterExperiences();
+
+        // Ensure proper initial state after filter (since filter resets selection)
+        // After filter, selected experience might be empty, but we set default after DOM ready
+        // We'll manually trigger once more after a tiny delay to catch initial adult/child values
+        setTimeout(() => {
+            // If no experience selected but first option exists programmatically, optionally select default? We'll keep as is.
+            // User needs to pick experience. But display proper message.
+            updateParticipantsAndPrice();
+        }, 50);
+
+        // For better user interaction: if search clears and no selection, keep price zero.
+        // Also handle manual date validation or other frontend checks.
+        bookingForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Basic validation
+            const experience = experienceSelect.value;
+            const dateVal = document.getElementById('experienceDate').value;
+            const guestName = document.getElementById('guestName').value.trim();
+            const guestEmail = document.getElementById('guestEmail').value.trim();
+            const guestPhone = document.getElementById('guestPhone').value.trim();
+
+            if (!experience) {
+                alert("Please select an experience.");
+                return;
+            }
+            if (!dateVal) {
+                alert("Please select your preferred date.");
+                return;
+            }
+            if (!guestName) {
+                alert("Please enter your full name.");
+                return;
+            }
+            if (!guestEmail || !guestEmail.includes('@')) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+            if (!guestPhone) {
+                alert("Please enter your phone number (WhatsApp).");
+                return;
+            }
+
+            const adults = parseInt(adultsInput.value) || 0;
+            const children = parseInt(childrenInput.value) || 0;
+            if (adults === 0 && children === 0) {
+                alert("At least one adult or child must be included.");
+                return;
+            }
+
+            const selectedOption = experienceSelect.options[experienceSelect.selectedIndex];
+            const adultPrice = parseInt(selectedOption.getAttribute('data-price')) || 0;
+            const totalCost = calculateTotalWithChildDiscount(adults, children, adultPrice);
+
+            // Show confirmation message (demo)
+            alert(`✨ Booking request received!\n\nExperience: ${selectedOption.text.split('–')[0].trim()}\nDate: ${dateVal}\nGuests: ${adults} Adult(s), ${children} Child(ren)\nTotal: KES ${totalCost.toLocaleString()}\n\nWe’ll send a confirmation email & payment link to ${guestEmail}.`);
+            // In production, submit via fetch/AJAX. For now demo.
+            // You can uncomment if needed: this.submit();
+        });
+
+        // Additional polish: when experience select changes via search, re-calc
+        // Also ensure child price is reflected instantly.
+        // Add note for user that children are half price
+        const childLabelNote = document.createElement('small');
+        const childFieldGroup = document.querySelector('.form-group:has(#children)');
+        if (childFieldGroup) {
+            const existingNote = childFieldGroup.querySelector('.child-discount-note');
+            if (!existingNote) {
+                const note = document.createElement('div');
+                note.className = 'form-text text-muted mt-1 child-discount-note';
+                note.style.fontSize = '0.7rem';
+                note.innerHTML = '<i class="fas fa-percent"></i> Children (under 12) pay 50% of adult price';
+                childFieldGroup.appendChild(note);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dateInput = document.getElementById("experienceDate");
+
+            const today = new Date().toISOString().split("T")[0];
+            dateInput.setAttribute("min", today);
+        });
     </script>
 </body>
 
