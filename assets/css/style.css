@@ -1447,7 +1447,7 @@ body.nav-fixed-padding {
 
 .hero-section {
     background: url('../image/main-bg.webp') no-repeat;
-    background-size: auto 140%;
+    background-size: auto 110%;
     background-position: calc(50% + 350px) center;
     background-repeat: no-repeat;
     min-height: 75vh;

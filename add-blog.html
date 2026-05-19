@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Blog Modal | CKEditor with Image Upload (Base64)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, 'Segoe UI', 'Inter', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(145deg, #f6f9fc 0%, #eef2f5 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .dashboard {
+            max-width: 1000px;
+            width: 100%;
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(2px);
+            border-radius: 2rem;
+            box-shadow: 0 25px 45px -12px rgba(0,0,0,0.25), 0 2px 8px rgba(0,0,0,0.05);
+            padding: 2rem;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255,255,255,0.6);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 1.2rem;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #1e293b, #2d3a4e);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: -0.3px;
+        }
+
+        .add-blog-btn {
+            background: linear-gradient(105deg, #0f2b3d, #1c4e6e);
+            border: none;
+            padding: 0.8rem 1.6rem;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 1rem;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 8px 18px rgba(0, 32, 64, 0.2);
+            transition: transform 0.15s, background 0.2s;
+        }
+
+        .add-blog-btn:hover {
+            background: linear-gradient(105deg, #1a3f56, #236b94);
+            transform: scale(1.02);
+            box-shadow: 0 12px 22px rgba(0, 0, 0, 0.2);
+        }
+
+        .empty-state {
+            background: #f8fafc;
+            border-radius: 1.5rem;
+            padding: 3rem;
+            text-align: center;
+            color: #4b5563;
+            border: 1px dashed #cbd5e1;
+            margin-top: 1rem;
+        }
+
+        /* ----- MODAL STYLES ----- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(10, 25, 40, 0.75);
+            backdrop-filter: blur(6px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            transition: opacity 0.2s;
+            padding: 1rem;
+        }
+
+        .modal-container {
+            background: #ffffff;
+            max-width: 1000px;
+            width: 100%;
+            max-height: 90vh;
+            border-radius: 1.75rem;
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+            overflow-y: auto;
+            animation: modalFadeIn 0.2s ease-out;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #e9edf2;
+            background: #fefefe;
+            border-radius: 1.75rem 1.75rem 0 0;
+        }
+
+        .modal-header h2 {
+            font-size: 1.65rem;
+            font-weight: 700;
+            background: linear-gradient(130deg, #1e293b, #2c4f6e);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .close-modal {
+            font-size: 2rem;
+            font-weight: 400;
+            cursor: pointer;
+            background: none;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            color: #5f6c80;
+        }
+
+        .close-modal:hover {
+            background-color: #f1f5f9;
+            color: #0f172a;
+            transform: scale(1.05);
+        }
+
+        .modal-body {
+            padding: 1.5rem 2rem 2rem 2rem;
+            background: #ffffff;
+        }
+
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+            font-size: 0.95rem;
+            letter-spacing: -0.2px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 1rem;
+            font-size: 1rem;
+            transition: all 0.2s;
+            background: #fefefe;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #2c7da0;
+            box-shadow: 0 0 0 3px rgba(44, 125, 160, 0.2);
+        }
+
+        .ckeditor-wrapper {
+            margin-top: 0.25rem;
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
+        .submit-area {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-secondary {
+            background: #f1f5f9;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 40px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.2s;
+            color: #1f3a4b;
+        }
+
+        .btn-secondary:hover {
+            background: #e2e8f0;
+        }
+
+        .btn-primary {
+            background: linear-gradient(95deg, #0f2b3d, #1b4f6e);
+            border: none;
+            padding: 0.75rem 1.8rem;
+            border-radius: 40px;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background: linear-gradient(95deg, #1a4057, #236b94);
+            transform: translateY(-1px);
+        }
+
+        .info-note {
+            font-size: 0.8rem;
+            color: #4b6a7c;
+            margin-top: 0.5rem;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #eef2f5;
+            border-radius: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #b9cad6;
+            border-radius: 8px;
+        }
+    </style>
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+</head>
+<body>
+
+<div class="dashboard">
+    <div class="header">
+        <h1>📝 Blog Studio (Images supported)</h1>
+        <button class="add-blog-btn" id="openModalBtn">+ Create new post</button>
+    </div>
+    <div class="empty-state">
+        🖼️ Now with <strong>image upload</strong> — paste, drag & drop, or browse images.<br>
+        Images are stored as base64 (no server needed). Open modal and try!
+    </div>
+</div>
+
+<!-- MODAL STRUCTURE -->
+<div id="blogModal" class="modal-overlay">
+    <div class="modal-container">
+        <div class="modal-header">
+            <h2>✏️ Write your blog post</h2>
+            <button class="close-modal" id="closeModalBtn" aria-label="Close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form id="blogForm" autocomplete="off">
+                <div class="form-group">
+                    <label>📌 Blog title *</label>
+                    <input type="text" id="blogTitle" placeholder="e.g., The future of web design" required>
+                </div>
+                <div class="form-group">
+                    <label>📸 Content (rich text with images) *</label>
+                    <div class="ckeditor-wrapper">
+                        <textarea id="editor" rows="8" placeholder="Start writing... You can drag & drop images here!"></textarea>
+                    </div>
+                    <div class="info-note">✨ Use the toolbar: insert image, format text, add links. Images are embedded directly.</div>
+                </div>
+                <div class="submit-area">
+                    <button type="button" class="btn-secondary" id="cancelModalBtn">Cancel</button>
+                    <button type="submit" class="btn-primary" id="publishBtn">Publish blog</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function() {
+        // DOM elements
+        const modal = document.getElementById('blogModal');
+        const openBtn = document.getElementById('openModalBtn');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const cancelModalBtn = document.getElementById('cancelModalBtn');
+        const blogForm = document.getElementById('blogForm');
+        const titleInput = document.getElementById('blogTitle');
+        const publishButton = document.getElementById('publishBtn');
+        
+        let blogEditorInstance = null;
+        let isEditorReady = false;
+        let initPromise = null;
+
+        // ----- Base64 image upload adapter for CKEditor 5 -----
+        // This custom adapter intercepts image uploads, converts file to base64,
+        // and returns a resolved URL so images are embedded.
+        class Base64UploadAdapter {
+            constructor(loader) {
+                this.loader = loader;
+            }
+
+            upload() {
+                return this.loader.file.then(file => new Promise((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.onload = () => {
+                        resolve({ default: reader.result });
+                    };
+                    reader.onerror = error => reject(error);
+                    reader.readAsDataURL(file);
+                }));
+            }
+
+            abort() {
+                // no cleanup needed for base64
+            }
+        }
+
+        function Base64UploadAdapterPlugin(editor) {
+            editor.plugins.get('FileRepository').createUploadAdapter = (loader) => {
+                return new Base64UploadAdapter(loader);
+            };
+        }
+
+        // Ensure editor with full image support
+        function ensureEditor() {
+            if (blogEditorInstance && isEditorReady) {
+                return Promise.resolve(blogEditorInstance);
+            }
+            if (initPromise) {
+                return initPromise;
+            }
+
+            if (publishButton) {
+                publishButton.disabled = true;
+                publishButton.textContent = '⏳ Loading editor...';
+            }
+
+            const textareaElement = document.querySelector('#editor');
+            if (!textareaElement) {
+                const errMsg = 'Textarea #editor not found';
+                console.error(errMsg);
+                if (publishButton) {
+                    publishButton.disabled = false;
+                    publishButton.textContent = 'Publish blog';
+                }
+                return Promise.reject(new Error(errMsg));
+            }
+
+            initPromise = ClassicEditor
+                .create(textareaElement, {
+                    extraPlugins: [Base64UploadAdapterPlugin],
+                    toolbar: {
+                        items: [
+                            'heading', '|',
+                            'bold', 'italic', 'underline', 'strikethrough', '|',
+                            'imageUpload', 'insertImage', '|',
+                            'bulletedList', 'numberedList', '|',
+                            'link', 'blockQuote', 'insertTable', '|',
+                            'undo', 'redo'
+                        ]
+                    },
+                    image: {
+                        toolbar: ['imageTextAlternative', 'imageStyle:full', 'imageStyle:side'],
+                        styles: ['full', 'side']
+                    },
+                    heading: {
+                        options: [
+                            { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+                            { model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' },
+                            { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' }
+                        ]
+                    },
+                    placeholder: 'Write your immersive blog content here... Drag & drop images or click "Insert image"'
+                })
+                .then(editor => {
+                    blogEditorInstance = editor;
+                    isEditorReady = true;
+                    console.log('CKEditor with image upload (base64) ready');
+                    if (publishButton) {
+                        publishButton.disabled = false;
+                        publishButton.textContent = 'Publish blog';
+                    }
+                    return editor;
+                })
+                .catch(error => {
+                    console.error('CKEditor init error:', error);
+                    isEditorReady = false;
+                    if (publishButton) {
+                        publishButton.disabled = false;
+                        publishButton.textContent = 'Publish blog';
+                    }
+                    alert('Failed to load rich editor. Please refresh the page.');
+                    throw error;
+                })
+                .finally(() => {
+                    initPromise = null;
+                });
+
+            return initPromise;
+        }
+
+        async function openModal() {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            titleInput.value = '';
+            try {
+                const editor = await ensureEditor();
+                if (editor && isEditorReady) {
+                    await editor.setData('');
+                } else if (editor) {
+                    await editor.setData('');
+                    isEditorReady = true;
+                }
+            } catch (err) {
+                console.warn('Editor init warning:', err);
+            }
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        async function getEditorContent() {
+            if (blogEditorInstance && isEditorReady) {
+                return blogEditorInstance.getData();
+            } else if (blogEditorInstance) {
+                try {
+                    return blogEditorInstance.getData();
+                } catch(e) { return ''; }
+            } else {
+                try {
+                    const editor = await ensureEditor();
+                    return editor.getData();
+                } catch(err) {
+                    console.error('Cannot retrieve content', err);
+                    return '';
+                }
+            }
+        }
+
+        async function handlePublish(event) {
+            event.preventDefault();
+            const title = titleInput.value.trim();
+            if (!title) {
+                alert('❌ Please provide a blog title.');
+                titleInput.focus();
+                return;
+            }
+
+            let content = '';
+            try {
+                content = await getEditorContent();
+            } catch (err) {
+                console.error(err);
+                alert('⚠️ Could not retrieve editor content. Please try again.');
+                return;
+            }
+
+            const plainText = content.replace(/<[^>]*>/g, '').trim();
+            if (!plainText || plainText.length === 0 || content === '<p>&nbsp;</p>' || content === '<p><br></p>' || content === '') {
+                alert('✏️ Blog content cannot be empty. Please write something meaningful.');
+                return;
+            }
+
+            const newBlogPost = {
+                id: Date.now(),
+                title: title,
+                content: content,
+                createdAt: new Date().toISOString()
+            };
+            console.log('📘 New blog post published (with images as base64):', newBlogPost);
+            alert(`✅ Blog "${title}" has been published! Images are embedded. (Check console for details)`);
+            closeModal();
+        }
+
+        // Event listeners
+        openBtn.addEventListener('click', () => {
+            openModal().catch(e => console.warn('Open modal error', e));
+        });
+        closeModalBtn.addEventListener('click', closeModal);
+        cancelModalBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+        });
+        blogForm.addEventListener('submit', handlePublish);
+
+        console.log('Blog modal with image upload ready — use "Insert image" or drag & drop');
+    })();
+</script>
+</body>
+</html>
