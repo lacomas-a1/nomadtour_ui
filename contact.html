@@ -14,6 +14,56 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Minimal inline CSS for tabs (only tab functionality support) -->
+    <style>
+        /* TAB SUPPORT CSS - no extra styling beyond tab behaviour */
+        .custom-tabs {
+            width: 100%;
+        }
+        .tabs-header {
+            display: flex;
+            gap: 0.5rem;
+            border-bottom: 2px solid #e2e8f0;
+            margin-bottom: 1.8rem;
+        }
+        .tab-link {
+            background: none;
+            border: none;
+            padding: 0.75rem 1.25rem;
+            font-weight: 600;
+            font-size: 1rem;
+            color: #4a5568;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+            border-radius: 0;
+        }
+        .tab-link.active {
+            color: var(--primary-blue, #2c7da0);
+        }
+        .tab-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-blue, #2c7da0);
+        }
+        .tab-pane {
+            display: none;
+        }
+        .tab-pane.active {
+            display: block;
+        }
+        /* ensure consistent spacing and form elements retain original styles */
+        .form-success-msg {
+            margin-top: 1rem;
+        }
+        .rating-select {
+            max-width: 140px;
+        }
+    </style>
 </head>
 
 <body>
@@ -87,67 +137,139 @@
         </div>
 
         <div class="row g-5">
-            <!-- Contact Form -->
+            <!-- LEFT COLUMN: Tabbed forms (Booking Safari + Leave Review) -->
             <div class="col-lg-7">
                 <div class="contact-form-wrapper">
-                    <h3 class="mb-4" style="color: var(--primary-blue);">Send Us a Message</h3>
-                    <form id="contactForm" action="#" method="POST">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label class="form-label">Full Name *</label>
-                                <input type="text" class="form-control" name="name" required>
+                    <!-- TABS: Booking / Review -->
+                    <div class="custom-tabs">
+                        <div class="tabs-header">
+                            <button class="tab-link active" data-tab="bookingTab" id="tabBookingBtn">🐘 Book a Safari</button>
+                            <button class="tab-link" data-tab="reviewTab" id="tabReviewBtn">⭐ Leave a Review</button>
+                        </div>
+                        <div class="tab-content">
+                            <!-- BOOKING SAFARI TAB -->
+                            <div id="bookingTab" class="tab-pane active">
+                                <h3 class="mb-4" style="color: var(--primary-blue);">Plan Your Safari Adventure</h3>
+                                <form id="bookingSafariForm" action="#" method="POST">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Full Name *</label>
+                                            <input type="text" class="form-control" name="fullname" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Email Address *</label>
+                                            <input type="email" class="form-control" name="email" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Phone Number</label>
+                                            <input type="tel" class="form-control" name="phone">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Preferred Safari Package</label>
+                                            <select class="form-select" name="package">
+                                                <option>Classic Safari (Masai Mara)</option>
+                                                <option>Beach & Bush Combo (Diani + Tsavo)</option>
+                                                <option>Great Migration Experience</option>
+                                                <option>Cultural & Village Tour</option>
+                                                <option>Honeymoon Escape</option>
+                                                <option>Adventure & Hiking</option>
+                                                <option>Custom Itinerary</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Preferred Travel Date</label>
+                                            <input type="date" class="form-control" name="travel_date">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Number of Travelers</label>
+                                            <select class="form-select" name="travelers">
+                                                <option value="1">1 Traveler</option>
+                                                <option value="2">2 Travelers</option>
+                                                <option value="3">3-4 Travelers</option>
+                                                <option value="5">5+ Group</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">Special Requests / Travel Plans *</label>
+                                            <textarea class="form-control" rows="4" name="message"
+                                                placeholder="Tell us about your dream safari, accommodation preferences, bucket-list wildlife, or any special needs..."
+                                                required></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn-submit"><i class="fas fa-paw me-2"></i>Request Booking</button>
+                                        </div>
+                                    </div>
+                                    <div id="bookingSuccessMsg" class="alert alert-success mt-3 d-none form-success-msg">🎉 Safari request sent! Our travel experts will reply within 24 hours.</div>
+                                </form>
                             </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Email Address *</label>
-                                <input type="email" class="form-control" name="email" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Phone Number</label>
-                                <input type="tel" class="form-control" name="phone">
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Preferred Package</label>
-                                <select class="form-select" name="destination">
-                                    <option>Summer Rest</option>
-                                    <option>Safari Tour</option>
-                                    <option>Cultural Tour</option>
-                                    <option>Corporate Tour</option>
-                                    <option>Honeymoon</option>
-                                    <option>Adventure</option>
-                                    <option>Custom Itinerary</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Preferred Date</label>
-                                <input type="date" class="form-control" name="preferred_date">
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Travelers</label>
-                                <select class="form-select" name="adults">
-                                    <option value="1">1 Traveler</option>
-                                    <option value="2">2 Travelers</option>
-                                    <option value="3">3-4 Travelers</option>
-                                    <option value="5">5+ Group</option>
-                                </select>
-                            </div>
-                            <div class="col-12">
-                                <label class="form-label">Message / Travel Plans *</label>
-                                <textarea class="form-control" rows="5" name="message"
-                                    placeholder="Tell us about your dream safari, group size, travel dates, and any special requests..."
-                                    required></textarea>
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" class="btn-submit"><i class="fas fa-paper-plane me-2"></i>Send
-                                    Inquiry</button>
+
+                            <!-- LEAVE REVIEW TAB -->
+                            <div id="reviewTab" class="tab-pane">
+                                <h3 class="mb-4" style="color: var(--primary-blue);">Share Your Safari Experience</h3>
+                                <form id="leaveReviewForm" action="#" method="POST">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Full Name *</label>
+                                            <input type="text" class="form-control" name="reviewer_name" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Email Address *</label>
+                                            <input type="email" class="form-control" name="reviewer_email" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Safari Experience *</label>
+                                            <select class="form-select" name="safari_experience" required>
+                                                <option value="">Select your tour</option>
+                                                <option>Masai Mara Safari</option>
+                                                <option>Tsavo East Expedition</option>
+                                                <option>Diani Beach Escape</option>
+                                                <option>Amboseli National Park</option>
+                                                <option>Lake Nakuru & Naivasha</option>
+                                                <option>Cultural Kilifi Tour</option>
+                                                <option>Custom Private Safari</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Rating *</label>
+                                            <select class="form-select rating-select" name="rating" required>
+                                                <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+                                                <option value="4">⭐⭐⭐⭐ - Very Good</option>
+                                                <option value="3">⭐⭐⭐ - Average</option>
+                                                <option value="2">⭐⭐ - Poor</option>
+                                                <option value="1">⭐ - Terrible</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">Review Title *</label>
+                                            <input type="text" class="form-control" name="review_title" placeholder="e.g., 'Unforgettable Wildebeest Migration'" required>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">Your Story / Feedback *</label>
+                                            <textarea class="form-control" rows="4" name="review_content"
+                                                placeholder="Tell us about your adventure, wildlife moments, guide experience, and overall journey..."
+                                                required></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="reviewConsent" name="consent" value="yes">
+                                                <label class="form-check-label" for="reviewConsent">
+                                                    I allow Nomad Tours to share my review on website & socials (optional).
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn-submit"><i class="fas fa-star me-2"></i>Submit Review</button>
+                                        </div>
+                                    </div>
+                                    <div id="reviewSuccessMsg" class="alert alert-success mt-3 d-none form-success-msg">🌟 Thank you for your review! You help fellow travelers discover authentic Kenya.</div>
+                                </form>
                             </div>
                         </div>
-                    </form>
-                    <div id="formSuccessMessage" class="alert alert-success mt-3 d-none">Thank you! We'll get back to
-                        you within 24 hours.</div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Map & Social -->
+            <!-- Map Column (unchanged) -->
             <div class="col-lg-5">
                 <div class="map-container mb-4">
                     <iframe
@@ -288,6 +410,91 @@
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <!-- Custom tab & forms behaviour - minimal enhancement without extra styling -->
+    <script>
+        (function() {
+            // Tab switching functionality (pure JS)
+            const tabButtons = document.querySelectorAll('.tab-link');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+
+            function switchTab(tabId) {
+                // hide all panes
+                tabPanes.forEach(pane => pane.classList.remove('active'));
+                // deactivate all buttons
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                // activate target pane
+                const activePane = document.getElementById(tabId);
+                if (activePane) activePane.classList.add('active');
+                // activate clicked button
+                const activeBtn = document.querySelector(`.tab-link[data-tab="${tabId}"]`);
+                if (activeBtn) activeBtn.classList.add('active');
+            }
+
+            tabButtons.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    const targetTabId = this.getAttribute('data-tab');
+                    if (targetTabId) switchTab(targetTabId);
+                });
+            });
+
+            // Booking Safari Form handler
+            const bookingForm = document.getElementById('bookingSafariForm');
+            const bookingSuccessMsg = document.getElementById('bookingSuccessMsg');
+
+            if (bookingForm) {
+                bookingForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // basic validation check (browser does required, but we add extra confirmation)
+                    let isValid = true;
+                    const requiredFields = bookingForm.querySelectorAll('[required]');
+                    requiredFields.forEach(field => {
+                        if (!field.value.trim()) isValid = false;
+                    });
+                    if (isValid) {
+                        bookingSuccessMsg.classList.remove('d-none');
+                        bookingForm.reset();
+                        setTimeout(() => {
+                            bookingSuccessMsg.classList.add('d-none');
+                        }, 5000);
+                    } else {
+                        alert('Please fill all required fields (*) before submitting your safari request.');
+                    }
+                });
+            }
+
+            // Leave Review Form handler
+            const reviewForm = document.getElementById('leaveReviewForm');
+            const reviewSuccessMsg = document.getElementById('reviewSuccessMsg');
+
+            if (reviewForm) {
+                reviewForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    let isValidReview = true;
+                    const requiredReviewFields = reviewForm.querySelectorAll('[required]');
+                    requiredReviewFields.forEach(field => {
+                        if (!field.value.trim()) isValidReview = false;
+                    });
+                    if (isValidReview) {
+                        reviewSuccessMsg.classList.remove('d-none');
+                        reviewForm.reset();
+                        setTimeout(() => {
+                            reviewSuccessMsg.classList.add('d-none');
+                        }, 5000);
+                    } else {
+                        alert('Please complete all required fields (name, email, safari experience, rating, title and your feedback).');
+                    }
+                });
+            }
+
+            // Optional: If any external library conflicts, this ensures no duplicate success on page load.
+            // Also makes sure initial active tab is booking (already active by default)
+            // Fix for any hash conflict
+            const initialActive = document.querySelector('.tab-link.active');
+            if (!initialActive) {
+                switchTab('bookingTab');
+            }
+        })();
+    </script>
 </body>
 
 </html>

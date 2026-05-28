@@ -123,3 +123,34 @@ function escapeHtml(str) { return str.replace(/[&<>]/g, function (m) { if (m ===
 document.querySelectorAll('.itinerary-content').forEach(c => c.style.display = 'block');
 
 
+(function () {
+    // Tab switching functionality (pure JS)
+    const tabButtons = document.querySelectorAll('.tab-link');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    function switchTab(tabId) {
+        // hide all panes
+        tabPanes.forEach(pane => pane.classList.remove('active'));
+        // deactivate all buttons
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        // activate target pane
+        const activePane = document.getElementById(tabId);
+        if (activePane) activePane.classList.add('active');
+        // activate clicked button
+        const activeBtn = document.querySelector(`.tab-link[data-tab="${tabId}"]`);
+        if (activeBtn) activeBtn.classList.add('active');
+    }
+
+    tabButtons.forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            const targetTabId = this.getAttribute('data-tab');
+            if (targetTabId) switchTab(targetTabId);
+        });
+    });
+
+    const initialActive = document.querySelector('.tab-link.active');
+    if (!initialActive) {
+        switchTab('bookingTab');
+    }
+})();
+
