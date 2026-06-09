@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Design 2 - Split Screen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', 'Segoe UI', sans-serif;
+        }
+
+        .hero-2 {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .hero-2-image {
+            flex: 1.2;
+            background: url('https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center center/cover no-repeat;
+        }
+
+        .hero-2-content {
+            flex: 1;
+            background: #FDFBF7;
+            display: flex;
+            align-items: center;
+            padding: 3rem;
+        }
+
+        .hero-2-inner {
+            max-width: 550px;
+        }
+
+        .hero-2-inner .badge {
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #C9A03D;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .hero-2-inner h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: #1C2D49;
+        }
+
+        .hero-2-inner p {
+            font-size: 1rem;
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .features-list {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .feature-item i {
+            color: #C9A03D;
+            font-size: 1.1rem;
+        }
+
+        .feature-item span {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #2d3748;
+        }
+
+        .hero-2-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-gold {
+            background: #C9A03D;
+            color: #1C2D49;
+            padding: 12px 32px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .btn-gold:hover {
+            background: #b58d2e;
+            transform: translateY(-2px);
+        }
+
+        .btn-dark {
+            background: transparent;
+            border: 2px solid #1C2D49;
+            color: #1C2D49;
+            padding: 12px 32px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .btn-dark:hover {
+            background: #1C2D49;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 900px) {
+            .hero-2 {
+                flex-direction: column;
+            }
+            .hero-2-image {
+                min-height: 50vh;
+            }
+            .hero-2-content {
+                padding: 2rem;
+            }
+            .hero-2-inner h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="hero-2">
+        <div class="hero-2-image"></div>
+        <div class="hero-2-content">
+            <div class="hero-2-inner">
+                <div class="badge">SINCE 2012</div>
+                <h1>Luxury Kenya Safaris<br>Tailored for You</h1>
+                <p>Private guided safaris across Kenya's most iconic destinations. Experience the magic of Africa in exclusive 4x4 vehicles with expert naturalist guides.</p>
+                <div class="features-list">
+                    <div class="feature-item"><i class="fas fa-check-circle"></i><span>Private 4x4 Vehicles</span></div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i><span>Expert Local Guides</span></div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i><span>Handpicked Lodges</span></div>
+                </div>
+                <div class="hero-2-buttons">
+                    <a href="#" class="btn-gold">Plan Your Safari</a>
+                    <a href="#" class="btn-dark">Custom Itinerary</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Experience unrivaled luxury Kenya safaris with Nomad Signature Trails. Private guided journeys to Masai Mara, Amboseli & beyond. Tailored itineraries, expert guides, and handpicked lodges.">
+    <meta name="keywords" content="luxury kenya safari, private safari kenya, kenya safari packages, masai mara luxury safari, luxury safari lodges kenya, kenya honeymoon safari, exclusive safari kenya, private guided safari kenya">
+    <meta name="author" content="Nomad Signature Trails">
+    <title>Luxury Kenya Safaris | Private Safari Experiences | Nomad Signature Trails</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Aptos', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            background-color: #FDFBF7;
+            color: #1e2a3e;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        /* Gold & Earth Tones */
+        :root {
+            --gold: #C9A03D;
+            --gold-light: #e0bc6e;
+            --earth: #8B6B4A;
+            --sand: #F4E9D8;
+            --charcoal: #1E2A3E;
+            --white: #ffffff;
+            --cream: #FEF9EF;
+            --shadow-sm: 0 8px 20px rgba(0,0,0,0.05);
+            --shadow-md: 0 20px 35px -12px rgba(0,0,0,0.1);
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Typography */
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 3px;
+            background: var(--gold);
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .text-center .section-title:after {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Hero Section */
+        .hero-luxury {
+            background: linear-gradient(107deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.25) 100%), url('https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center center/cover no-repeat;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .hero-content {
+            max-width: 720px;
+            color: white;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+        }
+        .hero-content h1 {
+            font-size: 3.8rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .btn-primary, .btn-outline-light {
+            padding: 12px 32px;
+            border-radius: 40px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: 0.25s;
+            display: inline-block;
+        }
+        .btn-primary {
+            background: var(--gold);
+            color: var(--charcoal);
+            border: 2px solid var(--gold);
+        }
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--gold);
+            border-color: var(--gold);
+            transform: translateY(-2px);
+        }
+        .btn-outline-light {
+            border: 2px solid white;
+            color: white;
+            background: transparent;
+        }
+        .btn-outline-light:hover {
+            background: white;
+            color: var(--charcoal);
+            transform: translateY(-2px);
+        }
+
+        /* Intro Section */
+        .intro-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #2d3a48;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Feature Cards Grid */
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+            margin: 48px 0;
+        }
+        .luxury-card {
+            background: white;
+            border-radius: 28px;
+            padding: 2rem 1.5rem;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(201,160,61,0.15);
+        }
+        .luxury-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--gold-light);
+        }
+        .card-icon {
+            font-size: 2.6rem;
+            color: var(--gold);
+            margin-bottom: 1.2rem;
+        }
+        .luxury-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.75rem;
+        }
+        .luxury-card p {
+            color: #4a5b6e;
+        }
+
+        /* Destination Cards */
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
+            margin: 40px 0;
+        }
+        .dest-card {
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            height: 340px;
+            box-shadow: var(--shadow-sm);
+            transition: 0.3s;
+        }
+        .dest-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .dest-card:hover img {
+            transform: scale(1.05);
+        }
+        .dest-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 24px;
+        }
+        .dest-overlay h4 {
+            font-size: 1.7rem;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        .dest-link {
+            color: var(--gold);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .dest-link:hover { text-decoration: underline; }
+
+        /* Why choose us */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            background: var(--cream);
+            border-radius: 48px;
+            padding: 48px 32px;
+            margin: 48px 0;
+        }
+        .why-item {
+            text-align: center;
+        }
+        .why-item i {
+            font-size: 2.4rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+        .why-item h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Blog section */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .blog-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            transition: 0.2s;
+            box-shadow: var(--shadow-sm);
+        }
+        .blog-card:hover { transform: translateY(-4px);}
+        .blog-img {
+            height: 180px;
+            width: 100%;
+            object-fit: cover;
+        }
+        .blog-content {
+            padding: 1.5rem;
+        }
+        .blog-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .blog-link {
+            color: var(--gold);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* Testimonial section */
+        .testimonial-card {
+            background: white;
+            border-radius: 28px;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            max-width: 700px;
+            margin: 0 auto;
+            border-left: 6px solid var(--gold);
+        }
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #2c3e44;
+        }
+        .testimonial-author {
+            margin-top: 1rem;
+            font-weight: 700;
+            color: var(--earth);
+        }
+
+        /* FAQ accordion */
+        .faq-item {
+            background: white;
+            border-radius: 20px;
+            margin-bottom: 16px;
+            box-shadow: var(--shadow-sm);
+        }
+        .faq-question {
+            padding: 1.2rem 1.8rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer {
+            padding: 0 1.8rem 1.5rem 1.8rem;
+            color: #4b5d6e;
+            display: none;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(115deg, var(--charcoal) 0%, #2d3e5a 100%);
+            border-radius: 48px;
+            padding: 64px 40px;
+            text-align: center;
+            color: white;
+            margin: 64px 0;
+        }
+        .final-cta h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 28px;
+        }
+        .btn-gold {
+            background: var(--gold);
+            color: var(--charcoal);
+            padding: 12px 32px;
+            border-radius: 40px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .btn-outline-gold {
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            background: transparent;
+            padding: 12px 32px;
+            border-radius: 40px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        footer {
+            background: var(--charcoal);
+            color: #cddde9;
+            padding: 48px 0 24px;
+            margin-top: 3rem;
+        }
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 32px;
+        }
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+        .footer-links a {
+            color: #cddde9;
+            text-decoration: none;
+            margin-right: 24px;
+        }
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.4rem; }
+            .section-title { font-size: 1.8rem; }
+            .grid-4, .destinations-grid { gap: 20px; }
+            .final-cta { padding: 40px 24px; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+        }
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--gold);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--charcoal);
+            cursor: pointer;
+            opacity: 0;
+            transition: 0.2s;
+            z-index: 99;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero-luxury">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Luxury Kenya Safari Experiences Tailored for You</h1>
+            <p>Private guided safaris across Kenya’s most iconic destinations including Masai Mara, Amboseli, Tsavo, and Samburu.</p>
+            <div class="btn-group">
+                <a href="#" class="btn-primary" onclick="alert('Plan Your Safari: Contact our experts →')">Plan Your Safari</a>
+                <a href="#" class="btn-outline-light" onclick="alert('Request custom itinerary →')">Get Custom Itinerary</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <!-- Introduction -->
+    <div style="margin: 64px 0 40px;">
+        <div class="text-center">
+            <h2 class="section-title">Unforgettable Private Safaris in Kenya</h2>
+        </div>
+        <div class="intro-text">
+            <p>A luxury Kenya safari with <strong>Nomad Signature Trails</strong> redefines exclusivity. Imagine traversing the sweeping plains of the Masai Mara in a private 4x4 vehicle, witnessing the Great Migration far from crowds, and retiring to handpicked lodges where every detail is designed for discerning travelers. Unlike crowded group tours, our private guided safaris give you complete flexibility — early morning game drives, sundowner cocktails in the bush, and personal interaction with expert naturalists.</p>
+            <p style="margin-top: 1rem;">From the elephant herds of Amboseli with Mt. Kilimanjaro as a backdrop, to the red elephants of Tsavo and the rare northern species in Samburu, each day becomes a story. We blend adventure with seamless luxury, ensuring your journey is as spectacular as Kenya itself. Let us curate an experience that celebrates the wild, on your terms.</p>
+        </div>
+    </div>
+
+    <!-- LUXURY EXPERIENCES SECTION -->
+    <div>
+        <div class="text-center">
+            <h2 class="section-title">Signature Luxury Safaris</h2>
+            <p style="max-width: 680px; margin: 0 auto 20px;">Exceptional encounters, crafted around you</p>
+        </div>
+        <div class="grid-4">
+            <div class="luxury-card"><div class="card-icon"><i class="fas fa-route"></i></div><h3>Private Guided Safaris</h3><p>Your own safari vehicle, expert guide, and flexible schedule. Discover hidden corners and witness wildlife at your own pace.</p></div>
+            <div class="luxury-card"><div class="card-icon"><i class="fas fa-bed"></i></div><h3>Luxury Safari Lodges</h3><p>Stay at award-winning eco-lodges & tented camps with personalized butler service, fine dining overlooking plains.</p></div>
+            <div class="luxury-card"><div class="card-icon"><i class="fas fa-pen-fancy"></i></div><h3>Custom Itineraries</h3><p>From 5-day romantic escapes to 14-day grand safaris, every journey is tailor-made for honeymooners, families or solo adventurers.</p></div>
+            <div class="luxury-card"><div class="card-icon"><i class="fas fa-heart"></i></div><h3>Honeymoon & Family Safaris</h3><p>Celebrate love or create multigenerational memories with private bush dinners, hot air balloon rides, and kid-friendly activities.</p></div>
+        </div>
+    </div>
+
+    <!-- TOP DESTINATIONS SECTION -->
+    <div>
+        <div class="text-center">
+            <h2 class="section-title">Kenya’s Finest Destinations</h2>
+            <p>Explore world-famous reserves & exclusive conservancies</p>
+        </div>
+        <div class="destinations-grid">
+            <div class="dest-card"><img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=600&h=400&fit=crop" alt="Masai Mara"><div class="dest-overlay"><h4>Masai Mara</h4><a href="#" class="dest-link">Discover →</a></div></div>
+            <div class="dest-card"><img src="https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?w=600&h=400&fit=crop" alt="Amboseli"><div class="dest-overlay"><h4>Amboseli</h4><a href="#" class="dest-link">Discover →</a></div></div>
+            <div class="dest-card"><img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&h=400&fit=crop" alt="Tsavo"><div class="dest-overlay"><h4>Tsavo</h4><a href="#" class="dest-link">Discover →</a></div></div>
+            <div class="dest-card"><img src="https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=600&h=400&fit=crop" alt="Samburu"><div class="dest-overlay"><h4>Samburu</h4><a href="#" class="dest-link">Discover →</a></div></div>
+        </div>
+    </div>
+
+    <!-- WHY CHOOSE US -->
+    <div class="why-grid">
+        <div class="why-item"><i class="fas fa-car-side"></i><h4>Private 4x4 Safari Vehicles</h4><p>Open-roof cruisers, window seats, and refreshments.</p></div>
+        <div class="why-item"><i class="fas fa-user-tie"></i><h4>Expert Local Safari Guides</h4><p>Certified naturalists, born and raised in Kenya.</p></div>
+        <div class="why-item"><i class="fas fa-hotel"></i><h4>Handpicked Luxury Lodges</h4><p>Exclusive camps with outstanding service.</p></div>
+        <div class="why-item"><i class="fas fa-map-marked-alt"></i><h4>Fully Customized Itineraries</h4><p>Designed around your interests, pace, and dates.</p></div>
+        <div class="why-item"><i class="fas fa-leaf"></i><h4>Sustainable & Ethical Tourism</h4><p>Community & conservation focused operations.</p></div>
+    </div>
+
+    <!-- BLOG GUIDES (INTERNAL LINKING) -->
+    <div>
+        <div class="text-center">
+            <h2 class="section-title">Travel Insights & Safari Guides</h2>
+            <p>Expert planning resources for the perfect luxury safari</p>
+        </div>
+        <div class="blog-grid">
+            <div class="blog-card"><img class="blog-img" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=250&fit=crop" alt="Mara timing"><div class="blog-content"><h4>Best Time to Visit Masai Mara</h4><a href="#" class="blog-link">Read Guide →</a></div></div>
+            <div class="blog-card"><img class="blog-img" src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=400&h=250&fit=crop" alt="Cost"><div class="blog-content"><h4>Kenya Safari Cost Explained</h4><a href="#" class="blog-link">Read Guide →</a></div></div>
+            <div class="blog-card"><img class="blog-img" src="https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?w=400&h=250&fit=crop" alt="Luxury lodges"><div class="blog-content"><h4>Top Luxury Safari Lodges in Kenya</h4><a href="#" class="blog-link">Read Guide →</a></div></div>
+            <div class="blog-card"><img class="blog-img" src="https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=400&h=250&fit=crop" alt="Packing"><div class="blog-content"><h4>Kenya Safari Packing Guide</h4><a href="#" class="blog-link">Read Guide →</a></div></div>
+        </div>
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <div style="margin: 60px 0;">
+        <div class="text-center"><h2 class="section-title">What Our Guests Say</h2></div>
+        <div class="testimonial-card">
+            <div class="testimonial-text">“The attention to detail was extraordinary – from our private guide who knew every lion by name, to the champagne breakfast overlooking the Mara. Nomad Signature Trails redefines safari luxury.”</div>
+            <div class="testimonial-author">— Jonathan & Amelia, United Kingdom</div>
+        </div>
+        <div class="testimonial-card" style="margin-top: 28px;">
+            <div class="testimonial-text">“Our honeymoon safari exceeded all expectations. We felt like royalty. The private vehicle and exclusive lodge made it intimate and unforgettable.”</div>
+            <div class="testimonial-author">— Priya & Michael, Australia</div>
+        </div>
+    </div>
+
+    <!-- FAQ SECTION -->
+    <div>
+        <div class="text-center"><h2 class="section-title">Frequently Asked Questions</h2></div>
+        <div style="margin: 40px 0;">
+            <div class="faq-item"><div class="faq-question">What is the best time for a Kenya safari? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">The dry season (June–October) offers exceptional wildlife viewing, especially for the Great Migration in Masai Mara. Luxury lodges operate year-round, and private safaris are available all seasons.</div></div>
+            <div class="faq-item"><div class="faq-question">How much does a luxury safari cost in Kenya? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Depending on length, lodges, and exclusivity, a private luxury safari typically starts from $800–$1500 per person per night. We offer fully transparent, tailor-made quotes.</div></div>
+            <div class="faq-item"><div class="faq-question">Are safaris private or shared? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Nomad Signature Trails specializes exclusively in private safaris. No sharing with strangers — your own guide and vehicle for total flexibility and comfort.</div></div>
+            <div class="faq-item"><div class="faq-question">What animals will I see in Kenya? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">The Big Five (lion, leopard, elephant, rhino, buffalo), cheetahs, giraffes, zebras, wildebeest, hippos, crocodiles, and over 500 bird species. Each destination offers unique sightings.</div></div>
+        </div>
+    </div>
+
+    <!-- FINAL CALL TO ACTION -->
+    <div class="final-cta">
+        <h2>Plan Your Luxury Kenya Safari Today</h2>
+        <p style="max-width: 550px; margin: 0 auto;">A once-in-a-lifetime journey awaits. Let our safari designers craft your perfect private expedition.</p>
+        <div class="cta-buttons">
+            <a href="#" class="btn-gold" onclick="alert('Contact our luxury travel specialists →')">Contact Us</a>
+            <a href="#" class="btn-outline-gold" onclick="alert('Get a bespoke itinerary →')">Book Custom Safari</a>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-inner">
+            <div><div class="footer-logo">Nomad Signature Trails</div><p style="margin-top: 12px; max-width: 260px;">Luxury Kenya Safaris – Private, tailor-made adventures since 2012.</p></div>
+            <div class="footer-links"><a href="#">About</a><a href="#">Safaris</a><a href="#">Destinations</a><a href="#">Contact</a></div>
+            <div><i class="fas fa-phone-alt"></i> +254 700 123 456<br><i class="fas fa-envelope"></i> luxury@nomadsignature.com<br><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</div>
+        </div>
+        <hr style="margin: 32px 0 16px; border-color: #4a627a;">
+        <p style="text-align: center; font-size: 0.85rem;">© 2026 Nomad Signature Trails — Luxury Kenya Safari Experts | Designed for unforgettable journeys</p>
+    </div>
+</footer>
+<div class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></div>
+
+<script>
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            item.classList.toggle('active');
+            const icon = question.querySelector('i');
+            if(item.classList.contains('active')) icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+            else icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+        });
+    });
+
+    // Scroll to top button
+    const scrollBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 500) scrollBtn.style.opacity = '1';
+        else scrollBtn.style.opacity = '0';
+    });
+    scrollBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+    // Smooth internal anchor fallback
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if(targetId !== "#" && targetId !== "") {
+                const target = document.querySelector(targetId);
+                if(target) { e.preventDefault(); target.scrollIntoView({behavior:'smooth'}); }
+            }
+        });
+    });
+    
+    // schema-ready hint (dynamically added meta for FAQ schema, but page includes FAQ)
+    const addSchema = () => {
+        const script = document.createElement('script');
+        script.type = "application/ld+json";
+        script.textContent = JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TravelAgency",
+            "name": "Nomad Signature Trails",
+            "url": "https://nomadsignature.com/luxury-kenya-safaris",
+            "description": "Luxury Kenya safari experiences with private guided tours, custom itineraries, and exclusive lodges.",
+            "address": { "@type": "PostalAddress", "addressLocality": "Nairobi", "addressCountry": "Kenya" },
+            "priceRange": "$$$",
+            "telephone": "+254700123456"
+        });
+        document.head.appendChild(script);
+        const faqSchema = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {"@type":"Question","name":"What is the best time for a Kenya safari?","acceptedAnswer":{"@type":"Answer","text":"Dry season June–October is ideal for wildlife viewing."}},
+                {"@type":"Question","name":"How much does a luxury safari cost in Kenya?","acceptedAnswer":{"@type":"Answer","text":"Starts from $800 per person per night, fully custom."}},
+                {"@type":"Question","name":"Are safaris private or shared?","acceptedAnswer":{"@type":"Answer","text":"Exclusively private safaris with Nomad Signature Trails."}},
+                {"@type":"Question","name":"What animals will I see in Kenya?","acceptedAnswer":{"@type":"Answer","text":"Big Five, cheetahs, giraffes, and more."}}
+            ]
+        };
+        const faqScript = document.createElement('script');
+        faqScript.type = "application/ld+json";
+        faqScript.textContent = JSON.stringify(faqSchema);
+        document.head.appendChild(faqScript);
+    };
+    addSchema();
+</script>
+</body>
+</html>
