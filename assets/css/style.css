@@ -273,7 +273,7 @@ body.nav-fixed-padding {
 }
 
 .hero-content-left-luxury h1 {
-    font-size: 3.4rem;
+    font-size: 3rem;
     font-weight: 800;
     margin-bottom: 1rem;
     line-height: 1.2;
@@ -431,8 +431,6 @@ body.nav-fixed-padding {
 
 /* Hero Section - Split Screen (Design 2) */
 .hero-destination-section {
-    /* background: linear-gradient(107deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.25) 100%), url('https://images.unsplash.com/photo-1589308078059-be1415eab4c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover; */
-    /* min-height: 50vh; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -442,22 +440,13 @@ body.nav-fixed-padding {
 
         .hero-split {
             display: flex;
-            /* min-height: 50vh; */
-            /* padding: 0 0 40px 0; */
             position: relative;
             flex: 1.2;
         }
 
         .hero-split-image {
-            background: linear-gradient(107deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.25) 100%), url('https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
-    /* min-height: 100vh; */
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0 0 40px 0;
-    position: relative; */
+            background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&h=400&fit=crop') no-repeat center center/cover;
             flex: 1.2;
-            /* background: url('https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center center/cover no-repeat; */
         }
 
         .hero-split-content {
@@ -527,7 +516,32 @@ body.nav-fixed-padding {
             flex-wrap: wrap;
         }
 
+        @media (max-width: 991px) {
 
+            .locations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ftr-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content-left-luxury h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-content-adventure h1 {
+                font-size: 2.2rem;
+            }
+        }
 
 
 .service-header {
@@ -1746,13 +1760,13 @@ body.nav-fixed-padding {
 } */
 
 .hero-content-left {
-    max-width: 650px;
+    max-width: 800px;
     margin: 0 0 40px 40px;
     color: var(--deep-navy);
 }
 
 .hero-content-left h1 {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     font-weight: 800;
     margin-bottom: 1rem;
     line-height: 1.2;
@@ -1760,7 +1774,7 @@ body.nav-fixed-padding {
 }
 
 .hero-content-left p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
     color: var(--deep-navy);
     opacity: 0.9;
@@ -1903,12 +1917,12 @@ body.nav-fixed-padding {
 
 
 /* Property By Location */
-/* .section-toprow {
+.section-toprow {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 32px;
-} */
+}
 
 .view-all {
     color: var(--secondary-orange);
