@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>YORA 2026 Travel Centre · Nomad Signature Trails</title>
+  <!-- Google Fonts (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Bootstrap 5 (light grid & utilities) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* ---------- GLOBAL ---------- */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #faf8f5;
+      color: #1e1e1e;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    :root {
+      --gold: #c9a03d;
+      --emerald: #0f6e4a;
+      --sand: #e8ddd0;
+      --soft-grey: #f3f0eb;
+      --deep-navy: #0b2a3c;
+      --warm-white: #fcfaf7;
+      --black: #111;
+      --glass: rgba(255,255,255,0.75);
+      --shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
+    }
+    .container { max-width: 1280px; padding: 0 28px; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    .section-pad { padding: 80px 0; }
+    .section-title {
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+    }
+    .section-sub {
+      font-size: 1.1rem;
+      color: #4a4a4a;
+      max-width: 640px;
+    }
+    .gold { color: var(--gold); }
+    .emerald { color: var(--emerald); }
+    .btn-gold {
+      background: var(--gold);
+      color: #111;
+      border: none;
+      padding: 0.7rem 2rem;
+      border-radius: 60px;
+      font-weight: 600;
+      transition: 0.2s;
+      box-shadow: 0 4px 14px rgba(201,160,61,0.3);
+    }
+    .btn-gold:hover { background: #b58d2e; color: #111; transform: translateY(-2px); }
+    .btn-outline-gold {
+      background: transparent;
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      padding: 0.7rem 2rem;
+      border-radius: 60px;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+    .btn-outline-gold:hover { background: var(--gold); color: #111; }
+    .btn-dark-outline {
+      border: 2px solid #1e1e1e;
+      color: #1e1e1e;
+      background: transparent;
+      padding: 0.7rem 2rem;
+      border-radius: 60px;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+    .btn-dark-outline:hover { background: #1e1e1e; color: white; }
+    /* glass card */
+    .glass-card {
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border-radius: 32px;
+      border: 1px solid rgba(255,255,255,0.5);
+      box-shadow: var(--shadow);
+      transition: 0.3s;
+    }
+    .glass-card:hover { transform: translateY(-4px); box-shadow: 0 30px 60px -20px rgba(0,0,0,0.2); }
+    /* ---------- NAVBAR ---------- */
+    .navbar-custom {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+      padding: 0.8rem 0;
+    }
+    .navbar-custom .nav-link {
+      font-weight: 500;
+      color: #1e1e1e;
+      padding: 0.5rem 1.2rem;
+      font-size: 0.95rem;
+      transition: 0.15s;
+    }
+    .navbar-custom .nav-link:hover { color: var(--gold); }
+    .navbar-custom .btn-gold { padding: 0.4rem 1.8rem; font-size: 0.9rem; }
+    .navbar-brand img { height: 44px; }
+    /* ---------- HERO ---------- */
+    .hero {
+      background: linear-gradient(135deg, #0b2a3c 0%, #1a4a5f 100%);
+      padding: 100px 0 120px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      right: -10%;
+      top: -20%;
+      width: 60%;
+      height: 140%;
+      background: radial-gradient(circle at 70% 40%, rgba(201,160,61,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero h1 {
+      font-size: 4.2rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero p {
+      font-size: 1.25rem;
+      opacity: 0.85;
+      max-width: 540px;
+      margin: 1.5rem 0 2rem;
+    }
+    .hero-badge {
+      background: rgba(201,160,61,0.2);
+      border: 1px solid rgba(201,160,61,0.3);
+      border-radius: 60px;
+      padding: 0.3rem 1.2rem;
+      display: inline-block;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .hero .btn-gold { background: var(--gold); color: #0b2a3c; }
+    .hero .btn-gold:hover { background: #b58d2e; }
+    .hero .btn-outline-gold { border-color: rgba(255,255,255,0.4); color: white; }
+    .hero .btn-outline-gold:hover { background: rgba(255,255,255,0.1); border-color: white; }
+    /* ---------- SECTION 2: WELCOME ---------- */
+    .welcome-block {
+      background: var(--warm-white);
+      border-radius: 48px;
+      padding: 4rem 4rem;
+      margin-top: -60px;
+      position: relative;
+      z-index: 2;
+      box-shadow: var(--shadow);
+    }
+    /* ---------- JOURNEY TIMELINE ---------- */
+    .timeline {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.8rem 1.5rem;
+      margin: 2rem 0;
+    }
+    .timeline-item {
+      background: white;
+      border-radius: 60px;
+      padding: 0.5rem 1.6rem;
+      font-weight: 500;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      border: 1px solid #eae6df;
+      transition: 0.2s;
+      cursor: default;
+      font-size: 0.9rem;
+    }
+    .timeline-item i { margin-right: 8px; color: var(--gold); }
+    .timeline-item:hover { border-color: var(--gold); background: #fcf8f0; }
+    /* ---------- CARDS (travel planner) ---------- */
+    .service-card {
+      background: white;
+      border-radius: 28px;
+      padding: 1.8rem 1.5rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+      border: 1px solid #f0ede8;
+      transition: 0.25s;
+      height: 100%;
+    }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); border-color: var(--gold); }
+    .service-card .icon { font-size: 2.4rem; color: var(--gold); margin-bottom: 1rem; }
+    .service-card h5 { font-weight: 700; }
+    .service-card .price { font-weight: 600; color: var(--emerald); }
+    /* ---------- ACCOMMODATION / HOTEL CARD ---------- */
+    .hotel-card {
+      border-radius: 28px;
+      overflow: hidden;
+      background: white;
+      box-shadow: var(--shadow);
+      transition: 0.25s;
+      border: 1px solid #f0ede8;
+    }
+    .hotel-card img { height: 200px; width: 100%; object-fit: cover; }
+    .hotel-card .body { padding: 1.5rem; }
+    /* ---------- EXPERIENCE CARD ---------- */
+    .exp-card {
+      border-radius: 28px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.02);
+      border: 1px solid #f0ede8;
+      transition: 0.25s;
+      height: 100%;
+    }
+    .exp-card img { height: 180px; width: 100%; object-fit: cover; }
+    .exp-card .body { padding: 1.5rem; }
+    .exp-card .tag {
+      background: var(--soft-grey);
+      border-radius: 40px;
+      padding: 0.2rem 1rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      display: inline-block;
+    }
+    /* ---------- TEAM ---------- */
+    .team-card {
+      background: white;
+      border-radius: 32px;
+      padding: 1.8rem;
+      text-align: center;
+      border: 1px solid #f0ede8;
+      transition: 0.2s;
+    }
+    .team-card img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin: 0 auto 1rem; }
+    .team-card .social a { color: #1e1e1e; margin: 0 6px; opacity: 0.5; transition: 0.2s; }
+    .team-card .social a:hover { opacity: 1; color: var(--gold); }
+    /* ---------- COMPARE TABLE ---------- */
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+    .compare-col {
+      background: white;
+      border-radius: 32px;
+      padding: 2rem 2rem;
+      border: 1px solid #f0ede8;
+    }
+    .compare-col ul { list-style: none; padding: 0; }
+    .compare-col li { padding: 0.5rem 0; border-bottom: 1px solid #f0ede8; display: flex; gap: 12px; }
+    .compare-col li i { color: var(--gold); width: 20px; }
+    /* ---------- FAQ ACCORDION ---------- */
+    .faq-item {
+      background: white;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      border: 1px solid #f0ede8;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 1.2rem 1.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      transition: 0.15s;
+    }
+    .faq-question:hover { background: #fcfaf7; }
+    .faq-answer { padding: 0 1.8rem 1.5rem; display: none; }
+    .faq-item.active .faq-answer { display: block; }
+    .faq-item.active .faq-question i { transform: rotate(180deg); }
+    /* ---------- CTA ---------- */
+    .cta-section {
+      background: linear-gradient(135deg, #0b2a3c 0%, #1a4a5f 100%);
+      border-radius: 48px;
+      padding: 4rem 3rem;
+      color: white;
+    }
+    .cta-section .btn-gold { background: var(--gold); color: #0b2a3c; }
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: #0b2a3c;
+      color: #d4d9df;
+      padding: 3rem 0 1.5rem;
+      border-top: 6px solid var(--gold);
+    }
+    footer a { color: #d4d9df; transition: 0.2s; }
+    footer a:hover { color: var(--gold); }
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.8rem; }
+      .section-title { font-size: 2rem; }
+      .welcome-block { padding: 2rem; margin-top: -30px; }
+      .compare-grid { grid-template-columns: 1fr; }
+      .timeline { gap: 0.6rem; }
+    }
+    @media (max-width: 576px) {
+      .hero { padding: 60px 0 80px; }
+      .hero h1 { font-size: 2.2rem; }
+      .container { padding: 0 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='44' viewBox='0 0 140 44'%3E%3Crect width='140' height='44' rx='12' fill='%230b2a3c'/%3E%3Ctext x='12' y='28' font-family='Inter' font-weight='700' font-size='16' fill='%23c9a03d'%3ENomad%3C/text%3E%3Ctext x='68' y='28' font-family='Inter' font-weight='500' font-size='13' fill='%23fcfaf7'%3ETrails%3C/text%3E%3C/svg%3E" alt="Nomad Signature Trails">
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#">Overview</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Plan My Trip</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Accommodation</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Transfers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Experiences</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Travel Guide</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+          <li class="nav-item"><a class="btn-gold ms-2" href="#">Book Now</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero" style="padding-top:140px;">
+    <div class="container position-relative" style="z-index:2;">
+      <div class="hero-badge"><i class="fas fa-crown me-2"></i> YORA 2026 · Official Travel Partner</div>
+      <h1>Your Complete <br><span>YORA Kenya</span> Travel Experience</h1>
+      <p>From the moment you arrive until your journey home, Nomad Signature Trails manages every detail of your YORA travel experience.</p>
+      <div class="d-flex flex-wrap gap-3">
+        <a href="#" class="btn-gold btn-lg px-5 py-3">Plan My Journey</a>
+        <a href="#" class="btn-outline-gold btn-lg px-5 py-3">Talk to Consultant</a>
+      </div>
+      <div class="mt-5 d-flex gap-4 flex-wrap" style="opacity:0.7; font-size:0.9rem;">
+        <span><i class="fas fa-shield-alt me-2" style="color:var(--gold);"></i> Trusted DMC</span>
+        <span><i class="fas fa-headset me-2" style="color:var(--gold);"></i> 24/7 Support</span>
+        <span><i class="fas fa-route me-2" style="color:var(--gold);"></i> 10+ Years Experience</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== WELCOME (SECTION 2) ====== -->
+  <div class="container" style="margin-top:-40px;">
+    <div class="welcome-block">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h2 class="section-title" style="font-size:2.2rem;">Welcome to Kenya</h2>
+          <p style="font-size:1.1rem; color:#2d2d2d;">Nomad Signature Trails is the destination experience partner for YORA 2026. We help international delegates, speakers, and VIPs experience Kenya beyond the conference — with confidence, convenience, and genuine hospitality.</p>
+          <p style="color:#4a4a4a;">Whether you need a seamless airport transfer, a luxury safari, or a private retreat on the Kilifi coast, we handle every detail so you can focus on the summit.</p>
+        </div>
+        <div class="col-lg-5 text-end">
+          <i class="fas fa-handshake" style="font-size:4rem; color:var(--gold); opacity:0.3;"></i>
+          <p class="mt-2" style="font-weight:600; color:var(--emerald);">YORA · Nairobi & Kilifi</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- ====== YOUR YORA JOURNEY (SECTION 3) ====== -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Your YORA Journey</h2>
+        <p class="section-sub mx-auto">Every stage of your trip, curated for a seamless experience.</p>
+      </div>
+      <div class="timeline">
+        <span class="timeline-item"><i class="fas fa-clipboard-list"></i> Registration</span>
+        <span class="timeline-item"><i class="fas fa-map-pin"></i> Travel Planning</span>
+        <span class="timeline-item"><i class="fas fa-plane"></i> Book Flights</span>
+        <span class="timeline-item"><i class="fas fa-hotel"></i> Reserve Hotel</span>
+        <span class="timeline-item"><i class="fas fa-taxi"></i> Airport Arrival</span>
+        <span class="timeline-item"><i class="fas fa-users"></i> Conference</span>
+        <span class="timeline-item"><i class="fas fa-handshake"></i> Networking</span>
+        <span class="timeline-item"><i class="fas fa-tree"></i> Safari</span>
+        <span class="timeline-item"><i class="fas fa-umbrella-beach"></i> Kilifi Retreat</span>
+        <span class="timeline-item"><i class="fas fa-plane-departure"></i> Departure</span>
+        <span class="timeline-item"><i class="fas fa-heart"></i> Stay Connected</span>
+      </div>
+      <div class="text-center mt-4"><span class="badge bg-light text-dark p-2"><i class="fas fa-chevron-right gold"></i> Click any stage to explore</span></div>
+    </div>
+  </section>
+
+  <!-- ====== TRAVEL PLANNER (SECTION 4) ====== -->
+  <section class="section-pad" style="background:var(--soft-grey);">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Travel Planner</h2>
+        <p class="section-sub mx-auto">Everything you need for a perfect YORA experience.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6"><div class="service-card"><div class="icon"><i class="fas fa-car"></i></div><h5>Airport Transfers</h5><p>Luxury vehicles, meet & greet</p><span class="price">from $45</span><br><a href="#" class="btn-outline-gold mt-2 d-inline-block" style="font-size:0.8rem; padding:0.3rem 1.2rem;">Book</a></div></div>
+        <div class="col-lg-3 col-md-6"><div class="service-card"><div class="icon"><i class="fas fa-hotel"></i></div><h5>Hotels</h5><p>Curated stays near GICC</p><span class="price">from $120/night</span><br><a href="#" class="btn-outline-gold mt-2 d-inline-block" style="font-size:0.8rem; padding:0.3rem 1.2rem;">Book</a></div></div>
+        <div class="col-lg-3 col-md-6"><div class="service-card"><div class="icon"><i class="fas fa-bus"></i></div><h5>Conference Shuttle</h5><p>Daily scheduled transfers</p><span class="price">complimentary</span><br><a href="#" class="btn-outline-gold mt-2 d-inline-block" style="font-size:0.8rem; padding:0.3rem 1.2rem;">View</a></div></div>
+        <div class="col-lg-3 col-md-6"><div class="service-card"><div class="icon"><i class="fas fa-safari"></i></div><h5>Safari Packages</h5><p>Masai Mara, Amboseli</p><span class="price">from $650</span><br><a href="#" class="btn-outline-gold mt-2 d-inline-block" style="font-size:0.8rem; padding:0.3rem 1.2rem;">Explore</a></div></div>
+        <div class="col-lg-3 col-md-6"><div class="service-card"><div class="icon"><i class="fas fa-city"></i></div><h5>City Tours</h5><p>Nairobi highlights</p><span class="price">from $90</span><br><a href="#" class="btn-outline-gold mt-2 d-inline-block" style="font-size:0.8rem; padding:0.3rem 1.2rem;">Book</a></div></div>
+        <div class="col-lg-3 col-md-6"><div class="service-card"><div class="icon"><i class="fas fa-umbrella-beach"></i></div><h5>Kilifi Retreat</h5><p>Post-summit coastal</p><span class="price">from $380</span><br><a href="#" class="btn-outline-gold mt-2 d-inline-block" style="font-size:0.8rem; padding:0.3rem 1.2rem;">Discover</a></div></div>
+        <div class="col-lg-3 col-md-6"><div class="service-card"><div class="icon"><i class="fas fa-golf-ball"></i></div><h5>Golf</h5><p>Vipingo Ridge</p><span class="price">from $220</span><br><a href="#" class="btn-outline-gold mt-2 d-inline-block" style="font-size:0.8rem; padding:0.3rem 1.2rem;">Book</a></div></div>
+        <div class="col-lg-3 col-md-6"><div class="service-card"><div class="icon"><i class="fas fa-concierge-bell"></i></div><h5>Executive Concierge</h5><p>Personalized VIP service</p><span class="price">inquire</span><br><a href="#" class="btn-outline-gold mt-2 d-inline-block" style="font-size:0.8rem; padding:0.3rem 1.2rem;">Contact</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ACCOMMODATION (SECTION 5) ====== -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Accommodation</h2>
+        <p class="section-sub mx-auto">Handpicked hotels near the summit venue.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4"><div class="hotel-card"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop" alt="Hotel"><div class="body"><h5>GICC Premier Suites</h5><p><i class="fas fa-map-marker-alt gold"></i> 0.2 mi from venue</p><p>5-star · pool · gym</p><span class="price">$280/night</span> <a href="#" class="btn-gold float-end" style="padding:0.2rem 1.4rem;">Book</a></div></div></div>
+        <div class="col-md-4"><div class="hotel-card"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&h=400&fit=crop" alt="Hotel"><div class="body"><h5>Nairobi Serena</h5><p><i class="fas fa-map-marker-alt gold"></i> 0.5 mi from venue</p><p>4-star · spa · business center</p><span class="price">$195/night</span> <a href="#" class="btn-gold float-end" style="padding:0.2rem 1.4rem;">Book</a></div></div></div>
+        <div class="col-md-4"><div class="hotel-card"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=600&h=400&fit=crop" alt="Hotel"><div class="body"><h5>Villa Rosa Kempinski</h5><p><i class="fas fa-map-marker-alt gold"></i> 1.2 mi from venue</p><p>5-star · luxury suites</p><span class="price">$420/night</span> <a href="#" class="btn-gold float-end" style="padding:0.2rem 1.4rem;">Book</a></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PRE-SUMMIT EXPERIENCES (SECTION 6) ====== -->
+  <section class="section-pad" style="background:var(--soft-grey);">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Pre-Summit Experiences</h2>
+        <p class="section-sub mx-auto">Arrive early and explore Kenya's iconic wilderness.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4"><div class="exp-card"><img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&h=400&fit=crop" alt="Safari"><div class="body"><span class="tag">3 days</span><h5 class="mt-2">Masai Mara Safari</h5><p>Big Five, Great Migration</p><span class="price">from $850</span><br><a href="#" class="btn-outline-gold mt-2 d-inline-block" style="font-size:0.8rem;">Book</a></div></div></div>
+        <div class="col-md-4"><div class="exp-card"><img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&h=400&fit=crop&crop=center" alt="Amboseli"><div class="body"><span class="tag">2 days</span><h5 class="mt-2">Amboseli & Kilimanjaro</h5><p>Elephant herds, mountain views</p><span class="price">from $620</span><br><a href="#" class="btn-outline-gold mt-2 d-inline-block" style="font-size:0.8rem;">Book</a></div></div></div>
+        <div class="col-md-4"><div class="exp-card"><img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=600&h=400&fit=crop" alt="Helicopter"><div class="body"><span class="tag">half day</span><h5 class="mt-2">Helicopter Safari</h5><p>Aerial view of Nairobi NP</p><span class="price">from $1,200</span><br><a href="#" class="btn-outline-gold mt-2 d-inline-block" style="font-size:0.8rem;">Book</a></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== AFTER SUMMIT (SECTION 7) ====== -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">After Summit · Coastal Retreats</h2>
+        <p class="section-sub mx-auto">Extend your stay in Kilifi, Watamu, Diani or Lamu.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-3"><div class="exp-card"><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop" alt="Diani"><div class="body"><h5>Diani Beach</h5><p>Marine safari, snorkel</p><span class="price">from $450</span><br><a href="#" class="btn-outline-gold mt-1 d-inline-block" style="font-size:0.8rem;">Explore</a></div></div></div>
+        <div class="col-md-3"><div class="exp-card"><img src="https://images.unsplash.com/photo-1582651300295-6c1a1bdee1b6?w=600&h=400&fit=crop" alt="Watamu"><div class="body"><h5>Watamu</h5><p>Turtle watching, blue lagoon</p><span class="price">from $390</span><br><a href="#" class="btn-outline-gold mt-1 d-inline-block" style="font-size:0.8rem;">Explore</a></div></div></div>
+        <div class="col-md-3"><div class="exp-card"><img src="https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?w=600&h=400&fit=crop" alt="Lamu"><div class="body"><h5>Lamu Archipelago</h5><p>Dhow, culture, Swahili</p><span class="price">from $520</span><br><a href="#" class="btn-outline-gold mt-1 d-inline-block" style="font-size:0.8rem;">Explore</a></div></div></div>
+        <div class="col-md-3"><div class="exp-card"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=600&h=400&fit=crop" alt="Villa"><div class="body"><h5>Private Villas</h5><p>Kilifi cliffside</p><span class="price">from $680</span><br><a href="#" class="btn-outline-gold mt-1 d-inline-block" style="font-size:0.8rem;">Explore</a></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== DELEGATE TRAVEL GUIDE (SECTION 8) ====== -->
+  <section class="section-pad" style="background:var(--soft-grey);">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Delegate Travel Guide</h2>
+        <p class="section-sub mx-auto">Essential information for a smooth trip.</p>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-3"><div class="glass-card p-4"><i class="fas fa-cloud-sun gold" style="font-size:2rem;"></i><h6 class="mt-2">Weather</h6><p class="small">October: 22–28°C, dry</p></div></div>
+        <div class="col-md-3"><div class="glass-card p-4"><i class="fas fa-money-bill-wave gold" style="font-size:2rem;"></i><h6 class="mt-2">Currency</h6><p class="small">KES · USD accepted</p></div></div>
+        <div class="col-md-3"><div class="glass-card p-4"><i class="fas fa-passport gold" style="font-size:2rem;"></i><h6 class="mt-2">Visa</h6><p class="small">eTA available online</p></div></div>
+        <div class="col-md-3"><div class="glass-card p-4"><i class="fas fa-plane gold" style="font-size:2rem;"></i><h6 class="mt-2">Airport</h6><p class="small">JKIA · 20 min to GICC</p></div></div>
+        <div class="col-md-3"><div class="glass-card p-4"><i class="fas fa-suitcase gold" style="font-size:2rem;"></i><h6 class="mt-2">Packing</h6><p class="small">Business + safari attire</p></div></div>
+        <div class="col-md-3"><div class="glass-card p-4"><i class="fas fa-heartbeat gold" style="font-size:2rem;"></i><h6 class="mt-2">Health</h6><p class="small">Yellow fever cert. advised</p></div></div>
+        <div class="col-md-3"><div class="glass-card p-4"><i class="fas fa-sim-card gold" style="font-size:2rem;"></i><h6 class="mt-2">SIM / Internet</h6><p class="small">eSIM available</p></div></div>
+        <div class="col-md-3"><div class="glass-card p-4"><i class="fas fa-comments gold" style="font-size:2rem;"></i><h6 class="mt-2">Culture</h6><p class="small">Warm hospitality</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== LIVE DELEGATE DASHBOARD (SECTION 9) ====== -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="glass-card p-5" style="background:rgba(255,255,255,0.6);">
+        <div class="row align-items-center">
+          <div class="col-lg-6"><h2 class="section-title" style="font-size:2rem;">Live Delegate Dashboard</h2><p>Flight status · airport pickups · shuttle times · weather · alerts · countdown</p><div class="d-flex gap-4 mt-3"><span><i class="fas fa-circle text-success"></i> 12:45</span><span><i class="fas fa-bus"></i> Shuttle every 30min</span><span><i class="fas fa-clock"></i> 42 days to summit</span></div></div>
+          <div class="col-lg-6 text-end"><i class="fas fa-chart-simple" style="font-size:4rem; color:var(--gold); opacity:0.3;"></i><p class="small text-muted">API integration coming soon</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== MEET YOUR TRAVEL TEAM (SECTION 10) ====== -->
+  <section class="section-pad" style="background:var(--soft-grey);">
+    <div class="container">
+      <div class="text-center mb-5"><h2 class="section-title">Meet Your Travel Team</h2><p class="section-sub mx-auto">Nomad Signature Trails · dedicated to your journey</p></div>
+      <div class="row g-4">
+        <div class="col-md-3"><div class="team-card"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Consultant"><h6>James M.</h6><p class="small">Travel Consultant</p><div class="social"><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="far fa-envelope"></i></a></div></div></div>
+        <div class="col-md-3"><div class="team-card"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Operations"><h6>Grace W.</h6><p class="small">Operations Manager</p><div class="social"><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="far fa-envelope"></i></a></div></div></div>
+        <div class="col-md-3"><div class="team-card"><img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Guest"><h6>David O.</h6><p class="small">Guest Experience</p><div class="social"><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="far fa-envelope"></i></a></div></div></div>
+        <div class="col-md-3"><div class="team-card"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Support"><h6>Faith K.</h6><p class="small">Emergency Support</p><div class="social"><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="far fa-envelope"></i></a></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== WHY BOOK THROUGH NOMAD (SECTION 11) ====== -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="text-center mb-5"><h2 class="section-title">Why Book Through Nomad</h2></div>
+      <div class="compare-grid">
+        <div class="compare-col"><h5><i class="fas fa-user-check gold"></i> Book with Nomad</h5><ul><li><i class="fas fa-check-circle"></i> Single point of contact</li><li><i class="fas fa-check-circle"></i> 24/7 support</li><li><i class="fas fa-check-circle"></i> Verified suppliers</li><li><i class="fas fa-check-circle"></i> Conference expertise</li><li><i class="fas fa-check-circle"></i> Local knowledge</li><li><i class="fas fa-check-circle"></i> Personalized itinerary</li><li><i class="fas fa-check-circle"></i> Emergency assistance</li><li><i class="fas fa-check-circle"></i> Flight monitoring</li></ul></div>
+        <div class="compare-col"><h5><i class="fas fa-user-slash" style="color:#999;"></i> Book Independently</h5><ul><li><i class="fas fa-times" style="color:#999;"></i> Multiple contacts</li><li><i class="fas fa-times" style="color:#999;"></i> Limited support</li><li><i class="fas fa-times" style="color:#999;"></i> Unverified vendors</li><li><i class="fas fa-times" style="color:#999;"></i> No conference context</li><li><i class="fas fa-times" style="color:#999;"></i> Generic recommendations</li><li><i class="fas fa-times" style="color:#999;"></i> Self‑coordinated</li><li><i class="fas fa-times" style="color:#999;"></i> No emergency backup</li><li><i class="fas fa-times" style="color:#999;"></i> No flight alerts</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TESTIMONIALS (SECTION 12) ====== -->
+  <section class="section-pad" style="background:var(--soft-grey);">
+    <div class="container">
+      <div class="text-center mb-5"><h2 class="section-title">Testimonials</h2></div>
+      <div class="row g-4">
+        <div class="col-md-4"><div class="glass-card p-4"><p class="fst-italic">"Nomad handled every detail. I just showed up and enjoyed Kenya."</p><div class="d-flex align-items-center mt-3"><div style="width:48px;height:48px;background:#ddd;border-radius:50%;"></div><div class="ms-3"><strong>Dr. A. K.</strong><br><span class="small">YORA Delegate</span></div></div></div></div>
+        <div class="col-md-4"><div class="glass-card p-4"><p class="fst-italic">"The safari and Kilifi retreat were world‑class. Highly recommended."</p><div class="d-flex align-items-center mt-3"><div style="width:48px;height:48px;background:#ddd;border-radius:50%;"></div><div class="ms-3"><strong>Sarah L.</strong><br><span class="small">Speaker</span></div></div></div></div>
+        <div class="col-md-4"><div class="glass-card p-4"><p class="fst-italic">"Flawless transfers and VIP treatment throughout."</p><div class="d-flex align-items-center mt-3"><div style="width:48px;height:48px;background:#ddd;border-radius:50%;"></div><div class="ms-3"><strong>Marcus C.</strong><br><span class="small">Investor</span></div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FAQ (SECTION 13) ====== -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="text-center mb-5"><h2 class="section-title">Frequently Asked Questions</h2></div>
+      <div class="faq-item"><div class="faq-question">Airport transfers <i class="fas fa-chevron-down"></i></div><div class="faq-answer">We offer private luxury vehicles, meet & greet, and flight monitoring. All transfers are included in our packages.</div></div>
+      <div class="faq-item"><div class="faq-question">Hotels near GICC <i class="fas fa-chevron-down"></i></div><div class="faq-answer">We've curated a list of 4‑ and 5‑star hotels within 2 km of the venue. Book through us for best rates.</div></div>
+      <div class="faq-item"><div class="faq-question">Safari packages <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Pre‑summit safaris to Masai Mara, Amboseli, and Tsavo. Customizable durations and lodge levels.</div></div>
+      <div class="faq-item"><div class="faq-question">Kilifi retreat <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Post‑summit coastal experiences in Kilifi, Watamu, Diani and Lamu. Beach, marine, and cultural activities.</div></div>
+      <div class="faq-item"><div class="faq-question">Payments & currency <i class="fas fa-chevron-down"></i></div><div class="faq-answer">We accept USD, EUR, and KES. All major credit cards and bank transfers are accepted.</div></div>
+    </div>
+  </section>
+
+  <div class="container py-5">
+    <div class="text-center">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+
+    <div style="margin: 5px 0">
+
+        <div class="faq-item">
+        <div class="faq-question">
+            Do you provide airport transfers in Kenya?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            Yes. We provide reliable private airport transfers from Jomo Kenyatta
+            International Airport (JKIA) and Wilson Airport to hotels, conference
+            venues, safari lodges, and beach resorts across Kenya. Our professional
+            drivers monitor your flight, assist with luggage, and ensure you arrive
+            safely and comfortably. Whether you are travelling alone, with family,
+            or as part of a delegation, we have luxury sedans, executive SUVs, and
+            spacious vans to suit your needs.
+        </div>
+        </div>
+
+        <div class="faq-item">
+        <div class="faq-question">
+            Can you help me find accommodation near GICC?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            Absolutely. We partner with carefully selected 4-star and 5-star hotels
+            located close to the Kenyatta International Convention Centre (GICC).
+            Whether you are attending YORA or another event, we'll recommend
+            accommodation based on your budget, preferred amenities, and travel
+            schedule. Many of our partner hotels offer airport transfers, business
+            facilities, restaurants, fitness centres, and executive lounges.
+        </div>
+        </div>
+
+        <div class="faq-item">
+        <div class="faq-question">
+            What safari experiences can I book?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            We offer tailor-made safari experiences to Kenya's most iconic
+            destinations including Masai Mara, Amboseli National Park, Tsavo East
+            and West, Samburu National Reserve, Lake Nakuru, and Ol Pejeta
+            Conservancy. Packages can include luxury accommodation, park entry
+            fees, professional guides, private transport, game drives, domestic
+            flights, and cultural experiences. Whether you have a weekend or two
+            weeks, we'll design an itinerary that fits your schedule.
+        </div>
+        </div>
+
+        <div class="faq-item">
+        <div class="faq-question">
+            Can I combine my business trip with a beach holiday?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            Yes. Many travellers extend their stay with a relaxing escape to
+            Kenya's beautiful coastline. We organize personalized experiences in
+            Kilifi, Watamu, Diani, Malindi, and Lamu, where you can enjoy white
+            sandy beaches, snorkeling, dhow cruises, marine parks, Swahili culture,
+            luxury resorts, and unforgettable sunsets before returning home.
+        </div>
+        </div>
+
+        <div class="faq-item">
+        <div class="faq-question">
+            Can you create a customized travel itinerary?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            Yes. Every itinerary we create is personalized to your travel dates,
+            interests, budget, and preferred pace. We can arrange airport
+            transfers, accommodation, conference transportation, safari tours,
+            domestic flights, coastal holidays, cultural experiences, and special
+            requests, allowing you to enjoy a seamless journey from arrival to
+            departure.
+        </div>
+        </div>
+
+        <div class="faq-item">
+        <div class="faq-question">
+            Do you organize travel for groups and corporate delegations?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            Certainly. We manage travel for individuals, families, tour operators,
+            conference delegates, NGOs, and corporate groups. Our services include
+            accommodation booking, airport transfers, event logistics, private
+            transportation, guided tours, and customized safari experiences,
+            ensuring every member of your group enjoys a smooth and well-organized
+            trip.
+        </div>
+        </div>
+
+        <div class="faq-item">
+        <div class="faq-question">
+            What payment methods do you accept?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            We accept secure payments in USD, EUR, and KES via bank transfers and
+            major credit or debit cards. A deposit is typically required to confirm
+            your booking, with the balance payable before your arrival. Our team
+            will provide a detailed quotation and payment schedule for complete
+            transparency.
+        </div>
+        </div>
+
+        <div class="faq-item">
+        <div class="faq-question">
+            Will I receive support during my stay in Kenya?
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            Yes. Our team provides dedicated support before, during, and after your
+            trip. From answering travel questions and coordinating transportation
+            to adjusting itineraries and assisting with unexpected situations,
+            we're always available to ensure your experience in Kenya is smooth,
+            enjoyable, and stress-free.
+        </div>
+        </div>
+
+    </div>
+    </div>
+
+  <!-- ====== FINAL CTA (SECTION 14) ====== -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="cta-section">
+        <div class="row align-items-center">
+          <div class="col-lg-8"><h2 style="font-weight:700; font-size:2.8rem;">Focus on YORA.<br><span style="color:var(--gold);">We'll take care of Kenya.</span></h2><p style="opacity:0.8; font-size:1.1rem;">Book your travel, build your itinerary, or speak with a consultant.</p></div>
+          <div class="col-lg-4 text-lg-end"><a href="#" class="btn-gold btn-lg px-5 py-3 me-2">Book My Travel</a><a href="#" class="btn-outline-gold btn-lg px-5 py-3 mt-2 mt-lg-0" style="border-color:white; color:white;">Build Itinerary</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='44' viewBox='0 0 160 44'%3E%3Crect width='160' height='44' rx='12' fill='%230b2a3c'/%3E%3Ctext x='12' y='28' font-family='Inter' font-weight='700' font-size='16' fill='%23c9a03d'%3ENomad%3C/text%3E%3Ctext x='78' y='28' font-family='Inter' font-weight='500' font-size='13' fill='%23fcfaf7'%3ETrails%3C/text%3E%3C/svg%3E" alt="Nomad" style="height:44px;"><p class="mt-2">YORA 2026 Travel Centre · Destination Management</p><div class="footer-social"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="far fa-envelope"></i></a></div></div>
+        <div class="col-md-2"><h6>Quick</h6><a href="#" class="d-block">Transfers</a><a href="#" class="d-block">Hotels</a><a href="#" class="d-block">Safari</a><a href="#" class="d-block">Kilifi</a></div>
+        <div class="col-md-2"><h6>Support</h6><a href="#" class="d-block">Contact</a><a href="#" class="d-block">FAQ</a><a href="#" class="d-block">Privacy</a><a href="#" class="d-block">Terms</a></div>
+        <div class="col-md-2"><h6>Connect</h6><a href="#" class="d-block">+254 102 593 346</a><a href="#" class="d-block">info@nomadtrails.com</a><a href="#" class="d-block">Emergency: +254 712 345 678</a></div>
+      </div>
+      <div class="footer-bottom mt-4 pt-3" style="border-top:1px solid rgba(255,255,255,0.08);"><p class="text-center" style="font-size:0.85rem; opacity:0.5;">© 2026 Nomad Signature Trails · YORA Official Travel Partner</p></div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp float -->
+  <a href="https://wa.me/254712345678" class="whatsapp-float" target="_blank" style="position:fixed;bottom:28px;right:28px;background:#25D366;color:white;width:60px;height:60px;border-radius:60px;display:flex;align-items:center;justify-content:center;font-size:2.2rem;box-shadow:0 8px 28px rgba(0,0,0,0.2);z-index:999;"><i class="fab fa-whatsapp"></i></a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const q = item.querySelector('.faq-question');
+      q.addEventListener('click', () => {
+        item.classList.toggle('active');
+        const icon = q.querySelector('i');
+        if (item.classList.contains('active')) icon.classList.replace('fa-chevron-down','fa-chevron-up');
+        else icon.classList.replace('fa-chevron-up','fa-chevron-down');
+      });
+    });
+    // Sticky nav (simple)
+    window.addEventListener('scroll', function(){
+      const nav = document.querySelector('.navbar-custom');
+      if (window.scrollY > 20) nav.style.boxShadow = '0 12px 30px rgba(0,0,0,0.06)';
+      else nav.style.boxShadow = 'none';
+    });
+  </script>
+</body>
+</html>

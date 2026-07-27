@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>YORA Summit 2026 · Nomad Tours</title>
+    <meta name="description" content="YORA Global Summit in Nairobi & Kilifi – pre & post summit safari, beach and golf experiences by Nomad Tours.">
+    <link rel="icon" href="assets/image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link href="assets/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="assets/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* ----- YOUR EXACT STYLES (kept as given) ----- */
+        @font-face {
+            font-family: 'Aptos';
+            src: url('/Aptos/Aptos.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        :root {
+            --support-green: #059669;
+            --white: #FFFFFF;
+            --light: #F8F9FA;
+            --soft-gray: #F1F5F9;
+            --dark: #1f2937;
+            --secondary-orange: #ff6b00;
+            --deep-navy: #1C2D49;
+            --gold-accent: #C9A03D;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Aptos', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.5;
+            font-size: 0.9rem;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Aptos', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Navbar */
+        .navbar-wrapper {
+            position: relative;
+            z-index: 1100;
+            transition: all 0.3s ease;
+            margin-top: 0;
+            border-radius: 60px;
+            background: transparent;
+            width: 100%;
+        }
+
+        .navbar-hero {
+            margin-top: 50px;
+        }
+
+        .custom-navbar {
+            background: var(--white);
+            border-radius: 60px;
+            padding: 0.5rem 5rem;
+            box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-wrapper.sticky-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            margin: 0;
+            border-radius: 0;
+            z-index: 1100;
+            background: var(--white);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-wrapper.sticky-nav .custom-navbar {
+            border-radius: 0;
+            box-shadow: none;
+            padding: 0.3rem 8rem;
+        }
+
+        body.nav-fixed-padding {
+            padding-top: 85px;
+        }
+
+        .travel-logo {
+            height: 70px;
+            transition: transform 0.2s;
+            max-width: 100%;
+        }
+
+        .custom-navbar .navbar-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .navbar-brand {
+            margin-right: 0;
+            padding: 0;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .navbar-collapse {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            gap: 0.25rem;
+            margin: 0;
+            list-style: none;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--dark);
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            transition: 0.2s;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--secondary-orange);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-primary-travel {
+            background-color: var(--secondary-orange);
+            text-decoration: none;
+            color: var(--white);
+            border: 2px solid var(--secondary-orange);
+            padding: 0.4rem 1.25rem;
+            border-radius: 40px;
+            font-weight: 600;
+            transition: all 0.25s;
+        }
+
+        .btn-primary-travel:hover {
+            background-color: transparent;
+            color: var(--secondary-orange);
+            border-color: var(--secondary-orange);
+        }
+
+        /* Hero Section - YORA Summit specific (keeps your luxury hero style) */
+        .hero-section-luxury {
+            background: linear-gradient(107deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.25) 100%), url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0 0 60px 0;
+            position: relative;
+        }
+
+        .hero-content-wrapper-luxury {
+            margin-top: 50px;
+        }
+
+        .hero-content-left-luxury {
+            max-width: 700px;
+            text-align: start;
+            margin: 0 0 40px 40px;
+            color: white;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-content-left-luxury h1 {
+            font-size: 3.4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-content-left-luxury p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero-buttons-luxury {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-hero-primary {
+            background-color: var(--secondary-orange);
+            color: var(--white);
+            padding: 12px 32px;
+            border-radius: 60px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: 0.2s;
+            display: inline-block;
+            border: none;
+        }
+
+        .btn-hero-primary:hover {
+            border: 2px solid var(--secondary-orange);
+            background: transparent;
+            transform: translateY(-2px);
+            color: var(--secondary-orange);
+        }
+
+        .btn-hero-outline {
+            background: transparent;
+            border: 2px solid var(--secondary-orange);
+            color: var(--secondary-orange);
+            padding: 12px 32px;
+            border-radius: 60px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .btn-hero-outline:hover {
+            background: var(--secondary-orange);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* Search Bar Section */
+        .search-section {
+            margin-top: -100px;
+            position: relative;
+            z-index: 20;
+        }
+
+        .search-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 16px 24px;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .search-btn {
+            background: var(--secondary-orange);
+            color: var(--white);
+            border: none;
+            padding: 12px 28px;
+            border-radius: 60px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .search-btn:hover {
+            background: #e6950e;
+            transform: translateY(-2px);
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -12px;
+        }
+
+        .col-md-4,
+        .col-md-10,
+        .col-md-2 {
+            padding: 0 12px;
+        }
+
+        .col-md-4 {
+            flex: 0 0 33.333%;
+            max-width: 33.333%;
+        }
+
+        .col-md-10 {
+            flex: 0 0 83.333%;
+            max-width: 83.333%;
+        }
+
+        .col-md-2 {
+            flex: 0 0 16.666%;
+            max-width: 16.666%;
+        }
+
+        .search-item input,
+        .search-item select {
+            width: 100%;
+            outline: none;
+            border: none;
+            background: #f8fafc;
+            padding: 10px 14px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            margin: 4px;
+        }
+
+        /* Section common */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--secondary-orange);
+            margin-top: 8px;
+            border-radius: 4px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-center .section-title:after {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .loc-card {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            height: 200px;
+        }
+
+        .loc-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .loc-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(13, 31, 60, 0.75) 0%, transparent 55%);
+        }
+
+        .loc-card-info {
+            position: absolute;
+            bottom: 14px;
+            left: 14px;
+            color: white;
+        }
+
+        .loc-view-btn {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            background: var(--secondary-orange);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            opacity: 0;
+            transition: 0.2s;
+        }
+
+        .loc-card:hover .loc-view-btn {
+            opacity: 1;
+        }
+
+        /* Safari Cards */
+        .row.g-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .safari-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.3s;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            height: 100%;
+        }
+
+        .img-holder {
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .img-holder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 1.3rem;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .price-block {
+            font-weight: 700;
+            color: var(--support-green);
+            margin: 10px 0;
+        }
+
+        .card-buttons {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .btn-outline-accent {
+            border: 1.5px solid var(--secondary-orange);
+            background: transparent;
+            color: var(--secondary-orange);
+            border-radius: 40px;
+            padding: 6px 12px;
+            text-decoration: none;
+            font-size: 0.8rem;
+        }
+
+        .btn-inquire {
+            background: #25D366;
+            color: white;
+            border-radius: 40px;
+            padding: 6px 12px;
+            text-decoration: none;
+            font-size: 0.8rem;
+        }
+
+        .btn-exp-book {
+            background: var(--secondary-orange);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 40px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .popular-ribbon {
+            position: absolute;
+            top: 16px;
+            right: -35px;
+            background: var(--secondary-orange);
+            color: white;
+            font-size: 0.7rem;
+            padding: 4px 40px;
+            transform: rotate(45deg);
+            z-index: 2;
+        }
+
+        .safari-card {
+            position: relative;
+        }
+
+        .center-btn {
+            text-align: center;
+            margin-top: 36px;
+        }
+
+        .btn-outline {
+            border: 1.5px solid var(--secondary-orange);
+            color: var(--secondary-orange);
+            padding: 8px 24px;
+            border-radius: 40px;
+            text-decoration: none;
+        }
+
+        /* Why choose us row */
+        .row.g-4>div {
+            padding: 0 12px;
+        }
+
+        /* Features Section */
+        .ftr-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .ftr-main {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            min-height: 360px;
+            background: var(--secondary-orange);
+        }
+
+        .ftr-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.55;
+        }
+
+        .ftr-main-content {
+            position: absolute;
+            bottom: 28px;
+            left: 28px;
+            color: white;
+        }
+
+        .ftr-tag {
+            background: var(--secondary-orange);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+
+        .ftr-right {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .ftr-sub-card {
+            border-radius: 14px;
+            overflow: hidden;
+            position: relative;
+            min-height: 165px;
+            background: var(--deep-navy);
+        }
+
+        .ftr-sub-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.5;
+        }
+
+        .ftr-sub-content {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            color: white;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 60px 0;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 0 6.5rem 0 6.5rem;
+            padding: 2rem;
+            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+
+        .author-block {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .author-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--soft-gray);
+        }
+
+        .dots-container {
+            display: flex;
+            gap: 0.6rem;
+            margin-top: 1rem;
+            justify-content: center;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--support-green);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background: var(--secondary-orange);
+            width: 24px;
+            border-radius: 12px;
+        }
+
+        /* Final CTA */
+        .cta-section {
+            background: linear-gradient(135deg, var(--deep-navy) 0%, #2a3f5e 100%);
+            border-radius: 28px;
+            padding: 3rem 2rem;
+            text-align: center;
+            color: white;
+            margin: 40px 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--deep-navy);
+            color: var(--white);
+            padding: 56px 0 28px;
+            margin-top: 3rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-social a {
+            color: white;
+            margin-right: 12px;
+            font-size: 1.2rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--secondary-orange);
+            padding-top: 22px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #25D366;
+            color: white;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            text-decoration: none;
+            z-index: 1000;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            font-size: 1.8rem;
+        }
+
+        @media (max-width: 991px) {
+
+            .navbar-collapse,
+            .nav-right {
+                display: none !important;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .custom-navbar {
+                padding: 0.5rem 1rem;
+            }
+
+            .locations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ftr-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content-left-luxury h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* YORA badge */
+        .yora-badge {
+            background: var(--gold-accent);
+            color: var(--deep-navy);
+            font-weight: 700;
+            padding: 0.2rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        .faq-item {
+            margin-bottom: 12px;
+        }
+        .faq-question {
+            background: white;
+            padding: 12px 18px;
+            border-radius: 40px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .faq-answer {
+            padding: 12px 18px;
+            display: none;
+            background: #f8fafc;
+            border-radius: 0 0 20px 20px;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        .intro-text {
+            max-width: 900px;
+            margin: 5px auto;
+            text-align: center;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hero Section with navbar (YOUR EXACT HERO) -->
+    <div class="hero-section-luxury">
+        <div class="container">
+            <div class="navbar-wrapper navbar-hero" id="navbarWrapper">
+                <div class="custom-navbar">
+                    <nav class="navbar navbar-expand-lg navbar-light p-0">
+                        <div class="container-fluid px-0 navbar-content">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/image/nomad_tours_logo.webp" alt="Nomad Tours Logo" class="travel-logo">
+                            </a>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="tours.html">Safari Tours</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="event.html">Events</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav-right">
+                                <span class="yora-badge"><i class="fas fa-handshake"></i> YORA partner</span>
+                                <a href="#" class="btn-primary-travel">Book Summit</a>
+                            </div>
+                            <button class="mobile-menu-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvas">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="hero-content-wrapper-luxury">
+            <div class="container">
+                <div class="hero-content-left-luxury">
+                    <h1>YORA Global Summit <br><span style="color: var(--gold-accent);">Nairobi · Kilifi</span></h1>
+                    <p>October 10–14, 2026 · Pre‑summit &amp; post‑summit safari, beach &amp; golf experiences — curated by Nomad Tours.</p>
+                    <div class="hero-buttons-luxury">
+                        <a href="#experiences" class="btn-hero-primary">Explore Experiences</a>
+                        <a href="#booking" class="btn-hero-outline">Reserve Your Spot</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Bar Section (YOUR EXACT SEARCH) -->
+        <div class="container search-section mt-1">
+            <div class="search-card">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="search-item"><select>
+                                <option>YORA Summit Package</option>
+                                <option>Pre‑Summit Safari</option>
+                                <option>Post‑Summit Beach + Golf</option>
+                                <option>Full Explorer</option>
+                            </select></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="search-item"><input type="date" placeholder="Check In"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="search-item"><select>
+                                <option>2 Travelers</option>
+                                <option>4 Travelers</option>
+                                <option>6+ Group</option>
+                            </select></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="search-item"><input type="text" placeholder="Full Name"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="search-item"><input type="email" placeholder="Email"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="search-item"><input type="tel" placeholder="Phone"></div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="search-item"><input type="text" placeholder="Travel Plan / Special requests..."></div>
+                    </div>
+                    <div class="col-md-2"><button class="search-btn"><i class="fas fa-paper-plane"></i> Send Inquiry</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- ====== YORA SUMMIT INTRO ====== -->
+        <div class="container py-4">
+            <div class="text-center">
+                <span class="yora-badge" style="font-size:1rem; padding:0.4rem 2rem;"><i class="fas fa-calendar-alt"></i> October 10–14, 2026</span>
+                <h2 class="section-title" style="margin-top:0.5rem;">YORA Summit · Nairobi & Kilifi</h2>
+            </div>
+            <div class="intro-text" style="max-width:900px; margin:5px auto; text-align:center; font-size:1rem;">
+                <p>Nomad Tours is proud to partner with <strong>YORA</strong> for their 2026 Global Summit. We offer exclusive pre‑summit safari adventures, post‑summit beach &amp; golf experiences, and seamless transfers between Nairobi and Kilifi. All packages are fully customizable for delegates and their guests.</p>
+            </div>
+        </div>
+
+        <!-- ====== EXPERIENCES: 6 SAFARI CARDS (your exact card style) ====== -->
+        <div class="container py-3" id="experiences">
+            <div class="section-title">YORA Summit Experiences</div>
+            <div class="container">
+                <div class="row g-4" id="safariGrid">
+                    <!-- 1. Pre-Summit Masai Mara (wildlife) -->
+                    <div class="col-lg-4 col-md-6 safari-item" data-category="wildlife">
+                        <div class="safari-card">
+                            <div class="img-holder">
+                                <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&w=600&h=400&fit=crop" class="card-img-top" alt="Masai Mara Safari">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Pre‑Summit: Masai Mara Safari</h5>
+                                <div class="location-text"><i class="fas fa-map-marker-alt" style="color: var(--secondary-orange);"></i> Masai Mara, Kenya</div>
+                                <div class="rating-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="ms-1 small text-muted">(4.9)</span></div>
+                                <p class="desc-text">3 days · Big Five game drives, bush dinner, Great Migration (Oct). Private 4x4.</p>
+                                <div class="price-block">KES 32,500 / person</div>
+                                <div class="card-buttons">
+                                    <a href="#" class="btn btn-outline-accent"><i class="fas fa-info-circle"></i> Details</a>
+                                    <a href="#" class="btn btn-inquire"><i class="fab fa-whatsapp"></i> Inquire</a>
+                                </div>
+                                <div class="mt-2">
+                                    <a href="#" class="btn-exp-book"><i class="fas fa-ticket-alt"></i> Book Now →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2. Pre-Summit Amboseli (wildlife) -->
+                    <div class="col-lg-4 col-md-6 safari-item" data-category="wildlife">
+                        <div class="safari-card">
+                            <div class="img-holder">
+                                <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&w=600&h=400&fit=crop&crop=center" class="card-img-top" alt="Amboseli elephants">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Pre‑Summit: Amboseli & Kilimanjaro</h5>
+                                <div class="location-text"><i class="fas fa-map-marker-alt" style="color: var(--secondary-orange);"></i> Amboseli National Park</div>
+                                <div class="rating-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span class="ms-1 small text-muted">(4.8)</span></div>
+                                <p class="desc-text">2 days · Elephant herds with Mt. Kilimanjaro backdrop, Maasai village visit.</p>
+                                <div class="price-block">KES 28,900 / person</div>
+                                <div class="card-buttons">
+                                    <a href="#" class="btn btn-outline-accent"><i class="fas fa-info-circle"></i> Details</a>
+                                    <a href="#" class="btn btn-inquire"><i class="fab fa-whatsapp"></i> Inquire</a>
+                                </div>
+                                <div class="mt-2">
+                                    <a href="#" class="btn-exp-book"><i class="fas fa-ticket-alt"></i> Book Now →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3. Post-Summit Diani Beach & Marine (beach) -->
+                    <div class="col-lg-4 col-md-6 safari-item" data-category="beach">
+                        <div class="safari-card">
+                            <div class="img-holder">
+                                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&w=600&h=400&fit=crop" class="card-img-top" alt="Diani beach">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Post‑Summit: Diani Marine Safari</h5>
+                                <div class="location-text"><i class="fas fa-map-marker-alt" style="color: var(--secondary-orange);"></i> Diani Beach, South Coast</div>
+                                <div class="rating-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span class="ms-1 small text-muted">(4.7)</span></div>
+                                <p class="desc-text">3 days · Dolphin spotting, snorkeling Kisite Marine Park, Swahili seafood.</p>
+                                <div class="price-block">KES 41,800 / person</div>
+                                <div class="card-buttons">
+                                    <a href="#" class="btn btn-outline-accent"><i class="fas fa-info-circle"></i> Details</a>
+                                    <a href="#" class="btn btn-inquire"><i class="fab fa-whatsapp"></i> Inquire</a>
+                                </div>
+                                <div class="mt-2">
+                                    <a href="#" class="btn-exp-book"><i class="fas fa-ticket-alt"></i> Book Now →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4. Post-Summit Vipingo Golf (golf) -->
+                    <div class="col-lg-4 col-md-6 safari-item" data-category="beach">
+                        <div class="safari-card">
+                            <div class="img-holder">
+                                <img src="https://images.unsplash.com/photo-1582651300295-6c1a1bdee1b6?ixlib=rb-4.0.3&w=600&h=400&fit=crop" class="card-img-top" alt="Vipingo golf">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Post‑Summit: Vipingo Golf & Beach</h5>
+                                <div class="location-text"><i class="fas fa-map-marker-alt" style="color: var(--secondary-orange);"></i> Vipingo Ridge, Kilifi</div>
+                                <div class="rating-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> <span class="ms-1 small text-muted">(4.6)</span></div>
+                                <p class="desc-text">18‑hole championship golf, beach relaxation, dhow sunset cruise.</p>
+                                <div class="price-block">KES 39,200 / person</div>
+                                <div class="card-buttons">
+                                    <a href="#" class="btn btn-outline-accent"><i class="fas fa-info-circle"></i> Details</a>
+                                    <a href="#" class="btn btn-inquire"><i class="fab fa-whatsapp"></i> Inquire</a>
+                                </div>
+                                <div class="mt-2">
+                                    <a href="#" class="btn-exp-book"><i class="fas fa-ticket-alt"></i> Book Now →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 5. Full Explorer (combined) -->
+                    <div class="col-lg-4 col-md-6 safari-item" data-category="wildlife">
+                        <div class="safari-card" style="border:2px solid var(--gold-accent);">
+                            <div class="img-holder">
+                                <img src="https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?ixlib=rb-4.0.3&w=600&h=400&fit=crop" class="card-img-top" alt="Lamu culture">
+                            </div>
+                            <div class="card-body" style="background:#fcf6ed;">
+                                <h5 class="card-title">Full YORA Explorer</h5>
+                                <div class="location-text"><i class="fas fa-map-marker-alt" style="color: var(--secondary-orange);"></i> Mara · Diani · Vipingo</div>
+                                <div class="rating-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span class="ms-1 small text-muted">(5.0)</span></div>
+                                <p class="desc-text">7 days · pre‑safari + post‑beach & golf · all transfers & 4* lodges.</p>
+                                <div class="price-block" style="background:#c97d2d; color:white; padding:0.2rem 1.2rem; border-radius:40px; display:inline-block;">KES 68,900 / person</div>
+                                <div class="card-buttons">
+                                    <a href="#" class="btn btn-outline-accent"><i class="fas fa-info-circle"></i> Details</a>
+                                    <a href="#" class="btn btn-inquire"><i class="fab fa-whatsapp"></i> Inquire</a>
+                                </div>
+                                <div class="mt-2">
+                                    <a href="#" class="btn-exp-book" style="background:#0b2a3c; color:white;"><i class="fas fa-ticket-alt"></i> Reserve Package</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 6. Samburu & Laikipia (new package) -->
+                    <div class="col-lg-4 col-md-6 safari-item" data-category="wildlife">
+                        <div class="safari-card">
+                            <div class="img-holder">
+                                <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?ixlib=rb-4.0.3&w=600&h=400&fit=crop" class="card-img-top" alt="Samburu">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Pre‑Summit: Samburu & Laikipia</h5>
+                                <div class="location-text"><i class="fas fa-map-marker-alt" style="color: var(--secondary-orange);"></i> Samburu · Laikipia</div>
+                                <div class="rating-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span class="ms-1 small text-muted">(4.9)</span></div>
+                                <p class="desc-text">4 days · rare species (Grevy's zebra, reticulated giraffe), cultural visits.</p>
+                                <div class="price-block">KES 45,200 / person</div>
+                                <div class="card-buttons">
+                                    <a href="#" class="btn btn-outline-accent"><i class="fas fa-info-circle"></i> Details</a>
+                                    <a href="#" class="btn btn-inquire"><i class="fab fa-whatsapp"></i> Inquire</a>
+                                </div>
+                                <div class="mt-2">
+                                    <a href="#" class="btn-exp-book"><i class="fas fa-ticket-alt"></i> Book Now →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== ITINERARY SNAPSHOT (your style) ====== -->
+        <div class="container py-3">
+            <div class="itinerary-block" style="background:#f4f0ea; border-radius:32px; padding:2rem 2.2rem;">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        <h4 style="font-weight:700;"><i class="fas fa-arrow-right" style="color:var(--secondary-orange);"></i> Pre‑summit (Oct 8‑10)</h4>
+                        <ul style="list-style:none; padding-left:0;">
+                            <li class="d-flex gap-3 mb-2"><span class="day-dot" style="background:var(--secondary-orange); width:38px; height:38px; border-radius:40px; display:flex; align-items:center; justify-content:center; font-weight:700; color:white;">1</span> <span><strong>Nairobi → Masai Mara</strong> · afternoon game drive</span></li>
+                            <li class="d-flex gap-3 mb-2"><span class="day-dot" style="background:var(--secondary-orange); width:38px; height:38px; border-radius:40px; display:flex; align-items:center; justify-content:center; font-weight:700; color:white;">2</span> <span><strong>Full day Mara</strong> · river crossings, balloon option</span></li>
+                            <li class="d-flex gap-3"><span class="day-dot" style="background:var(--secondary-orange); width:38px; height:38px; border-radius:40px; display:flex; align-items:center; justify-content:center; font-weight:700; color:white;">3</span> <span><strong>Mara → Nairobi</strong> · transfer to GICC for summit</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 style="font-weight:700;"><i class="fas fa-arrow-right" style="color:var(--secondary-orange);"></i> Post‑summit (Oct 14‑17)</h4>
+                        <ul style="list-style:none; padding-left:0;">
+                            <li class="d-flex gap-3 mb-2"><span class="day-dot" style="background:var(--secondary-orange); width:38px; height:38px; border-radius:40px; display:flex; align-items:center; justify-content:center; font-weight:700; color:white;">4</span> <span><strong>Kilifi → Diani</strong> · beach check‑in, marine safari</span></li>
+                            <li class="d-flex gap-3 mb-2"><span class="day-dot" style="background:var(--secondary-orange); width:38px; height:38px; border-radius:40px; display:flex; align-items:center; justify-content:center; font-weight:700; color:white;">5</span> <span><strong>Vipingo Golf</strong> · 18 holes + lunch</span></li>
+                            <li class="d-flex gap-3"><span class="day-dot" style="background:var(--secondary-orange); width:38px; height:38px; border-radius:40px; display:flex; align-items:center; justify-content:center; font-weight:700; color:white;">6</span> <span><strong>Dhow sunset & departure</strong> · transfer to Mombasa</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-3 text-center">
+                    <span class="badge bg-light text-dark p-2"><i class="fas fa-clock"></i> Summit dates: Oct 10‑14 · Pre/post extensions flexible</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== WHY CHOOSE US (your exact) ====== -->
+        <div class="container py-4">
+            <div class="text-center mb-4">
+                <h2 class="section-title">Why Choose a YORA Summit Experience</h2>
+                <p class="text-muted">We go beyond the ordinary to create unforgettable moments</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3 text-center">
+                    <i class="fas fa-car-side fa-3x" style="color: var(--secondary-orange);"></i>
+                    <h5 class="mt-3">Private 4x4 Vehicles</h5>
+                    <p>Open-roof cruisers, window seats, refreshments</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <i class="fas fa-route fa-3x" style="color: var(--secondary-orange);"></i>
+                    <h5 class="mt-3">Private Guided Safaris</h5>
+                    <p>Your own vehicle, expert guide, flexible schedule.</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <i class="fas fa-hotel fa-3x" style="color: var(--secondary-orange);"></i>
+                    <h5 class="mt-3">Handpicked Luxury Lodges</h5>
+                    <p>Exclusive camps with outstanding service.</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <i class="fas fa-map-marked-alt fa-3x" style="color: var(--secondary-orange);"></i>
+                    <h5 class="mt-3">Fully Customized Itineraries</h5>
+                    <p>Designed around your interests, pace, and dates.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== DESTINATIONS PILLAR (your exact) ====== -->
+        <div class="container py-3">
+            <div class="text-center">
+                <h2 class="section-title">YORA Summit Destinations</h2>
+            </div>
+            <div class="locations-grid" style="margin-top:10px;">
+                <div class="loc-card">
+                    <img src="assets/image/top-safaris/wildebeest-zebra-maasai-mara.webp" alt="Masai Mara">
+                    <div class="loc-card-overlay"></div>
+                    <div class="loc-card-info"><h4>Masai Mara</h4><span>Pre‑Summit Safari</span></div>
+                    <a href="#" class="loc-view-btn">Explore</a>
+                </div>
+                <div class="loc-card">
+                    <img src="assets/image/top-safaris/amboseli-national-park-elephants.webp" alt="Amboseli">
+                    <div class="loc-card-overlay"></div>
+                    <div class="loc-card-info"><h4>Amboseli</h4><span>Elephants & Kilimanjaro</span></div>
+                    <a href="#" class="loc-view-btn">Explore</a>
+                </div>
+                <div class="loc-card">
+                    <img src="assets/image/top-safaris/tsavo-east-national-park-destination.webp" alt="Tsavo">
+                    <div class="loc-card-overlay"></div>
+                    <div class="loc-card-info"><h4>Tsavo</h4><span>Red elephants</span></div>
+                    <a href="#" class="loc-view-btn">Explore</a>
+                </div>
+                <div class="loc-card">
+                    <img src="assets/image/top-safaris/samburu-national-reserve.webp" alt="Samburu">
+                    <div class="loc-card-overlay"></div>
+                    <div class="loc-card-info"><h4>Samburu</h4><span>Rare wildlife</span></div>
+                    <a href="#" class="loc-view-btn">Explore</a>
+                </div>
+                <div class="loc-card">
+                    <img src="assets/image/top-safaris/visit-lake-nakuru.webp" alt="Lake Nakuru">
+                    <div class="loc-card-overlay"></div>
+                    <div class="loc-card-info"><h4>Lake Nakuru</h4><span>Flamingos & rhino</span></div>
+                    <a href="#" class="loc-view-btn">Explore</a>
+                </div>
+                <div class="loc-card">
+                    <img src="assets/image/top-safaris/lake-naivasha-kenya.webp" alt="Lake Naivasha">
+                    <div class="loc-card-overlay"></div>
+                    <div class="loc-card-info"><h4>Lake Naivasha</h4><span>Boat safaris</span></div>
+                    <a href="#" class="loc-view-btn">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== TESTIMONIALS (your exact) ====== -->
+        <div class="container" style="margin-top: 80px;">
+            <div class="testimonials-grid">
+                <div class="testimonial-info-card">
+                    <h2 class="title">Traveler Stories</h2>
+                    <div class="feature-text">
+                        At Nomad Tours and Experiences, every journey tells a story. Our testimonials showcase real experiences from travelers who have explored Kenya’s breathtaking landscapes, vibrant cultures, and unforgettable adventures with us.
+                    </div>
+                </div>
+                <div class="testimonial-card" id="testimonialCard">
+                    <div class="quote-img-wrapper">
+                        <img class="quote-img" src="assets/image/quote.png" alt="Quote decoration image">
+                    </div>
+                    <div class="testimonial-content-area" id="testimonialDynamic">
+                        <div class="testimonial-text" id="quoteText">"The YORA summit experience was incredible. The safari was flawless, and the team made everything seamless."</div>
+                        <div class="author-block" id="authorBlock">
+                            <div class="author-avatar" id="authorAvatar"></div>
+                            <div class="author-info">
+                                <div class="author-name-line">
+                                    <span class="author-name" id="authorName">Dr. A. K.</span>
+                                    <span class="author-location-date" id="authorLocationDate">YORA Delegate</span>
+                                </div>
+                                <div class="author-title" id="authorTitle"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-controls">
+                        <div class="dots-container" id="dotsContainer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== FAQ (your exact) ====== -->
+        <div class="container py-5">
+            <div class="text-center">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+            <div style="margin: 5px 0;">
+                <div class="faq-item"><div class="faq-question">What is included in the YORA summit package? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">All packages include private safari, accommodation, meals, transfers, and park fees. Golf and marine activities are included in post‑summit packages.</div></div>
+                <div class="faq-item"><div class="faq-question">Can I combine pre and post summit experiences? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Yes, the Full Explorer combines both pre‑summit safari and post‑summit beach & golf with all transfers.</div></div>
+                <div class="faq-item"><div class="faq-question">How do I get from Nairobi to Kilifi? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">We arrange private road transfers or domestic flights. Both options are included in our packages.</div></div>
+                <div class="faq-item"><div class="faq-question">Are the safaris private? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Yes, all our safaris are private with your own vehicle and guide – no sharing with strangers.</div></div>
+            </div>
+        </div>
+
+        <!-- ====== CTA (your exact) ====== -->
+        <div class="container py-2">
+            <div class="cta-section">
+                <h3>Secure Your YORA Summit Experience</h3>
+                <p class="mt-2 mb-3">Limited spots available for pre‑ and post‑summit adventures. Book now to avoid disappointment.</p>
+                <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                    <a href="#booking" class="btn-hero-outline">Contact Us</a>
+                    <a href="#booking" class="btn-hero-primary">Book Safari Tour <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ====== FOOTER (your exact) ====== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col contact-info-card-footer">
+                    <img src="assets/image/nomad_tours_logo.webp" alt="Nomad Tours" style="border-radius:12px; padding:6px 12px; max-height:100px; margin-bottom:16px; filter: brightness(0) invert(1);">
+                    <h5>Nomad Tours & Experiences</h5>
+                    <p>Your trusted partner for authentic African adventures and unforgettable safari experiences.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/254712345678"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Experiences</h5>
+                    <a href="#">Wildlife Safaris</a>
+                    <a href="#">Cultural Tours</a>
+                    <a href="#">Beach Excursions</a>
+                    <a href="#">Custom Itineraries</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Policies</h5>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Booking Terms</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#cancellationModal">Cancellation Policy</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <p><i class="fas fa-phone-alt me-2" style="color:var(--secondary-orange);"></i> +254 102 593 346</p>
+                    <p><i class="fas fa-map-marker-alt me-2" style="color:var(--secondary-orange);"></i> Bofa Road, Kilifi Kenya</p>
+                    <p><i class="far fa-envelope me-2" style="color:var(--secondary-orange);"></i> info@wildnomads.co.ke</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Nomad Tours & Experiences — Authentic Kenya Adventures. | YORA Summit partner</p>
+                <p>🌍 Kilifi, Kenya | Design: LacomasTech</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/254712345678" class="whatsapp-float" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- OFF-CANVAS MOBILE MENU -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileOffcanvas" aria-labelledby="mobileOffcanvasLabel">
+        <div class="offcanvas-header">
+            <img src="assets/image/savira_nest_logo.png" alt="Nomad Tours Logo" class="offcanvas-logo" style="height: 55px;">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="tours.html"><i class="fas fa-binoculars"></i> Safari Tours</a></li>
+                <li><a href="acc.html"><i class="fas fa-compass"></i> Experiences</a></li>
+                <li><a href="pricing.html"><i class="fas fa-tag"></i> Pricing</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            <div class="mobile-action-buttons">
+                <a href="#" class="btn-mobile-book"><i class="fas fa-calendar-check"></i> Book an Experience</a>
+                <a href="https://wa.me/254712345678" target="_blank" class="btn-mobile-wa"><i class="fab fa-whatsapp"></i> WhatsApp Inquiry</a>
+            </div>
+            <div class="mobile-contact-info">
+                <p><i class="fas fa-phone-alt"></i> +254 712 345 678</p>
+                <p><i class="fas fa-map-marker-alt"></i> Bofa Road, Kilifi, Kenya</p>
+                <p><i class="far fa-envelope"></i> hello@nomadtours.co.ke</p>
+                <div class="mobile-social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/254712345678" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+                const icon = question.querySelector('i');
+                if (item.classList.contains('active')) icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+                else icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+            });
+        });
+
+        // Sticky navbar (your exact)
+        const navbarWrapper = document.getElementById('navbarWrapper');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 20) {
+                if (!navbarWrapper.classList.contains('sticky-nav')) {
+                    navbarWrapper.classList.add('sticky-nav');
+                    document.body.classList.add('nav-fixed-padding');
+                }
+            } else {
+                if (navbarWrapper.classList.contains('sticky-nav')) {
+                    navbarWrapper.classList.remove('sticky-nav');
+                    document.body.classList.remove('nav-fixed-padding');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
