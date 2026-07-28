@@ -1743,6 +1743,8 @@ body.nav-fixed-padding {
 
 .search-card {
     background: var(--white);
+    /* width: calc(100% + 100px);
+    margin-right: -80px; */
     border-radius: 24px;
     padding: 16px 24px;
     box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
@@ -1752,6 +1754,21 @@ body.nav-fixed-padding {
     justify-content: space-between;
     gap: 16px;
 }
+ 
+/* .search-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: 100%;
+    background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0)
+    );
+    pointer-events: none;
+} */
 
 .search-item {
     flex: 1;
