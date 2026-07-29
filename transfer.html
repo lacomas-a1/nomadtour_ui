@@ -11,30 +11,44 @@
   <link rel="stylesheet" href="assets/css/y-styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <style>
-    /* quick overrides for this dedicated page – keeps brand consistent */
-    .hero-section {
+    /* keep brand consistent */
+    .contact-header {
+    background: linear-gradient(rgba(28, 45, 73, 0.88), rgba(28, 45, 73, 0.88)),
+        url('https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+    background-size: cover;
+    min-height: 38vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 0 40px;
+    text-align: center;
+    color: white;
+}
+    /* .contact-header {
       background: linear-gradient(135deg, #0b2d1e 0%, #1a4d33 50%, #2d6b4a 100%);
+      padding: 20px 0 40px;
       min-height: 35vh;
       display: flex;
-      align-items: center;
-      position: relative;
-      margin-bottom: 0;
-      padding: 40px 0;
-    }
-    .hero-section .hero-content-left {
+      flex-direction: column;
+      justify-content: center;
+    } */
+    .contact-header .hero-content {
       text-align: center;
-      width: 100%;
+      margin-top: 20px;
     }
-    .search-section {
-      margin-top: -30px;
-      position: relative;
-      z-index: 10;
+    .contact-header .hero-title {
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: #fff;
     }
-    .search-card {
-      background: white;
-      border-radius: 40px 40px 20px 20px;
-      padding: 30px 35px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    .contact-header .hero-title span {
+      color: #e7d6a8;
+    }
+    .contact-header .hero-subtitle {
+      color: #f0f0ea;
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
     }
     .btn-outline-accent {
       border: 1px solid var(--secondary-orange, #c9a84c);
@@ -44,39 +58,13 @@
       padding: 6px 20px;
       font-weight: 500;
       transition: all 0.2s;
+      text-decoration: none;
+      display: inline-block;
     }
     .btn-outline-accent:hover {
       background: var(--secondary-orange, #c9a84c);
       color: #fff;
     }
-    .btn-hero-primary {
-      background: var(--secondary-orange, #c9a84c);
-      border: none;
-      color: #fff;
-      padding: 12px 32px;
-      border-radius: 60px;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: 0.2s;
-    }
-    .btn-hero-primary:hover { background: #b8952f; color: #fff; }
-    .btn-hero-outline {
-      background: transparent;
-      border: 1.5px solid rgba(255,255,255,0.6);
-      color: #fff;
-      padding: 10px 28px;
-      border-radius: 60px;
-      font-weight: 500;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: 0.2s;
-    }
-    .btn-hero-outline:hover { background: rgba(255,255,255,0.12); border-color: #fff; color: #fff; }
     .btn-submit {
       background: var(--secondary-orange, #c9a84c);
       border: none;
@@ -126,37 +114,50 @@
       border-radius: 36px;
       padding: 32px 28px;
       border: 1px solid rgba(201,168,76,0.2);
+      height: 100%;
+    }
+    .contact-info-card .contact-icon {
+      font-size: 2.2rem;
+      color: var(--secondary-orange, #c9a84c);
+      margin-bottom: 12px;
     }
     .footer { background: #0b2d1e; color: #ddd; padding: 40px 0 20px; }
     .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 60px; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.3); z-index: 999; text-decoration: none; }
     .whatsapp-float:hover { background: #1ebe5c; color: #fff; }
+    .tab-link.active { color: var(--primary-blue, #2c7da0); }
+    .tab-link.active::after {
+      content: ''; position: absolute; bottom: -2px; left: 0;
+      width: 100%; height: 2px; background-color: var(--primary-blue, #2c7da0);
+    }
+    .form-success-msg { margin-top: 1rem; }
     @media (max-width: 768px) {
-      .hero-section { min-height: 50vh; padding: 30px 0; }
-      .search-card { padding: 20px; }
-      .section-title { font-size: 1.6rem; }
-      .btn-hero-primary, .btn-hero-outline { padding: 8px 18px; font-size: 0.9rem; }
+      .contact-header { min-height: 50vh; padding: 20px 0 30px; }
+      .contact-header .hero-title { font-size: 2.2rem; }
+      .service-icon-box { padding: 20px 12px; }
     }
   </style>
 </head>
 <body>
 
-<!-- HERO (centered) – using the same hero layout as requested -->
-<div class="hero-section" id="index">
+<!-- HEADER – exactly as requested (contact-header design) -->
+<header class="contact-header">
   <div class="container">
-    <div class="navbar-wrapper navbar-hero" id="navbarWrapper">
+    <div class="navbar-wrapper" id="navbarWrapper">
       <div class="custom-navbar">
         <nav class="navbar navbar-expand-lg navbar-light p-0">
           <div class="container-fluid px-0 navbar-content">
             <a class="navbar-brand" href="index.html">
-              <img src="assets/image/nomad_tours_logo.webp" alt="Nomad Tours Logo" class="travel-logo" style="height:50px;" />
+              <img src="assets/image/nomad_tours_logo.webp" alt="Nomad Tours Logo" class="travel-logo" style="height:50px;">
             </a>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link active" href="#index">Transfers</a></li>
-                <li class="nav-item"><a class="nav-link" href="#shuttle">Shuttle</a></li>
-                <li class="nav-item"><a class="nav-link" href="#service">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="#book">Book</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="tours.html">Safari Tours</a></li>
+                <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+                <li class="nav-item"><a class="nav-link" href="event.html">Events</a></li>
+                <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
               </ul>
             </div>
             <div class="nav-right">
@@ -169,66 +170,50 @@
         </nav>
       </div>
     </div>
-    <!-- hero content - centered -->
-    <div class="hero-content-left">
-      <h1 style="font-size:3.2rem;font-weight:700;color:#fff;">YORA 2026 <span style="color:#e7d6a8;">Transfers & Shuttles</span></h1>
-      <p style="color:#f0f0ea;font-size:1.2rem;max-width:700px;margin:0 auto;">Airport transfers, conference shuttles, and executive transport for delegates, speakers, and VIPs.</p>
-    </div>
   </div>
-</div>
-
-<!-- Search / intro -->
-<div class="container search-section">
-  <div class="search-card">
-    <div class="row align-items-center">
-      <div class="col-lg-8">
-        <h2 class="section-title" style="font-size:2rem;">Seamless Transport for YORA Delegates</h2>
-        <p style="font-size:1rem;color:#2d2d2d;">Nomad Signature Trails provides reliable, luxury transfers between JKIA, Vipingo, partner hotels, and the conference venue. Real‑time flight tracking, professional drivers, and 24/7 support.</p>
-      </div>
-      <div class="col-lg-4 text-center">
-        <img src="assets/image/YORA-logo-light.webp" alt="Yora Logo" style="max-width:140px;" />
-      </div>
-    </div>
+  <!-- hero content centered -->
+  <div class="hero-content container">
+    <h1 class="hero-title">YORA 2026 <span>Transfers & Shuttles</span></h1>
+    <p class="hero-subtitle">Airport transfers, conference shuttles, and executive transport for delegates, speakers, and VIPs.</p>
   </div>
-</div>
+</header>
 
-<!-- main content -->
-<main>
-  <!-- service cards: airport transfer + conference shuttle + dedicated concierge -->
-  <div class="container py-4" id="service">
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="service-icon-box text-center">
-          <i class="fas fa-plane-arrival fa-3x" style="color:var(--secondary-orange,#c9a84c);margin-bottom:12px;"></i>
-          <h4>Airport Transfers</h4>
-          <p>24/7 transfers between JKIA, Vipingo, hotels, and residences with professional drivers and real-time flight tracking.</p>
-          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+<!-- main content area -->
+<div class="container contact-section py-4">
+
+  <!-- Contact Info Cards – 3 columns (Airport Transfers, Conference Shuttle, Dedicated Travel Concierge) -->
+  <div class="row g-4 mb-5">
+    <div class="col-md-4">
+      <div class="contact-info-card text-center">
+        <div class="contact-icon"><i class="fas fa-plane-arrival"></i></div>
+        <h4>Airport Transfers</h4>
+        <p>24/7 transfers between JKIA, Vipingo, hotels, and residences with professional drivers and real-time flight tracking.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
             <a href="#book" class="btn btn-outline-accent"><i class="fas fa-calendar-check"></i> Book Now</a>
             <a href="#" class="btn btn-outline-accent"><i class="fas fa-phone-alt"></i> +254 102 593 346</a>
           </div>
-        </div>
       </div>
-      <div class="col-md-4">
-        <div class="service-icon-box text-center">
-          <i class="fas fa-shuttle-van fa-3x" style="color:var(--secondary-orange,#c9a84c);margin-bottom:12px;"></i>
-          <h4>Conference Shuttle</h4>
+    </div>
+    <div class="col-md-4">
+      <div class="contact-info-card text-center">
+        <div class="contact-icon"><i class="fas fa-shuttle-van"></i></div>
+        <h4>Conference Shuttle</h4>
           <p>Reliable scheduled shuttle services between partner hotels and the YORA conference venue.</p>
           <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
             <a href="#shuttle" class="btn btn-outline-accent"><i class="fas fa-clock"></i> View Schedule</a>
             <a href="#book" class="btn btn-outline-accent"><i class="fas fa-ticket-alt"></i> Reserve Seat</a>
           </div>
-        </div>
       </div>
-      <div class="col-md-4">
-        <div class="service-icon-box text-center">
-          <i class="fas fa-headset fa-3x" style="color:var(--secondary-orange,#c9a84c);margin-bottom:12px;"></i>
-          <h4>Dedicated Travel Concierge</h4>
+    </div>
+    <div class="col-md-4">
+      <div class="contact-info-card text-center">
+        <div class="contact-icon"><i class="fas fa-headset"></i></div>
+        <h4>Dedicated Travel Concierge</h4>
           <p>One WhatsApp contact for itinerary updates, reservations, travel assistance, and on-ground support throughout your stay.</p>
           <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
             <a href="https://wa.me/254712345678" target="_blank" class="btn btn-outline-accent"><i class="fab fa-whatsapp"></i> Chat Now</a>
             <a href="#contact" class="btn btn-outline-accent"><i class="fas fa-info-circle"></i> Learn More</a>
           </div>
-        </div>
       </div>
     </div>
   </div>
@@ -383,7 +368,7 @@
       </div>
     </div>
   </div>
-</main>
+</div>
 
 <!-- Footer (exact brand) -->
 <footer style="background:#0b2d1e;color:#ddd;padding:40px 0 20px;margin-top:20px;">
@@ -419,15 +404,28 @@
   </div>
   <div class="offcanvas-body">
     <ul class="mobile-nav-list">
-      <li><a href="#index"><i class="fas fa-home"></i> Transfers</a></li>
-      <li><a href="#shuttle"><i class="fas fa-clock"></i> Shuttle</a></li>
-      <li><a href="#service"><i class="fas fa-concierge-bell"></i> Services</a></li>
-      <li><a href="#book"><i class="fas fa-calendar-check"></i> Book</a></li>
-      <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+      <li><a href="tours.html"><i class="fas fa-binoculars"></i> Safari Tours</a></li>
+      <li><a href="service.html"><i class="fas fa-concierge-bell"></i> Services</a></li>
+      <li><a href="blogs.html"><i class="fas fa-blog"></i> Blogs</a></li>
+      <li><a href="event.html"><i class="fas fa-calendar-alt"></i> Events</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
     </ul>
-    <div class="mobile-action-buttons mt-3">
-      <a href="#book" class="btn btn-primary w-100 mb-2" style="background:var(--secondary-orange);border:none;">Book Transfer</a>
-      <a href="https://wa.me/254712345678" target="_blank" class="btn btn-success w-100"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <div class="mobile-action-buttons mt-4">
+      <a href="#book" class="btn-mobile-book"><i class="fas fa-ticket-alt"></i> Book Now</a>
+      <a href="https://wa.me/254712345678" class="btn-mobile-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+    <div class="mobile-contact-info">
+      <p><i class="fas fa-phone-alt"></i> +254 102 593 346</p>
+      <p><i class="fas fa-map-marker-alt"></i> Bofa Road, Kilifi, Kenya</p>
+      <p><i class="far fa-envelope"></i> transfers@nomadsignaturetrails.co.ke</p>
+      <div class="mobile-social-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/254712345678" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
     </div>
   </div>
 </div>
@@ -435,5 +433,49 @@
 <!-- scripts -->
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script>
+  (function() {
+    // Tab switching
+    const tabButtons = document.querySelectorAll('.tab-link');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    function switchTab(tabId) {
+      tabPanes.forEach(pane => pane.style.display = 'none');
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      const activePane = document.getElementById(tabId);
+      if (activePane) activePane.style.display = 'block';
+      const activeBtn = document.querySelector(`.tab-link[data-tab="${tabId}"]`);
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const targetTabId = this.getAttribute('data-tab');
+        if (targetTabId) switchTab(targetTabId);
+      });
+    });
+
+    // Booking form handler
+    const bookingForm = document.getElementById('bookingTransferForm');
+    const bookingSuccessMsg = document.getElementById('bookingSuccessMsg');
+    if (bookingForm) {
+      bookingForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        let isValid = true;
+        this.querySelectorAll('[required]').forEach(f => { if (!f.value.trim()) isValid = false; });
+        if (isValid) {
+          bookingSuccessMsg.classList.remove('d-none');
+          bookingForm.reset();
+          setTimeout(() => bookingSuccessMsg.classList.add('d-none'), 5000);
+        } else {
+          alert('Please fill all required fields (*).');
+        }
+      });
+    }
+
+    // Ensure initial active tab
+    if (!document.querySelector('.tab-link.active')) switchTab('bookingTab');
+  })();
+</script>
 </body>
 </html>
