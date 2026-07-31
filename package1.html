@@ -1,0 +1,1231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>YORA 2026 • Safari & Experiences | Nomad Signature Trails</title>
+    <meta
+      name="description"
+      content="Pre-summit safaris, post-summit coastal retreats, and custom itineraries for YORA 2026 delegates. Explore Kenya beyond the conference."
+    />
+    <link rel="icon" href="assets/image/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link href="assets/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/y-styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      .contact-header {
+        background:
+          linear-gradient(rgba(28, 45, 73, 0.85), rgba(28, 45, 73, 0.85)),
+          url("https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")
+            no-repeat center center;
+        background-size: cover;
+        min-height: 38vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 50px 0 40px;
+        text-align: center;
+        color: white;
+      }
+      .contact-header .hero-content {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .contact-header .hero-title {
+        font-size: 3.2rem;
+        font-weight: 700;
+        color: #fff;
+      }
+      .contact-header .hero-title span {
+        color: #e7d6a8;
+      }
+      .contact-header .hero-subtitle {
+        color: #f0f0ea;
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .btn-outline-accent {
+        border: 1px solid var(--secondary-orange, #c9a84c);
+        color: var(--secondary-orange, #c9a84c);
+        background: transparent;
+        border-radius: 40px;
+        padding: 6px 20px;
+        font-weight: 500;
+        transition: all 0.2s;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .btn-outline-accent:hover {
+        background: var(--secondary-orange, #c9a84c);
+        color: #fff;
+      }
+      .btn-submit {
+        background: var(--secondary-orange, #c9a84c);
+        border: none;
+        padding: 14px 36px;
+        border-radius: 60px;
+        color: #fff;
+        font-weight: 600;
+        transition: 0.2s;
+      }
+      .btn-submit:hover {
+        background: #b08a2e;
+        color: #fff;
+      }
+      .section-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #1a3a2a;
+        margin-bottom: 0.5rem;
+      }
+      .service-icon-box {
+        background: #f8f5ed;
+        border-radius: 32px;
+        padding: 28px 16px;
+        transition: 0.2s;
+        height: 100%;
+        border: 1px solid rgba(201, 168, 76, 0.15);
+      }
+      .service-icon-box:hover {
+        background: #f3efe4;
+      }
+      .experience-card {
+        background: #fff;
+        border-radius: 20px;
+        padding: 20px 22px;
+        border-left: 5px solid var(--secondary-orange, #c9a84c);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        transition: 0.2s;
+        height: 100%;
+      }
+      .experience-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      }
+      .experience-card .exp-price {
+        color: var(--secondary-orange, #c9a84c);
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
+      .experience-card .exp-icon {
+        font-size: 2rem;
+        color: var(--secondary-orange, #c9a84c);
+        margin-bottom: 10px;
+      }
+      .contact-info-card {
+        background: #faf8f4;
+        border-radius: 36px;
+        padding: 40px 30px;
+        border: 1px solid rgba(201, 168, 76, 0.2);
+        height: 100%;
+      }
+      .contact-info-card h2,
+      .contact-info-card > p {
+        text-align: center;
+      }
+      .contact-feature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 32px;
+      }
+      .contact-feature i {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        color: var(--secondary-orange, #c9a84c);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        transition: all 0.3s ease;
+      }
+      .contact-feature h6 {
+        margin-bottom: 8px;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--primary-green);
+      }
+      .contact-feature p {
+        margin: 0;
+        color: #666;
+        line-height: 1.6;
+        max-width: 320px;
+      }
+      .contact-feature a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .contact-feature a:hover {
+        color: var(--secondary-orange, #c9a84c);
+      }
+      .contact-highlight {
+        background: #fff;
+        border: 1px solid rgba(201, 168, 76, 0.2);
+        border-radius: 20px;
+        padding: 18px;
+        margin-top: 10px;
+        text-align: center;
+      }
+      .contact-highlight i {
+        color: var(--secondary-orange, #c9a84c);
+        margin-right: 6px;
+      }
+      .contact-highlight p {
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.7;
+      }
+      .footer {
+        background: #0b2d1e;
+        color: #ddd;
+        padding: 40px 0 20px;
+      }
+      .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: #25d366;
+        color: #fff;
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+        text-decoration: none;
+      }
+      .whatsapp-float:hover {
+        background: #1ebe5c;
+        color: #fff;
+      }
+      .form-success-msg {
+        margin-top: 1rem;
+      }
+      .tab-link.active {
+        color: var(--primary-blue, #2c7da0);
+      }
+      .tab-link.active::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--primary-blue, #2c7da0);
+      }
+      .tabs-header {
+        display: flex;
+        gap: 0.5rem;
+        border-bottom: 2px solid #e2e8f0;
+        margin-bottom: 1.8rem;
+        flex-wrap: wrap;
+      }
+      .tab-link {
+        background: none;
+        border: none;
+        padding: 0.75rem 1.25rem;
+        font-weight: 600;
+        font-size: 1rem;
+        color: #4a5568;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        position: relative;
+        border-radius: 0;
+      }
+      .tab-pane {
+        display: none;
+      }
+      .tab-pane.active {
+        display: block;
+      }
+
+      /* CTA Section */
+      .cta-section {
+        background: linear-gradient(135deg, #0b2d1e 0%, #1a4d33 50%, #2d6b4a 100%);
+        border-radius: 40px;
+        padding: 50px 40px;
+        text-align: center;
+        color: #fff;
+        margin: 30px 0 20px;
+      }
+      .cta-section h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+      .cta-section h2 span {
+        color: #e7d6a8;
+      }
+      .cta-section p {
+        font-size: 1.15rem;
+        max-width: 700px;
+        margin: 0 auto 28px;
+        color: #f0f0ea;
+        line-height: 1.7;
+      }
+      .cta-section .btn-hero-primary {
+        background: var(--secondary-orange, #c9a84c);
+        color: #fff;
+        padding: 16px 44px;
+        border-radius: 60px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        transition: 0.2s;
+        border: none;
+      }
+      .cta-section .btn-hero-primary:hover {
+        background: #b8952f;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      }
+      .cta-section .btn-hero-outline {
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        color: #fff;
+        padding: 14px 36px;
+        border-radius: 60px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: 0.2s;
+        margin-left: 12px;
+      }
+      .cta-section .btn-hero-outline:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: #fff;
+      }
+      .cta-section .cta-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      @media (max-width: 768px) {
+        .contact-header {
+          min-height: 50vh;
+          padding: 20px 0 30px;
+        }
+        .contact-header .hero-title {
+          font-size: 2.2rem;
+        }
+        .service-icon-box {
+          padding: 20px 12px;
+        }
+        .tabs-header {
+          flex-direction: column;
+          gap: 0.25rem;
+        }
+        .tab-link {
+          padding: 0.5rem 1rem;
+        }
+        .cta-section {
+          padding: 30px 20px;
+        }
+        .cta-section h2 {
+          font-size: 1.8rem;
+        }
+        .cta-section .btn-hero-primary,
+        .cta-section .btn-hero-outline {
+          padding: 12px 24px;
+          font-size: 0.95rem;
+          width: 100%;
+          justify-content: center;
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="contact-header">
+      <div class="container">
+        <div class="navbar-wrapper" id="navbarWrapper">
+          <div class="custom-navbar">
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
+              <div class="container-fluid px-0 navbar-content">
+                <a class="navbar-brand" href="index.html">
+                  <img
+                    src="assets/image/nomad_tours_logo.webp"
+                    alt="Nomad Tours Logo"
+                    class="travel-logo"
+                    style="height: 50px"
+                  />
+                </a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="tours.html">Safari Tours</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="service.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="blogs.html">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="event.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="nav-right">
+                  <a href="#book" class="btn-primary-travel"
+                    >Plan Your Experience</a
+                  >
+                </div>
+                <button
+                  class="mobile-menu-toggle"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#mobileOffcanvas"
+                >
+                  <i class="fas fa-bars"></i>
+                </button>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="hero-content container">
+        <h1 class="hero-title">YORA 2026 <span>Safari & Experiences</span></h1>
+        <p class="hero-subtitle">
+          Pre-summit safaris, post-summit coastal retreats, and custom
+          itineraries designed exclusively for YORA delegates.
+        </p>
+      </div>
+    </header>
+
+    <!-- main content area -->
+    <div class="container contact-section py-4">
+      <!-- Service Cards – 3 columns -->
+      <div class="row g-4 mb-5">
+        <div class="col-md-4">
+          <div class="contact-info-card text-center">
+            <div class="contact-icon"><i class="fas fa-binoculars"></i></div>
+            <h4>Pre-Summit Safaris</h4>
+            <p>
+              Extend your journey with 2–4 day luxury safaris featuring private
+              guides, premium lodges, and seamless logistics.
+            </p>
+            <div style="display: flex; gap: 12px; justify-content: center">
+              <a href="#pre-summit" class="btn btn-outline-accent"
+                ><i class="fas fa-tree"></i> Explore Safaris</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-info-card text-center">
+            <div class="contact-icon"><i class="fas fa-umbrella-beach"></i></div>
+            <h4>Post-Summit Coastal Retreat</h4>
+            <p>
+              Relax in Kilifi with wellness experiences, dhow cruises, beach
+              escapes, and authentic coastal culture.
+            </p>
+            <div style="display: flex; gap: 12px; justify-content: center">
+              <a href="#post-summit" class="btn btn-outline-accent"
+                ><i class="fas fa-water"></i> Discover Kilifi</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-info-card text-center">
+            <div class="contact-icon"><i class="fas fa-pen-fancy"></i></div>
+            <h4>Custom Itineraries</h4>
+            <p>
+              Tailor-made experiences combining safaris, culture, beach, and
+              executive travel — designed around your schedule.
+            </p>
+            <div style="display: flex; gap: 12px; justify-content: center">
+              <a href="#book" class="btn btn-outline-accent"
+                ><i class="fas fa-magic"></i> Design Yours</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA SECTION - Added here -->
+      <div class="cta-section">
+        <h2>Ready for an <span>Unforgettable</span> Kenya Experience?</h2>
+        <p>
+          Let our travel experts curate the perfect pre-summit safari, post-summit coastal retreat, or a fully custom itinerary. Every detail — from luxury lodges to private guides — is taken care of.
+        </p>
+        <div class="cta-buttons">
+          <a href="#book" class="btn-hero-primary">
+            <i class="fas fa-tree"></i> Plan Your Experience
+          </a>
+          <a href="https://wa.me/254712345678" target="_blank" class="btn-hero-outline">
+            <i class="fab fa-whatsapp"></i> Chat with Concierge
+          </a>
+        </div>
+      </div>
+
+      <!-- Tabbed Experience Options -->
+      <div class="container py-4" id="experiences">
+        <h3 class="section-title">YORA Delegate Experiences</h3>
+        <p class="mb-4">
+          Choose from pre-summit safaris, post-summit coastal escapes, or design
+          a custom itinerary that perfectly fits your schedule.
+        </p>
+
+        <div class="custom-tabs">
+          <div class="tabs-header">
+            <button class="tab-link active" data-tab="preTab">
+              <i class="fas fa-binoculars me-1"></i> Pre-Summit Safaris
+            </button>
+            <button class="tab-link" data-tab="postTab">
+              <i class="fas fa-umbrella-beach me-1"></i> Post-Summit Coastal
+            </button>
+            <button class="tab-link" data-tab="customTab">
+              <i class="fas fa-pen-fancy me-1"></i> Custom Itinerary
+            </button>
+          </div>
+          <div class="tab-content">
+            <!-- PRE-SUMMIT TAB -->
+            <div id="preTab" class="tab-pane active">
+              <div class="row g-4">
+                <div class="col-md-4">
+                  <div class="experience-card">
+                    <div class="exp-icon"><i class="fas fa-elephant"></i></div>
+                    <h6>3-Day Masai Mara Safari</h6>
+                    <p class="small">
+                      Game drives in search of Big Five, picnic by the Mara
+                      River, and authentic bush dinner under the stars.
+                    </p>
+                    <p class="exp-price">From KES 24,500 / person</p>
+                    <a href="#book" class="btn btn-outline-accent btn-sm"
+                      ><i class="fas fa-calendar-check"></i> Book Now</a
+                    >
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="experience-card">
+                    <div class="exp-icon"><i class="fas fa-mountain"></i></div>
+                    <h6>2-Day Amboseli Safari</h6>
+                    <p class="small">
+                      Witness elephants against Mount Kilimanjaro, visit
+                      Maasai villages, and enjoy stunning savanna views.
+                    </p>
+                    <p class="exp-price">From KES 18,500 / person</p>
+                    <a href="#book" class="btn btn-outline-accent btn-sm"
+                      ><i class="fas fa-calendar-check"></i> Book Now</a
+                    >
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="experience-card">
+                    <div class="exp-icon"><i class="fas fa-tree"></i></div>
+                    <h6>4-Day Tsavo & Amboseli Combo</h6>
+                    <p class="small">
+                      Explore Kenya's largest national parks with diverse
+                      wildlife, stunning landscapes, and luxury lodges.
+                    </p>
+                    <p class="exp-price">From KES 32,000 / person</p>
+                    <a href="#book" class="btn btn-outline-accent btn-sm"
+                      ><i class="fas fa-calendar-check"></i> Book Now</a
+                    >
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="experience-card">
+                    <div class="exp-icon"><i class="fas fa-water"></i></div>
+                    <h6>2-Day Lake Nakuru & Naivasha</h6>
+                    <p class="small">
+                      Flamingos at Lake Nakuru, boat safari on Lake Naivasha,
+                      and crescent island game walk.
+                    </p>
+                    <p class="exp-price">From KES 15,500 / person</p>
+                    <a href="#book" class="btn btn-outline-accent btn-sm"
+                      ><i class="fas fa-calendar-check"></i> Book Now</a
+                    >
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="experience-card">
+                    <div class="exp-icon"><i class="fas fa-city"></i></div>
+                    <h6>Nairobi National Park Day Trip</h6>
+                    <p class="small">
+                      Wildlife viewing in the city's doorstep — spot rhinos,
+                      lions, and giraffes with Nairobi's skyline backdrop.
+                    </p>
+                    <p class="exp-price">From KES 8,500 / person</p>
+                    <a href="#book" class="btn btn-outline-accent btn-sm"
+                      ><i class="fas fa-calendar-check"></i> Book Now</a
+                    >
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="experience-card">
+                    <div class="exp-icon"><i class="fas fa-crown"></i></div>
+                    <h6>VIP Private Safari</h6>
+                    <p class="small">
+                      Exclusive private vehicle, personal guide, luxury lodge,
+                      and fully customizable itinerary for VIP delegates.
+                    </p>
+                    <p class="exp-price">From KES 45,000 / person</p>
+                    <a href="#book" class="btn btn-outline-accent btn-sm"
+                      ><i class="fas fa-calendar-check"></i> Book Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- POST-SUMMIT TAB -->
+            <div id="postTab" class="tab-pane">
+              <div class="row g-4">
+                <div class="col-md-4">
+                  <div class="experience-card">
+                    <div class="exp-icon"><i class="fas fa-umbrella-beach"></i></div>
+                    <h6>3-Day Kilifi Coastal Retreat</h6>
+                    <p class="small">
+                      Relax on pristine beaches, explore Mnarani ruins, and
+                      enjoy a sunset dhow cruise on Kilifi Creek.
+                    </p>
+                    <p class="exp-price">From KES 22,000 / person</p>
+                    <a href="#book" class="btn btn-outline-accent btn-sm"
+                      ><i class="fas fa-calendar-check"></i> Book Now</a
+                    >
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="experience-card">
+                    <div class="exp-icon"><i class="fas fa-ship"></i></div>
+                    <h6>Dhow Cruise & Seafood Lunch</h6>
+                    <p class="small">
+                      Sail on a traditional dhow, snorkel in coral gardens, and
+                      enjoy fresh Swahili seafood on a private island.
+                    </p>
+                    <p class="exp-price">From KES 12,500 / person</p>
+                    <a href="#book" class="btn btn-outline-accent btn-sm"
+                      ><i class="fas fa-calendar-check"></i> Book Now</a
+                    >
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="experience-card">
+                    <div class="exp-icon"><i class="fas fa-spa"></i></div>
+                    <h6>Wellness & Beach Escape</h6>
+                    <p class="small">
+                      Yoga on the beach, spa treatments, meditation sessions,
+                      and healthy coastal cuisine.
+                    </p>
+                    <p class="exp-price">From KES 15,000 / person</p>
+                    <a href="#book" class="btn btn-outline-accent btn-sm"
+                      ><i class="fas fa-calendar-check"></i> Book Now</a
+                    >
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="experience-card">
+                    <div class="exp-icon"><i class="fas fa-monument"></i></div>
+                    <h6>Culture & Heritage Tour</h6>
+                    <p class="small">
+                      Discover Mnarani Ruins, explore Kilifi Old Town, Swahili
+                      storytelling, and visit local artisans.
+                    </p>
+                    <p class="exp-price">From KES 9,500 / person</p>
+                    <a href="#book" class="btn btn-outline-accent btn-sm"
+                      ><i class="fas fa-calendar-check"></i> Book Now</a
+                    >
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="experience-card">
+                    <div class="exp-icon"><i class="fas fa-golf-ball"></i></div>
+                    <h6>Golf & Coastal Lifestyle</h6>
+                    <p class="small">
+                      Play at Vipingo Ridge's championship course followed by a
+                      beachside dinner and sunset views.
+                    </p>
+                    <p class="exp-price">From KES 18,500 / person</p>
+                    <a href="#book" class="btn btn-outline-accent btn-sm"
+                      ><i class="fas fa-calendar-check"></i> Book Now</a
+                    >
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="experience-card">
+                    <div class="exp-icon"><i class="fas fa-building"></i></div>
+                    <h6>Coastal Real Estate Insight</h6>
+                    <p class="small">
+                      Tour beachfront villas, explore prime investment
+                      locations around Kilifi Creek with local property experts.
+                    </p>
+                    <p class="exp-price">From KES 8,500 / person</p>
+                    <a href="#book" class="btn btn-outline-accent btn-sm"
+                      ><i class="fas fa-calendar-check"></i> Book Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CUSTOM ITINERARY TAB -->
+            <div id="customTab" class="tab-pane">
+              <div class="row g-4">
+                <div class="col-lg-8 mx-auto">
+                  <div class="experience-card" style="border-left-color: var(--primary-blue, #2c7da0);">
+                    <h5><i class="fas fa-magic me-2" style="color: var(--secondary-orange);"></i>Design Your Custom Itinerary</h5>
+                    <p>
+                      Combine safaris, coastal escapes, culture, golf, wellness,
+                      and executive experiences into one seamless journey.
+                      Our travel experts will craft a personalized itinerary
+                      based on your preferences, schedule, and budget.
+                    </p>
+                    <div class="row g-3 mt-3">
+                      <div class="col-md-6">
+                        <div class="p-3" style="background: #f8f5ed; border-radius: 16px;">
+                          <i class="fas fa-check-circle" style="color: var(--secondary-orange);"></i>
+                          <span class="ms-2">Choose your destinations</span>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="p-3" style="background: #f8f5ed; border-radius: 16px;">
+                          <i class="fas fa-check-circle" style="color: var(--secondary-orange);"></i>
+                          <span class="ms-2">Select accommodation style</span>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="p-3" style="background: #f8f5ed; border-radius: 16px;">
+                          <i class="fas fa-check-circle" style="color: var(--secondary-orange);"></i>
+                          <span class="ms-2">Add activities & experiences</span>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="p-3" style="background: #f8f5ed; border-radius: 16px;">
+                          <i class="fas fa-check-circle" style="color: var(--secondary-orange);"></i>
+                          <span class="ms-2">Set your preferred dates</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                      <a href="#book" class="btn btn-submit">
+                        <i class="fas fa-pen-fancy me-2"></i> Start Designing Your Itinerary
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-3 text-muted small">
+          <i class="fas fa-info-circle me-1"></i> All experiences include
+          private transport, professional guides, and dedicated concierge
+          support. Group discounts available.
+        </div>
+      </div>
+
+      <!-- additional service highlights -->
+      <div class="container py-4">
+        <div class="row g-3">
+          <div class="col-md-3">
+            <div
+              style="
+                background: #f8f5ed;
+                border-radius: 24px;
+                padding: 20px;
+                border: 1px solid rgba(201, 168, 76, 0.1);
+              "
+            >
+              <i
+                class="fas fa-user-tie fa-2x"
+                style="color: var(--secondary-orange)"
+              ></i>
+              <h6 class="mt-2">Private Guides</h6>
+              <p class="small">
+                Expert local guides with deep knowledge of wildlife, culture,
+                and history.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div
+              style="
+                background: #f8f5ed;
+                border-radius: 24px;
+                padding: 20px;
+                border: 1px solid rgba(201, 168, 76, 0.1);
+              "
+            >
+              <i
+                class="fas fa-shuttle-van fa-2x"
+                style="color: var(--secondary-orange)"
+              ></i>
+              <h6 class="mt-2">Executive Transport</h6>
+              <p class="small">
+                Premium 4x4 vehicles and luxury vans with Wi-Fi, water, and
+                comfort.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div
+              style="
+                background: #f8f5ed;
+                border-radius: 24px;
+                padding: 20px;
+                border: 1px solid rgba(201, 168, 76, 0.1);
+              "
+            >
+              <i
+                class="fas fa-hotel fa-2x"
+                style="color: var(--secondary-orange)"
+              ></i>
+              <h6 class="mt-2">Premium Lodges</h6>
+              <p class="small">
+                Carefully selected luxury lodges, boutique hotels, and beach
+                resorts.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div
+              style="
+                background: #f8f5ed;
+                border-radius: 24px;
+                padding: 20px;
+                border: 1px solid rgba(201, 168, 76, 0.1);
+              "
+            >
+              <i
+                class="fas fa-headset fa-2x"
+                style="color: var(--secondary-orange)"
+              ></i>
+              <h6 class="mt-2">24/7 Concierge</h6>
+              <p class="small">
+                Dedicated WhatsApp support for updates, reservations, and
+                on-ground assistance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- booking form + info -->
+      <div class="container py-5" id="book">
+        <div class="row g-5">
+          <div class="col-lg-7">
+            <div class="contact-form-wrapper">
+              <h3 class="mb-4" style="color: var(--primary-blue)">
+                Plan Your YORA Safari & Experience
+              </h3>
+              <p class="mb-4">
+                Complete the form below and our travel specialists will design a
+                personalized itinerary tailored to your YORA experience. Whether
+                you want a pre-summit safari, post-summit coastal retreat, or a
+                custom journey, we'll handle every detail.
+              </p>
+              <form id="experienceBookingForm" action="#" method="POST">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label">Full Name *</label
+                    ><input
+                      type="text"
+                      class="form-control"
+                      name="full_name"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Email Address *</label
+                    ><input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Phone (with country code) *</label
+                    ><input
+                      type="tel"
+                      class="form-control"
+                      name="phone"
+                      placeholder="+39..."
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Country of Residence</label
+                    ><input type="text" class="form-control" name="country" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Experience Type</label>
+                    <select class="form-select" name="experience_type">
+                      <option>Pre-Summit Safari</option>
+                      <option>Post-Summit Coastal Retreat</option>
+                      <option>Custom Itinerary</option>
+                      <option>Safari & Beach Combo</option>
+                      <option>VIP Private Safari</option>
+                      <option>Executive Business & Leisure</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Preferred Start Date</label>
+                    <input type="date" class="form-control" name="start_date" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Number of Travelers</label>
+                    <select class="form-select" name="travelers">
+                      <option>1 Traveler</option>
+                      <option>2 Travelers</option>
+                      <option>3-5 Travelers</option>
+                      <option>6-10 Travelers</option>
+                      <option>10+ Travelers</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Accommodation Preference</label>
+                    <select class="form-select" name="accommodation">
+                      <option>Luxury Lodge</option>
+                      <option>Boutique Hotel</option>
+                      <option>Beach Resort</option>
+                      <option>Executive Apartment</option>
+                      <option>Private Villa</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">YORA Delegate Code</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="delegate_code"
+                      placeholder="Enter for special rates"
+                    />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label"
+                      >Tell us about your dream experience</label
+                    >
+                    <textarea
+                      class="form-control"
+                      rows="5"
+                      name="message"
+                      placeholder="Destinations you'd like to visit, wildlife you want to see, activities you enjoy, dietary requirements, accessibility needs, or any special requests..."
+                    ></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn-submit">
+                      <i class="fas fa-tree me-2"></i> Request Experience
+                    </button>
+                  </div>
+                </div>
+                <small class="d-block mt-3 text-muted"
+                  ><i class="fas fa-lock me-1"></i> Secure. Response within 2
+                  hours.</small
+                >
+                <div
+                  id="bookingSuccessMsg"
+                  class="alert alert-success mt-3 d-none form-success-msg"
+                >
+                  ✅ Experience request sent! Our travel specialists will create
+                  your personalized itinerary within 2 hours.
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-5" id="contact">
+            <div class="contact-info-card">
+              <h2 class="text-center">YORA Travel Desk</h2>
+              <p class="text-center mb-5">
+                Dedicated support for safari experiences, coastal retreats, and
+                custom itineraries.
+              </p>
+
+              <div class="contact-feature">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                  <h6>24/7 Experience Hotline</h6>
+                  <p><a href="tel:+254102593346">+254 102 593 346</a></p>
+                </div>
+              </div>
+
+              <div class="contact-feature">
+                <i class="fas fa-whatsapp"></i>
+                <div>
+                  <h6>WhatsApp Concierge</h6>
+                  <p>
+                    <a href="https://wa.me/254712345678" target="_blank">
+                      +254 712 345 678
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-feature">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h6>Email</h6>
+                  <p>
+                    <a href="mailto:safari@nomadsignaturetrails.co.ke"
+                      >safari@nomadsignaturetrails.co.ke</a
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-feature">
+                <i class="fas fa-user-check"></i>
+                <div>
+                  <h6>Dedicated Travel Concierge</h6>
+                  <p>
+                    One WhatsApp contact for itinerary updates, reservations,
+                    travel assistance, and on-ground support throughout your
+                    stay.
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-highlight">
+                <p>
+                  <i class="fas fa-check-circle"></i>
+                  Private guides • Luxury lodges • Executive transport •
+                  Personal concierge
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      style="
+        background: #0b2d1e;
+        color: #ddd;
+        padding: 40px 0 20px;
+        margin-top: 20px;
+      "
+    >
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-3">
+            <img
+              src="assets/image/nomad_tours_logo.webp"
+              alt="Nomad Tours"
+              style="
+                max-height: 70px;
+                filter: brightness(0) invert(1);
+                margin-bottom: 12px;
+              "
+            />
+            <p>
+              Nomad Tours & Experiences — authentic Kenya travel since 2016.
+            </p>
+            <div style="display: flex; gap: 14px; font-size: 1.4rem">
+              <a href="#" style="color: #ddd"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" style="color: #ddd"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" style="color: #ddd"><i class="fab fa-tiktok"></i></a>
+              <a href="#" style="color: #ddd"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h5>Experiences</h5>
+            <a href="#" style="color: #ccc; display: block">Pre-Summit Safaris</a
+            ><a href="#" style="color: #ccc; display: block"
+              >Post-Summit Coastal</a
+            ><a href="#" style="color: #ccc; display: block"
+              >Custom Itineraries</a
+            ><a href="#" style="color: #ccc; display: block">VIP Experiences</a>
+          </div>
+          <div class="col-md-3">
+            <h5>Policies</h5>
+            <a href="#" style="color: #ccc; display: block">Privacy</a
+            ><a href="#" style="color: #ccc; display: block">Booking Terms</a
+            ><a href="#" style="color: #ccc; display: block">Cancellation</a>
+          </div>
+          <div class="col-md-3">
+            <h5>Contact</h5>
+            <p>
+              <i
+                class="fas fa-phone-alt me-2"
+                style="color: var(--secondary-orange)"
+              ></i
+              >+254 102 593 346
+            </p>
+            <p>
+              <i
+                class="fas fa-map-marker-alt me-2"
+                style="color: var(--secondary-orange)"
+              ></i
+              >Bofa Road, Kilifi Kenya
+            </p>
+          </div>
+        </div>
+        <hr style="border-color: #2a5a3e" />
+        <p class="text-center small" style="color: #aaa">
+          © 2026 Nomad Tours & Experiences — YORA Official Travel Partner
+        </p>
+      </div>
+    </footer>
+
+    <!-- WhatsApp float -->
+    <a href="https://wa.me/254712345678" class="whatsapp-float" target="_blank"
+      ><i class="fab fa-whatsapp"></i
+    ></a>
+
+    <!-- Offcanvas (mobile) -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileOffcanvas">
+      <div class="offcanvas-header">
+        <img
+          src="assets/image/nomad_tours_logo.webp"
+          alt="Nomad Tours"
+          style="height: 50px"
+        />
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="mobile-nav-list">
+          <li>
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+          </li>
+          <li>
+            <a href="tours.html"
+              ><i class="fas fa-binoculars"></i> Safari Tours</a
+            >
+          </li>
+          <li>
+            <a href="service.html"
+              ><i class="fas fa-concierge-bell"></i> Services</a
+            >
+          </li>
+          <li>
+            <a href="blogs.html"><i class="fas fa-blog"></i> Blogs</a>
+          </li>
+          <li>
+            <a href="event.html"><i class="fas fa-calendar-alt"></i> Events</a>
+          </li>
+          <li>
+            <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+          </li>
+        </ul>
+        <div class="mobile-action-buttons mt-4">
+          <a href="#book" class="btn-mobile-book"
+            ><i class="fas fa-ticket-alt"></i> Plan Experience</a
+          >
+          <a href="https://wa.me/254712345678" class="btn-mobile-wa"
+            ><i class="fab fa-whatsapp"></i> WhatsApp</a
+          >
+        </div>
+        <div class="mobile-contact-info">
+          <p><i class="fas fa-phone-alt"></i> +254 102 593 346</p>
+          <p><i class="fas fa-map-marker-alt"></i> Bofa Road, Kilifi, Kenya</p>
+          <p>
+            <i class="far fa-envelope"></i> safari@nomadsignaturetrails.co.ke
+          </p>
+          <div class="mobile-social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/254712345678" target="_blank"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      (function () {
+        // Tab switching
+        const tabButtons = document.querySelectorAll(".tab-link");
+        const tabPanes = document.querySelectorAll(".tab-pane");
+
+        function switchTab(tabId) {
+          tabPanes.forEach((pane) => pane.classList.remove("active"));
+          tabButtons.forEach((btn) => btn.classList.remove("active"));
+          const activePane = document.getElementById(tabId);
+          if (activePane) activePane.classList.add("active");
+          const activeBtn = document.querySelector(
+            `.tab-link[data-tab="${tabId}"]`
+          );
+          if (activeBtn) activeBtn.classList.add("active");
+        }
+
+        tabButtons.forEach((btn) => {
+          btn.addEventListener("click", function (e) {
+            const targetTabId = this.getAttribute("data-tab");
+            if (targetTabId) switchTab(targetTabId);
+          });
+        });
+
+        // Booking form handler
+        const bookingForm = document.getElementById("experienceBookingForm");
+        const bookingSuccessMsg = document.getElementById("bookingSuccessMsg");
+
+        if (bookingForm) {
+          bookingForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            let isValid = true;
+            this.querySelectorAll("[required]").forEach((f) => {
+              if (!f.value.trim()) isValid = false;
+            });
+            if (isValid) {
+              bookingSuccessMsg.classList.remove("d-none");
+              bookingForm.reset();
+              setTimeout(() => bookingSuccessMsg.classList.add("d-none"), 5000);
+            } else {
+              alert("Please fill all required fields (*).");
+            }
+          });
+        }
+
+        // Ensure initial active tab
+        if (!document.querySelector(".tab-link.active"))
+          switchTab("preTab");
+      })();
+    </script>
+  </body>
+</html>
