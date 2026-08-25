@@ -11,10 +11,10 @@
       name="description"
       content="Airport transfers & conference shuttles for YORA 2026 delegates. Reliable, luxury transport in Nairobi & Kilifi."
     />
-    <link rel="icon" href="assets/image/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link href="assets/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/y-styles.css" />
+    <link rel="icon" href="../assets/image/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link href="../assets/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/y-styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -35,14 +35,6 @@
         text-align: center;
         color: white;
       }
-      /* .contact-header {
-      background: linear-gradient(135deg, #0b2d1e 0%, #1a4d33 50%, #2d6b4a 100%);
-      padding: 20px 0 40px;
-      min-height: 35vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    } */
       .contact-header .hero-content {
         text-align: center;
         margin-top: 20px;
@@ -140,7 +132,6 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        /* background: rgba(201, 168, 76, 0.12); */
         color: var(--secondary-orange, #c9a84c);
         display: flex;
         align-items: center;
@@ -149,12 +140,6 @@
         margin-bottom: 15px;
         transition: all 0.3s ease;
       }
-
-      /* .contact-feature:hover i {
-        transform: scale(2.08);
-        background: var(--secondary-orange, #c9a84c);
-        color: #fff;
-      } */
 
       .contact-feature h6 {
         margin-bottom: 8px;
@@ -198,30 +183,7 @@
         font-size: 0.95rem;
         line-height: 1.7;
       }
-      /* .contact-feature {
-      display: flex;
-      gap: 16px;
-      margin-bottom: 22px;
-      align-items: flex-start;
-    }
-    .contact-feature i {
-      font-size: 1.8rem;
-      color: var(--secondary-orange, #c9a84c);
-      min-width: 40px;
-      margin-top: 4px;
-    }
-    .contact-info-card {
-      background: #faf8f4;
-      border-radius: 36px;
-      padding: 32px 28px;
-      border: 1px solid rgba(201,168,76,0.2);
-      height: 100%;
-    }
-    .contact-info-card .contact-icon {
-      font-size: 2.2rem;
-      color: var(--secondary-orange, #c9a84c);
-      margin-bottom: 12px;
-    } */
+
       .footer {
         background: #0b2d1e;
         color: #ddd;
@@ -263,22 +225,192 @@
       .form-success-msg {
         margin-top: 1rem;
       }
-      @media (max-width: 768px) {
-        .contact-header {
-          min-height: 50vh;
-          padding: 20px 0 30px;
+
+      /* === FLEX GALLERY (like the safari feature) === */
+      .ftr-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 20px;
+        margin-top: 24px;
+      }
+      .ftr-main {
+        position: relative;
+        border-radius: 32px;
+        overflow: hidden;
+        background: #0f172a;
+        min-height: 400px;
+        cursor: pointer;
+        transition: 0.25s;
+      }
+      .ftr-main img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.3s;
+        display: block;
+      }
+      .ftr-main:hover img {
+        transform: scale(1.02);
+      }
+      .ftr-main-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 28px 24px;
+        background: linear-gradient(transparent, rgba(15, 23, 42, 0.85));
+        color: white;
+      }
+      .ftr-main-content .ftr-tag {
+        background: var(--secondary-orange, #c9a84c);
+        color: #fff;
+        padding: 4px 16px;
+        border-radius: 40px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        display: inline-block;
+        margin-bottom: 8px;
+      }
+      .ftr-main-content h3 {
+        font-weight: 700;
+        font-size: 1.6rem;
+        margin-bottom: 4px;
+      }
+      .ftr-main-content p {
+        opacity: 0.85;
+        margin: 0;
+        font-size: 0.95rem;
+      }
+
+      .ftr-right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        height: 100%;
+      }
+      .ftr-sub-card {
+        position: relative;
+        border-radius: 24px;
+        overflow: hidden;
+        background: #0f172a;
+        min-height: 180px;
+        transition: 0.2s;
+        cursor: pointer;
+      }
+      .ftr-sub-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.3s;
+        display: block;
+      }
+      .ftr-sub-card:hover img {
+        transform: scale(1.04);
+      }
+      .ftr-sub-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 18px 16px;
+        background: linear-gradient(transparent, rgba(15, 23, 42, 0.8));
+        color: white;
+      }
+      .ftr-sub-content h4 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 2px;
+      }
+      .ftr-sub-content p {
+        font-size: 0.75rem;
+        opacity: 0.8;
+        margin: 0;
+      }
+      .ftr-sub-card .ftr-tag {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        background: var(--secondary-orange, #c9a84c);
+        color: #fff;
+        padding: 2px 14px;
+        border-radius: 40px;
+        font-size: 0.6rem;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        z-index: 2;
+      }
+
+      /* route cards */
+      .route-card {
+        background: #fff;
+        border-radius: 24px;
+        padding: 20px;
+        border: 1px solid rgba(201, 168, 76, 0.15);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+        height: 100%;
+        transition: 0.2s;
+      }
+      .route-card:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+      }
+      .route-card .route-title {
+        font-weight: 700;
+        color: #1a3a2a;
+        border-bottom: 2px solid var(--secondary-orange, #c9a84c);
+        padding-bottom: 6px;
+        margin-bottom: 12px;
+      }
+      .route-card .route-time {
+        font-size: 0.9rem;
+        color: #444;
+        background: #f5f2eb;
+        border-radius: 40px;
+        padding: 4px 16px;
+        display: inline-block;
+        margin-bottom: 12px;
+      }
+      .route-card .transport-select {
+        width: 100%;
+        padding: 8px 12px;
+        border-radius: 40px;
+        border: 1px solid #ddd;
+        background: #faf8f4;
+        font-size: 0.9rem;
+      }
+      .route-card .price-tag {
+        font-weight: 700;
+        color: var(--secondary-orange, #c9a84c);
+        font-size: 1.2rem;
+        margin-top: 8px;
+      }
+
+      @media (max-width: 992px) {
+        .ftr-grid {
+          grid-template-columns: 1fr;
+        }
+        .ftr-right {
+          grid-template-columns: 1fr 1fr;
+        }
+        .ftr-main {
+          min-height: 280px;
+        }
+      }
+      @media (max-width: 576px) {
+        .ftr-right {
+          grid-template-columns: 1fr;
+        }
+        .ftr-main {
+          min-height: 220px;
         }
         .contact-header .hero-title {
-          font-size: 2.2rem;
-        }
-        .service-icon-box {
-          padding: 20px 12px;
+          font-size: 2rem;
         }
       }
     </style>
   </head>
   <body>
-    <!-- HEADER – exactly as requested (contact-header design) -->
+    <!-- HEADER -->
     <header class="contact-header">
       <div class="container">
         <div class="navbar-wrapper" id="navbarWrapper">
@@ -295,22 +427,26 @@
                 </a>
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
-                        <li class="nav-item">
-                        <a class="nav-link" href="yora3.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="packages.html">Safari & Experiences</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="stays.html">Accommodation</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link active" href="transfer.html">Transfers</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
+                    <li class="nav-item">
+                      <a class="nav-link" href="yora3.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="packages.html"
+                        >Safari & Experiences</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="stays.html">Accommodation</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="transfer.html"
+                        >Transfers</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                  </ul>
                 </div>
                 <div class="nav-right">
                   <a href="#book" class="btn-primary-travel"
@@ -330,7 +466,6 @@
           </div>
         </div>
       </div>
-      <!-- hero content centered -->
       <div class="hero-content container">
         <h1 class="hero-title">YORA 2026 <span>Transfers & Shuttles</span></h1>
         <p class="hero-subtitle">
@@ -340,9 +475,9 @@
       </div>
     </header>
 
-    <!-- main content area -->
+    <!-- main -->
     <div class="container contact-section py-4">
-      <!-- Contact Info Cards – 3 columns (Airport Transfers, Conference Shuttle, Dedicated Travel Concierge) -->
+      <!-- 3 contact cards -->
       <div class="row g-4 mb-5">
         <div class="col-md-4">
           <div class="contact-info-card text-center">
@@ -424,112 +559,210 @@
         </div>
       </div>
 
-      <!-- Shuttle Schedule -->
-      <div class="container py-4" id="shuttle">
-        <h3 class="section-title">YORA Conference Shuttle Schedule</h3>
+      <!-- ROUTE + TIME + TRANSPORT SELECT + PRICE -->
+      <div class="container py-3" id="routes">
+        <h3 class="section-title">Transfer Routes & Pricing</h3>
         <p class="mb-4">
-          Daily shuttles from partner hotels to the YORA venue. Times subject to
-          change – check with concierge.
+          Select your route, choose transport type, and see the price instantly.
         </p>
-        <div class="row g-3">
+        <div class="row g-4">
+          <!-- Nairobi -->
           <div class="col-md-4">
-            <div class="schedule-item">
-              <h6>
+            <div class="route-card">
+              <div class="route-title">
                 <i
-                  class="fas fa-hotel me-2"
+                  class="fas fa-map-pin me-2"
                   style="color: var(--secondary-orange)"
                 ></i
-                >Hemingways Nairobi
-              </h6>
-              <p>
-                <i class="far fa-clock me-2"></i>07:45 · 08:30 · 12:15 · 17:00
-              </p>
-              <small class="text-muted">Return: 18:30, 20:15</small>
+                >Nairobi
+              </div>
+              <div class="route-time">
+                <i class="far fa-clock me-1"></i> 45–60 min
+              </div>
+              <p><strong>JKIA → Broadwalk Residency</strong></p>
+              <select
+                class="transport-select"
+                onchange="updatePrice(this, 'nairobiPrice')"
+              >
+                <option value="90">Luxury Sedan – $90</option>
+                <option value="120">Executive Van – $120</option>
+                <option value="180">22-Seater Bus – $180</option>
+              </select>
+              <div class="price-tag" id="nairobiPrice">$90</div>
+              <small class="text-muted"
+                >per vehicle · up to 3 pax (sedan)</small
+              >
             </div>
           </div>
           <div class="col-md-4">
-            <div class="schedule-item">
-              <h6>
+            <div class="route-card">
+              <div class="route-title">
                 <i
-                  class="fas fa-hotel me-2"
+                  class="fas fa-map-signs me-2"
                   style="color: var(--secondary-orange)"
                 ></i
-                >Villa Rosa Kempinski
-              </h6>
-              <p>
-                <i class="far fa-clock me-2"></i>07:30 · 08:15 · 12:00 · 16:45
-              </p>
-              <small class="text-muted">Return: 18:15, 20:00</small>
+                >Coast Transition
+              </div>
+              <div class="route-time">
+                <i class="far fa-clock me-1"></i> 60–90 min
+              </div>
+              <p><strong>Miritini SGR → Vipingo Ridge</strong></p>
+              <select
+                class="transport-select"
+                onchange="updatePrice(this, 'coastPrice')"
+              >
+                <option value="110">Luxury Sedan – $110</option>
+                <option value="150">Executive Van – $150</option>
+                <option value="220">Luxury Coach – $220</option>
+              </select>
+              <div class="price-tag" id="coastPrice">$110</div>
+              <small class="text-muted"
+                >per vehicle · up to 4 pax (sedan)</small
+              >
             </div>
           </div>
           <div class="col-md-4">
-            <div class="schedule-item">
-              <h6>
+            <div class="route-card">
+              <div class="route-title">
                 <i
-                  class="fas fa-hotel me-2"
+                  class="fas fa-route me-2"
                   style="color: var(--secondary-orange)"
                 ></i
-                >Fairmont Norfolk
-              </h6>
-              <p>
-                <i class="far fa-clock me-2"></i>07:40 · 08:20 · 12:10 · 16:55
-              </p>
-              <small class="text-muted">Return: 18:20, 20:10</small>
+                >Vipingo / Kilifi
+              </div>
+              <div class="route-time">
+                <i class="far fa-clock me-1"></i> 20–40 min
+              </div>
+              <p><strong>Vipingo Airstrip → Vipingo Ridge</strong></p>
+              <select
+                class="transport-select"
+                onchange="updatePrice(this, 'vipingoPrice')"
+              >
+                <option value="65">Land Cruiser – $65</option>
+                <option value="95">Shuttle Van – $95</option>
+                <option value="140">Luxury Sedan – $140</option>
+              </select>
+              <div class="price-tag" id="vipingoPrice">$65</div>
+              <small class="text-muted"
+                >per vehicle · up to 5 pax (Cruiser)</small
+              >
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="schedule-item">
-              <h6>
-                <i
-                  class="fas fa-hotel me-2"
-                  style="color: var(--secondary-orange)"
-                ></i
-                >Radisson Blu Nairobi
-              </h6>
-              <p>
-                <i class="far fa-clock me-2"></i>07:50 · 08:35 · 12:20 · 17:10
+        </div>
+        <div class="mt-4 text-muted small">
+          <i class="fas fa-info-circle me-1"></i> Prices are per vehicle,
+          subject to change. Group discounts available.
+        </div>
+      </div>
+
+      <!-- ====== GALLERY: 1 big + 4 small (shuffle on click) ====== -->
+      <div class="container py-4">
+        <div class="section-header-center">
+          <h2>Our Fleet — YORA Transfer Vehicles</h2>
+          <p>Click any image to see it in the main spotlight</p>
+        </div>
+        <div class="ftr-grid" id="galleryGrid">
+          <!-- Main Card -->
+          <div class="ftr-main" id="galleryMain">
+            <img
+              id="mainGalleryImg"
+              src="https://images.unsplash.com/photo-1559416523-140ddc3d238c?w=600&h=400&fit=crop&auto=format"
+              alt="Fleet"
+            />
+            <div class="ftr-main-content">
+              <span class="ftr-tag">Fleet</span>
+              <h3 id="mainGalleryTitle">22-Seater Bus</h3>
+              <p id="mainGalleryDesc">
+                Luxury coach · group transfers · Wi-Fi & water
               </p>
-              <small class="text-muted">Return: 18:40, 20:25</small>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="schedule-item">
-              <h6>
-                <i
-                  class="fas fa-hotel me-2"
-                  style="color: var(--secondary-orange)"
-                ></i
-                >Boma Inn Nairobi
-              </h6>
-              <p>
-                <i class="far fa-clock me-2"></i>07:35 · 08:10 · 12:05 · 16:50
-              </p>
-              <small class="text-muted">Return: 18:10, 19:55</small>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="schedule-item">
-              <h6>
-                <i
-                  class="fas fa-hotel me-2"
-                  style="color: var(--secondary-orange)"
-                ></i
-                >Eka Hotel (near JKIA)
-              </h6>
-              <p>
-                <i class="far fa-clock me-2"></i>07:55 · 08:40 · 12:25 · 17:15
-              </p>
-              <small class="text-muted">Return: 18:45, 20:30</small>
+
+          <!-- Right Grid: 4 small cards -->
+          <div>
+            <div class="ftr-right">
+              <!-- card 1 -->
+              <div
+                class="ftr-sub-card"
+                data-img="https://images.unsplash.com/photo-1559416523-140ddc3d238c?w=600&h=400&fit=crop&auto=format"
+                data-title="22-Seater Bus"
+                data-desc="Luxury coach · group transfers · Wi-Fi & water"
+                onclick="shuffleGallery(this)"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1559416523-140ddc3d238c?w=300&h=200&fit=crop&auto=format"
+                  alt="Bus"
+                />
+                <div class="ftr-sub-content">
+                  <h4>22-Seater Bus</h4>
+                  <p>Luxury coach</p>
+                </div>
+              </div>
+              <!-- card 2 -->
+              <div
+                class="ftr-sub-card"
+                data-img="https://images.unsplash.com/photo-1562911791-c7a97b729ec5?w=600&h=400&fit=crop&auto=format"
+                data-title="Executive Van"
+                data-desc="Mercedes V-Class · 7 pax · leather seats"
+                onclick="shuffleGallery(this)"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1562911791-c7a97b729ec5?w=300&h=200&fit=crop&auto=format"
+                  alt="Van"
+                />
+                <div class="ftr-sub-content">
+                  <h4>Executive Van</h4>
+                  <p>Mercedes V-Class</p>
+                </div>
+              </div>
+              <!-- card 3 -->
+              <div
+                class="ftr-sub-card"
+                data-img="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=600&h=400&fit=crop&auto=format"
+                data-title="Luxury Sedan"
+                data-desc="BMW 7 Series · VIP transfer · privacy glass"
+                onclick="shuffleGallery(this)"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=300&h=200&fit=crop&auto=format"
+                  alt="Sedan"
+                />
+                <div class="ftr-sub-content">
+                  <h4>Luxury Sedan</h4>
+                  <p>BMW 7 Series</p>
+                </div>
+              </div>
+              <!-- card 4 -->
+              <div class="ftr-sub-card" style="background: #0f172a">
+                <div
+                  class="ftr-sub-content"
+                  style="bottom: 50%; transform: translateY(50%)"
+                >
+                  <h4>24/7 Guest Assistance</h4>
+
+                  <p>
+                    Dedicated support available anytime for a seamless
+                    experience.
+                  </p>
+                </div>
+              </div>
+              <!-- <div class="ftr-sub-card" data-img="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&h=400&fit=crop&auto=format" data-title="Executive SUV" data-desc="Lexus LX · off-road · 4 pax" onclick="shuffleGallery(this)">
+                <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=300&h=200&fit=crop&auto=format" alt="SUV">
+                <div class="ftr-sub-content"><h4>Executive SUV</h4><p>Lexus LX</p></div>
+              </div> -->
             </div>
           </div>
         </div>
         <div class="mt-3 text-muted small">
-          <i class="fas fa-info-circle me-1"></i> Extra shuttles available for
-          VIP / speaker schedules. Contact YORA Travel Desk.
+          <i
+            class="fas fa-check-circle me-1"
+            style="color: var(--secondary-orange)"
+          ></i>
+          All vehicles include Wi‑Fi, bottled water, and meet‑&‑greet service.
         </div>
       </div>
 
-      <!-- additional service highlights -->
+      <!-- extra service highlights -->
       <div class="container py-4">
         <div class="row g-3">
           <div class="col-md-3">
@@ -615,7 +848,7 @@
         </div>
       </div>
 
-      <!-- booking form + info -->
+      <!-- booking form -->
       <div class="container py-5" id="book">
         <div class="row g-5">
           <div class="col-lg-7">
@@ -625,8 +858,7 @@
               </h3>
               <p class="mb-4">
                 Complete the form and our YORA Travel Desk will confirm your
-                transfer within 2 hours. For group bookings or special requests,
-                use the message field.
+                transfer within 2 hours.
               </p>
               <form id="yoraInquiryForm" action="#" method="POST">
                 <div class="row g-3">
@@ -743,17 +975,13 @@
                 Dedicated support for airport transfers, conference shuttles,
                 and executive transport.
               </p>
-
               <div class="contact-feature">
                 <i class="fas fa-phone-alt"></i>
                 <div>
-                  <h6>24/7 Transfer Hotline/ WhatsApp</h6>
+                  <h6>24/7 Transfer Hotline</h6>
                   <p><a href="tel:+254102593346">+254 102 593 346</a></p>
-                  <a href="https://wa.me/254712345678" target="_blank">
-                      +254 712 345 678
                 </div>
               </div>
-
               <div class="contact-feature">
                 <i class="fas fa-envelope"></i>
                 <div>
@@ -765,7 +993,6 @@
                   </p>
                 </div>
               </div>
-
               <div class="contact-feature">
                 <i class="fas fa-clock"></i>
                 <div>
@@ -773,37 +1000,20 @@
                   <p>07:00 – 21:00 (Conference Days)</p>
                 </div>
               </div>
-
-              <!-- <div class="contact-feature">
-                <i class="fas fa-headset"></i>
-                <div>
-                  <h6>On-ground Concierge</h6>
-                  <p>
-                    WhatsApp:
-                    <a href="https://wa.me/254712345678" target="_blank">
-                      +254 712 345 678
-                    </a>
-                  </p>
-                </div>
-              </div> -->
-
               <div class="contact-feature">
                 <i class="fas fa-user-check"></i>
                 <div>
                   <h6>Dedicated Travel Concierge</h6>
                   <p>
                     One WhatsApp contact for itinerary updates, reservations,
-                    travel assistance, and on-ground support throughout your
-                    stay.
+                    travel assistance.
                   </p>
                 </div>
               </div>
-
               <div class="contact-highlight">
                 <p>
-                  <i class="fas fa-check-circle"></i>
-                  Real-time flight tracking • VIP meet & greet • Luxury fleet •
-                  Personal concierge
+                  <i class="fas fa-check-circle"></i> Real-time flight tracking
+                  • VIP meet & greet • Luxury fleet • Personal concierge
                 </p>
               </div>
             </div>
@@ -812,7 +1022,7 @@
       </div>
     </div>
 
-    <!-- Footer (exact brand) -->
+    <!-- Footer -->
     <footer
       style="
         background: #0b2d1e;
@@ -896,7 +1106,7 @@
       ><i class="fab fa-whatsapp"></i
     ></a>
 
-    <!-- Offcanvas (mobile) -->
+    <!-- Offcanvas mobile -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileOffcanvas">
       <div class="offcanvas-header">
         <img
@@ -964,57 +1174,35 @@
       </div>
     </div>
 
-    <!-- scripts -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-      (function () {
-        // Tab switching
-        const tabButtons = document.querySelectorAll(".tab-link");
-        const tabPanes = document.querySelectorAll(".tab-pane");
+      // update price on select change
+      function updatePrice(select, targetId) {
+        const price = select.value;
+        document.getElementById(targetId).innerText = "$" + price;
+      }
 
-        function switchTab(tabId) {
-          tabPanes.forEach((pane) => (pane.style.display = "none"));
-          tabButtons.forEach((btn) => btn.classList.remove("active"));
-          const activePane = document.getElementById(tabId);
-          if (activePane) activePane.style.display = "block";
-          const activeBtn = document.querySelector(
-            `.tab-link[data-tab="${tabId}"]`,
-          );
-          if (activeBtn) activeBtn.classList.add("active");
+      // shuffle gallery: click on small card -> update main
+      function shuffleGallery(el) {
+        const img = el.dataset.img;
+        const title = el.dataset.title;
+        const desc = el.dataset.desc;
+        if (img) {
+          document.getElementById("mainGalleryImg").src = img;
+          document.getElementById("mainGalleryTitle").innerText =
+            title || "Fleet";
+          document.getElementById("mainGalleryDesc").innerText =
+            desc || "Premium vehicle";
         }
+      }
 
-        tabButtons.forEach((btn) => {
-          btn.addEventListener("click", function (e) {
-            const targetTabId = this.getAttribute("data-tab");
-            if (targetTabId) switchTab(targetTabId);
-          });
-        });
-
-        // Booking form handler
-        const bookingForm = document.getElementById("bookingTransferForm");
-        const bookingSuccessMsg = document.getElementById("bookingSuccessMsg");
-        if (bookingForm) {
-          bookingForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-            let isValid = true;
-            this.querySelectorAll("[required]").forEach((f) => {
-              if (!f.value.trim()) isValid = false;
-            });
-            if (isValid) {
-              bookingSuccessMsg.classList.remove("d-none");
-              bookingForm.reset();
-              setTimeout(() => bookingSuccessMsg.classList.add("d-none"), 5000);
-            } else {
-              alert("Please fill all required fields (*).");
-            }
-          });
-        }
-
-        // Ensure initial active tab
-        if (!document.querySelector(".tab-link.active"))
-          switchTab("bookingTab");
-      })();
+      // (optional) reset gallery on load
+      document.addEventListener("DOMContentLoaded", function () {
+        // ensure main shows first card
+        const first = document.querySelector(".ftr-sub-card");
+        if (first) shuffleGallery(first);
+      });
     </script>
   </body>
 </html>

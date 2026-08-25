@@ -1,0 +1,1978 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>YORA 2026 • Transfers & Shuttles | Nomad Signature Trails</title>
+    <meta
+      name="description"
+      content="Airport transfers & conference shuttles for YORA 2026 delegates. Reliable, luxury transport in Nairobi & Kilifi."
+    />
+    <link rel="icon" href="../assets/image/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link href="../assets/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/y-styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Bootstrap Icons (optional) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <style>
+      /* keep brand consistent */
+      .contact-header {
+        background:
+          linear-gradient(rgba(28, 45, 73, 0.88), rgba(28, 45, 73, 0.88)),
+          url("https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")
+            no-repeat center center;
+        background-size: cover;
+        min-height: 38vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 50px 0 40px;
+        text-align: center;
+        color: white;
+      }
+      .contact-header .hero-content {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .contact-header .hero-title {
+        font-size: 3.2rem;
+        font-weight: 700;
+        color: #fff;
+      }
+      .contact-header .hero-title span {
+        color: #e7d6a8;
+      }
+      .contact-header .hero-subtitle {
+        color: #f0f0ea;
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .btn-outline-accent {
+        border: 1px solid var(--secondary-orange, #c9a84c);
+        color: var(--secondary-orange, #c9a84c);
+        background: transparent;
+        border-radius: 40px;
+        padding: 6px 20px;
+        font-weight: 500;
+        transition: all 0.2s;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .btn-outline-accent:hover {
+        background: var(--secondary-orange, #c9a84c);
+        color: #fff;
+      }
+      .btn-submit {
+        background: var(--secondary-orange, #c9a84c);
+        border: none;
+        padding: 14px 36px;
+        border-radius: 60px;
+        color: #fff;
+        font-weight: 600;
+        transition: 0.2s;
+      }
+      .btn-submit:hover {
+        background: #b08a2e;
+        color: #fff;
+      }
+      .section-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #1a3a2a;
+        margin-bottom: 0.5rem;
+      }
+      .service-icon-box {
+        background: #f8f5ed;
+        border-radius: 32px;
+        padding: 28px 16px;
+        transition: 0.2s;
+        height: 100%;
+        border: 1px solid rgba(201, 168, 76, 0.15);
+      }
+      .service-icon-box:hover {
+        background: #f3efe4;
+      }
+      .schedule-item {
+        background: #fff;
+        border-radius: 20px;
+        padding: 18px 22px;
+        border-left: 5px solid var(--secondary-orange, #c9a84c);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        height: 100%;
+        transition: 0.2s;
+      }
+      .schedule-item:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+      }
+      .schedule-item .route-select {
+        width: 100%;
+        padding: 6px 10px;
+        border-radius: 40px;
+        border: 1px solid #ddd;
+        background: #faf8f4;
+        font-size: 0.85rem;
+        margin-top: 8px;
+      }
+      .schedule-item .price-badge {
+        display: inline-block;
+        background: var(--secondary-orange, #c9a84c);
+        color: #fff;
+        padding: 2px 14px;
+        border-radius: 40px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-top: 6px;
+      }
+      .contact-info-card {
+        background: #faf8f4;
+        border-radius: 36px;
+        padding: 40px 30px;
+        border: 1px solid rgba(201, 168, 76, 0.2);
+        height: 100%;
+      }
+      .contact-info-card h2,
+      .contact-info-card > p {
+        text-align: center;
+      }
+      .contact-feature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 32px;
+      }
+      .contact-feature i {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        color: var(--secondary-orange, #c9a84c);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        transition: all 0.3s ease;
+      }
+      .contact-feature h6 {
+        margin-bottom: 8px;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--primary-green);
+      }
+      .contact-feature p {
+        margin: 0;
+        color: #666;
+        line-height: 1.6;
+        max-width: 320px;
+      }
+      .contact-feature a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .contact-feature a:hover {
+        color: var(--secondary-orange, #c9a84c);
+      }
+      .contact-highlight {
+        background: #fff;
+        border: 1px solid rgba(201, 168, 76, 0.2);
+        border-radius: 20px;
+        padding: 18px;
+        margin-top: 10px;
+        text-align: center;
+      }
+      .contact-highlight i {
+        color: var(--secondary-orange, #c9a84c);
+        margin-right: 6px;
+      }
+      .contact-highlight p {
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.7;
+      }
+      .footer {
+        background: #0b2d1e;
+        color: #ddd;
+        padding: 40px 0 20px;
+      }
+      .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: #25d366;
+        color: #fff;
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+        text-decoration: none;
+      }
+      .whatsapp-float:hover {
+        background: #1ebe5c;
+        color: #fff;
+      }
+      .tab-link.active {
+        color: var(--primary-blue, #2c7da0);
+      }
+      .tab-link.active::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--primary-blue, #2c7da0);
+      }
+      .form-success-msg {
+        margin-top: 1rem;
+      }
+
+      /* === GALLERY CAROUSEL STYLES === */
+      .gallery-section {
+        margin-top: 40px;
+      }
+      .gallery-section .carousel-inner img {
+        height: 320px;
+        object-fit: cover;
+        border-radius: 24px;
+      }
+      .gallery-section .carousel-control-prev,
+      .gallery-section .carousel-control-next {
+        width: 5%;
+        opacity: 0.7;
+      }
+      .gallery-section .carousel-indicators button {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #ccc;
+        border: none;
+      }
+      .gallery-section .carousel-indicators .active {
+        background: var(--secondary-orange, #c9a84c);
+      }
+      .gallery-card {
+        background: #fff;
+        border-radius: 32px;
+        padding: 20px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+        border: 1px solid rgba(201, 168, 76, 0.12);
+        height: 100%;
+        transition: 0.2s;
+      }
+      .gallery-card:hover {
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.07);
+      }
+      .gallery-card h5 {
+        font-weight: 700;
+        color: #1a3a2a;
+        margin-top: 12px;
+        margin-bottom: 4px;
+      }
+      .gallery-card .sub-text {
+        font-size: 0.85rem;
+        color: #666;
+      }
+
+      @media (max-width: 768px) {
+        .contact-header .hero-title {
+          font-size: 2.2rem;
+        }
+        .gallery-section .carousel-inner img {
+          height: 200px;
+        }
+        .schedule-item {
+          padding: 14px 16px;
+        }
+      }
+
+      .transfer-price-card {
+    background: #1c2d49;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 6px 18px rgba(28, 45, 73, 0.18);
+}
+
+.transfer-price-card .price-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.transfer-price-card .price-row:last-of-type {
+    border-bottom: none;
+}
+
+.transfer-price-card .price-row i {
+    color: var(--secondary-orange);
+}
+
+.transfer-price-card .price {
+    font-size: 1.05rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.transfer-price-card .price span {
+    font-size: 0.75rem;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.transfer-price-card .price-note {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.transfer-price-card {
+    background: #1c2d49;
+    color: #ffffff;
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 8px 24px rgba(28, 45, 73, 0.20);
+}
+
+/* Header */
+.pricing-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.pricing-header small {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.pricing-header h6 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 3px;
+}
+
+.pricing-tag {
+    color: var(--secondary-orange);
+    font-size: 20px;
+}
+
+/* Price rows */
+.price-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 13px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.vehicle-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.vehicle-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: rgba(216, 87, 42, 0.15);
+    color: var(--secondary-orange);
+}
+
+.vehicle-info strong {
+    display: block;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.vehicle-info small {
+    display: block;
+    margin-top: 2px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.60);
+}
+
+/* Price */
+.price {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.price strong {
+    display: block;
+    font-size: 17px;
+    color: #ffffff;
+}
+
+.price span {
+    display: block;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.60);
+}
+
+/* Round trip information */
+.price-note {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 13px;
+    padding: 9px 11px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.07);
+    font-size: 11px;
+}
+
+.price-note i {
+    color: var(--secondary-orange);
+}
+
+.price-note span {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/* Included */
+.included-info {
+    margin-top: 10px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.included-info i {
+    color: #55c878;
+    margin-right: 5px;
+}
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="contact-header">
+      <div class="container">
+        <div class="navbar-wrapper" id="navbarWrapper">
+          <div class="custom-navbar">
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
+              <div class="container-fluid px-0 navbar-content">
+                <a class="navbar-brand" href="index.html">
+                  <img
+                    src="assets/image/nomad_tours_logo.webp"
+                    alt="Nomad Tours Logo"
+                    class="travel-logo"
+                    style="height: 50px"
+                  />
+                </a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="yora3.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="packages.html"
+                        >Safari & Experiences</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="stays.html">Accommodation</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="transfer.html"
+                        >Transfers</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="nav-right">
+                  <a href="#book" class="btn-primary-travel"
+                    >Request Transfer</a
+                  >
+                </div>
+                <button
+                  class="mobile-menu-toggle"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#mobileOffcanvas"
+                >
+                  <i class="fas fa-bars"></i>
+                </button>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="hero-content container">
+        <h1 class="hero-title">YORA 2026 <span>Transfers & Shuttles</span></h1>
+        <p class="hero-subtitle">
+          Airport transfers, conference shuttles, and executive transport for
+          delegates, speakers, and VIPs.
+        </p>
+      </div>
+    </header>
+
+    <!-- main -->
+    <div class="container contact-section py-4">
+      <!-- 3 contact cards -->
+      <div class="row g-4 mb-5">
+        <div class="col-md-4">
+          <div class="contact-info-card text-center">
+            <div class="contact-icon"><i class="fas fa-plane-arrival"></i></div>
+            <h4>Airport Transfers</h4>
+            <p>
+              24/7 transfers between JKIA, Vipingo, hotels, and residences with
+              professional drivers and real-time flight tracking.
+            </p>
+            <div
+              style="
+                display: flex;
+                gap: 12px;
+                justify-content: center;
+                flex-wrap: wrap;
+              "
+            >
+              <a href="#book" class="btn btn-outline-accent"
+                ><i class="fas fa-calendar-check"></i> Book Now</a
+              >
+              <a href="#" class="btn btn-outline-accent"
+                ><i class="fas fa-phone-alt"></i> +254 102 593 346</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-info-card text-center">
+            <div class="contact-icon"><i class="fas fa-shuttle-van"></i></div>
+            <h4>Conference Shuttle</h4>
+            <p>
+              Reliable scheduled shuttle services between partner hotels and the
+              YORA conference venue.
+            </p>
+            <div
+              style="
+                display: flex;
+                gap: 12px;
+                justify-content: center;
+                flex-wrap: wrap;
+              "
+            >
+              <a href="#shuttle" class="btn btn-outline-accent"
+                ><i class="fas fa-clock"></i> View Schedule</a
+              >
+              <a href="#book" class="btn btn-outline-accent"
+                ><i class="fas fa-ticket-alt"></i> Reserve Seat</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-info-card text-center">
+            <div class="contact-icon"><i class="fas fa-headset"></i></div>
+            <h4>Dedicated Travel Concierge</h4>
+            <p>
+              One WhatsApp contact for itinerary updates, reservations, travel
+              assistance, and on-ground support throughout your stay.
+            </p>
+            <div
+              style="
+                display: flex;
+                gap: 12px;
+                justify-content: center;
+                flex-wrap: wrap;
+              "
+            >
+              <a
+                href="https://wa.me/254712345678"
+                target="_blank"
+                class="btn btn-outline-accent"
+                ><i class="fab fa-whatsapp"></i> Chat Now</a
+              >
+              <a href="#contact" class="btn btn-outline-accent"
+                ><i class="fas fa-info-circle"></i> Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== ROUTES WITH PRICING DROPDOWN & DEPARTURES ===== -->
+      <div class="container py-3" id="routes">
+        <h3 class="section-title">Transfer Routes & Pricing</h3>
+        <p class="mb-4">
+          Select your route, choose vehicle type, and see the price. All routes
+          include meet & greet.
+        </p>
+
+        <!-- Nairobi Routes -->
+        <h5 class="mt-4 mb-3" style="color: #1a3a2a">
+          <i
+            class="fas fa-map-pin me-2"
+            style="color: var(--secondary-orange)"
+          ></i
+          >Proposed Nairobi Routes
+        </h5>
+
+        <div class="row g-4">
+          <!-- JKIA -->
+          <div class="col-md-4">
+            <div class="schedule-item d-flex flex-column h-100">
+              <!-- Transport -->
+              <div>
+                <h6>
+                  <i
+                    class="fas fa-plane-arrival me-2"
+                    style="color: var(--secondary-orange)"
+                  ></i>
+                  JKIA → Broadwalk Residency
+                </h6>
+
+                <p>
+                  <i class="far fa-clock me-2"></i>
+                  45–60 min journey
+                </p>
+
+                <p>
+                  <i class="fas fa-bus me-2"></i>
+                  Departs: 06:30 · 10:00 · 14:00 · 18:30
+                </p>
+              </div>
+
+              <!-- Prices -->
+              <div class="mt-auto pt-3">
+                <table class="table table-sm table-borderless mb-0">
+                  <thead>
+                    <tr>
+                      <th>Transport</th>
+                      <th>Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Bus (22 seater)</td>
+                      <td>$90</td>
+                    </tr>
+                    <tr>
+                      <td>Van (Executive)</td>
+                      <td>$120</td>
+                    </tr>
+                    <tr>
+                      <td>Private (Luxury Sedan)</td>
+                      <td>$180</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wilson Airport -->
+          <div class="col-md-4">
+            <div class="schedule-item d-flex flex-column h-100">
+              <!-- Transport -->
+              <div>
+                <h6>
+                  <i
+                    class="fas fa-plane me-2"
+                    style="color: var(--secondary-orange)"
+                  ></i>
+                  Wilson Airport → Broadwalk
+                </h6>
+
+                <p>
+                  <i class="far fa-clock me-2"></i>
+                  35–50 min journey
+                </p>
+
+                <p>
+                  <i class="fas fa-bus me-2"></i>
+                  Departs: 07:00 · 11:00 · 15:00 · 19:00
+                </p>
+              </div>
+
+              <!-- Prices -->
+              <div class="mt-auto pt-3">
+                <table class="table table-sm table-borderless mb-0">
+                  <thead>
+                    <tr>
+                      <th>Transport</th>
+                      <th>Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Bus (22 seater)</td>
+                      <td>$80</td>
+                    </tr>
+                    <tr>
+                      <td>Van (Executive)</td>
+                      <td>$110</td>
+                    </tr>
+                    <tr>
+                      <td>Private (Luxury Sedan)</td>
+                      <td>$160</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Broadwalk ↔ Summit -->
+          <div class="col-md-4">
+            <div class="schedule-item d-flex flex-column h-100">
+              <!-- Transport -->
+              <div>
+                <h6>
+                  <i
+                    class="fas fa-arrows-left-right me-2"
+                    style="color: var(--secondary-orange)"
+                  ></i>
+                  Broadwalk Residency ↔ Summit Venue
+                </h6>
+
+                <p>
+                  <i class="far fa-clock me-2"></i>
+                  15–25 min journey
+                </p>
+
+                <p>
+                  <i class="fas fa-bus me-2"></i>
+                  Departs: 07:30 · 12:00 · 16:30 · 20:00
+                </p>
+              </div>
+
+              <!-- Prices -->
+              <div class="mt-auto pt-3">
+                <table class="table table-sm table-borderless mb-0">
+                  <thead>
+                    <tr>
+                      <th>Transport</th>
+                      <th>Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Bus (22 seater)</td>
+                      <td>$45</td>
+                    </tr>
+                    <tr>
+                      <td>Van (Executive)</td>
+                      <td>$65</td>
+                    </tr>
+                    <tr>
+                      <td>Private (Luxury Sedan)</td>
+                      <td>$95</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coast Transition -->
+        <h5 class="mt-5 mb-3" style="color: #1a3a2a">
+          <i
+            class="fas fa-map-signs me-2"
+            style="color: var(--secondary-orange)"
+          ></i
+          >Proposed Coast Transition Routes (15 Oct)
+        </h5>
+
+        <div class="row g-4">
+          <!-- Miritini SGR -->
+          <div class="col-md-4">
+            <div class="schedule-item d-flex flex-column h-100">
+              <!-- Transport -->
+              <div>
+                <h6>
+                  <i
+                    class="fas fa-train me-2"
+                    style="color: var(--secondary-orange)"
+                  ></i>
+                  Miritini SGR → Vipingo Ridge
+                </h6>
+
+                <p>
+                  <i class="far fa-clock me-2"></i>
+                  60–90 min journey
+                </p>
+
+                <p>
+                  <i class="fas fa-bus me-2"></i>
+                  Departs: 08:00 · 12:30 · 17:00
+                </p>
+              </div>
+
+              <!-- Prices -->
+              <div class="mt-auto pt-3">
+                <table class="table table-sm table-borderless mb-0">
+                  <thead>
+                    <tr>
+                      <th>Transport</th>
+                      <th>Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Bus (Luxury Coach)</td>
+                      <td>$110</td>
+                    </tr>
+                    <tr>
+                      <td>Van (Executive)</td>
+                      <td>$150</td>
+                    </tr>
+                    <tr>
+                      <td>Private (Luxury Sedan)</td>
+                      <td>$220</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mombasa Airport -->
+          <div class="col-md-4">
+            <div class="schedule-item d-flex flex-column h-100">
+              <!-- Transport -->
+              <div>
+                <h6>
+                  <i
+                    class="fas fa-plane me-2"
+                    style="color: var(--secondary-orange)"
+                  ></i>
+                  Mombasa Airport (MBA) → Vipingo
+                </h6>
+
+                <p>
+                  <i class="far fa-clock me-2"></i>
+                  50–70 min journey
+                </p>
+
+                <p>
+                  <i class="fas fa-bus me-2"></i>
+                  Departs: 09:00 · 13:00 · 18:00
+                </p>
+              </div>
+
+              <!-- Prices -->
+              <div class="mt-auto pt-3">
+                <table class="table table-sm table-borderless mb-0">
+                  <thead>
+                    <tr>
+                      <th>Transport</th>
+                      <th>Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Bus (Luxury Coach)</td>
+                      <td>$100</td>
+                    </tr>
+                    <tr>
+                      <td>Van (Executive)</td>
+                      <td>$140</td>
+                    </tr>
+                    <tr>
+                      <td>Private (Luxury Sedan)</td>
+                      <td>$200</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Malindi Airport -->
+          <div class="col-md-4">
+            <div class="schedule-item d-flex flex-column h-100">
+              <!-- Transport -->
+              <div>
+                <h6>
+                  <i
+                    class="fas fa-plane me-2"
+                    style="color: var(--secondary-orange)"
+                  ></i>
+                  Malindi Airport (MYD) → Vipingo / Kilifi
+                </h6>
+
+                <p>
+                  <i class="far fa-clock me-2"></i>
+                  40–60 min journey
+                </p>
+
+                <p>
+                  <i class="fas fa-bus me-2"></i>
+                  Departs: 08:30 · 12:00 · 16:30
+                </p>
+              </div>
+
+              <!-- Prices -->
+              <div class="mt-auto pt-3">
+                <table class="table table-sm table-borderless mb-0">
+                  <thead>
+                    <tr>
+                      <th>Transport</th>
+                      <th>Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Bus (Luxury Coach)</td>
+                      <td>$85</td>
+                    </tr>
+                    <tr>
+                      <td>Van (Executive)</td>
+                      <td>$120</td>
+                    </tr>
+                    <tr>
+                      <td>Private (Luxury Sedan)</td>
+                      <td>$170</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vipingo / Kilifi -->
+        <h5 class="mt-5 mb-3" style="color: #1a3a2a">
+          <i
+            class="fas fa-route me-2"
+            style="color: var(--secondary-orange)"
+          ></i
+          >Proposed Vipingo / Kilifi Operational Routes
+        </h5>
+
+        <div class="row g-4">
+          <!-- Vipingo Airstrip → Vipingo Ridge -->
+          <div class="col-md-4">
+            <div class="schedule-item d-flex flex-column h-100">
+              <!-- Transport -->
+              <div>
+                <h6>
+                  <i
+                    class="fas fa-plane me-2"
+                    style="color: var(--secondary-orange)"
+                  ></i>
+                  Vipingo Airstrip → Vipingo Ridge
+                </h6>
+
+                <p>
+                  <i class="far fa-clock me-2"></i>
+                  15–25 min journey
+                </p>
+
+                <p>
+                  <i class="fas fa-bus me-2"></i>
+                  Departs: 07:00 · 11:00 · 15:00 · 19:00
+                </p>
+              </div>
+
+              <!-- Prices -->
+              <div class="mt-auto pt-3">
+                <table class="table table-sm table-borderless mb-0">
+                  <thead>
+                    <tr>
+                      <th>Transport</th>
+                      <th>Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Bus (22 seater)</td>
+                      <td>$65</td>
+                    </tr>
+                    <tr>
+                      <td>Van (Executive)</td>
+                      <td>$95</td>
+                    </tr>
+                    <tr>
+                      <td>Private (Land Cruiser)</td>
+                      <td>$140</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vipingo Airstrip → Bofa / Kilifi Hotels -->
+          <div class="col-md-4">
+            <div class="schedule-item d-flex flex-column h-100">
+              <!-- Transport -->
+              <div>
+                <h6>
+                  <i
+                    class="fas fa-hotel me-2"
+                    style="color: var(--secondary-orange)"
+                  ></i>
+                  Vipingo Airstrip → Bofa / Kilifi Hotels
+                </h6>
+
+                <p>
+                  <i class="far fa-clock me-2"></i>
+                  25–40 min journey
+                </p>
+
+                <p>
+                  <i class="fas fa-bus me-2"></i>
+                  Departs: 08:00 · 12:00 · 16:00 · 20:00
+                </p>
+              </div>
+
+              <!-- Prices -->
+              <div class="mt-auto pt-3">
+                <table class="table table-sm table-borderless mb-0">
+                  <thead>
+                    <tr>
+                      <th>Transport</th>
+                      <th>Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Bus (22 seater)</td>
+                      <td>$70</td>
+                    </tr>
+                    <tr>
+                      <td>Van (Executive)</td>
+                      <td>$100</td>
+                    </tr>
+                    <tr>
+                      <td>Private (Land Cruiser)</td>
+                      <td>$150</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vipingo Ridge ↔ Coastal Venues -->
+          <div class="col-md-4">
+            <div class="schedule-item d-flex flex-column h-100">
+              <!-- Transport -->
+              <div>
+                <h6>
+                  <i
+                    class="fas fa-umbrella-beach me-2"
+                    style="color: var(--secondary-orange)"
+                  ></i>
+                  Vipingo Ridge ↔ Coastal Venues
+                </h6>
+
+                <p>
+                  <i class="far fa-clock me-2"></i>
+                  20–40 min journey
+                </p>
+
+                <p>
+                  <i class="fas fa-bus me-2"></i>
+                  Departs: 09:00 · 13:00 · 17:00 · 21:00
+                </p>
+              </div>
+
+              <!-- Prices -->
+              <div class="mt-auto pt-3">
+                <table class="table table-sm table-borderless mb-0">
+                  <thead>
+                    <tr>
+                      <th>Transport</th>
+                      <th>Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Bus (22 seater)</td>
+                      <td>$60</td>
+                    </tr>
+                    <tr>
+                      <td>Van (Executive)</td>
+                      <td>$90</td>
+                    </tr>
+                    <tr>
+                      <td>Private (Luxury Sedan)</td>
+                      <td>$130</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="mt-4 text-muted small">
+          <i class="fas fa-info-circle me-1"></i> Prices are per vehicle. Group
+          discounts available. All transfers include Wi‑Fi, water, and flight
+          tracking.
+        </div> -->
+      </div>
+
+      <!-- Pricing Card -->
+<div class="mt-auto pt-3">
+    <div class="transfer-price-card">
+
+        <!-- Card Header -->
+        <div class="pricing-header">
+            <div>
+                <small class="text-uppercase">Transfer Pricing</small>
+                <h6 class="mb-0">Choose Your Ride</h6>
+            </div>
+
+            <i class="fas fa-tag pricing-tag"></i>
+        </div>
+
+        <!-- Bus -->
+        <div class="price-row">
+            <div class="vehicle-info">
+                <div class="vehicle-icon">
+                    <i class="fas fa-bus"></i>
+                </div>
+
+                <div>
+                    <strong>Bus</strong>
+                    <small>22-Seater</small>
+                </div>
+            </div>
+
+            <div class="price">
+                <strong>$16</strong>
+                <span>per seat</span>
+            </div>
+        </div>
+
+        <!-- Van -->
+        <div class="price-row">
+            <div class="vehicle-info">
+                <div class="vehicle-icon">
+                    <i class="fas fa-shuttle-van"></i>
+                </div>
+
+                <div>
+                    <strong>Executive Van</strong>
+                    <small>Comfortable group transfer</small>
+                </div>
+            </div>
+
+            <div class="price">
+                <strong>$16</strong>
+                <span>per seat</span>
+            </div>
+        </div>
+
+        <!-- Private -->
+        <div class="price-row">
+            <div class="vehicle-info">
+                <div class="vehicle-icon">
+                    <i class="fas fa-car-side"></i>
+                </div>
+
+                <div>
+                    <strong>Private</strong>
+                    <small>Luxury private vehicle</small>
+                </div>
+            </div>
+
+            <div class="price">
+                <strong>$271</strong>
+                <span>per day</span>
+            </div>
+        </div>
+
+        <!-- Pricing Information -->
+        <div class="price-note">
+            <div>
+                <i class="fas fa-sync-alt me-2"></i>
+                <strong>Round Trip</strong>
+            </div>
+
+            <span>
+                Bus & Van
+            </span>
+        </div>
+
+        <!-- Included -->
+        <div class="included-info">
+            <i class="fas fa-check-circle"></i>
+            Meet & greet included
+        </div>
+
+    </div>
+</div>
+
+      <!-- Pricing Card -->
+<div class="mt-auto pt-3">
+    <div class="transfer-price-card">
+        <div class="price-row">
+            <div>
+                <i class="fas fa-bus me-2"></i>
+                <strong>Bus</strong>
+            </div>
+            <div class="price">
+                $16 <span>per seat</span>
+            </div>
+        </div>
+
+        <div class="price-row">
+            <div>
+                <i class="fas fa-shuttle-van me-2"></i>
+                <strong>Van</strong>
+            </div>
+            <div class="price">
+                $16 <span>per seat</span>
+            </div>
+        </div>
+
+        <div class="price-row">
+            <div>
+                <i class="fas fa-car-side me-2"></i>
+                <strong>Private</strong>
+            </div>
+            <div class="price">
+                $271 <span>per day</span>
+            </div>
+        </div>
+
+        <div class="price-note">
+            <i class="fas fa-sync-alt me-1"></i>
+            Bus & Van rates are round trip
+        </div>
+    </div>
+</div>
+
+      <!-- ===== GALLERY WITH CAROUSELS ===== -->
+      <div class="container gallery-section py-4">
+        <div class="section-header-center">
+          <h2>Our Fleet — YORA Transfer Vehicles</h2>
+          <p>Each section has its own carousel. Click arrows to browse.</p>
+        </div>
+
+        <!-- Nairobi Gallery -->
+        <div class="gallery-card mb-4">
+          <h5>
+            <i
+              class="fas fa-map-pin me-2"
+              style="color: var(--secondary-orange)"
+            ></i
+            >Nairobi Fleet
+          </h5>
+          <div
+            id="carouselNairobi"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselNairobi"
+                data-bs-slide-to="0"
+                class="active"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselNairobi"
+                data-bs-slide-to="1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselNairobi"
+                data-bs-slide-to="2"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://images.unsplash.com/photo-1559416523-140ddc3d238c?w=800&h=400&fit=crop&auto=format"
+                  class="d-block w-100"
+                  alt="Bus"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>22-Seater Bus</h5>
+                  <p>Luxury coach · group transfers</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1562911791-c7a97b729ec5?w=800&h=400&fit=crop&auto=format"
+                  class="d-block w-100"
+                  alt="Van"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Executive Van</h5>
+                  <p>Mercedes V-Class · 7 pax</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&h=400&fit=crop&auto=format"
+                  class="d-block w-100"
+                  alt="Sedan"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Luxury Sedan</h5>
+                  <p>BMW 7 Series · VIP</p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselNairobi"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselNairobi"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Coast Transition Gallery -->
+        <div class="gallery-card mb-4">
+          <h5>
+            <i
+              class="fas fa-map-signs me-2"
+              style="color: var(--secondary-orange)"
+            ></i
+            >Coast Transition Fleet
+          </h5>
+          <div
+            id="carouselCoast"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselCoast"
+                data-bs-slide-to="0"
+                class="active"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselCoast"
+                data-bs-slide-to="1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselCoast"
+                data-bs-slide-to="2"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&h=400&fit=crop&auto=format"
+                  class="d-block w-100"
+                  alt="Coach"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Luxury Coach</h5>
+                  <p>40-seater · air-conditioned</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&h=400&fit=crop&auto=format"
+                  class="d-block w-100"
+                  alt="SUV"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Executive SUV</h5>
+                  <p>Lexus LX · 4 pax</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&h=400&fit=crop&auto=format"
+                  class="d-block w-100"
+                  alt="Minibus"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Premium Minibus</h5>
+                  <p>Mercedes Sprinter · 15 pax</p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselCoast"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselCoast"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Vipingo / Kilifi Gallery -->
+        <div class="gallery-card">
+          <h5>
+            <i
+              class="fas fa-route me-2"
+              style="color: var(--secondary-orange)"
+            ></i
+            >Vipingo / Kilifi Fleet
+          </h5>
+          <div
+            id="carouselVipingo"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselVipingo"
+                data-bs-slide-to="0"
+                class="active"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselVipingo"
+                data-bs-slide-to="1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselVipingo"
+                data-bs-slide-to="2"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&h=400&fit=crop&auto=format"
+                  class="d-block w-100"
+                  alt="Land Cruiser"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Land Cruiser</h5>
+                  <p>Off-road · 5 pax</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1562911791-c7a97b729ec5?w=800&h=400&fit=crop&auto=format"
+                  class="d-block w-100"
+                  alt="Shuttle Van"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Shuttle Van</h5>
+                  <p>Ford Transit · 12 pax</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&h=400&fit=crop&auto=format"
+                  class="d-block w-100"
+                  alt="Luxury Sedan"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Luxury Sedan</h5>
+                  <p>Mercedes E-Class · 3 pax</p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselVipingo"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselVipingo"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-3 text-muted small">
+          <i
+            class="fas fa-check-circle me-1"
+            style="color: var(--secondary-orange)"
+          ></i>
+          All vehicles include Wi‑Fi, bottled water, and meet‑&‑greet service.
+        </div>
+      </div>
+
+      <!-- extra service highlights -->
+      <div class="container py-4">
+        <div class="row g-3">
+          <div class="col-md-3">
+            <div
+              style="
+                background: #f8f5ed;
+                border-radius: 24px;
+                padding: 20px;
+                border: 1px solid rgba(201, 168, 76, 0.1);
+              "
+            >
+              <i
+                class="fas fa-user-tie fa-2x"
+                style="color: var(--secondary-orange)"
+              ></i>
+              <h6 class="mt-2">Executive Transfers</h6>
+              <p class="small">
+                Premium vehicles with Wi‑Fi, water, and professional drivers for
+                VIP delegates.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div
+              style="
+                background: #f8f5ed;
+                border-radius: 24px;
+                padding: 20px;
+                border: 1px solid rgba(201, 168, 76, 0.1);
+              "
+            >
+              <i
+                class="fas fa-clock fa-2x"
+                style="color: var(--secondary-orange)"
+              ></i>
+              <h6 class="mt-2">24/7 Flight Tracking</h6>
+              <p class="small">
+                We monitor your flight and adjust pickup times – no extra charge
+                for delays.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div
+              style="
+                background: #f8f5ed;
+                border-radius: 24px;
+                padding: 20px;
+                border: 1px solid rgba(201, 168, 76, 0.1);
+              "
+            >
+              <i
+                class="fas fa-hand-holding-heart fa-2x"
+                style="color: var(--secondary-orange)"
+              ></i>
+              <h6 class="mt-2">Group & Delegation</h6>
+              <p class="small">
+                Coordinated shuttle blocks for corporate teams, exhibitors, and
+                speaker groups.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div
+              style="
+                background: #f8f5ed;
+                border-radius: 24px;
+                padding: 20px;
+                border: 1px solid rgba(201, 168, 76, 0.1);
+              "
+            >
+              <i
+                class="fas fa-concierge-bell fa-2x"
+                style="color: var(--secondary-orange)"
+              ></i>
+              <h6 class="mt-2">Personal Concierge</h6>
+              <p class="small">
+                Dedicated WhatsApp support for itinerary updates, reservations,
+                and on-ground assistance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- booking form -->
+      <div class="container py-5" id="book">
+        <div class="row g-5">
+          <div class="col-lg-7">
+            <div class="contact-form-wrapper">
+              <h3 class="mb-4" style="color: var(--primary-blue)">
+                Book Airport Transfer or Shuttle
+              </h3>
+              <p class="mb-4">
+                Complete the form and our YORA Travel Desk will confirm your
+                transfer within 2 hours.
+              </p>
+              <form id="yoraInquiryForm" action="#" method="POST">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label">Full Name *</label
+                    ><input
+                      type="text"
+                      class="form-control"
+                      name="full_name"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Email Address *</label
+                    ><input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Phone (with country code) *</label
+                    ><input
+                      type="tel"
+                      class="form-control"
+                      name="phone"
+                      placeholder="+39..."
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Country of Residence</label
+                    ><input type="text" class="form-control" name="country" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Arrival Date</label
+                    ><input
+                      type="date"
+                      class="form-control"
+                      name="arrival_date"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Flight / Arrival Time</label
+                    ><input
+                      type="text"
+                      class="form-control"
+                      name="flight_time"
+                      placeholder="e.g. BA 123, 14:30"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Transfer Type</label>
+                    <select class="form-select" name="transfer_type">
+                      <option>Airport Transfer (JKIA → Hotel)</option>
+                      <option>Airport Transfer (Hotel → JKIA)</option>
+                      <option>Conference Shuttle (Hotel → Venue)</option>
+                      <option>Conference Shuttle (Venue → Hotel)</option>
+                      <option>VIP Executive Transfer</option>
+                      <option>Group Transfer (10+ pax)</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Hotel / Pickup Location</label>
+                    <select class="form-select" name="hotel">
+                      <option>Hemingways Nairobi</option>
+                      <option>Villa Rosa Kempinski</option>
+                      <option>Fairmont Norfolk</option>
+                      <option>Radisson Blu Nairobi</option>
+                      <option>Boma Inn</option>
+                      <option>Eka Hotel</option>
+                      <option>Other (specify in message)</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Number of Passengers</label>
+                    <select class="form-select" name="pax">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3-5</option>
+                      <option>6-10</option>
+                      <option>10+</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label"
+                      >Special requests / additional details</label
+                    >
+                    <textarea
+                      class="form-control"
+                      rows="4"
+                      name="message"
+                      placeholder="Flight changes, accessibility needs, group name, extra luggage, etc."
+                    ></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn-submit">
+                      <i class="fas fa-paper-plane me-2"></i> Request Transfer
+                    </button>
+                  </div>
+                </div>
+                <small class="d-block mt-3 text-muted"
+                  ><i class="fas fa-lock me-1"></i> Secure. Response within 2
+                  hours.</small
+                >
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-5" id="contact">
+            <div class="contact-info-card">
+              <h2 class="text-center">YORA Travel Desk</h2>
+              <p class="text-center mb-5">
+                Dedicated support for airport transfers, conference shuttles,
+                and executive transport.
+              </p>
+              <div class="contact-feature">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                  <h6>24/7 Transfer Hotline</h6>
+                  <p><a href="tel:+254102593346">+254 102 593 346</a></p>
+                </div>
+              </div>
+              <div class="contact-feature">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h6>Email</h6>
+                  <p>
+                    <a href="mailto:transfers@nomadsignaturetrails.co.ke"
+                      >transfers@nomadsignaturetrails.co.ke</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="contact-feature">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <h6>Shuttle Support</h6>
+                  <p>07:00 – 21:00 (Conference Days)</p>
+                </div>
+              </div>
+              <div class="contact-feature">
+                <i class="fas fa-user-check"></i>
+                <div>
+                  <h6>Dedicated Travel Concierge</h6>
+                  <p>
+                    One WhatsApp contact for itinerary updates, reservations,
+                    travel assistance.
+                  </p>
+                </div>
+              </div>
+              <div class="contact-highlight">
+                <p>
+                  <i class="fas fa-check-circle"></i> Real-time flight tracking
+                  • VIP meet & greet • Luxury fleet • Personal concierge
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      style="
+        background: #0b2d1e;
+        color: #ddd;
+        padding: 40px 0 20px;
+        margin-top: 20px;
+      "
+    >
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-3">
+            <img
+              src="assets/image/nomad_tours_logo.webp"
+              alt="Nomad Tours"
+              style="
+                max-height: 70px;
+                filter: brightness(0) invert(1);
+                margin-bottom: 12px;
+              "
+            />
+            <p>
+              Nomad Tours & Experiences — authentic Kenya travel since 2016.
+            </p>
+            <div style="display: flex; gap: 14px; font-size: 1.4rem">
+              <a href="#" style="color: #ddd"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" style="color: #ddd"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" style="color: #ddd"><i class="fab fa-tiktok"></i></a>
+              <a href="#" style="color: #ddd"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h5>Services</h5>
+            <a href="#" style="color: #ccc; display: block">Airport Transfers</a
+            ><a href="#" style="color: #ccc; display: block"
+              >Conference Shuttle</a
+            ><a href="#" style="color: #ccc; display: block"
+              >Executive Transport</a
+            ><a href="#" style="color: #ccc; display: block"
+              >Travel Concierge</a
+            >
+          </div>
+          <div class="col-md-3">
+            <h5>Policies</h5>
+            <a href="#" style="color: #ccc; display: block">Privacy</a
+            ><a href="#" style="color: #ccc; display: block">Booking Terms</a
+            ><a href="#" style="color: #ccc; display: block">Cancellation</a>
+          </div>
+          <div class="col-md-3">
+            <h5>Contact</h5>
+            <p>
+              <i
+                class="fas fa-phone-alt me-2"
+                style="color: var(--secondary-orange)"
+              ></i
+              >+254 102 593 346
+            </p>
+            <p>
+              <i
+                class="fas fa-map-marker-alt me-2"
+                style="color: var(--secondary-orange)"
+              ></i
+              >Bofa Road, Kilifi Kenya
+            </p>
+          </div>
+        </div>
+        <hr style="border-color: #2a5a3e" />
+        <p class="text-center small" style="color: #aaa">
+          © 2026 Nomad Tours & Experiences — YORA Official Travel Partner
+        </p>
+      </div>
+    </footer>
+
+    <!-- WhatsApp float -->
+    <a href="https://wa.me/254712345678" class="whatsapp-float" target="_blank"
+      ><i class="fab fa-whatsapp"></i
+    ></a>
+
+    <!-- Offcanvas mobile -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileOffcanvas">
+      <div class="offcanvas-header">
+        <img
+          src="assets/image/nomad_tours_logo.webp"
+          alt="Nomad Tours"
+          style="height: 50px"
+        />
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="mobile-nav-list">
+          <li>
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+          </li>
+          <li>
+            <a href="tours.html"
+              ><i class="fas fa-binoculars"></i> Safari Tours</a
+            >
+          </li>
+          <li>
+            <a href="service.html"
+              ><i class="fas fa-concierge-bell"></i> Services</a
+            >
+          </li>
+          <li>
+            <a href="blogs.html"><i class="fas fa-blog"></i> Blogs</a>
+          </li>
+          <li>
+            <a href="event.html"><i class="fas fa-calendar-alt"></i> Events</a>
+          </li>
+          <li>
+            <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+          </li>
+        </ul>
+        <div class="mobile-action-buttons mt-4">
+          <a href="#book" class="btn-mobile-book"
+            ><i class="fas fa-ticket-alt"></i> Book Now</a
+          >
+          <a href="https://wa.me/254712345678" class="btn-mobile-wa"
+            ><i class="fab fa-whatsapp"></i> WhatsApp</a
+          >
+        </div>
+        <div class="mobile-contact-info">
+          <p><i class="fas fa-phone-alt"></i> +254 102 593 346</p>
+          <p><i class="fas fa-map-marker-alt"></i> Bofa Road, Kilifi, Kenya</p>
+          <p>
+            <i class="far fa-envelope"></i> transfers@nomadsignaturetrails.co.ke
+          </p>
+          <div class="mobile-social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/254712345678" target="_blank"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      // update price on select change
+      function updatePrice(select, targetId) {
+        const price = select.value;
+        document.getElementById(targetId).innerText = "$" + price;
+      }
+      // ensure carousels work
+      document.addEventListener("DOMContentLoaded", function () {
+        // init carousels (bootstrap handles via data-bs-ride)
+      });
+    </script>
+  </body>
+</html>

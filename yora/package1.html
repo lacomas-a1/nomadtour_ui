@@ -100,25 +100,37 @@
       .experience-card {
         background: #fff;
         border-radius: 20px;
-        padding: 20px 22px;
-        border-left: 5px solid var(--secondary-orange, #c9a84c);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-        transition: 0.2s;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        transition: 0.3s;
         height: 100%;
+        display: flex;
+        flex-direction: column;
       }
       .experience-card:hover {
         transform: translateY(-4px);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.10);
+      }
+      .experience-card .exp-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .experience-card .exp-body {
+        padding: 18px 20px 20px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
       }
       .experience-card .exp-price {
         color: var(--secondary-orange, #c9a84c);
         font-weight: 700;
-        font-size: 1.1rem;
+        font-size: 1.05rem;
+        margin-top: 6px;
       }
-      .experience-card .exp-icon {
-        font-size: 2rem;
-        color: var(--secondary-orange, #c9a84c);
-        margin-bottom: 10px;
+      .experience-card .exp-body .btn {
+        align-self: flex-start;
+        margin-top: 10px;
       }
       .contact-info-card {
         background: #faf8f4;
@@ -271,6 +283,9 @@
         .tab-link {
           padding: 0.5rem 1rem;
         }
+        .experience-card .exp-img {
+          height: 160px;
+        }
       }
     </style>
   </head>
@@ -292,22 +307,22 @@
                 </a>
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
-                        <li class="nav-item">
-                        <a class="nav-link" href="yora3.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link active" href="packages.html">Safari & Experiences</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="stays.html">Accommodation</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="transfer.html">Transfers</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
+                    <li class="nav-item">
+                      <a class="nav-link" href="yora3.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="packages.html">Safari & Experiences</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="stays.html">Accommodation</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="transfer.html">Transfers</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                  </ul>
                 </div>
                 <div class="nav-right">
                   <a href="#book" class="btn-primary-travel"
@@ -413,86 +428,68 @@
               <div class="row g-4">
                 <div class="col-md-4">
                   <div class="experience-card">
-                    <div class="exp-icon"><i class="fas fa-elephant"></i></div>
-                    <h6>3-Day Masai Mara Safari</h6>
-                    <p class="small">
-                      Game drives in search of Big Five, picnic by the Mara
-                      River, and authentic bush dinner under the stars.
-                    </p>
-                    <p class="exp-price">From KES 24,500 / person</p>
-                    <a href="#book" class="btn btn-outline-accent btn-sm"
-                      ><i class="fas fa-calendar-check"></i> Book Now</a
-                    >
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" class="exp-img" alt="Masai Mara Safari">
+                    <div class="exp-body">
+                      <h6>3-Day Masai Mara Safari</h6>
+                      <p class="small">Game drives in search of Big Five, picnic by the Mara River, and authentic bush dinner under the stars.</p>
+                      <p class="exp-price">From KES 24,500 / person</p>
+                      <a href="#book" class="btn btn-outline-accent btn-sm"><i class="fas fa-calendar-check"></i> Book Now</a>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="experience-card">
-                    <div class="exp-icon"><i class="fas fa-mountain"></i></div>
-                    <h6>2-Day Amboseli Safari</h6>
-                    <p class="small">
-                      Witness elephants against Mount Kilimanjaro, visit
-                      Maasai villages, and enjoy stunning savanna views.
-                    </p>
-                    <p class="exp-price">From KES 18,500 / person</p>
-                    <a href="#book" class="btn btn-outline-accent btn-sm"
-                      ><i class="fas fa-calendar-check"></i> Book Now</a
-                    >
+                    <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" class="exp-img" alt="Amboseli Safari">
+                    <div class="exp-body">
+                      <h6>2-Day Amboseli Safari</h6>
+                      <p class="small">Witness elephants against Mount Kilimanjaro, visit Maasai villages, and enjoy stunning savanna views.</p>
+                      <p class="exp-price">From KES 18,500 / person</p>
+                      <a href="#book" class="btn btn-outline-accent btn-sm"><i class="fas fa-calendar-check"></i> Book Now</a>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="experience-card">
-                    <div class="exp-icon"><i class="fas fa-tree"></i></div>
-                    <h6>4-Day Tsavo & Amboseli Combo</h6>
-                    <p class="small">
-                      Explore Kenya's largest national parks with diverse
-                      wildlife, stunning landscapes, and luxury lodges.
-                    </p>
-                    <p class="exp-price">From KES 32,000 / person</p>
-                    <a href="#book" class="btn btn-outline-accent btn-sm"
-                      ><i class="fas fa-calendar-check"></i> Book Now</a
-                    >
+                    <img src="https://images.unsplash.com/photo-1505995433366-e12047f3f144?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" class="exp-img" alt="Tsavo & Amboseli">
+                    <div class="exp-body">
+                      <h6>4-Day Tsavo & Amboseli Combo</h6>
+                      <p class="small">Explore Kenya's largest national parks with diverse wildlife, stunning landscapes, and luxury lodges.</p>
+                      <p class="exp-price">From KES 32,000 / person</p>
+                      <a href="#book" class="btn btn-outline-accent btn-sm"><i class="fas fa-calendar-check"></i> Book Now</a>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="experience-card">
-                    <div class="exp-icon"><i class="fas fa-water"></i></div>
-                    <h6>2-Day Lake Nakuru & Naivasha</h6>
-                    <p class="small">
-                      Flamingos at Lake Nakuru, boat safari on Lake Naivasha,
-                      and crescent island game walk.
-                    </p>
-                    <p class="exp-price">From KES 15,500 / person</p>
-                    <a href="#book" class="btn btn-outline-accent btn-sm"
-                      ><i class="fas fa-calendar-check"></i> Book Now</a
-                    >
+                    <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" class="exp-img" alt="Lake Nakuru">
+                    <div class="exp-body">
+                      <h6>2-Day Lake Nakuru & Naivasha</h6>
+                      <p class="small">Flamingos at Lake Nakuru, boat safari on Lake Naivasha, and crescent island game walk.</p>
+                      <p class="exp-price">From KES 15,500 / person</p>
+                      <a href="#book" class="btn btn-outline-accent btn-sm"><i class="fas fa-calendar-check"></i> Book Now</a>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="experience-card">
-                    <div class="exp-icon"><i class="fas fa-city"></i></div>
-                    <h6>Nairobi National Park Day Trip</h6>
-                    <p class="small">
-                      Wildlife viewing in the city's doorstep — spot rhinos,
-                      lions, and giraffes with Nairobi's skyline backdrop.
-                    </p>
-                    <p class="exp-price">From KES 8,500 / person</p>
-                    <a href="#book" class="btn btn-outline-accent btn-sm"
-                      ><i class="fas fa-calendar-check"></i> Book Now</a
-                    >
+                    <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" class="exp-img" alt="Nairobi National Park">
+                    <div class="exp-body">
+                      <h6>Nairobi National Park Day Trip</h6>
+                      <p class="small">Wildlife viewing in the city's doorstep — spot rhinos, lions, and giraffes with Nairobi's skyline backdrop.</p>
+                      <p class="exp-price">From KES 8,500 / person</p>
+                      <a href="#book" class="btn btn-outline-accent btn-sm"><i class="fas fa-calendar-check"></i> Book Now</a>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="experience-card">
-                    <div class="exp-icon"><i class="fas fa-crown"></i></div>
-                    <h6>VIP Private Safari</h6>
-                    <p class="small">
-                      Exclusive private vehicle, personal guide, luxury lodge,
-                      and fully customizable itinerary for VIP delegates.
-                    </p>
-                    <p class="exp-price">From KES 45,000 / person</p>
-                    <a href="#book" class="btn btn-outline-accent btn-sm"
-                      ><i class="fas fa-calendar-check"></i> Book Now</a
-                    >
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" class="exp-img" alt="VIP Private Safari">
+                    <div class="exp-body">
+                      <h6>VIP Private Safari</h6>
+                      <p class="small">Exclusive private vehicle, personal guide, luxury lodge, and fully customizable itinerary for VIP delegates.</p>
+                      <p class="exp-price">From KES 45,000 / person</p>
+                      <a href="#book" class="btn btn-outline-accent btn-sm"><i class="fas fa-calendar-check"></i> Book Now</a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -503,86 +500,68 @@
               <div class="row g-4">
                 <div class="col-md-4">
                   <div class="experience-card">
-                    <div class="exp-icon"><i class="fas fa-umbrella-beach"></i></div>
-                    <h6>3-Day Kilifi Coastal Retreat</h6>
-                    <p class="small">
-                      Relax on pristine beaches, explore Mnarani ruins, and
-                      enjoy a sunset dhow cruise on Kilifi Creek.
-                    </p>
-                    <p class="exp-price">From KES 22,000 / person</p>
-                    <a href="#book" class="btn btn-outline-accent btn-sm"
-                      ><i class="fas fa-calendar-check"></i> Book Now</a
-                    >
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" class="exp-img" alt="Kilifi Coastal Retreat">
+                    <div class="exp-body">
+                      <h6>3-Day Kilifi Coastal Retreat</h6>
+                      <p class="small">Relax on pristine beaches, explore Mnarani ruins, and enjoy a sunset dhow cruise on Kilifi Creek.</p>
+                      <p class="exp-price">From KES 22,000 / person</p>
+                      <a href="#book" class="btn btn-outline-accent btn-sm"><i class="fas fa-calendar-check"></i> Book Now</a>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="experience-card">
-                    <div class="exp-icon"><i class="fas fa-ship"></i></div>
-                    <h6>Dhow Cruise & Seafood Lunch</h6>
-                    <p class="small">
-                      Sail on a traditional dhow, snorkel in coral gardens, and
-                      enjoy fresh Swahili seafood on a private island.
-                    </p>
-                    <p class="exp-price">From KES 12,500 / person</p>
-                    <a href="#book" class="btn btn-outline-accent btn-sm"
-                      ><i class="fas fa-calendar-check"></i> Book Now</a
-                    >
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" class="exp-img" alt="Dhow Cruise">
+                    <div class="exp-body">
+                      <h6>Dhow Cruise & Seafood Lunch</h6>
+                      <p class="small">Sail on a traditional dhow, snorkel in coral gardens, and enjoy fresh Swahili seafood on a private island.</p>
+                      <p class="exp-price">From KES 12,500 / person</p>
+                      <a href="#book" class="btn btn-outline-accent btn-sm"><i class="fas fa-calendar-check"></i> Book Now</a>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="experience-card">
-                    <div class="exp-icon"><i class="fas fa-spa"></i></div>
-                    <h6>Wellness & Beach Escape</h6>
-                    <p class="small">
-                      Yoga on the beach, spa treatments, meditation sessions,
-                      and healthy coastal cuisine.
-                    </p>
-                    <p class="exp-price">From KES 15,000 / person</p>
-                    <a href="#book" class="btn btn-outline-accent btn-sm"
-                      ><i class="fas fa-calendar-check"></i> Book Now</a
-                    >
+                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" class="exp-img" alt="Wellness & Beach">
+                    <div class="exp-body">
+                      <h6>Wellness & Beach Escape</h6>
+                      <p class="small">Yoga on the beach, spa treatments, meditation sessions, and healthy coastal cuisine.</p>
+                      <p class="exp-price">From KES 15,000 / person</p>
+                      <a href="#book" class="btn btn-outline-accent btn-sm"><i class="fas fa-calendar-check"></i> Book Now</a>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="experience-card">
-                    <div class="exp-icon"><i class="fas fa-monument"></i></div>
-                    <h6>Culture & Heritage Tour</h6>
-                    <p class="small">
-                      Discover Mnarani Ruins, explore Kilifi Old Town, Swahili
-                      storytelling, and visit local artisans.
-                    </p>
-                    <p class="exp-price">From KES 9,500 / person</p>
-                    <a href="#book" class="btn btn-outline-accent btn-sm"
-                      ><i class="fas fa-calendar-check"></i> Book Now</a
-                    >
+                    <img src="https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" class="exp-img" alt="Culture & Heritage">
+                    <div class="exp-body">
+                      <h6>Culture & Heritage Tour</h6>
+                      <p class="small">Discover Mnarani Ruins, explore Kilifi Old Town, Swahili storytelling, and visit local artisans.</p>
+                      <p class="exp-price">From KES 9,500 / person</p>
+                      <a href="#book" class="btn btn-outline-accent btn-sm"><i class="fas fa-calendar-check"></i> Book Now</a>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="experience-card">
-                    <div class="exp-icon"><i class="fas fa-golf-ball"></i></div>
-                    <h6>Golf & Coastal Lifestyle</h6>
-                    <p class="small">
-                      Play at Vipingo Ridge's championship course followed by a
-                      beachside dinner and sunset views.
-                    </p>
-                    <p class="exp-price">From KES 18,500 / person</p>
-                    <a href="#book" class="btn btn-outline-accent btn-sm"
-                      ><i class="fas fa-calendar-check"></i> Book Now</a
-                    >
+                    <img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" class="exp-img" alt="Golf">
+                    <div class="exp-body">
+                      <h6>Golf & Coastal Lifestyle</h6>
+                      <p class="small">Play at Vipingo Ridge's championship course followed by a beachside dinner and sunset views.</p>
+                      <p class="exp-price">From KES 18,500 / person</p>
+                      <a href="#book" class="btn btn-outline-accent btn-sm"><i class="fas fa-calendar-check"></i> Book Now</a>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="experience-card">
-                    <div class="exp-icon"><i class="fas fa-building"></i></div>
-                    <h6>Coastal Real Estate Insight</h6>
-                    <p class="small">
-                      Tour beachfront villas, explore prime investment
-                      locations around Kilifi Creek with local property experts.
-                    </p>
-                    <p class="exp-price">From KES 8,500 / person</p>
-                    <a href="#book" class="btn btn-outline-accent btn-sm"
-                      ><i class="fas fa-calendar-check"></i> Book Now</a
-                    >
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" class="exp-img" alt="Real Estate">
+                    <div class="exp-body">
+                      <h6>Coastal Real Estate Insight</h6>
+                      <p class="small">Tour beachfront villas, explore prime investment locations around Kilifi Creek with local property experts.</p>
+                      <p class="exp-price">From KES 8,500 / person</p>
+                      <a href="#book" class="btn btn-outline-accent btn-sm"><i class="fas fa-calendar-check"></i> Book Now</a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -592,44 +571,42 @@
             <div id="customTab" class="tab-pane">
               <div class="row g-4">
                 <div class="col-lg-8 mx-auto">
-                  <div class="experience-card" style="border-left-color: var(--primary-blue, #2c7da0);">
-                    <h5><i class="fas fa-magic me-2" style="color: var(--secondary-orange);"></i>Design Your Custom Itinerary</h5>
-                    <p>
-                      Combine safaris, coastal escapes, culture, golf, wellness,
-                      and executive experiences into one seamless journey.
-                      Our travel experts will craft a personalized itinerary
-                      based on your preferences, schedule, and budget.
-                    </p>
-                    <div class="row g-3 mt-3">
-                      <div class="col-md-6">
-                        <div class="p-3" style="background: #f8f5ed; border-radius: 16px;">
-                          <i class="fas fa-check-circle" style="color: var(--secondary-orange);"></i>
-                          <span class="ms-2">Choose your destinations</span>
+                  <div class="experience-card" style="border-left: 5px solid var(--primary-blue, #2c7da0);">
+                    <img src="https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=300&q=80" class="exp-img" alt="Custom Itinerary" style="height:200px;">
+                    <div class="exp-body">
+                      <h5><i class="fas fa-magic me-2" style="color: var(--secondary-orange);"></i>Design Your Custom Itinerary</h5>
+                      <p>Combine safaris, coastal escapes, culture, golf, wellness, and executive experiences into one seamless journey. Our travel experts will craft a personalized itinerary based on your preferences, schedule, and budget.</p>
+                      <div class="row g-3 mt-2">
+                        <div class="col-md-6">
+                          <div class="p-3" style="background: #f8f5ed; border-radius: 16px;">
+                            <i class="fas fa-check-circle" style="color: var(--secondary-orange);"></i>
+                            <span class="ms-2">Choose your destinations</span>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="p-3" style="background: #f8f5ed; border-radius: 16px;">
+                            <i class="fas fa-check-circle" style="color: var(--secondary-orange);"></i>
+                            <span class="ms-2">Select accommodation style</span>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="p-3" style="background: #f8f5ed; border-radius: 16px;">
+                            <i class="fas fa-check-circle" style="color: var(--secondary-orange);"></i>
+                            <span class="ms-2">Add activities & experiences</span>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="p-3" style="background: #f8f5ed; border-radius: 16px;">
+                            <i class="fas fa-check-circle" style="color: var(--secondary-orange);"></i>
+                            <span class="ms-2">Set your preferred dates</span>
+                          </div>
                         </div>
                       </div>
-                      <div class="col-md-6">
-                        <div class="p-3" style="background: #f8f5ed; border-radius: 16px;">
-                          <i class="fas fa-check-circle" style="color: var(--secondary-orange);"></i>
-                          <span class="ms-2">Select accommodation style</span>
-                        </div>
+                      <div class="mt-4 text-center">
+                        <a href="#book" class="btn btn-submit">
+                          <i class="fas fa-pen-fancy me-2"></i> Start Designing Your Itinerary
+                        </a>
                       </div>
-                      <div class="col-md-6">
-                        <div class="p-3" style="background: #f8f5ed; border-radius: 16px;">
-                          <i class="fas fa-check-circle" style="color: var(--secondary-orange);"></i>
-                          <span class="ms-2">Add activities & experiences</span>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="p-3" style="background: #f8f5ed; border-radius: 16px;">
-                          <i class="fas fa-check-circle" style="color: var(--secondary-orange);"></i>
-                          <span class="ms-2">Set your preferred dates</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mt-4 text-center">
-                      <a href="#book" class="btn btn-submit">
-                        <i class="fas fa-pen-fancy me-2"></i> Start Designing Your Itinerary
-                      </a>
                     </div>
                   </div>
                 </div>

@@ -6,24 +6,25 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=yes"
     />
-    <title>YORA 2026 • Hotels & Residences | Nomad Signature Trails</title>
+    <title>YORA 2026 • Transfers & Shuttles | Nomad Signature Trails</title>
     <meta
       name="description"
-      content="Business hotels, boutique stays, and executive apartments for YORA 2026 delegates. Book your accommodation in Nairobi & Kilifi."
+      content="Airport transfers & conference shuttles for YORA 2026 delegates. Reliable, luxury transport in Nairobi & Kilifi."
     />
-    <link rel="icon" href="assets/image/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link href="assets/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/y-styles.css" />
+    <link rel="icon" href="../assets/image/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link href="../assets/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/y-styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <style>
+      /* keep brand consistent */
       .contact-header {
         background:
           linear-gradient(rgba(28, 45, 73, 0.88), rgba(28, 45, 73, 0.88)),
-          url("https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")
+          url("https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")
             no-repeat center center;
         background-size: cover;
         min-height: 38vh;
@@ -34,6 +35,14 @@
         text-align: center;
         color: white;
       }
+      /* .contact-header {
+      background: linear-gradient(135deg, #0b2d1e 0%, #1a4d33 50%, #2d6b4a 100%);
+      padding: 20px 0 40px;
+      min-height: 35vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    } */
       .contact-header .hero-content {
         text-align: center;
         margin-top: 20px;
@@ -97,24 +106,14 @@
       .service-icon-box:hover {
         background: #f3efe4;
       }
-      .hotel-card {
+      .schedule-item {
         background: #fff;
         border-radius: 20px;
         padding: 18px 22px;
         border-left: 5px solid var(--secondary-orange, #c9a84c);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-        transition: 0.2s;
-        height: 100%;
       }
-      .hotel-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-      }
-      .hotel-card .hotel-price {
-        color: var(--secondary-orange, #c9a84c);
-        font-weight: 700;
-        font-size: 1.1rem;
-      }
+
       .contact-info-card {
         background: #faf8f4;
         border-radius: 36px;
@@ -122,10 +121,12 @@
         border: 1px solid rgba(201, 168, 76, 0.2);
         height: 100%;
       }
+
       .contact-info-card h2,
       .contact-info-card > p {
         text-align: center;
       }
+
       .contact-feature {
         display: flex;
         flex-direction: column;
@@ -134,10 +135,12 @@
         text-align: center;
         margin-bottom: 32px;
       }
+
       .contact-feature i {
         width: 40px;
         height: 40px;
         border-radius: 50%;
+        /* background: rgba(201, 168, 76, 0.12); */
         color: var(--secondary-orange, #c9a84c);
         display: flex;
         align-items: center;
@@ -146,25 +149,36 @@
         margin-bottom: 15px;
         transition: all 0.3s ease;
       }
+
+      /* .contact-feature:hover i {
+        transform: scale(2.08);
+        background: var(--secondary-orange, #c9a84c);
+        color: #fff;
+      } */
+
       .contact-feature h6 {
         margin-bottom: 8px;
         font-size: 1.05rem;
         font-weight: 700;
         color: var(--primary-green);
       }
+
       .contact-feature p {
         margin: 0;
         color: #666;
         line-height: 1.6;
         max-width: 320px;
       }
+
       .contact-feature a {
         color: inherit;
         text-decoration: none;
       }
+
       .contact-feature a:hover {
         color: var(--secondary-orange, #c9a84c);
       }
+
       .contact-highlight {
         background: #fff;
         border: 1px solid rgba(201, 168, 76, 0.2);
@@ -173,15 +187,41 @@
         margin-top: 10px;
         text-align: center;
       }
+
       .contact-highlight i {
         color: var(--secondary-orange, #c9a84c);
         margin-right: 6px;
       }
+
       .contact-highlight p {
         margin: 0;
         font-size: 0.95rem;
         line-height: 1.7;
       }
+      /* .contact-feature {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 22px;
+      align-items: flex-start;
+    }
+    .contact-feature i {
+      font-size: 1.8rem;
+      color: var(--secondary-orange, #c9a84c);
+      min-width: 40px;
+      margin-top: 4px;
+    }
+    .contact-info-card {
+      background: #faf8f4;
+      border-radius: 36px;
+      padding: 32px 28px;
+      border: 1px solid rgba(201,168,76,0.2);
+      height: 100%;
+    }
+    .contact-info-card .contact-icon {
+      font-size: 2.2rem;
+      color: var(--secondary-orange, #c9a84c);
+      margin-bottom: 12px;
+    } */
       .footer {
         background: #0b2d1e;
         color: #ddd;
@@ -208,6 +248,18 @@
         background: #1ebe5c;
         color: #fff;
       }
+      .tab-link.active {
+        color: var(--primary-blue, #2c7da0);
+      }
+      .tab-link.active::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--primary-blue, #2c7da0);
+      }
       .form-success-msg {
         margin-top: 1rem;
       }
@@ -226,7 +278,7 @@
     </style>
   </head>
   <body>
-    <!-- HEADER -->
+    <!-- HEADER – exactly as requested (contact-header design) -->
     <header class="contact-header">
       <div class="container">
         <div class="navbar-wrapper" id="navbarWrapper">
@@ -242,7 +294,7 @@
                   />
                 </a>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                  <ul class="navbar-nav">
                         <li class="nav-item">
                         <a class="nav-link" href="yora3.html">Home</a>
                         </li>
@@ -250,10 +302,10 @@
                         <a class="nav-link" href="packages.html">Safari & Experiences</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link active" href="stays.html">Accommodation</a>
+                        <a class="nav-link" href="stays.html">Accommodation</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="transfer.html">Transfers</a>
+                        <a class="nav-link active" href="transfer.html">Transfers</a>
                         </li>
                         <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -261,7 +313,9 @@
                     </ul>
                 </div>
                 <div class="nav-right">
-                  <a href="#book" class="btn-primary-travel">Book a Stay</a>
+                  <a href="#book" class="btn-primary-travel"
+                    >Request Transfer</a
+                  >
                 </div>
                 <button
                   class="mobile-menu-toggle"
@@ -276,157 +330,202 @@
           </div>
         </div>
       </div>
+      <!-- hero content centered -->
       <div class="hero-content container">
-        <h1 class="hero-title">YORA 2026 <span>Hotels & Residences</span></h1>
+        <h1 class="hero-title">YORA 2026 <span>Transfers & Shuttles</span></h1>
         <p class="hero-subtitle">
-          Business hotels, boutique stays, and executive apartments carefully
-          selected for YORA summit delegates.
+          Airport transfers, conference shuttles, and executive transport for
+          delegates, speakers, and VIPs.
         </p>
       </div>
     </header>
 
     <!-- main content area -->
     <div class="container contact-section py-4">
-      <!-- Service Cards – 3 columns -->
+      <!-- Contact Info Cards – 3 columns (Airport Transfers, Conference Shuttle, Dedicated Travel Concierge) -->
       <div class="row g-4 mb-5">
         <div class="col-md-4">
           <div class="contact-info-card text-center">
-            <div class="contact-icon"><i class="fas fa-building"></i></div>
-            <h4>Business Hotels</h4>
+            <div class="contact-icon"><i class="fas fa-plane-arrival"></i></div>
+            <h4>Airport Transfers</h4>
             <p>
-              Premium business hotels with conference facilities, high-speed
-              internet, and executive services for summit delegates.
+              24/7 transfers between JKIA, Vipingo, hotels, and residences with
+              professional drivers and real-time flight tracking.
             </p>
-            <div style="display: flex; gap: 12px; justify-content: center">
+            <div
+              style="
+                display: flex;
+                gap: 12px;
+                justify-content: center;
+                flex-wrap: wrap;
+              "
+            >
               <a href="#book" class="btn btn-outline-accent"
                 ><i class="fas fa-calendar-check"></i> Book Now</a
+              >
+              <a href="#" class="btn btn-outline-accent"
+                ><i class="fas fa-phone-alt"></i> +254 102 593 346</a
               >
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="contact-info-card text-center">
-            <div class="contact-icon"><i class="fas fa-spa"></i></div>
-            <h4>Boutique Stays</h4>
+            <div class="contact-icon"><i class="fas fa-shuttle-van"></i></div>
+            <h4>Conference Shuttle</h4>
             <p>
-              Unique boutique hotels with personalized service, local charm,
-              and authentic Kenyan hospitality experiences.
+              Reliable scheduled shuttle services between partner hotels and the
+              YORA conference venue.
             </p>
-            <div style="display: flex; gap: 12px; justify-content: center">
+            <div
+              style="
+                display: flex;
+                gap: 12px;
+                justify-content: center;
+                flex-wrap: wrap;
+              "
+            >
+              <a href="#shuttle" class="btn btn-outline-accent"
+                ><i class="fas fa-clock"></i> View Schedule</a
+              >
               <a href="#book" class="btn btn-outline-accent"
-                ><i class="fas fa-calendar-check"></i> Book Now</a
+                ><i class="fas fa-ticket-alt"></i> Reserve Seat</a
               >
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="contact-info-card text-center">
-            <div class="contact-icon"><i class="fas fa-building"></i></div>
-            <h4>Executive Apartments</h4>
+            <div class="contact-icon"><i class="fas fa-headset"></i></div>
+            <h4>Dedicated Travel Concierge</h4>
             <p>
-              Spacious serviced apartments with kitchens, living areas, and
-              premium amenities for extended stays and VIP delegates.
+              One WhatsApp contact for itinerary updates, reservations, travel
+              assistance, and on-ground support throughout your stay.
             </p>
-            <div style="display: flex; gap: 12px; justify-content: center">
-              <a href="#book" class="btn btn-outline-accent"
-                ><i class="fas fa-calendar-check"></i> Book Now</a
+            <div
+              style="
+                display: flex;
+                gap: 12px;
+                justify-content: center;
+                flex-wrap: wrap;
+              "
+            >
+              <a
+                href="https://wa.me/254712345678"
+                target="_blank"
+                class="btn btn-outline-accent"
+                ><i class="fab fa-whatsapp"></i> Chat Now</a
+              >
+              <a href="#contact" class="btn btn-outline-accent"
+                ><i class="fas fa-info-circle"></i> Learn More</a
               >
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Featured Hotels -->
-      <div class="container py-4" id="hotels">
-        <h3 class="section-title">Featured YORA Accommodations</h3>
+      <!-- Shuttle Schedule -->
+      <div class="container py-4" id="shuttle">
+        <h3 class="section-title">YORA Conference Shuttle Schedule</h3>
         <p class="mb-4">
-          Carefully selected hotels and residences near the YORA conference
-          venue with special delegate rates.
+          Daily shuttles from partner hotels to the YORA venue. Times subject to
+          change – check with concierge.
         </p>
-        <div class="row g-4">
+        <div class="row g-3">
           <div class="col-md-4">
-            <div class="hotel-card">
+            <div class="schedule-item">
               <h6>
-                <i class="fas fa-hotel me-2" style="color: var(--secondary-orange)"></i
+                <i
+                  class="fas fa-hotel me-2"
+                  style="color: var(--secondary-orange)"
+                ></i
                 >Hemingways Nairobi
               </h6>
-              <p class="small">Luxury business hotel with conference center, pool, and fine dining.</p>
-              <p class="hotel-price">From KES 25,000 / night</p>
-              <a href="#book" class="btn btn-outline-accent btn-sm"
-                ><i class="fas fa-calendar-check"></i> Check Availability</a
-              >
+              <p>
+                <i class="far fa-clock me-2"></i>07:45 · 08:30 · 12:15 · 17:00
+              </p>
+              <small class="text-muted">Return: 18:30, 20:15</small>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="hotel-card">
+            <div class="schedule-item">
               <h6>
-                <i class="fas fa-hotel me-2" style="color: var(--secondary-orange)"></i
+                <i
+                  class="fas fa-hotel me-2"
+                  style="color: var(--secondary-orange)"
+                ></i
                 >Villa Rosa Kempinski
               </h6>
-              <p class="small">5-star luxury hotel with spa, business center, and executive lounge.</p>
-              <p class="hotel-price">From KES 32,000 / night</p>
-              <a href="#book" class="btn btn-outline-accent btn-sm"
-                ><i class="fas fa-calendar-check"></i> Check Availability</a
-              >
+              <p>
+                <i class="far fa-clock me-2"></i>07:30 · 08:15 · 12:00 · 16:45
+              </p>
+              <small class="text-muted">Return: 18:15, 20:00</small>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="hotel-card">
+            <div class="schedule-item">
               <h6>
-                <i class="fas fa-hotel me-2" style="color: var(--secondary-orange)"></i
+                <i
+                  class="fas fa-hotel me-2"
+                  style="color: var(--secondary-orange)"
+                ></i
                 >Fairmont Norfolk
               </h6>
-              <p class="small">Historic luxury hotel with gardens, pool, and premium conference facilities.</p>
-              <p class="hotel-price">From KES 28,000 / night</p>
-              <a href="#book" class="btn btn-outline-accent btn-sm"
-                ><i class="fas fa-calendar-check"></i> Check Availability</a
-              >
+              <p>
+                <i class="far fa-clock me-2"></i>07:40 · 08:20 · 12:10 · 16:55
+              </p>
+              <small class="text-muted">Return: 18:20, 20:10</small>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="hotel-card">
+            <div class="schedule-item">
               <h6>
-                <i class="fas fa-hotel me-2" style="color: var(--secondary-orange)"></i
+                <i
+                  class="fas fa-hotel me-2"
+                  style="color: var(--secondary-orange)"
+                ></i
                 >Radisson Blu Nairobi
               </h6>
-              <p class="small">Modern business hotel with meeting rooms, fitness center, and rooftop dining.</p>
-              <p class="hotel-price">From KES 22,000 / night</p>
-              <a href="#book" class="btn btn-outline-accent btn-sm"
-                ><i class="fas fa-calendar-check"></i> Check Availability</a
-              >
+              <p>
+                <i class="far fa-clock me-2"></i>07:50 · 08:35 · 12:20 · 17:10
+              </p>
+              <small class="text-muted">Return: 18:40, 20:25</small>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="hotel-card">
+            <div class="schedule-item">
               <h6>
-                <i class="fas fa-hotel me-2" style="color: var(--secondary-orange)"></i
+                <i
+                  class="fas fa-hotel me-2"
+                  style="color: var(--secondary-orange)"
+                ></i
                 >Boma Inn Nairobi
               </h6>
-              <p class="small">Comfortable business hotel with conference rooms and convenient location.</p>
-              <p class="hotel-price">From KES 18,000 / night</p>
-              <a href="#book" class="btn btn-outline-accent btn-sm"
-                ><i class="fas fa-calendar-check"></i> Check Availability</a
-              >
+              <p>
+                <i class="far fa-clock me-2"></i>07:35 · 08:10 · 12:05 · 16:50
+              </p>
+              <small class="text-muted">Return: 18:10, 19:55</small>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="hotel-card">
+            <div class="schedule-item">
               <h6>
-                <i class="fas fa-building me-2" style="color: var(--secondary-orange)"></i
-                >Executive Apartments
+                <i
+                  class="fas fa-hotel me-2"
+                  style="color: var(--secondary-orange)"
+                ></i
+                >Eka Hotel (near JKIA)
               </h6>
-              <p class="small">Serviced apartments with kitchen, living room, and premium amenities.</p>
-              <p class="hotel-price">From KES 15,000 / night</p>
-              <a href="#book" class="btn btn-outline-accent btn-sm"
-                ><i class="fas fa-calendar-check"></i> Check Availability</a
-              >
+              <p>
+                <i class="far fa-clock me-2"></i>07:55 · 08:40 · 12:25 · 17:15
+              </p>
+              <small class="text-muted">Return: 18:45, 20:30</small>
             </div>
           </div>
         </div>
         <div class="mt-3 text-muted small">
-          <i class="fas fa-info-circle me-1"></i> Special YORA delegate rates
-          available. Contact our travel desk for group bookings and extended
-          stays.
+          <i class="fas fa-info-circle me-1"></i> Extra shuttles available for
+          VIP / speaker schedules. Contact YORA Travel Desk.
         </div>
       </div>
 
@@ -443,71 +542,73 @@
               "
             >
               <i
+                class="fas fa-user-tie fa-2x"
+                style="color: var(--secondary-orange)"
+              ></i>
+              <h6 class="mt-2">Executive Transfers</h6>
+              <p class="small">
+                Premium vehicles with Wi‑Fi, water, and professional drivers for
+                VIP delegates.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div
+              style="
+                background: #f8f5ed;
+                border-radius: 24px;
+                padding: 20px;
+                border: 1px solid rgba(201, 168, 76, 0.1);
+              "
+            >
+              <i
+                class="fas fa-clock fa-2x"
+                style="color: var(--secondary-orange)"
+              ></i>
+              <h6 class="mt-2">24/7 Flight Tracking</h6>
+              <p class="small">
+                We monitor your flight and adjust pickup times – no extra charge
+                for delays.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div
+              style="
+                background: #f8f5ed;
+                border-radius: 24px;
+                padding: 20px;
+                border: 1px solid rgba(201, 168, 76, 0.1);
+              "
+            >
+              <i
+                class="fas fa-hand-holding-heart fa-2x"
+                style="color: var(--secondary-orange)"
+              ></i>
+              <h6 class="mt-2">Group & Delegation</h6>
+              <p class="small">
+                Coordinated shuttle blocks for corporate teams, exhibitors, and
+                speaker groups.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div
+              style="
+                background: #f8f5ed;
+                border-radius: 24px;
+                padding: 20px;
+                border: 1px solid rgba(201, 168, 76, 0.1);
+              "
+            >
+              <i
                 class="fas fa-concierge-bell fa-2x"
                 style="color: var(--secondary-orange)"
               ></i>
-              <h6 class="mt-2">24/7 Concierge</h6>
+              <h6 class="mt-2">Personal Concierge</h6>
               <p class="small">
-                Dedicated support for check-in, room requests, and any
-                assistance you need.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div
-              style="
-                background: #f8f5ed;
-                border-radius: 24px;
-                padding: 20px;
-                border: 1px solid rgba(201, 168, 76, 0.1);
-              "
-            >
-              <i
-                class="fas fa-wifi fa-2x"
-                style="color: var(--secondary-orange)"
-              ></i>
-              <h6 class="mt-2">Premium Connectivity</h6>
-              <p class="small">
-                High-speed internet and business facilities in all partner hotels.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div
-              style="
-                background: #f8f5ed;
-                border-radius: 24px;
-                padding: 20px;
-                border: 1px solid rgba(201, 168, 76, 0.1);
-              "
-            >
-              <i
-                class="fas fa-shuttle-van fa-2x"
-                style="color: var(--secondary-orange)"
-              ></i>
-              <h6 class="mt-2">Conference Shuttle</h6>
-              <p class="small">
-                Daily shuttle service between hotels and the YORA conference venue.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div
-              style="
-                background: #f8f5ed;
-                border-radius: 24px;
-                padding: 20px;
-                border: 1px solid rgba(201, 168, 76, 0.1);
-              "
-            >
-              <i
-                class="fas fa-utensils fa-2x"
-                style="color: var(--secondary-orange)"
-              ></i>
-              <h6 class="mt-2">Dining Options</h6>
-              <p class="small">
-                On-site restaurants, room service, and nearby dining
-                recommendations.
+                Dedicated WhatsApp support for itinerary updates, reservations,
+                and on-ground assistance.
               </p>
             </div>
           </div>
@@ -520,13 +621,14 @@
           <div class="col-lg-7">
             <div class="contact-form-wrapper">
               <h3 class="mb-4" style="color: var(--primary-blue)">
-                Book Your YORA Accommodation
+                Book Airport Transfer or Shuttle
               </h3>
               <p class="mb-4">
-                Complete the form below and our YORA Travel Desk will confirm
-                your hotel reservation within 2 hours. Special delegate rates available.
+                Complete the form and our YORA Travel Desk will confirm your
+                transfer within 2 hours. For group bookings or special requests,
+                use the message field.
               </p>
-              <form id="hotelBookingForm" action="#" method="POST">
+              <form id="yoraInquiryForm" action="#" method="POST">
                 <div class="row g-3">
                   <div class="col-md-6">
                     <label class="form-label">Full Name *</label
@@ -561,65 +663,54 @@
                     ><input type="text" class="form-control" name="country" />
                   </div>
                   <div class="col-md-6">
-                    <label class="form-label">Check-in Date *</label
+                    <label class="form-label">Arrival Date</label
                     ><input
                       type="date"
                       class="form-control"
-                      name="checkin"
-                      required
+                      name="arrival_date"
                     />
                   </div>
                   <div class="col-md-6">
-                    <label class="form-label">Check-out Date *</label
+                    <label class="form-label">Flight / Arrival Time</label
                     ><input
-                      type="date"
+                      type="text"
                       class="form-control"
-                      name="checkout"
-                      required
+                      name="flight_time"
+                      placeholder="e.g. BA 123, 14:30"
                     />
                   </div>
                   <div class="col-md-6">
-                    <label class="form-label">Hotel Preference</label>
+                    <label class="form-label">Transfer Type</label>
+                    <select class="form-select" name="transfer_type">
+                      <option>Airport Transfer (JKIA → Hotel)</option>
+                      <option>Airport Transfer (Hotel → JKIA)</option>
+                      <option>Conference Shuttle (Hotel → Venue)</option>
+                      <option>Conference Shuttle (Venue → Hotel)</option>
+                      <option>VIP Executive Transfer</option>
+                      <option>Group Transfer (10+ pax)</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Hotel / Pickup Location</label>
                     <select class="form-select" name="hotel">
-                      <option value="">Select a hotel</option>
                       <option>Hemingways Nairobi</option>
                       <option>Villa Rosa Kempinski</option>
                       <option>Fairmont Norfolk</option>
                       <option>Radisson Blu Nairobi</option>
-                      <option>Boma Inn Nairobi</option>
-                      <option>Executive Apartment</option>
-                      <option>Boutique Hotel</option>
-                      <option>No Preference (Best Available)</option>
+                      <option>Boma Inn</option>
+                      <option>Eka Hotel</option>
+                      <option>Other (specify in message)</option>
                     </select>
                   </div>
-                  <div class="col-md-6">
-                    <label class="form-label">Room Type</label>
-                    <select class="form-select" name="room_type">
-                      <option>Single Room</option>
-                      <option>Double Room</option>
-                      <option>Twin Room</option>
-                      <option>Suite</option>
-                      <option>Executive Apartment</option>
-                      <option>Presidential Suite</option>
+                  <div class="col-12">
+                    <label class="form-label">Number of Passengers</label>
+                    <select class="form-select" name="pax">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3-5</option>
+                      <option>6-10</option>
+                      <option>10+</option>
                     </select>
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label">Number of Guests</label>
-                    <select class="form-select" name="guests">
-                      <option>1 Guest</option>
-                      <option>2 Guests</option>
-                      <option>3-4 Guests</option>
-                      <option>5+ Guests (Group)</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label">YORA Delegate Code</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="delegate_code"
-                      placeholder="Enter your delegate code for special rates"
-                    />
                   </div>
                   <div class="col-12">
                     <label class="form-label"
@@ -629,12 +720,12 @@
                       class="form-control"
                       rows="4"
                       name="message"
-                      placeholder="Dietary requirements, accessibility needs, early check-in, late check-out, etc."
+                      placeholder="Flight changes, accessibility needs, group name, extra luggage, etc."
                     ></textarea>
                   </div>
                   <div class="col-12">
                     <button type="submit" class="btn-submit">
-                      <i class="fas fa-hotel me-2"></i> Book Accommodation
+                      <i class="fas fa-paper-plane me-2"></i> Request Transfer
                     </button>
                   </div>
                 </div>
@@ -642,9 +733,6 @@
                   ><i class="fas fa-lock me-1"></i> Secure. Response within 2
                   hours.</small
                 >
-                <div id="bookingSuccessMsg" class="alert alert-success mt-3 d-none form-success-msg">
-                  ✅ Booking request sent! Our YORA Travel Desk will confirm your reservation within 2 hours.
-                </div>
               </form>
             </div>
           </div>
@@ -652,27 +740,17 @@
             <div class="contact-info-card">
               <h2 class="text-center">YORA Travel Desk</h2>
               <p class="text-center mb-5">
-                Dedicated support for hotel bookings, residences, and
-                accommodation services.
+                Dedicated support for airport transfers, conference shuttles,
+                and executive transport.
               </p>
 
               <div class="contact-feature">
                 <i class="fas fa-phone-alt"></i>
                 <div>
-                  <h6>24/7 Booking Hotline</h6>
+                  <h6>24/7 Transfer Hotline/ WhatsApp</h6>
                   <p><a href="tel:+254102593346">+254 102 593 346</a></p>
-                </div>
-              </div>
-
-              <div class="contact-feature">
-                <i class="fas fa-whatsapp"></i>
-                <div>
-                  <h6>WhatsApp Concierge</h6>
-                  <p>
-                    <a href="https://wa.me/254712345678" target="_blank">
+                  <a href="https://wa.me/254712345678" target="_blank">
                       +254 712 345 678
-                    </a>
-                  </p>
                 </div>
               </div>
 
@@ -681,12 +759,33 @@
                 <div>
                   <h6>Email</h6>
                   <p>
-                    <a href="mailto:hotels@nomadsignaturetrails.co.ke"
-                      >hotels@nomadsignaturetrails.co.ke</a
+                    <a href="mailto:transfers@nomadsignaturetrails.co.ke"
+                      >transfers@nomadsignaturetrails.co.ke</a
                     >
                   </p>
                 </div>
               </div>
+
+              <div class="contact-feature">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <h6>Shuttle Support</h6>
+                  <p>07:00 – 21:00 (Conference Days)</p>
+                </div>
+              </div>
+
+              <!-- <div class="contact-feature">
+                <i class="fas fa-headset"></i>
+                <div>
+                  <h6>On-ground Concierge</h6>
+                  <p>
+                    WhatsApp:
+                    <a href="https://wa.me/254712345678" target="_blank">
+                      +254 712 345 678
+                    </a>
+                  </p>
+                </div>
+              </div> -->
 
               <div class="contact-feature">
                 <i class="fas fa-user-check"></i>
@@ -703,7 +802,7 @@
               <div class="contact-highlight">
                 <p>
                   <i class="fas fa-check-circle"></i>
-                  Special YORA delegate rates • 24/7 support • Luxury fleet •
+                  Real-time flight tracking • VIP meet & greet • Luxury fleet •
                   Personal concierge
                 </p>
               </div>
@@ -713,7 +812,7 @@
       </div>
     </div>
 
-    <!-- Footer -->
+    <!-- Footer (exact brand) -->
     <footer
       style="
         background: #0b2d1e;
@@ -752,11 +851,14 @@
           </div>
           <div class="col-md-3">
             <h5>Services</h5>
-            <a href="#" style="color: #ccc; display: block">Business Hotels</a
-            ><a href="#" style="color: #ccc; display: block">Boutique Stays</a
+            <a href="#" style="color: #ccc; display: block">Airport Transfers</a
             ><a href="#" style="color: #ccc; display: block"
-              >Executive Apartments</a
-            ><a href="#" style="color: #ccc; display: block">Travel Concierge</a>
+              >Conference Shuttle</a
+            ><a href="#" style="color: #ccc; display: block"
+              >Executive Transport</a
+            ><a href="#" style="color: #ccc; display: block"
+              >Travel Concierge</a
+            >
           </div>
           <div class="col-md-3">
             <h5>Policies</h5>
@@ -848,7 +950,7 @@
           <p><i class="fas fa-phone-alt"></i> +254 102 593 346</p>
           <p><i class="fas fa-map-marker-alt"></i> Bofa Road, Kilifi, Kenya</p>
           <p>
-            <i class="far fa-envelope"></i> hotels@nomadsignaturetrails.co.ke
+            <i class="far fa-envelope"></i> transfers@nomadsignaturetrails.co.ke
           </p>
           <div class="mobile-social-links">
             <a href="#"><i class="fab fa-instagram"></i></a>
@@ -867,26 +969,51 @@
     <script src="assets/js/main.js"></script>
     <script>
       (function () {
-        // Booking form handler
-        const bookingForm = document.getElementById('hotelBookingForm');
-        const bookingSuccessMsg = document.getElementById('bookingSuccessMsg');
+        // Tab switching
+        const tabButtons = document.querySelectorAll(".tab-link");
+        const tabPanes = document.querySelectorAll(".tab-pane");
 
+        function switchTab(tabId) {
+          tabPanes.forEach((pane) => (pane.style.display = "none"));
+          tabButtons.forEach((btn) => btn.classList.remove("active"));
+          const activePane = document.getElementById(tabId);
+          if (activePane) activePane.style.display = "block";
+          const activeBtn = document.querySelector(
+            `.tab-link[data-tab="${tabId}"]`,
+          );
+          if (activeBtn) activeBtn.classList.add("active");
+        }
+
+        tabButtons.forEach((btn) => {
+          btn.addEventListener("click", function (e) {
+            const targetTabId = this.getAttribute("data-tab");
+            if (targetTabId) switchTab(targetTabId);
+          });
+        });
+
+        // Booking form handler
+        const bookingForm = document.getElementById("bookingTransferForm");
+        const bookingSuccessMsg = document.getElementById("bookingSuccessMsg");
         if (bookingForm) {
-          bookingForm.addEventListener('submit', function (e) {
+          bookingForm.addEventListener("submit", function (e) {
             e.preventDefault();
             let isValid = true;
-            this.querySelectorAll('[required]').forEach((f) => {
+            this.querySelectorAll("[required]").forEach((f) => {
               if (!f.value.trim()) isValid = false;
             });
             if (isValid) {
-              bookingSuccessMsg.classList.remove('d-none');
+              bookingSuccessMsg.classList.remove("d-none");
               bookingForm.reset();
-              setTimeout(() => bookingSuccessMsg.classList.add('d-none'), 5000);
+              setTimeout(() => bookingSuccessMsg.classList.add("d-none"), 5000);
             } else {
-              alert('Please fill all required fields (*).');
+              alert("Please fill all required fields (*).");
             }
           });
         }
+
+        // Ensure initial active tab
+        if (!document.querySelector(".tab-link.active"))
+          switchTab("bookingTab");
       })();
     </script>
   </body>

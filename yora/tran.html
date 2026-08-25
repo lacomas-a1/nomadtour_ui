@@ -1,0 +1,427 @@
+<style>
+  .ftr-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 24px;
+  }
+
+  .ftr-main {
+    position: relative;
+    min-height: 500px;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #0f172a;
+  }
+
+  .ftr-main .carousel,
+  .ftr-main .carousel-inner,
+  .ftr-main .carousel-item {
+    height: 100%;
+  }
+
+  .ftr-main .carousel-item {
+    position: relative;
+  }
+
+  .ftr-main .carousel-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.1) 60%,
+      rgba(0, 0, 0, 0.15)
+    );
+    z-index: 1;
+  }
+
+  .ftr-main .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ftr-main-content {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 45px;
+    z-index: 3;
+    color: #fff;
+  }
+
+  .ftr-tag {
+    display: inline-block;
+    background: var(--secondary-orange);
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .ftr-main-content h3 {
+    margin: 0 0 8px;
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .ftr-main-content p {
+    margin: 0;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .ftr-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    height: 100%;
+  }
+
+  .ftr-sub-card {
+    position: relative;
+    min-height: 238px;
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #0f172a;
+  }
+
+  .ftr-sub-card img {
+    width: 100%;
+    height: 100%;
+    min-height: 238px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .ftr-sub-card:hover img {
+    transform: scale(1.06);
+  }
+
+  .ftr-sub-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.05)
+    );
+  }
+
+  .ftr-sub-content {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 18px;
+    z-index: 2;
+    color: #fff;
+  }
+
+  .ftr-sub-content h4 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .ftr-sub-content p {
+    margin: 0;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .ftr-assistance {
+    background: #0f172a;
+  }
+
+  .ftr-assistance::after {
+    display: none;
+  }
+
+  .ftr-assistance .ftr-sub-content {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+
+  .ftr-assistance .ftr-sub-content h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .ftr-assistance .ftr-sub-content p {
+    line-height: 1.6;
+  }
+
+  .ftr-main .carousel-control-prev,
+  .ftr-main .carousel-control-next {
+    width: 10%;
+    z-index: 5;
+  }
+
+  .ftr-main .carousel-indicators {
+    z-index: 5;
+    margin-bottom: 15px;
+  }
+
+  .ftr-main .carousel-indicators button {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: 0;
+  }
+
+  @media (max-width: 991px) {
+    .ftr-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .ftr-main {
+      min-height: 450px;
+    }
+
+    .ftr-right {
+      min-height: 500px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .ftr-right {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+
+    .ftr-sub-card {
+      min-height: 220px;
+    }
+
+    .ftr-sub-card img {
+      min-height: 220px;
+    }
+
+    .ftr-main-content {
+      left: 20px;
+      right: 20px;
+      bottom: 40px;
+    }
+
+    .ftr-main-content h3 {
+      font-size: 24px;
+    }
+  }
+</style>
+
+<div class="container py-4">
+  <!-- Section Header -->
+  <div class="section-header-center">
+    <h2>Our Fleet — YORA Transfer Vehicles</h2>
+    <p>Click any vehicle to see it in the main spotlight</p>
+  </div>
+
+  <div class="ftr-grid" id="galleryGrid">
+    <!-- ========================================= -->
+    <!-- MAIN FLEET CAROUSEL -->
+    <!-- ========================================= -->
+
+    <div class="ftr-main" id="galleryMain">
+      <div
+        id="fleetCarousel"
+        class="carousel slide h-100"
+        data-bs-ride="carousel"
+        data-bs-interval="4000"
+        data-bs-pause="hover"
+      >
+        <div class="carousel-inner h-100">
+          <!-- BUS -->
+          <div class="carousel-item active h-100">
+            <img
+              src="https://images.unsplash.com/photo-1559416523-140ddc3d238c?w=900&h=600&fit=crop&auto=format"
+              alt="Bus (Luxury Coach)"
+            />
+
+            <div class="ftr-main-content">
+              <span class="ftr-tag"> Fleet </span>
+
+              <h3>Bus (Luxury Coach)</h3>
+
+              <p>Luxury coach · group transfers · Wi-Fi & water</p>
+            </div>
+          </div>
+
+          <!-- VAN -->
+          <div class="carousel-item h-100">
+            <img
+              src="https://images.unsplash.com/photo-1562911791-c7a97b729ec5?w=900&h=600&fit=crop&auto=format"
+              alt="Van (Executive)"
+            />
+
+            <div class="ftr-main-content">
+              <span class="ftr-tag"> Fleet </span>
+
+              <h3>Van (Executive)</h3>
+
+              <p>Executive van · premium comfort · leather seats</p>
+            </div>
+          </div>
+
+          <!-- PRIVATE -->
+          <div class="carousel-item h-100">
+            <img
+              src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=900&h=600&fit=crop&auto=format"
+              alt="Private (Luxury Sedan/Cruiser)"
+            />
+
+            <div class="ftr-main-content">
+              <span class="ftr-tag"> Fleet </span>
+
+              <h3>Private (Luxury Sedan/Cruiser)</h3>
+
+              <p>VIP transfer · private travel · premium comfort</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PREVIOUS BUTTON -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#fleetCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden"> Previous </span>
+        </button>
+
+        <!-- NEXT BUTTON -->
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#fleetCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden"> Next </span>
+        </button>
+
+        <!-- CAROUSEL INDICATORS -->
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#fleetCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Bus"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#fleetCarousel"
+            data-bs-slide-to="1"
+            aria-label="Van"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#fleetCarousel"
+            data-bs-slide-to="2"
+            aria-label="Private"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================= -->
+    <!-- RIGHT SIDE VEHICLE CARDS -->
+    <!-- ========================================= -->
+
+    <div>
+      <div class="ftr-right">
+        <!-- ================================= -->
+        <!-- BUS CARD -->
+        <!-- ================================= -->
+
+        <div class="ftr-sub-card" data-slide="0" onclick="selectFleet(this)">
+          <img
+            src="https://images.unsplash.com/photo-1559416523-140ddc3d238c?w=600&h=400&fit=crop&auto=format"
+            alt="Bus (Luxury Coach)"
+          />
+
+          <div class="ftr-sub-content">
+            <h4>Bus (Luxury Coach)</h4>
+
+            <p>Group transfers</p>
+          </div>
+        </div>
+
+        <!-- ================================= -->
+        <!-- VAN CARD -->
+        <!-- ================================= -->
+
+        <div class="ftr-sub-card" data-slide="1" onclick="selectFleet(this)">
+          <img
+            src="https://images.unsplash.com/photo-1562911791-c7a97b729ec5?w=600&h=400&fit=crop&auto=format"
+            alt="Van (Executive)"
+          />
+
+          <div class="ftr-sub-content">
+            <h4>Van (Executive)</h4>
+
+            <p>Premium comfort</p>
+          </div>
+        </div>
+
+        <!-- ================================= -->
+        <!-- PRIVATE CARD -->
+        <!-- ================================= -->
+
+        <div class="ftr-sub-card" data-slide="2" onclick="selectFleet(this)">
+          <img
+            src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=600&h=400&fit=crop&auto=format"
+            alt="Private (Luxury Sedan/Cruiser)"
+          />
+
+          <div class="ftr-sub-content">
+            <h4>Private (Luxury Sedan/Cruiser)</h4>
+
+            <p>VIP transfer</p>
+          </div>
+        </div>
+
+        <!-- ================================= -->
+        <!-- 24/7 ASSISTANCE -->
+        <!-- ================================= -->
+
+        <div class="ftr-sub-card ftr-assistance">
+          <div class="ftr-sub-content">
+            <h4>24/7 Guest Assistance</h4>
+
+            <p>
+              Dedicated support available anytime for a seamless experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function selectFleet(card) {
+    const slideIndex = parseInt(card.getAttribute("data-slide"));
+
+    const carouselElement = document.getElementById("fleetCarousel");
+
+    const carousel = bootstrap.Carousel.getOrCreateInstance(carouselElement, {
+      interval: false,
+    });
+
+    carousel.to(slideIndex);
+  }
+</script>
