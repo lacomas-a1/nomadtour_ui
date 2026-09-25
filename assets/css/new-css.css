@@ -1,0 +1,847 @@
+
+/* =========================================================
+   BRAND COLORS
+========================================================= */
+
+:root {
+    --support-green: #059669;
+    --white: #FFFFFF;
+    --light: #F8F9FA;
+    --soft-gray: #F1F5F9;
+    --dark: #1f2937;
+    --secondary-orange: #ff6b00;
+    --deep-navy: #1C2D49;
+}
+
+
+/* =========================================================
+   SEASONAL ESCAPES / STAYS CTA
+========================================================= */
+
+.stays-cta-wrapper {
+    width: 100%;
+    padding: 60px 0;
+    margin: 0;
+}
+
+
+/* =========================================================
+   SEASONAL HEADER
+========================================================= */
+
+.seasonal-header {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.seasonal-header .cta-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 8px 16px;
+    margin-bottom: 15px;
+
+    border-radius: 50px;
+
+    background: rgba(5, 150, 105, 0.10);
+    color: var(--support-green);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    border: 1px solid rgba(5, 150, 105, 0.15);
+}
+
+.seasonal-header .cta-badge i {
+    font-size: 13px;
+}
+
+.seasonal-header h2 {
+    color: var(--deep-navy);
+
+    font-size: 38px;
+    font-weight: 700;
+
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.seasonal-header p {
+    color: var(--dark);
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    opacity: 0.8;
+    margin-bottom: 0;
+}
+
+.seasonal-header p strong {
+    color: var(--secondary-orange);
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   SAFARI CARD
+========================================================= */
+
+.safari-card {
+    height: 100%;
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: var(--white);
+
+    border: 1px solid rgba(28, 45, 73, 0.10);
+
+    box-shadow: 0 12px 35px rgba(28, 45, 73, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.safari-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 45px rgba(28, 45, 73, 0.14);
+
+    border-color: rgba(5, 150, 105, 0.20);
+}
+
+
+/* =========================================================
+   SAFARI IMAGE
+========================================================= */
+
+.safari-image-wrapper {
+    position: relative;
+
+    height: 260px;
+
+    overflow: hidden;
+}
+
+.safari-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.safari-card:hover .safari-image {
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   DURATION BADGE
+========================================================= */
+
+.safari-duration {
+    position: absolute;
+
+    top: 16px;
+    right: 16px;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 8px 13px;
+
+    border-radius: 50px;
+
+    background: rgba(28, 45, 73, 0.90);
+
+    color: var(--white);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    backdrop-filter: blur(6px);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.safari-duration i {
+    color: var(--secondary-orange);
+}
+
+
+/* =========================================================
+   SAFARI CONTENT
+========================================================= */
+
+.safari-content {
+    padding: 25px;
+}
+
+.safari-location {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 10px;
+
+    color: var(--support-green);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.safari-location i {
+    color: var(--secondary-orange);
+}
+
+.safari-content h3 {
+    color: var(--deep-navy);
+
+    font-size: 24px;
+    font-weight: 700;
+
+    margin-bottom: 12px;
+
+    line-height: 1.25;
+}
+
+.safari-content > p {
+    color: var(--dark);
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    margin-bottom: 22px;
+
+    opacity: 0.75;
+}
+
+
+/* =========================================================
+   SAFARI DETAILS
+========================================================= */
+
+.safari-details {
+    display: flex;
+    flex-direction: column;
+
+    gap: 13px;
+
+    margin-bottom: 25px;
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(28, 45, 73, 0.10);
+}
+
+.safari-detail {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.safari-detail > i {
+    width: 38px;
+    height: 38px;
+
+    flex: 0 0 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(5, 150, 105, 0.10);
+
+    color: var(--support-green);
+
+    font-size: 14px;
+}
+
+.safari-detail small {
+    display: block;
+
+    color: var(--dark);
+
+    font-size: 11px;
+
+    opacity: 0.6;
+
+    margin-bottom: 2px;
+}
+
+.safari-detail strong {
+    display: block;
+
+    color: var(--deep-navy);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   SAFARI CARD BUTTONS
+========================================================= */
+
+.safari-card-buttons {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: auto;
+}
+
+
+/* =========================================================
+   PLAN YOUR TRIP BUTTON
+========================================================= */
+
+.btn-plan-trip {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 13px 17px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    background: var(--secondary-orange);
+    color: var(--white);
+
+    border: 1px solid var(--secondary-orange);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.btn-plan-trip span {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+.btn-plan-trip:hover {
+    background: var(--deep-navy);
+    border-color: var(--deep-navy);
+
+    color: var(--white);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 18px rgba(28, 45, 73, 0.18);
+}
+
+.btn-plan-trip > i {
+    transition: transform 0.3s ease;
+}
+
+.btn-plan-trip:hover > i {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   DOWNLOAD ITINERARY BUTTON
+========================================================= */
+
+.btn-download-itinerary {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 17px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    background: var(--white);
+
+    color: var(--deep-navy);
+
+    border: 1px solid rgba(28, 45, 73, 0.15);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.btn-download-itinerary span {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+.btn-download-itinerary span i {
+    color: var(--secondary-orange);
+}
+
+.btn-download-itinerary > i {
+    color: var(--support-green);
+
+    transition: transform 0.3s ease;
+}
+
+.btn-download-itinerary:hover {
+    background: var(--soft-gray);
+
+    border-color: var(--support-green);
+
+    color: var(--deep-navy);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 15px rgba(5, 150, 105, 0.10);
+}
+
+.btn-download-itinerary:hover > i {
+    transform: translateY(3px);
+}
+
+
+/* =========================================================
+   GRAND KENYA SAFARI META
+========================================================= */
+
+.grand-safari-meta {
+    display: flex;
+    align-items: center;
+
+    justify-content: flex-start;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+}
+
+.grand-safari-meta span {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 7px 13px;
+
+    border-radius: 50px;
+
+    background: rgba(255, 107, 0, 0.08);
+
+    color: var(--secondary-orange);
+
+    border: 1px solid rgba(255, 107, 0, 0.12);
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.grand-safari-meta i {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   GRAND SAFARI DESTINATIONS
+========================================================= */
+
+.grand-safari-destinations {
+    display: flex;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin: 20px 0;
+}
+
+.grand-safari-destinations strong {
+    margin-right: 3px;
+
+    color: var(--deep-navy);
+
+    font-size: 13px;
+}
+
+.grand-safari-destinations span {
+    padding: 5px 10px;
+
+    border-radius: 50px;
+
+    background: var(--soft-gray);
+
+    color: var(--deep-navy);
+
+    border: 1px solid rgba(28, 45, 73, 0.06);
+
+    font-size: 12px;
+    font-weight: 500;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.grand-safari-destinations span:hover {
+    background: rgba(5, 150, 105, 0.10);
+
+    color: var(--support-green);
+
+    border-color: rgba(5, 150, 105, 0.15);
+}
+
+
+/* =========================================================
+   GRAND SAFARI DESCRIPTION
+========================================================= */
+
+.grand-safari-description {
+    color: var(--dark);
+}
+
+.grand-safari-description p {
+    margin-bottom: 14px;
+
+    line-height: 1.75;
+}
+
+.grand-safari-description p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   GRAND SAFARI IMAGE
+========================================================= */
+
+.grand-safari-image {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 1rem;
+}
+
+.grand-safari-image img {
+    width: 100%;
+
+    min-height: 400px;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.grand-safari-image:hover img {
+    transform: scale(1.02);
+}
+
+
+/* =========================================================
+   GRAND SAFARI IMAGE BADGE
+========================================================= */
+
+.grand-safari-badge {
+    position: absolute;
+
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+
+    padding: 14px 18px;
+
+    border-radius: 14px;
+
+    background: rgba(28, 45, 73, 0.90);
+
+    color: var(--white);
+
+    text-align: left;
+
+    backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.grand-safari-badge strong {
+    display: block;
+
+    color: var(--white);
+
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.grand-safari-badge span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--white);
+
+    font-size: 12px;
+
+    opacity: 0.85;
+}
+
+
+/* =========================================================
+   GRAND SAFARI BUTTONS
+========================================================= */
+
+.grand-safari-description + .hero-buttons-luxury {
+    display: flex;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   ALIGN STAYS CTA WITH GRAND SAFARI
+========================================================= */
+
+.stays-cta-wrapper > .container,
+.stays-cta-wrapper .container,
+.grand-safari-section .container {
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   OPTIONAL SECTION BACKGROUND
+========================================================= */
+
+.stays-cta-wrapper {
+    background: var(--light);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .stays-cta-wrapper {
+        padding: 50px 0;
+    }
+
+    .seasonal-header {
+        margin-bottom: 35px;
+    }
+
+    .seasonal-header h2 {
+        font-size: 32px;
+    }
+
+    .safari-image-wrapper {
+        height: 240px;
+    }
+
+    .safari-content {
+        padding: 23px;
+    }
+
+    .safari-content h3 {
+        font-size: 22px;
+    }
+
+    .grand-safari-meta {
+        justify-content: center;
+    }
+
+    .grand-safari-image img {
+        min-height: 350px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .stays-cta-wrapper {
+        padding: 40px 0;
+    }
+
+    .seasonal-header {
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
+
+    .seasonal-header .cta-badge {
+        font-size: 12px;
+        padding: 7px 14px;
+    }
+
+    .seasonal-header h2 {
+        font-size: 28px;
+    }
+
+    .seasonal-header p {
+        font-size: 14px;
+    }
+
+    .safari-image-wrapper {
+        height: 230px;
+    }
+
+    .safari-content {
+        padding: 22px;
+    }
+
+    .safari-content h3 {
+        font-size: 21px;
+    }
+
+    .safari-duration {
+        top: 12px;
+        right: 12px;
+
+        padding: 7px 11px;
+
+        font-size: 11px;
+    }
+
+    .safari-detail > i {
+        width: 36px;
+        height: 36px;
+
+        flex-basis: 36px;
+    }
+
+    .safari-detail strong {
+        font-size: 12px;
+    }
+
+    .grand-safari-meta {
+        justify-content: center;
+    }
+
+    .grand-safari-destinations {
+        justify-content: center;
+    }
+
+    .grand-safari-destinations strong {
+        width: 100%;
+
+        margin-right: 0;
+
+        text-align: center;
+
+        margin-bottom: 3px;
+    }
+
+    .grand-safari-description {
+        text-align: left;
+    }
+
+    .grand-safari-image img {
+        min-height: 280px;
+    }
+
+    .grand-safari-badge {
+        bottom: 12px;
+        left: 12px;
+        right: 12px;
+
+        padding: 12px 15px;
+    }
+
+    .grand-safari-badge strong {
+        font-size: 17px;
+    }
+
+    .grand-safari-description + .hero-buttons-luxury {
+        justify-content: center;
+    }
+
+    .safari-card-buttons {
+        gap: 9px;
+    }
+
+    .safari-card-buttons .btn-plan-trip,
+    .btn-download-itinerary {
+        padding: 12px 15px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .seasonal-header h2 {
+        font-size: 25px;
+    }
+
+    .seasonal-header p {
+        font-size: 13px;
+    }
+
+    .safari-image-wrapper {
+        height: 210px;
+    }
+
+    .safari-content {
+        padding: 19px;
+    }
+
+    .safari-content h3 {
+        font-size: 20px;
+    }
+
+    .grand-safari-destinations span {
+        font-size: 11px;
+        padding: 5px 9px;
+    }
+
+}
